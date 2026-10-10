@@ -1,0 +1,3 @@
+?? ../.gitignore
+?? ./
+?? ../strong_edge_lean_verified_checkpoint.zip

@@ -1,0 +1,7 @@
+.tools/
+strong_edge_lean_starter/.lake/
+strong_edge_lean_starter/.cache/
+__pycache__/
+*.pyc
+.env
+.env.*

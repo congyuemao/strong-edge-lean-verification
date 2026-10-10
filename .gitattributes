@@ -1,0 +1,3 @@
+# Keep verified source, log, and checkpoint bytes identical across platforms.
+* -text
+*.zip binary

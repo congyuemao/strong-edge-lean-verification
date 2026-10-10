@@ -1,0 +1,120 @@
+{
+  "lean_file_count": 28,
+  "new_theorems": {
+    "StrongEdge/Bounds/High22.lean": [
+      "high22_clique_card_le_seventeen"
+    ],
+    "StrongEdge/Bounds/High22Heavy.lean": [
+      "labelHeavyTips_subset_multiple",
+      "root_type_inter_card_sum",
+      "outerEdges_meet_labelHeavyTips",
+      "high22_heavy_label_card_le_two",
+      "high22_labelHeavyTips_card_le_three",
+      "high22_outer_incidence_le_two_at_heavy",
+      "high22_outer_card_le_six_of_root_three",
+      "high22_heavy_card_and_degree_of_outer_six",
+      "high22_heavy_label_card_eq_two_of_three",
+      "high22_multiple_subset_heavy_of_three"
+    ],
+    "StrongEdge/Bounds/High22Local.lean": [
+      "high22_cover_card_eq_six",
+      "high22_endpoints_degree_four",
+      "high22_other_neighbor_sets_disjoint",
+      "high22_no_triangle_on_edge",
+      "high22_cover_inside_card_le_two",
+      "high22_at_most_two_four_cycles_on_edge"
+    ],
+    "StrongEdge/Bounds/High22RootFour.lean": [
+      "high22_clique_card_le_seventeen_of_root_triple",
+      "outer_endpoints_multiple_of_root_four",
+      "outer_incidence_sum_eq_twice",
+      "high22_outer_card_le_four_of_root_types_le_two",
+      "rootEdges_card_le_tips_add_multiple",
+      "rootEdges_card_le_twice_multiple_of_no_single",
+      "high22_outer_degree_eq_two_of_four",
+      "outer_saturated_neighbors",
+      "high22_active_multiple_card_le_two_of_outer_four",
+      "high22_clique_card_le_seventeen_of_root_four"
+    ],
+    "StrongEdge/Bounds/High22Subcubic.lean": [
+      "root_outer_incidence_add_le",
+      "root_incidence_at_tip_le_type",
+      "rootEdges_card_le_tips_of_incidence_le_one",
+      "rootTips_subset_multiple_of_no_single",
+      "high22_clique_card_le_seventeen_of_support_degree_le_three"
+    ],
+    "StrongEdge/Bounds/High22Support.lean": [
+      "high22_root_degree_four",
+      "high22_root_neighborhood_independent",
+      "fourCycleOpposites_card_eq_root_load",
+      "high22_root_label_budget_two",
+      "high22_root_type_erase_card_le_two",
+      "high22_root_type_card_le_three",
+      "high22_root_label_multiple_card_le_two",
+      "high22_shared_root_types_card_le_four",
+      "root_type_card_sum_eq_label_sum",
+      "high22_multipleTips_card_le_four",
+      "high22_multipleTips_eq_of_triple"
+    ],
+    "StrongEdge/Bounds/RootCounting.lean": [
+      "root_single_edge_outer_adj",
+      "rootTips_adj_of_single",
+      "rootTips_card_le_six_of_single",
+      "rootEdges_card_le_tip_weight",
+      "clique_card_le_star_root_outer",
+      "outer_incidence_add_type_card_le_degree"
+    ],
+    "StrongEdge/High22Packing.lean": [
+      "minimalCliqueBounds20_of_high20_high21",
+      "induced_matching_packing20_of_high20_high21"
+    ]
+  },
+  "new_definitions": {
+    "StrongEdge/Bounds/High22.lean": [],
+    "StrongEdge/Bounds/High22Heavy.lean": [
+      "labelHeavyTips"
+    ],
+    "StrongEdge/Bounds/High22Local.lean": [],
+    "StrongEdge/Bounds/High22RootFour.lean": [],
+    "StrongEdge/Bounds/High22Subcubic.lean": [],
+    "StrongEdge/Bounds/High22Support.lean": [
+      "multipleTips"
+    ],
+    "StrongEdge/Bounds/RootCounting.lean": [
+      "rootTips",
+      "rootEdges"
+    ],
+    "StrongEdge/High22Packing.lean": []
+  },
+  "new_theorem_count": 51,
+  "forbidden_token_matches": [],
+  "audit_entry_count": 145,
+  "all_new_theorems_in_audit": true,
+  "changed_preexisting_lean_files": [
+    "StrongEdge.lean",
+    "StrongEdge/Audit.lean"
+  ],
+  "unchanged_preexisting_sources_and_configs": [
+    "StrongEdge/Basic.lean",
+    "StrongEdge/Bounds/ConflictDegree.lean",
+    "StrongEdge/Bounds/ConflictRigidity.lean",
+    "StrongEdge/Bounds/EdgeCounting.lean",
+    "StrongEdge/Bounds/High23.lean",
+    "StrongEdge/Bounds/High23Four.lean",
+    "StrongEdge/Bounds/High23Local.lean",
+    "StrongEdge/Bounds/High23Outer.lean",
+    "StrongEdge/Bounds/High23Support.lean",
+    "StrongEdge/Bounds/High24.lean",
+    "StrongEdge/Conflict.lean",
+    "StrongEdge/DoubleCount.lean",
+    "StrongEdge/High23Packing.lean",
+    "StrongEdge/High24Packing.lean",
+    "StrongEdge/MinimalPacking.lean",
+    "StrongEdge/Packing.lean",
+    "StrongEdge/PrivateExchange.lean",
+    "StrongEdge/Tests.lean",
+    "lean-toolchain",
+    "lakefile.toml",
+    "lake-manifest.json"
+  ]
+}

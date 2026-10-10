@@ -1,0 +1,10 @@
+⚠ [1124/1124] Built StrongEdge.Bounds.High23Four (98s)
+warning: StrongEdge/Bounds/High23Four.lean:26:0: automatically included section variable(s) unused in theorem `StrongEdge.root_edge_tip_not_neighbor`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (1124 jobs).

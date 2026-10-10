@@ -1,0 +1,1672 @@
+--- high23/README.md
++++ high22/README.md
+@@ -1,22 +1,23 @@
+ # Strong-edge packing: Lean formalisation
+ 
+-C4 and the `high24` and `high23` clique bounds are complete. In every finite
++C4 and the `high24`, `high23`, and `high22` clique bounds are complete. In every finite
+ simple graph of maximum degree four, every original edge has full conflict
+ degree at most 24. Every conflict clique whose members all have full conflict
+-degree at least 23 has at most **16** edges; at threshold 24 the proved bound
+-is **13**, which supplies the required `high24 ≤15` field.
+-The unconditional 20-packing theorem is **not yet proved**: `high20`, `high21`,
+-and `high22` remain open in this formalisation.
++degree at least 22 has at most **17** edges; at threshold 23 the proved bound
++is **16**, and at threshold 24 it is **13**, supplying the required `high24 ≤15` field.
++The unconditional 20-packing theorem is **not yet proved**: `high20` and `high21`
++remain open in this formalisation.
+ 
+-Verified on 9 October 2026: the full build passed (1,136 jobs) and all 94 audited
++Verified on 9 October 2026: the full build passed (1,144 jobs) and all 145 audited
+ theorems use only `propext`, `Classical.choice`, and `Quot.sound`. No proof gaps
+ or custom axioms occur in these dependency closures. Current evidence is in
+-`verification/high23-build.log` and `verification/high23-axioms.log`.
++`verification/high22-build.log` and `verification/high22-axioms.log`.
+ All previous logs and checkpoint archives are preserved. See the
+-[high23 handoff](HIGH23_HANDOFF.md) for this stage's 43 new theorem names,
++[high22 handoff](HIGH22_HANDOFF.md) for this stage's 51 new theorem names,
+ exact exported signatures, checks, and remaining work. The earlier
+-[high24 handoff](verification/high24-handoff.md) and
+-[C4 report](verification/NEXT_STAGE_REPORT.md) records the preceding stage.
++[high23 handoff](HIGH23_HANDOFF.md),
++[high24 handoff](verification/high24-handoff.md), and
++[C4 report](verification/NEXT_STAGE_REPORT.md) record the preceding stages.
+ 
+ ## Verified mathematical core
+ 
+@@ -59,12 +60,30 @@
+   `high23_clique_card_le_sixteen` from the original degree bound alone.
+ - `High23Packing.lean`: supplies both high23 and high24 to the unchanged minimal
+   record, leaving only high20, high21, and high22 explicit in the packing wrapper.
++- `Bounds/High22Local.lean`: degree-four endpoints, no triangle on a selected
++  high22 edge, and at most two internal cover edges and four-cycles.
++- `Bounds/RootCounting.lean`: a singleton-type selected edge restricts all
++  selected tips to at most six vertices; generic root and outer incidence counts.
++- `Bounds/High22Support.lean`: proves the root-label two-loss budget and bounds
++  multiple-type vertices, including the triple-type case.
++- `Bounds/High22RootFour.lean`: a clique containing a four-edge root star has
++  at most 17 edges, by selected-tip counts and original-degree saturation.
++- `Bounds/High22Heavy.lean`: for a three-edge root, at most three vertices meet
++  two selected root labels; at most six selected edges lie outside its closed
++  neighbourhood, with precise equality consequences.
++- `Bounds/High22Subcubic.lean`: excludes the equality case to prove high22 ≤17
++  when selected support degrees are at most three. This theorem retains the
++  high22 hypothesis; a threshold-free subcubic bound is not claimed.
++- `Bounds/High22.lean`: combines the two support-degree branches to prove
++  `high22_clique_card_le_seventeen` under exactly the requested assumptions.
++- `High22Packing.lean`: supplies high22 to the preserved constructor and exports
++  packing with only high20 and high21 as explicit structural assumptions.
+ 
+ `Packing.lean` extends the conditional result to every candidate subset and
+ states it in terms of original edges. It passed the full build and axiom audit.
+-Both threshold records and all eleven earlier mathematical source modules
++Both threshold records and all eighteen earlier mathematical source modules
+ are unchanged. No claim is made that a maximum-degree-four original graph has
+-yet been shown to satisfy either threshold record without the three remaining
++yet been shown to satisfy either threshold record without the two remaining
+ clique hypotheses. The original record's stronger high24 bound 7 is still open.
+ 
+ ## Pinned environment
+@@ -103,10 +122,10 @@
+ ## Checked endpoint
+ 
+ The current endpoint is
+-`StrongEdge.induced_matching_packing20_of_high20_high21_high22`.
+-It takes the original degree bound `hΔ` and exactly three explicit clique-bound
++`StrongEdge.induced_matching_packing20_of_high20_high21`.
++It takes the original degree bound `hΔ` and exactly two explicit clique-bound
+ parameters, with the meanings in the table below. It constructs the old `hb`
+-record by supplying `high23_clique_card_le_sixteen` and
++record by supplying `high22_clique_card_le_seventeen`, `high23_clique_card_le_sixteen`, and
+ `high24_clique_card_le_fifteen` automatically and calls the
+ preserved `StrongEdge.induced_matching_packing20_of_minimal_clique_bounds`:
+ 
+@@ -117,33 +136,33 @@
+ ```
+ 
+ The finite-vertex and decidability instances are shown in full in the axiom log.
+-The old wrapper still takes `hb`; the new wrapper discharges its high23 and
+-high24 fields and retains high20–high22 explicitly. The old
++The old wrapper still takes `hb`; the new wrapper discharges its high22, high23,
++and high24 fields and retains high20 and high21 explicitly. The old
+ `induced_matching_packing20_of_thresholds` is also preserved and audited.
+ The private-clique, degree-exchange and double-counting proofs have no such
+ structural premises. Empty graphs and empty candidate sets require no exception.
+ 
+ The source scan found no `sorry`, `admit`, `axiom`, `constant`, `unsafe`, or
+-`native_decide` tokens in the twenty project Lean files. The axiom audit, rather than that textual
++`native_decide` tokens in the twenty-eight project Lean files. The axiom audit, rather than that textual
+ scan alone, checks the exported proof dependencies. Source/configuration SHA-256
+-fingerprints are saved in `verification/high23-source-sha256.json`.
++fingerprints are saved in `verification/high22-source-sha256.json`.
+ Earlier source manifests are retained as historical snapshots.
+ 
+ ## Still required
+ 
+ For every clique `Q` in the **full** conflict graph, `MinimalCliqueBounds20`
+-requires the following five facts. The last two have now been proved universally.
++requires the following five facts. The last three have now been proved universally.
+ 
+ | Field | Lower bound on every member's full conflict degree | Required bound on `Q.card` | Status |
+ |---|---:|---:|---|
+ | `high20` | 20 | 19 | Open |
+ | `high21` | 21 | 18 | Open |
+-| `high22` | 22 | 17 | Open |
++| `high22` | 22 | 17 | Proved |
+ | `high23` | 23 | 16 | Proved |
+ | `high24` | 24 | 15 | Proved, with stronger bound 13 |
+ 
+-Next, formalise `high22`, followed by `high21` and `high20`.
+-Discharging the three open fields yields the unconditional theorem through the
++Next, formalise `high21`, followed by `high20`.
++Discharging the two open fields yields the unconditional theorem through the
+ new wrapper. The original
+ record additionally includes maximum degree 24 (now proved for these conflict
+ graphs) and uses the stronger degree-24 clique bound 7. The 19.5 strengthening
+@@ -161,3 +180,7 @@
+ [High23 proof at the same commit](https://github.com/congyuemao/strong-edge-colouring-research/blob/3a95c4a9c44475196c42b6eab4749c487d15d59b/research/high_conflict_23_improved.md).
+ This implementation uses a uniform outer-edge bound of two to obtain the
+ required 16; the optional strengthening to 15 is not exported.
++
++[High22 threshold proof at the same commit](https://github.com/congyuemao/strong-edge-colouring-research/blob/3a95c4a9c44475196c42b6eab4749c487d15d59b/research/high_conflict_thresholds.md).
++The high22 implementation uses shorter selected-tip and equality arguments
++described in `HIGH22_HANDOFF.md`. The optional high22 bound 16 is not exported.
+--- /dev/null
++++ high22/HIGH22_HANDOFF.md
+@@ -0,0 +1,306 @@
++# C5 high22: verified handoff
++
++Date: 2026-10-09, Australia/Sydney.
++
++**Complete success: high22 ≤17 is proved and integrated.** In every finite
++simple graph with original maximum degree at most four, every full-conflict
++clique whose edges have full conflict degree at least 22 has at most 17 edges.
++The theorem assumes no extra girth, regularity, maximality, support closure,
++or unproved clique bound. The optional ≤16 strengthening was not exported.
++
++The new packing wrapper retains exactly high20 and high21 as explicit
++structural parameters. Unconditional 20-packing remains unfinished.
++
++## Exact exported signatures
++
++Copied from the actual final `#check` output in `verification/high22-axioms.log`:
++
++```lean
++StrongEdge.high22_clique_card_le_seventeen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
++  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
++  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
++  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) : Q.card ≤ 17
++StrongEdge.minimalCliqueBounds20_of_high20_high21.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
++  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
++  (high20 :
++    ∀ (Q : Finset ↑G.edgeSet),
++      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 19)
++  (high21 :
++    ∀ (Q : Finset ↑G.edgeSet),
++      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 21 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 18) :
++  StrongEdge.MinimalCliqueBounds20 (StrongEdge.conflictGraph G)
++StrongEdge.induced_matching_packing20_of_high20_high21.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
++  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
++  (hΔ : ∀ (x : V), G.degree x ≤ 4)
++  (high20 :
++    ∀ (Q : Finset ↑G.edgeSet),
++      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 19)
++  (high21 :
++    ∀ (Q : Finset ↑G.edgeSet),
++      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 21 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 18)
++  (F : Finset ↑G.edgeSet) : ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card
++```
++
++The constructor reuses the preserved high23 constructor, supplies the new
++high22 theorem, and thereby retains the previously proved high23 ≤16 and
++high24 ≤15 (proved with bound 13). The packing theorem applies to every
++candidate set F. All conflicts and induced matchings use the complete original G.
++
++## Proof and its departures from the suggested route
++
++The implementation proves the universal bound directly, without first
++extracting an 18-edge subclique or enumerating finite graphs.
++
++1. **Local two-loss budget.** The existing exact incidence identity gives
++   conflict degree plus the number of original edges inside the endpoint
++   neighbour cover at most 24. At threshold 22, the cover has six vertices,
++   endpoints have degree four, the edge lies in no triangle, and at most two
++   original edges lie inside the cover. Oriented opposite edges inject into
++   those inside edges, proving at most two four-cycles through the selected edge.
++2. **Root-label load.** For a selected root label a, the number of four-cycles
++   through r-a equals the sum, over all original neighbours x of a other than r,
++   of |T_x minus a|. This sum is at most two. Thus at most two multiple-type
++   vertices contain a. Distinct multiple-type vertices sharing a have type
++   sizes with sum at most four. This uses only the cross-edge part of the
++   paper's budget; the additional triangle term is unnecessary for this proof.
++3. **Selected tips.** A singleton-type selected edge a-x forces every selected
++   tip y whose type omits a to be adjacent to x. All selected tips therefore lie
++   in (N(a) minus r) union (N(x) minus a), giving at most six selected tips.
++   These sets count vertices; separate proved incidence bounds count edges.
++4. **Four-edge root, a triple type exists.** Every multiple-type vertex must
++   equal that triple-type vertex: any other type of size at least two meets the
++   triple and exceeds a shared label's budget. Every outer selected edge meets
++   this one vertex, which has at most one remaining original neighbour.
++   At most 16 selected edges meet N(r), and at most one lies outside: |Q|≤17.
++5. **Four-edge root, all types have size at most two.** There are at most four
++   multiple-type vertices. Every outer edge has both endpoints among them;
++   each has at most two outer incidences, so there are at most four outer edges.
++   Without a singleton selected edge, the root-neighbourhood edges number at
++   most eight. Otherwise the six-tip bound gives at most 6+4=10 such edges,
++   hence |Q|≤4+10+4=18. Equality at 18 forces all multiple-type vertices to
++   have two outer incidences, saturating their original degree four. A selected
++   multiple-type tip must then contain the singleton edge's label, or its
++   required adjacency would exceed degree four. At most two such tips contain
++   that label, reducing 10 to 6+2=8 and contradicting equality.
++6. **Support degree at most three.** If all selected incidence degrees are at
++   most two, the preserved general cover theorem gives 13. Otherwise choose a
++   root with three selected labels. Call a non-root vertex heavy when its type
++   contains at least two of these three labels. Label budgets give at most three
++   heavy vertices. Every outer edge meets a heavy vertex; each heavy vertex has
++   at most two outer incidences, giving at most six outer edges. At most 12
++   selected edges meet N(r), so a clique of size at least 18 forces exactly six
++   outer edges, three heavy vertices, and two outer incidences at each.
++7. **Exclude that equality case.** Every root label then occurs in exactly two
++   heavy types, using all its multiplicity capacity. Every multiple type meets
++   a selected root label, so every multiple-type vertex is heavy. Its two outer
++   selected incidences leave at most one selected edge meeting N(r), because
++   the selected support degree is at most three. All other tips have singleton
++   type and also contribute at most one such edge. The six-tip lemma bounds
++   these edges by six if a singleton selected edge exists; if none exists,
++   all tips are heavy and there are at most three. Either gives |Q|≤15,
++   contradicting the assumed |Q|≥18.
++
++The two support-degree branches exhaust all possibilities because selected
++incidence degree is at most original degree, hence at most four. No support
++closure or induced deletion of original edges is used.
++
++The support-degree-at-most-three theorem in this stage **retains h22**. It is
++not the stronger threshold-free subcubic theorem suggested in the brief.
++That more general theorem is unnecessary for the present universal high22 bound
++and has not been claimed as proved.
++
++Exact budget and branch signatures:
++
++```lean
++StrongEdge.high22_root_label_budget_two.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
++  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
++  (Q : Finset ↑G.edgeSet) (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) {r a : V}
++  (ha : a ∈ StrongEdge.rootLabels G Q r) :
++  ∑ x ∈ (G.neighborFinset a).erase r, ((StrongEdge.rootType G r x).erase a).card ≤ 2
++StrongEdge.high22_clique_card_le_seventeen_of_root_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
++  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
++  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
++  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) (r : V) (hR : (StrongEdge.rootLabels G Q r).card = 4) :
++  Q.card ≤ 17
++StrongEdge.high22_clique_card_le_seventeen_of_support_degree_le_three.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
++  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
++  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
++  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e)
++  (hQdeg : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3) : Q.card ≤ 17
++```
++
++The mathematical source was read at the fixed supplied commit:
++[high_conflict_thresholds.md](https://github.com/congyuemao/strong-edge-colouring-research/blob/3a95c4a9c44475196c42b6eab4749c487d15d59b/research/high_conflict_thresholds.md).
++The optional high22 improvement and general subcubic manuscript were also read.
++Their downloaded source snapshots are retained as `verification/high22-research-*.md`.
++The shorter counting steps above replace the manuscript's case enumerations;
++the Lean proofs, rather than the manuscripts' review claims, certify the result.
++
++## Definitions and individually audited declarations
++
++Four new finite-set definitions use the unchanged original graph:
++
++| Definition | Meaning |
++|---|---|
++| `rootTips` | Non-root tips of selected edges meeting the root neighbourhood |
++| `rootEdges` | Selected edges meeting the root neighbourhood and avoiding the root |
++| `multipleTips` | Non-root vertices whose root-neighbourhood type has size at least two |
++| `labelHeavyTips` | Non-root vertices whose type contains at least two selected root labels |
++
++The stage adds 51 theorems in eight modules. Every theorem is included
++individually in the axiom audit:
++
++### StrongEdge/Bounds/High22.lean
++
++- `StrongEdge.high22_clique_card_le_seventeen`
++
++### StrongEdge/Bounds/High22Heavy.lean
++
++- `StrongEdge.labelHeavyTips_subset_multiple`
++- `StrongEdge.root_type_inter_card_sum`
++- `StrongEdge.outerEdges_meet_labelHeavyTips`
++- `StrongEdge.high22_heavy_label_card_le_two`
++- `StrongEdge.high22_labelHeavyTips_card_le_three`
++- `StrongEdge.high22_outer_incidence_le_two_at_heavy`
++- `StrongEdge.high22_outer_card_le_six_of_root_three`
++- `StrongEdge.high22_heavy_card_and_degree_of_outer_six`
++- `StrongEdge.high22_heavy_label_card_eq_two_of_three`
++- `StrongEdge.high22_multiple_subset_heavy_of_three`
++
++### StrongEdge/Bounds/High22Local.lean
++
++- `StrongEdge.high22_cover_card_eq_six`
++- `StrongEdge.high22_endpoints_degree_four`
++- `StrongEdge.high22_other_neighbor_sets_disjoint`
++- `StrongEdge.high22_no_triangle_on_edge`
++- `StrongEdge.high22_cover_inside_card_le_two`
++- `StrongEdge.high22_at_most_two_four_cycles_on_edge`
++
++### StrongEdge/Bounds/High22RootFour.lean
++
++- `StrongEdge.high22_clique_card_le_seventeen_of_root_triple`
++- `StrongEdge.outer_endpoints_multiple_of_root_four`
++- `StrongEdge.outer_incidence_sum_eq_twice`
++- `StrongEdge.high22_outer_card_le_four_of_root_types_le_two`
++- `StrongEdge.rootEdges_card_le_tips_add_multiple`
++- `StrongEdge.rootEdges_card_le_twice_multiple_of_no_single`
++- `StrongEdge.high22_outer_degree_eq_two_of_four`
++- `StrongEdge.outer_saturated_neighbors`
++- `StrongEdge.high22_active_multiple_card_le_two_of_outer_four`
++- `StrongEdge.high22_clique_card_le_seventeen_of_root_four`
++
++### StrongEdge/Bounds/High22Subcubic.lean
++
++- `StrongEdge.root_outer_incidence_add_le`
++- `StrongEdge.root_incidence_at_tip_le_type`
++- `StrongEdge.rootEdges_card_le_tips_of_incidence_le_one`
++- `StrongEdge.rootTips_subset_multiple_of_no_single`
++- `StrongEdge.high22_clique_card_le_seventeen_of_support_degree_le_three`
++
++### StrongEdge/Bounds/High22Support.lean
++
++- `StrongEdge.high22_root_degree_four`
++- `StrongEdge.high22_root_neighborhood_independent`
++- `StrongEdge.fourCycleOpposites_card_eq_root_load`
++- `StrongEdge.high22_root_label_budget_two`
++- `StrongEdge.high22_root_type_erase_card_le_two`
++- `StrongEdge.high22_root_type_card_le_three`
++- `StrongEdge.high22_root_label_multiple_card_le_two`
++- `StrongEdge.high22_shared_root_types_card_le_four`
++- `StrongEdge.root_type_card_sum_eq_label_sum`
++- `StrongEdge.high22_multipleTips_card_le_four`
++- `StrongEdge.high22_multipleTips_eq_of_triple`
++
++### StrongEdge/Bounds/RootCounting.lean
++
++- `StrongEdge.root_single_edge_outer_adj`
++- `StrongEdge.rootTips_adj_of_single`
++- `StrongEdge.rootTips_card_le_six_of_single`
++- `StrongEdge.rootEdges_card_le_tip_weight`
++- `StrongEdge.clique_card_le_star_root_outer`
++- `StrongEdge.outer_incidence_add_type_card_le_degree`
++
++### StrongEdge/High22Packing.lean
++
++- `StrongEdge.minimalCliqueBounds20_of_high20_high21`
++- `StrongEdge.induced_matching_packing20_of_high20_high21`
++
++## Commands and verified evidence
++
++The baseline and final checks both ran these actual PowerShell commands from
++the project directory; all four invocations exited 0:
++
++```powershell
++.\lean.ps1 build
++.\lean.ps1 env lean StrongEdge/Audit.lean
++```
++
++Baseline: **1,136 jobs and 94 audited theorems**, recorded in
++`verification/high22-baseline-build.log` and `verification/high22-baseline-axioms.log`.
++Final: **1,144 jobs and 145 audited theorems**, recorded in
++`verification/high22-build.log` and `verification/high22-axioms.log`.
++The final build has no warnings. All 94 previous audit entries are preserved;
++all 51 new entries depend only on `propext`, `Classical.choice`, and
++`Quot.sound`. No proof gaps or custom axioms occur in these dependency closures.
++
++The source scan of all 28 project Lean files found no `sorry`,
++`admit`, `sorryAx`, `axiom`, `constant`, `unsafe`, or `native_decide` tokens.
++This scan supplements the proof dependency audit. Detailed results are saved
++in `verification/high22-source-checks.json` and `verification/high22-audit-checks.json`.
++
++After the Lean commands, this reproducibility command checks the logs, hashes,
++audit inventory, forbidden-token scan, old artifacts, source diff, and archive:
++
++```powershell
++python verification/finalize-high22.py
++```
++
++It completed with exit status 0. The script verifies saved evidence and packages
++files; it does not itself prove mathematics. Intermediate development logs may
++contain earlier errors or warnings. The final two Lean logs are the acceptance evidence.
++
++## Preservation, differences, and checkpoint
++
++All **18 pre-existing mathematical modules** are byte-for-byte unchanged.
++The only modified old Lean files are `StrongEdge.lean` (new public imports) and
++`StrongEdge/Audit.lean` (appended audits and signatures). Eight new Lean modules
++implement the stage; README and this handoff record the current status.
++
++The three environment files are unchanged. Pins remain:
++
++- Lean `leanprover/lean4:v4.35.0-rc4`
++- Compiler commit `c29b6dda4f7c20e3eeaa717c4e565663c5cfa364`
++- mathlib commit `49fd9dee36e7bbf345fe7981d2de6aeeb591f75b`
++
++No dependency update, repository reset, Git commit, or public push was performed.
++All earlier checkpoints and verification artifacts are preserved.
++
++Initial hashes: `verification/high22-baseline-source-sha256.json`.
++Final source/configuration hashes: `verification/high22-source-sha256.json`.
++Real diff against the high23 checkpoint: `verification/high22-source.diff`.
++Added/modified file summary: `verification/high22-change-summary.json`.
++The project is still untracked in the enclosing Git repository; the saved empty
++Git diff-stat is not presented as evidence of unchanged source.
++
++The new archive is `../strong_edge_lean_high22_checkpoint.zip`. It includes source,
++locked configuration, documentation, and verification evidence. Compiler binaries,
++dependency checkouts, and caches are excluded. Packaging checks ZIP integrity and
++byte-for-byte equality with the corresponding workspace files.
++
++## Remaining assumptions and next stage
++
++| Field | Full conflict degree threshold | Required clique bound | Status |
++|---|---:|---:|---|
++| high20 | ≥20 | ≤19 | Explicit, unproved |
++| high21 | ≥21 | ≤18 | Explicit, unproved |
++| high22 | ≥22 | ≤17 | Proved and supplied |
++| high23 | ≥23 | ≤16 | Previously proved and supplied |
++| high24 | ≥24 | ≤15 | Previously proved with bound 13; supplied |
++
++No mathematical gap or unresolved Lean obligation remains in the high22 theorem
++or its integration. The next requested bound should be high21 ≤18, followed by
++high20 ≤19. The generic root-tip counting lemmas are reusable. The high22
++two-loss and heavy-type saturation conclusions must be reworked for high21's
++three-loss budget; their hypotheses cannot simply be weakened.
++Unconditional 20-packing, the 19.5 strengthening, and integer strong-edge
++20-colourability are not established by this checkpoint.
+--- high23/StrongEdge.lean
++++ high22/StrongEdge.lean
+@@ -18,3 +18,11 @@
+ public import StrongEdge.Bounds.High23Four
+ public import StrongEdge.Bounds.High23
+ public import StrongEdge.High23Packing
++public import StrongEdge.Bounds.High22Local
++public import StrongEdge.Bounds.RootCounting
++public import StrongEdge.Bounds.High22Support
++public import StrongEdge.Bounds.High22RootFour
++public import StrongEdge.Bounds.High22Heavy
++public import StrongEdge.Bounds.High22Subcubic
++public import StrongEdge.Bounds.High22
++public import StrongEdge.High22Packing
+--- high23/StrongEdge/Audit.lean
++++ high22/StrongEdge/Audit.lean
+@@ -121,3 +121,70 @@
+ #check StrongEdge.high23_clique_card_le_sixteen
+ #check StrongEdge.minimalCliqueBounds20_of_high20_high21_high22
+ #check StrongEdge.induced_matching_packing20_of_high20_high21_high22
++
++#print axioms StrongEdge.high22_cover_card_eq_six
++#print axioms StrongEdge.high22_endpoints_degree_four
++#print axioms StrongEdge.high22_other_neighbor_sets_disjoint
++#print axioms StrongEdge.high22_no_triangle_on_edge
++#print axioms StrongEdge.high22_cover_inside_card_le_two
++#print axioms StrongEdge.high22_at_most_two_four_cycles_on_edge
++
++#print axioms StrongEdge.root_single_edge_outer_adj
++#print axioms StrongEdge.rootTips_adj_of_single
++#print axioms StrongEdge.rootTips_card_le_six_of_single
++#print axioms StrongEdge.rootEdges_card_le_tip_weight
++#print axioms StrongEdge.clique_card_le_star_root_outer
++#print axioms StrongEdge.outer_incidence_add_type_card_le_degree
++
++#print axioms StrongEdge.high22_root_degree_four
++#print axioms StrongEdge.high22_root_neighborhood_independent
++#print axioms StrongEdge.fourCycleOpposites_card_eq_root_load
++#print axioms StrongEdge.high22_root_label_budget_two
++#print axioms StrongEdge.high22_root_type_erase_card_le_two
++#print axioms StrongEdge.high22_root_type_card_le_three
++#print axioms StrongEdge.high22_root_label_multiple_card_le_two
++#print axioms StrongEdge.high22_shared_root_types_card_le_four
++#print axioms StrongEdge.root_type_card_sum_eq_label_sum
++#print axioms StrongEdge.high22_multipleTips_card_le_four
++#print axioms StrongEdge.high22_multipleTips_eq_of_triple
++
++#print axioms StrongEdge.high22_clique_card_le_seventeen_of_root_triple
++#print axioms StrongEdge.outer_endpoints_multiple_of_root_four
++#print axioms StrongEdge.outer_incidence_sum_eq_twice
++#print axioms StrongEdge.high22_outer_card_le_four_of_root_types_le_two
++#print axioms StrongEdge.rootEdges_card_le_tips_add_multiple
++#print axioms StrongEdge.rootEdges_card_le_twice_multiple_of_no_single
++#print axioms StrongEdge.high22_outer_degree_eq_two_of_four
++#print axioms StrongEdge.outer_saturated_neighbors
++#print axioms StrongEdge.high22_active_multiple_card_le_two_of_outer_four
++#print axioms StrongEdge.high22_clique_card_le_seventeen_of_root_four
++
++#print axioms StrongEdge.labelHeavyTips_subset_multiple
++#print axioms StrongEdge.root_type_inter_card_sum
++#print axioms StrongEdge.outerEdges_meet_labelHeavyTips
++#print axioms StrongEdge.high22_heavy_label_card_le_two
++#print axioms StrongEdge.high22_labelHeavyTips_card_le_three
++#print axioms StrongEdge.high22_outer_incidence_le_two_at_heavy
++#print axioms StrongEdge.high22_outer_card_le_six_of_root_three
++#print axioms StrongEdge.high22_heavy_card_and_degree_of_outer_six
++#print axioms StrongEdge.high22_heavy_label_card_eq_two_of_three
++#print axioms StrongEdge.high22_multiple_subset_heavy_of_three
++
++#print axioms StrongEdge.root_outer_incidence_add_le
++#print axioms StrongEdge.root_incidence_at_tip_le_type
++#print axioms StrongEdge.rootEdges_card_le_tips_of_incidence_le_one
++#print axioms StrongEdge.rootTips_subset_multiple_of_no_single
++#print axioms StrongEdge.high22_clique_card_le_seventeen_of_support_degree_le_three
++
++#print axioms StrongEdge.high22_clique_card_le_seventeen
++
++#print axioms StrongEdge.minimalCliqueBounds20_of_high20_high21
++#print axioms StrongEdge.induced_matching_packing20_of_high20_high21
++#check StrongEdge.high22_cover_inside_card_le_two
++#check StrongEdge.high22_at_most_two_four_cycles_on_edge
++#check StrongEdge.high22_root_label_budget_two
++#check StrongEdge.high22_clique_card_le_seventeen_of_root_four
++#check StrongEdge.high22_clique_card_le_seventeen_of_support_degree_le_three
++#check StrongEdge.high22_clique_card_le_seventeen
++#check StrongEdge.minimalCliqueBounds20_of_high20_high21
++#check StrongEdge.induced_matching_packing20_of_high20_high21
+--- /dev/null
++++ high22/StrongEdge/Bounds/High22.lean
+@@ -0,0 +1,31 @@
++module
++
++public import StrongEdge.Bounds.High22Subcubic
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++variable [DecidableRel (conflictGraph G).Adj]
++
++/-- Universal high22 bound, retaining all original edges as conflict witnesses. -/
++theorem high22_clique_card_le_seventeen
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e) : Q.card ≤ 17 := by
++  by_cases hfour : ∃ r, (edgeIncidences G Q r).card = 4
++  · obtain ⟨r, hr⟩ := hfour
++    exact high22_clique_card_le_seventeen_of_root_four G hΔ Q hQ h22 r
++      (by rw [rootLabels_card G Q r]; exact hr)
++  have hthree : ∀ x, (edgeIncidences G Q x).card ≤ 3 := by
++    intro x
++    have hc := (edgeIncidences_card_le_degree G Q x).trans (hΔ x)
++    have hn : (edgeIncidences G Q x).card ≠ 4 := fun h => hfour ⟨x, h⟩
++    omega
++  exact high22_clique_card_le_seventeen_of_support_degree_le_three G hΔ Q hQ h22 hthree
++
++end StrongEdge
+--- /dev/null
++++ high22/StrongEdge/Bounds/High22Heavy.lean
+@@ -0,0 +1,172 @@
++module
++
++public import StrongEdge.Bounds.High22RootFour
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++
++def labelHeavyTips (Q : Finset G.edgeSet) (r : V) : Finset V :=
++  univ.filter (fun x => x ≠ r ∧ 2 ≤ (rootType G r x ∩ rootLabels G Q r).card)
++
++theorem labelHeavyTips_subset_multiple (Q : Finset G.edgeSet) (r : V) :
++    labelHeavyTips G Q r ⊆ multipleTips G r := by
++  intro x hx
++  obtain ⟨_, hxr, hc⟩ := mem_filter.mp hx
++  exact mem_filter.mpr ⟨mem_univ _, hxr, hc.trans (card_le_card inter_subset_left)⟩
++
++theorem root_type_inter_card_sum (P R : Finset V) (r : V) :
++    (∑ x ∈ P, (rootType G r x ∩ R).card) =
++      ∑ a ∈ R, (P.filter (fun x => a ∈ rootType G r x)).card := by
++  classical
++  have he (x : V) : rootType G r x ∩ R = R.filter (fun a => a ∈ rootType G r x) := by
++    ext a
++    simp only [mem_inter, mem_filter, and_comm]
++  simp only [he, card_eq_sum_ones, sum_filter]
++  exact sum_comm
++
++theorem outerEdges_meet_labelHeavyTips
++    (Q : Finset G.edgeSet) (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (r : V) (hR : 3 ≤ (rootLabels G Q r).card)
++    (e : G.edgeSet) (heo : e ∈ outerEdges G Q r) :
++    ∃ x ∈ labelHeavyTips G Q r, x ∈ e.val := by
++  obtain ⟨x, y, he⟩ := Sym2.exists.mp (show ∃ z : Sym2 V, z = e.val from ⟨e.val, rfl⟩)
++  have hends := outerEdges_endpoints G Q r e he.symm heo
++  have hcov := outer_edge_types_cover_root_labels G Q hQ r e he.symm heo
++  have hs : rootLabels G Q r ⊆ (rootType G r x ∩ rootLabels G Q r) ∪
++      (rootType G r y ∩ rootLabels G Q r) := by
++    intro a ha
++    rcases mem_union.mp (hcov ha) with hx | hy
++    · exact mem_union_left _ (mem_inter.mpr ⟨hx, ha⟩)
++    · exact mem_union_right _ (mem_inter.mpr ⟨hy, ha⟩)
++  have hc := (card_le_card hs).trans (card_union_le _ _)
++  by_cases hx : 2 ≤ (rootType G r x ∩ rootLabels G Q r).card
++  · exact ⟨x, mem_filter.mpr ⟨mem_univ _, hends.2.1, hx⟩, he ▸ Sym2.mem_mk_left x y⟩
++  · exact ⟨y, mem_filter.mpr ⟨mem_univ _, hends.2.2.1, by omega⟩, he ▸ Sym2.mem_mk_right x y⟩
++
++variable [DecidableRel (conflictGraph G).Adj]
++
++theorem high22_heavy_label_card_le_two
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    {r a : V} (ha : a ∈ rootLabels G Q r) :
++    ((labelHeavyTips G Q r).filter (fun x => a ∈ rootType G r x)).card ≤ 2 := by
++  have hs : (labelHeavyTips G Q r).filter (fun x => a ∈ rootType G r x) ⊆
++      (multipleTips G r).filter (fun x => a ∈ rootType G r x) := by
++    intro x hx
++    obtain ⟨hxp, hax⟩ := mem_filter.mp hx
++    exact mem_filter.mpr ⟨labelHeavyTips_subset_multiple G Q r hxp, hax⟩
++  exact (card_le_card hs).trans (high22_root_label_multiple_card_le_two G hΔ Q h22 ha)
++
++theorem high22_labelHeavyTips_card_le_three
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 3) :
++    (labelHeavyTips G Q r).card ≤ 3 := by
++  have hlo := sum_le_sum (s := labelHeavyTips G Q r) (fun x hx => (mem_filter.mp hx).2.2)
++  have hup := sum_le_sum (s := rootLabels G Q r)
++    (fun a ha => high22_heavy_label_card_le_two G hΔ Q h22 ha)
++  have heq := root_type_inter_card_sum G (labelHeavyTips G Q r) (rootLabels G Q r) r
++  simp only [sum_const, smul_eq_mul, hR] at hlo hup
++  omega
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem high22_outer_incidence_le_two_at_heavy
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet) (r : V)
++    {x : V} (hx : x ∈ labelHeavyTips G Q r) :
++    (edgeIncidences G (outerEdges G Q r) x).card ≤ 2 := by
++  have hm := labelHeavyTips_subset_multiple G Q r hx
++  have hc := (mem_filter.mp hm).2.2
++  have hi := outer_incidence_add_type_card_le_degree G Q r x
++  have hd := hΔ x
++  omega
++
++theorem high22_outer_card_le_six_of_root_three
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 3) :
++    (outerEdges G Q r).card ≤ 6 := by
++  have hm : edgesMeeting G (outerEdges G Q r) (labelHeavyTips G Q r) = outerEdges G Q r := by
++    apply filter_eq_self.mpr
++    exact outerEdges_meet_labelHeavyTips G Q hQ r (by omega)
++  have hi := incidence_sum_eq_meeting_add_inside G (outerEdges G Q r) (labelHeavyTips G Q r)
++  rw [hm] at hi
++  have hs := sum_le_sum (s := labelHeavyTips G Q r)
++    (fun x hx => high22_outer_incidence_le_two_at_heavy G hΔ Q r hx)
++  have hc := high22_labelHeavyTips_card_le_three G hΔ Q h22 r hR
++  simp only [sum_const, smul_eq_mul] at hs
++  omega
++
++theorem high22_heavy_card_and_degree_of_outer_six
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 3)
++    (ho : (outerEdges G Q r).card = 6) :
++    (labelHeavyTips G Q r).card = 3 ∧
++      ∀ x ∈ labelHeavyTips G Q r, (edgeIncidences G (outerEdges G Q r) x).card = 2 := by
++  have hm : edgesMeeting G (outerEdges G Q r) (labelHeavyTips G Q r) = outerEdges G Q r := by
++    apply filter_eq_self.mpr
++    exact outerEdges_meet_labelHeavyTips G Q hQ r (by omega)
++  have hi := incidence_sum_eq_meeting_add_inside G (outerEdges G Q r) (labelHeavyTips G Q r)
++  rw [hm] at hi
++  have hs := sum_le_sum (s := labelHeavyTips G Q r)
++    (fun x hx => high22_outer_incidence_le_two_at_heavy G hΔ Q r hx)
++  have hc := high22_labelHeavyTips_card_le_three G hΔ Q h22 r hR
++  simp only [sum_const, smul_eq_mul] at hs
++  refine ⟨by omega, ?_⟩
++  intro x hx
++  have hxc := high22_outer_incidence_le_two_at_heavy G hΔ Q r hx
++  have he := sum_erase_add (labelHeavyTips G Q r)
++    (fun y => (edgeIncidences G (outerEdges G Q r) y).card) hx
++  have hce := card_erase_add_one hx
++  have hse := sum_le_sum (s := (labelHeavyTips G Q r).erase x)
++    (fun y hy => high22_outer_incidence_le_two_at_heavy G hΔ Q r (mem_erase.mp hy).2)
++  simp only [sum_const, smul_eq_mul] at hse
++  omega
++
++theorem high22_heavy_label_card_eq_two_of_three
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 3)
++    (hp : (labelHeavyTips G Q r).card = 3)
++    {a : V} (ha : a ∈ rootLabels G Q r) :
++    ((labelHeavyTips G Q r).filter (fun x => a ∈ rootType G r x)).card = 2 := by
++  have hlo := sum_le_sum (s := labelHeavyTips G Q r) (fun x hx => (mem_filter.mp hx).2.2)
++  have heq := root_type_inter_card_sum G (labelHeavyTips G Q r) (rootLabels G Q r) r
++  have hb := high22_heavy_label_card_le_two G hΔ Q h22 ha
++  have he := sum_erase_add (rootLabels G Q r)
++    (fun b => ((labelHeavyTips G Q r).filter (fun x => b ∈ rootType G r x)).card) ha
++  have hce := card_erase_add_one ha
++  have hse := sum_le_sum (s := (rootLabels G Q r).erase a)
++    (fun b hb => high22_heavy_label_card_le_two G hΔ Q h22 (mem_erase.mp hb).2)
++  simp only [sum_const, smul_eq_mul, hp] at hlo hse
++  omega
++
++theorem high22_multiple_subset_heavy_of_three
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 3)
++    (hp : (labelHeavyTips G Q r).card = 3) :
++    multipleTips G r ⊆ labelHeavyTips G Q r := by
++  intro x hx
++  obtain ⟨a, ha⟩ := high23_type_meets_root_labels G hΔ Q r x (by omega) (mem_filter.mp hx).2.2
++  obtain ⟨haT, haR⟩ := mem_inter.mp ha
++  have heq : (labelHeavyTips G Q r).filter (fun y => a ∈ rootType G r y) =
++      (multipleTips G r).filter (fun y => a ∈ rootType G r y) := by
++    apply eq_of_subset_of_card_le
++    · intro y hy
++      obtain ⟨hyp, hay⟩ := mem_filter.mp hy
++      exact mem_filter.mpr ⟨labelHeavyTips_subset_multiple G Q r hyp, hay⟩
++    · rw [high22_heavy_label_card_eq_two_of_three G hΔ Q h22 r hR hp haR]
++      exact high22_root_label_multiple_card_le_two G hΔ Q h22 haR
++  exact (mem_filter.mp (heq.symm ▸ mem_filter.mpr ⟨hx, haT⟩)).1
++
++end StrongEdge
+--- /dev/null
++++ high22/StrongEdge/Bounds/High22Local.lean
+@@ -0,0 +1,105 @@
++module
++
++public import StrongEdge.Bounds.High23Local
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++variable [DecidableRel (conflictGraph G).Adj]
++
++theorem high22_cover_card_eq_six
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h22 : 22 ≤ (conflictGraph G).degree e) :
++    (endpointNeighbourCover G u v).card = 6 := by
++  have huv : G.Adj u v := G.mem_edgeSet.mp (he ▸ e.property)
++  have hc := endpointNeighbourCover_card_le_six G huv hΔ
++  have hd := conflict_degree_le_incidence_sum G e he
++  have hs := sum_le_sum (s := endpointNeighbourCover G u v) (fun w _ => hΔ w)
++  simp only [sum_const, smul_eq_mul] at hs
++  omega
++
++theorem high22_endpoints_degree_four
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h22 : 22 ≤ (conflictGraph G).degree e) :
++    G.degree u = 4 ∧ G.degree v = 4 := by
++  have huv : G.Adj u v := G.mem_edgeSet.mp (he ▸ e.property)
++  have hcard := high22_cover_card_eq_six G hΔ e he h22
++  have hu := card_erase_add_one ((G.mem_neighborFinset u v).mpr huv)
++  have hv := card_erase_add_one ((G.mem_neighborFinset v u).mpr huv.symm)
++  have hc := card_union_le ((G.neighborFinset u).erase v) ((G.neighborFinset v).erase u)
++  have hdu := hΔ u
++  have hdv := hΔ v
++  simp only [SimpleGraph.card_neighborFinset_eq_degree] at hu hv
++  dsimp [endpointNeighbourCover] at hcard
++  omega
++
++theorem high22_other_neighbor_sets_disjoint
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h22 : 22 ≤ (conflictGraph G).degree e) :
++    Disjoint ((G.neighborFinset u).erase v) ((G.neighborFinset v).erase u) := by
++  have huv : G.Adj u v := G.mem_edgeSet.mp (he ▸ e.property)
++  have hcard := high22_cover_card_eq_six G hΔ e he h22
++  have hu := card_erase_add_one ((G.mem_neighborFinset u v).mpr huv)
++  have hv := card_erase_add_one ((G.mem_neighborFinset v u).mpr huv.symm)
++  have hc := card_union_add_card_inter ((G.neighborFinset u).erase v)
++    ((G.neighborFinset v).erase u)
++  have hdu := hΔ u
++  have hdv := hΔ v
++  simp only [SimpleGraph.card_neighborFinset_eq_degree] at hu hv
++  apply disjoint_iff_inter_eq_empty.mpr
++  apply card_eq_zero.mp
++  dsimp [endpointNeighbourCover] at hcard
++  omega
++
++theorem high22_no_triangle_on_edge
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h22 : 22 ≤ (conflictGraph G).degree e)
++    {w : V} (huw : G.Adj u w) : ¬ G.Adj v w := by
++  intro hvw
++  exact disjoint_left.mp (high22_other_neighbor_sets_disjoint G hΔ e he h22)
++    (mem_erase.mpr ⟨hvw.ne.symm, (G.mem_neighborFinset u w).mpr huw⟩)
++    (mem_erase.mpr ⟨huw.ne.symm, (G.mem_neighborFinset v w).mpr hvw⟩)
++
++/-- At most two original edges lie wholly within the six-vertex cover.
++This follows from an exact incidence identity, not a girth assumption. -/
++theorem high22_cover_inside_card_le_two
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h22 : 22 ≤ (conflictGraph G).degree e) :
++    (edgesInside G univ (endpointNeighbourCover G u v)).card ≤ 2 := by
++  have hc := conflict_degree_add_inside_le_sum G e he
++  have hs := sum_le_sum (s := endpointNeighbourCover G u v) (fun w _ => hΔ w)
++  have hcard := high22_cover_card_eq_six G hΔ e he h22
++  simp only [sum_const, smul_eq_mul, hcard] at hs
++  omega
++
++theorem high22_at_most_two_four_cycles_on_edge
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h22 : 22 ≤ (conflictGraph G).degree e) :
++    (fourCycleOpposites G u v).card ≤ 2 := by
++  classical
++  have hc : (fourCycleOpposites G u v).card ≤
++      (edgesInside G univ (endpointNeighbourCover G u v)).card := by
++    apply card_le_via_relation _ _ (fun p f => f.val = s(p.1, p.2))
++    · intro p hp
++      obtain ⟨hp, hpAdj⟩ := mem_filter.mp hp
++      obtain ⟨hx, hy⟩ := mem_product.mp hp
++      refine ⟨⟨s(p.1, p.2), hpAdj⟩, mem_filter.mpr ⟨mem_univ _, ?_⟩, rfl⟩
++      exact Sym2.forall_mem_pair.mpr ⟨mem_union_left _ hx, mem_union_right _ hy⟩
++    · intro p hp q hq f hpf hqf
++      obtain ⟨hp, _⟩ := mem_filter.mp hp
++      obtain ⟨hq, _⟩ := mem_filter.mp hq
++      obtain ⟨hxp, hyp⟩ := mem_product.mp hp
++      obtain ⟨hxq, hyq⟩ := mem_product.mp hq
++      rcases Sym2.eq_iff.mp (hpf.symm.trans hqf) with h | h
++      · exact Prod.ext h.1 h.2
++      · exact (disjoint_left.mp (high22_other_neighbor_sets_disjoint G hΔ e he h22)
++          hxp (h.1.symm ▸ hyq)).elim
++  exact hc.trans (high22_cover_inside_card_le_two G hΔ e he h22)
++
++end StrongEdge
+--- /dev/null
++++ high22/StrongEdge/Bounds/High22RootFour.lean
+@@ -0,0 +1,287 @@
++module
++
++public import StrongEdge.Bounds.High22Support
++public import StrongEdge.Bounds.RootCounting
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++variable [DecidableRel (conflictGraph G).Adj]
++
++theorem high22_clique_card_le_seventeen_of_root_triple
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 4)
++    {x : V} (hxr : x ≠ r) (hx : 3 ≤ (rootType G r x).card) : Q.card ≤ 17 := by
++  have hfull : rootLabels G Q r = G.neighborFinset r :=
++    eq_of_subset_of_card_le (rootLabels_subset_neighbors G Q r)
++      (by simpa only [hR, SimpleGraph.card_neighborFinset_eq_degree] using hΔ r)
++  have hs : outerEdges G Q r ⊆ edgeIncidences G (outerEdges G Q r) x := by
++    intro e heo
++    obtain ⟨u, v, he⟩ := Sym2.exists.mp (show ∃ z : Sym2 V, z = e.val from ⟨e.val, rfl⟩)
++    have hends := outerEdges_endpoints G Q r e he.symm heo
++    have hcov := outer_edge_types_cover_root_labels G Q hQ r e he.symm heo
++    have hc := (card_le_card hcov).trans (card_union_le _ _)
++    have hp : u ∈ multipleTips G r ∨ v ∈ multipleTips G r := by
++      by_cases hu : 2 ≤ (rootType G r u).card
++      · exact Or.inl (mem_filter.mpr ⟨mem_univ _, hends.2.1, hu⟩)
++      · exact Or.inr (mem_filter.mpr ⟨mem_univ _, hends.2.2.1, by omega⟩)
++    apply mem_filter.mpr
++    refine ⟨heo, ?_⟩
++    rcases hp with hp | hp
++    · have heq := high22_multipleTips_eq_of_triple G hΔ Q h22 r hfull hxr hx hp
++      rw [← he, ← heq]
++      exact Sym2.mem_mk_left _ _
++    · have heq := high22_multipleTips_eq_of_triple G hΔ Q h22 r hfull hxr hx hp
++      rw [← he, ← heq]
++      exact Sym2.mem_mk_right _ _
++  have ho := card_le_card hs
++  have hi := outer_incidence_add_type_card_le_degree G Q r x
++  have hd := hΔ x
++  have hm := incidence_sum_eq_meeting_add_inside G Q (G.neighborFinset r)
++  have hsum := sum_le_sum (s := G.neighborFinset r)
++    (fun y _ => (edgeIncidences_card_le_degree G Q y).trans (hΔ y))
++  have hdr := hΔ r
++  have hq := selected_edges_card_le_meeting_add_outer G Q r
++  simp only [sum_const, smul_eq_mul, SimpleGraph.card_neighborFinset_eq_degree] at hsum
++  omega
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem outer_endpoints_multiple_of_root_four
++    (Q : Finset G.edgeSet) (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (r : V) (hR : (rootLabels G Q r).card = 4)
++    (ht : ∀ x, x ≠ r → (rootType G r x).card ≤ 2)
++    (e : G.edgeSet) (heo : e ∈ outerEdges G Q r) :
++    ∀ x ∈ e.val, x ∈ multipleTips G r := by
++  obtain ⟨u, v, he⟩ := Sym2.exists.mp (show ∃ z : Sym2 V, z = e.val from ⟨e.val, rfl⟩)
++  have hends := outerEdges_endpoints G Q r e he.symm heo
++  have hc := (card_le_card (outer_edge_types_cover_root_labels G Q hQ r e he.symm heo)).trans
++    (card_union_le _ _)
++  have hu := ht u hends.2.1
++  have hv := ht v hends.2.2.1
++  rw [← he, Sym2.forall_mem_pair]
++  exact ⟨mem_filter.mpr ⟨mem_univ _, hends.2.1, by omega⟩,
++    mem_filter.mpr ⟨mem_univ _, hends.2.2.1, by omega⟩⟩
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem outer_incidence_sum_eq_twice
++    (Q : Finset G.edgeSet) (r : V) (P : Finset V)
++    (hp : ∀ e ∈ outerEdges G Q r, ∀ x ∈ e.val, x ∈ P) :
++    (∑ x ∈ P, (edgeIncidences G (outerEdges G Q r) x).card) =
++      2 * (outerEdges G Q r).card := by
++  have hi : edgesInside G (outerEdges G Q r) P = outerEdges G Q r := by
++    apply filter_eq_self.mpr
++    exact hp
++  have hm : edgesMeeting G (outerEdges G Q r) P = outerEdges G Q r := by
++    apply filter_eq_self.mpr
++    intro e he
++    obtain ⟨u, v, huv⟩ := Sym2.exists.mp (show ∃ z : Sym2 V, z = e.val from ⟨e.val, rfl⟩)
++    have hu : u ∈ e.val := huv ▸ Sym2.mem_mk_left u v
++    exact ⟨u, hp e he u hu, hu⟩
++  have hc := incidence_sum_eq_meeting_add_inside G (outerEdges G Q r) P
++  rw [hi, hm] at hc
++  omega
++
++theorem high22_outer_card_le_four_of_root_types_le_two
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 4)
++    (ht : ∀ x, x ≠ r → (rootType G r x).card ≤ 2) :
++    (outerEdges G Q r).card ≤ 4 := by
++  have hfull : rootLabels G Q r = G.neighborFinset r :=
++    eq_of_subset_of_card_le (rootLabels_subset_neighbors G Q r)
++      (by simpa only [hR, SimpleGraph.card_neighborFinset_eq_degree] using hΔ r)
++  have hp := high22_multipleTips_card_le_four G hΔ Q h22 r hfull
++  have hi := outer_incidence_sum_eq_twice G Q r (multipleTips G r)
++    (outer_endpoints_multiple_of_root_four G Q hQ r hR ht)
++  have hs : ∀ x ∈ multipleTips G r, (edgeIncidences G (outerEdges G Q r) x).card ≤ 2 := by
++    intro x hx
++    have hb := outer_incidence_add_type_card_le_degree G Q r x
++    have hd := hΔ x
++    have hc := (mem_filter.mp hx).2.2
++    omega
++  have hsum := sum_le_sum hs
++  simp only [sum_const, smul_eq_mul] at hsum
++  omega
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem rootEdges_card_le_tips_add_multiple
++    (Q : Finset G.edgeSet) (r : V)
++    (ht : ∀ x, x ≠ r → (rootType G r x).card ≤ 2) :
++    (rootEdges G Q r).card ≤ (rootTips G Q r).card +
++      ((rootTips G Q r).filter (fun x => x ∈ multipleTips G r)).card := by
++  have hs : ∀ x ∈ rootTips G Q r, (rootType G r x).card ≤
++      1 + if x ∈ multipleTips G r then 1 else 0 := by
++    intro x hx
++    have hxr := (mem_filter.mp hx).2.1
++    have hc := ht x hxr
++    by_cases hp : x ∈ multipleTips G r
++    · simp only [hp, ite_true]; omega
++    · have hn : ¬ 2 ≤ (rootType G r x).card := fun h => hp (mem_filter.mpr ⟨mem_univ _, hxr, h⟩)
++      simp only [hp, ite_false]; omega
++  have hc := (rootEdges_card_le_tip_weight G Q r).trans (sum_le_sum hs)
++  simpa only [sum_add_distrib, sum_const, smul_eq_mul, mul_one, ← sum_filter, ← card_eq_sum_ones] using hc
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem rootEdges_card_le_twice_multiple_of_no_single
++    (Q : Finset G.edgeSet) (r : V)
++    (ht : ∀ x, x ≠ r → (rootType G r x).card ≤ 2)
++    (hn : ¬ (singleTips G Q r).Nonempty) :
++    (rootEdges G Q r).card ≤ 2 * (multipleTips G r).card := by
++  have hs : rootTips G Q r ⊆ multipleTips G r := by
++    intro x hx
++    obtain ⟨_, hxr, a, haN, e, heQ, he⟩ := mem_filter.mp hx
++    apply mem_filter.mpr
++    refine ⟨mem_univ _, hxr, ?_⟩
++    by_contra hncard
++    have haT : a ∈ rootType G r x := (mem_rootType G r x a).mpr
++      ⟨(G.mem_neighborFinset r a).mp haN, (G.mem_edgeSet.mp (he ▸ e.property)).symm⟩
++    have hxT : rootType G r x = {a} := eq_singleton_iff_unique_mem.mpr
++      ⟨haT, fun b hb => card_le_one.mp (by omega) b hb a haT⟩
++    exact hn ⟨x, mem_filter.mpr ⟨mem_univ _, hxr, a, haN, hxT, e, heQ, he⟩⟩
++  have hc := card_le_card hs
++  have hsum := sum_le_sum (s := rootTips G Q r)
++    (fun x hx => ht x (mem_filter.mp hx).2.1)
++  have he := rootEdges_card_le_tip_weight G Q r
++  simp only [sum_const, smul_eq_mul] at hsum
++  omega
++
++theorem high22_outer_degree_eq_two_of_four
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 4)
++    (ht : ∀ x, x ≠ r → (rootType G r x).card ≤ 2)
++    (ho : (outerEdges G Q r).card = 4) {y : V} (hy : y ∈ multipleTips G r) :
++    (edgeIncidences G (outerEdges G Q r) y).card = 2 := by
++  have hfull : rootLabels G Q r = G.neighborFinset r :=
++    eq_of_subset_of_card_le (rootLabels_subset_neighbors G Q r)
++      (by simpa only [hR, SimpleGraph.card_neighborFinset_eq_degree] using hΔ r)
++  have hp := high22_multipleTips_card_le_four G hΔ Q h22 r hfull
++  have hi := outer_incidence_sum_eq_twice G Q r (multipleTips G r)
++    (outer_endpoints_multiple_of_root_four G Q hQ r hR ht)
++  have hbound : ∀ x ∈ multipleTips G r, (edgeIncidences G (outerEdges G Q r) x).card ≤ 2 := by
++    intro x hx
++    have hb := outer_incidence_add_type_card_le_degree G Q r x
++    have hd := hΔ x
++    have hc := (mem_filter.mp hx).2.2
++    omega
++  have hyb := hbound y hy
++  have he := sum_erase_add (multipleTips G r)
++    (fun x => (edgeIncidences G (outerEdges G Q r) x).card) hy
++  have hce := card_erase_add_one hy
++  have hsum := sum_le_sum (s := (multipleTips G r).erase y)
++    (fun x hx => hbound x (mem_erase.mp hx).2)
++  simp only [sum_const, smul_eq_mul] at hsum
++  omega
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem outer_saturated_neighbors
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet) (r : V) (P : Finset V)
++    (hp : ∀ e ∈ outerEdges G Q r, ∀ x ∈ e.val, x ∈ P)
++    {y : V} (hsat : 4 ≤ (edgeIncidences G (outerEdges G Q r) y).card + (rootType G r y).card)
++    {x : V} (hxy : G.Adj y x) : G.Adj r x ∨ x ∈ P := by
++  have hsub : rootLabels G (outerEdges G Q r) y ∪ rootType G r y ⊆ G.neighborFinset y := by
++    apply union_subset (rootLabels_subset_neighbors G _ y)
++    intro a ha
++    exact (G.mem_neighborFinset y a).mpr ((mem_rootType G r y a).mp ha).2
++  have hdis : Disjoint (rootLabels G (outerEdges G Q r) y) (rootType G r y) := by
++    apply disjoint_left.mpr
++    intro a ha ht
++    obtain ⟨_, e, heo, he⟩ := mem_filter.mp ha
++    exact (mem_filter.mp heo).2.2 a (he.symm ▸ Sym2.mem_mk_right y a)
++      ((mem_rootType G r y a).mp ht).1
++  have heq : rootLabels G (outerEdges G Q r) y ∪ rootType G r y = G.neighborFinset y := by
++    apply eq_of_subset_of_card_le hsub
++    rw [card_union_of_disjoint hdis, rootLabels_card, SimpleGraph.card_neighborFinset_eq_degree]
++    exact (hΔ y).trans hsat
++  have hx : x ∈ rootLabels G (outerEdges G Q r) y ∪ rootType G r y :=
++    heq.symm ▸ (G.mem_neighborFinset y x).mpr hxy
++  rcases mem_union.mp hx with hx | hx
++  · obtain ⟨_, e, heo, he⟩ := mem_filter.mp hx
++    exact Or.inr (hp e heo x (he.symm ▸ Sym2.mem_mk_right y x))
++  · exact Or.inl ((mem_rootType G r y x).mp hx).1
++
++theorem high22_active_multiple_card_le_two_of_outer_four
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 4)
++    (ht : ∀ x, x ≠ r → (rootType G r x).card ≤ 2)
++    (ho : (outerEdges G Q r).card = 4)
++    {a x : V} (ha : G.Adj r a) (hxT : rootType G r x = {a})
++    (e : G.edgeSet) (heQ : e ∈ Q) (he : e.val = s(a, x)) :
++    ((rootTips G Q r).filter (fun y => y ∈ multipleTips G r)).card ≤ 2 := by
++  have hfull : rootLabels G Q r = G.neighborFinset r :=
++    eq_of_subset_of_card_le (rootLabels_subset_neighbors G Q r)
++      (by simpa only [hR, SimpleGraph.card_neighborFinset_eq_degree] using hΔ r)
++  have hN := high22_root_neighborhood_independent G hΔ Q h22 r (by omega)
++  have hnx := root_edge_tip_not_neighbor G hN ha e he
++  have hxp : x ∉ multipleTips G r := by
++    intro hp
++    have hc := (mem_filter.mp hp).2.2
++    simp only [hxT, card_singleton] at hc
++    omega
++  have hs : (rootTips G Q r).filter (fun y => y ∈ multipleTips G r) ⊆
++      (multipleTips G r).filter (fun y => a ∈ rootType G r y) := by
++    intro y hy
++    obtain ⟨hyt, hyp⟩ := mem_filter.mp hy
++    apply mem_filter.mpr
++    refine ⟨hyp, ?_⟩
++    by_contra hna
++    have hxy := rootTips_adj_of_single G Q hQ hN ha hxT e heQ he hyt hna
++    have hdy := high22_outer_degree_eq_two_of_four G hΔ Q hQ h22 r hR ht ho hyp
++    have hty := (mem_filter.mp hyp).2.2
++    have hres := outer_saturated_neighbors G hΔ Q r (multipleTips G r)
++      (outer_endpoints_multiple_of_root_four G Q hQ r hR ht) (by omega) hxy.symm
++    exact hres.elim hnx hxp
++  exact (card_le_card hs).trans (high22_root_label_multiple_card_le_two G hΔ Q h22
++    (hfull.symm ▸ (G.mem_neighborFinset r a).mpr ha))
++
++theorem high22_clique_card_le_seventeen_of_root_four
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).card = 4) : Q.card ≤ 17 := by
++  by_cases htr : ∃ x, x ≠ r ∧ 3 ≤ (rootType G r x).card
++  · obtain ⟨x, hxr, hx⟩ := htr
++    exact high22_clique_card_le_seventeen_of_root_triple G hΔ Q hQ h22 r hR hxr hx
++  have ht : ∀ x, x ≠ r → (rootType G r x).card ≤ 2 := by
++    intro x hxr
++    have hn : ¬ 3 ≤ (rootType G r x).card := fun h => htr ⟨x, hxr, h⟩
++    omega
++  have hfull : rootLabels G Q r = G.neighborFinset r :=
++    eq_of_subset_of_card_le (rootLabels_subset_neighbors G Q r)
++      (by simpa only [hR, SimpleGraph.card_neighborFinset_eq_degree] using hΔ r)
++  have hp := high22_multipleTips_card_le_four G hΔ Q h22 r hfull
++  have ho := high22_outer_card_le_four_of_root_types_le_two G hΔ Q hQ h22 r hR ht
++  have hstar : (edgeIncidences G Q r).card = 4 := by rw [← rootLabels_card G Q r, hR]
++  have hc := clique_card_le_star_root_outer G Q r
++  by_cases hsingle : (singleTips G Q r).Nonempty
++  · obtain ⟨x, hx⟩ := hsingle
++    obtain ⟨_, _, a, haN, hxT, e, heQ, he⟩ := mem_filter.mp hx
++    have ha := (G.mem_neighborFinset r a).mp haN
++    have hN := high22_root_neighborhood_independent G hΔ Q h22 r (by omega)
++    have htip := rootTips_card_le_six_of_single G hΔ Q hQ hN ha hxT e heQ he
++    have hroot := rootEdges_card_le_tips_add_multiple G Q r ht
++    have hsub : (rootTips G Q r).filter (fun y => y ∈ multipleTips G r) ⊆ multipleTips G r := by
++      intro y hy
++      exact (mem_filter.mp hy).2
++    have hact := card_le_card hsub
++    by_contra hn
++    have hfour : (outerEdges G Q r).card = 4 := by omega
++    have htwo := high22_active_multiple_card_le_two_of_outer_four G hΔ Q hQ h22 r hR ht hfour
++      ha hxT e heQ he
++    omega
++  · have hroot := rootEdges_card_le_twice_multiple_of_no_single G Q r ht hsingle
++    omega
++
++end StrongEdge
+--- /dev/null
++++ high22/StrongEdge/Bounds/High22Subcubic.lean
+@@ -0,0 +1,133 @@
++module
++
++public import StrongEdge.Bounds.High22Heavy
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++
++theorem root_outer_incidence_add_le (Q : Finset G.edgeSet) (r x : V) :
++    (edgeIncidences G (rootEdges G Q r) x).card +
++      (edgeIncidences G (outerEdges G Q r) x).card ≤ (edgeIncidences G Q x).card := by
++  have hs : edgeIncidences G (rootEdges G Q r) x ∪ edgeIncidences G (outerEdges G Q r) x ⊆
++      edgeIncidences G Q x := by
++    intro e he
++    rcases mem_union.mp he with he | he
++    · obtain ⟨her, hxe⟩ := mem_filter.mp he
++      exact mem_filter.mpr ⟨(mem_filter.mp (mem_filter.mp her).1).1, hxe⟩
++    · obtain ⟨heo, hxe⟩ := mem_filter.mp he
++      exact mem_filter.mpr ⟨(mem_filter.mp heo).1, hxe⟩
++  have hd : Disjoint (edgeIncidences G (rootEdges G Q r) x) (edgeIncidences G (outerEdges G Q r) x) := by
++    apply disjoint_left.mpr
++    intro e her heo
++    obtain ⟨_, a, haN, hae⟩ := mem_filter.mp (mem_filter.mp (mem_filter.mp her).1).1
++    exact (mem_filter.mp (mem_filter.mp heo).1).2.2 a hae ((G.mem_neighborFinset r a).mp haN)
++  have hc := card_le_card hs
++  rwa [card_union_of_disjoint hd] at hc
++
++theorem root_incidence_at_tip_le_type
++    (Q : Finset G.edgeSet) (r : V) (hN : G.IsIndepSet (G.neighborSet r))
++    {x : V} (hx : x ∈ rootTips G Q r) :
++    (edgeIncidences G (rootEdges G Q r) x).card ≤ (rootType G r x).card := by
++  obtain ⟨_, _, b, hbN, f, _, hf⟩ := mem_filter.mp hx
++  have hnx := root_edge_tip_not_neighbor G hN ((G.mem_neighborFinset r b).mp hbN) f hf
++  apply card_le_via_relation _ _ (fun e y => e.val = s(x, y))
++  · intro e he
++    obtain ⟨her, hxe⟩ := mem_filter.mp he
++    obtain ⟨_, a, haN, hae⟩ := mem_filter.mp (mem_filter.mp her).1
++    obtain ⟨y, hey⟩ := Sym2.mem_iff_exists.mp hxe
++    have hxy : G.Adj x y := G.mem_edgeSet.mp (hey ▸ e.property)
++    have hay : a = y := by
++      rw [hey, Sym2.mem_iff] at hae
++      rcases hae with h | h
++      · exact (hnx (h ▸ (G.mem_neighborFinset r a).mp haN)).elim
++      · exact h
++    exact ⟨y, (mem_rootType G r x y).mpr ⟨hay ▸ (G.mem_neighborFinset r a).mp haN, hxy⟩, hey⟩
++  · intro e he f hf y hey hfy
++    exact Subtype.ext (hey.trans hfy.symm)
++
++theorem rootEdges_card_le_tips_of_incidence_le_one
++    (Q : Finset G.edgeSet) (r : V)
++    (hd : ∀ x ∈ rootTips G Q r, (edgeIncidences G (rootEdges G Q r) x).card ≤ 1) :
++    (rootEdges G Q r).card ≤ (rootTips G Q r).card := by
++  apply card_le_via_relation _ _ (fun e x => x ∈ rootTips G Q r ∧ x ∈ e.val)
++  · intro e he
++    obtain ⟨hem, hr⟩ := mem_filter.mp he
++    obtain ⟨heQ, a, ha, hae⟩ := mem_filter.mp hem
++    obtain ⟨x, hex⟩ := Sym2.mem_iff_exists.mp hae
++    have hxr : x ≠ r := by
++      intro h
++      exact hr (hex.symm ▸ h ▸ Sym2.mem_mk_right a x)
++    have hx : x ∈ rootTips G Q r := mem_filter.mpr ⟨mem_univ _, hxr, a, ha, e, heQ, hex⟩
++    exact ⟨x, hx, hx, hex.symm ▸ Sym2.mem_mk_right a x⟩
++  · intro e he f hf x hxe hxf
++    exact card_le_one.mp (hd x hxe.1) e (mem_filter.mpr ⟨he, hxe.2⟩)
++      f (mem_filter.mpr ⟨hf, hxf.2⟩)
++
++theorem rootTips_subset_multiple_of_no_single
++    (Q : Finset G.edgeSet) (r : V) (hn : ¬ (singleTips G Q r).Nonempty) :
++    rootTips G Q r ⊆ multipleTips G r := by
++  intro x hx
++  obtain ⟨_, hxr, a, haN, e, heQ, he⟩ := mem_filter.mp hx
++  apply mem_filter.mpr
++  refine ⟨mem_univ _, hxr, ?_⟩
++  by_contra hncard
++  have haT : a ∈ rootType G r x := (mem_rootType G r x a).mpr
++    ⟨(G.mem_neighborFinset r a).mp haN, (G.mem_edgeSet.mp (he ▸ e.property)).symm⟩
++  have hxT : rootType G r x = {a} := eq_singleton_iff_unique_mem.mpr
++    ⟨haT, fun b hb => card_le_one.mp (by omega) b hb a haT⟩
++  exact hn ⟨x, mem_filter.mpr ⟨mem_univ _, hxr, a, haN, hxT, e, heQ, he⟩⟩
++
++variable [DecidableRel (conflictGraph G).Adj]
++
++theorem high22_clique_card_le_seventeen_of_support_degree_le_three
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (hQdeg : ∀ x, (edgeIncidences G Q x).card ≤ 3) : Q.card ≤ 17 := by
++  by_cases htwo : ∀ x, (edgeIncidences G Q x).card ≤ 2
++  · exact (clique_card_le_thirteen_of_support_degree_le_two G hΔ Q hQ htwo).trans (by omega)
++  obtain ⟨r, hr⟩ := not_forall.mp htwo
++  have hstar : (edgeIncidences G Q r).card = 3 := by have := hQdeg r; omega
++  have hR : (rootLabels G Q r).card = 3 := by rw [rootLabels_card, hstar]
++  have hN := high22_root_neighborhood_independent G hΔ Q h22 r (by omega)
++  by_contra hn
++  have hm := incidence_sum_eq_meeting_add_inside G Q (G.neighborFinset r)
++  have hsum := sum_le_sum (s := G.neighborFinset r) (fun x _ => hQdeg x)
++  have hdr := hΔ r
++  simp only [sum_const, smul_eq_mul, SimpleGraph.card_neighborFinset_eq_degree] at hsum
++  have hcover := selected_edges_card_le_meeting_add_outer G Q r
++  have hob := high22_outer_card_le_six_of_root_three G hΔ Q hQ h22 r hR
++  have ho : (outerEdges G Q r).card = 6 := by omega
++  obtain ⟨hp, hpd⟩ := high22_heavy_card_and_degree_of_outer_six G hΔ Q hQ h22 r hR ho
++  have hmh := high22_multiple_subset_heavy_of_three G hΔ Q h22 r hR hp
++  have hrd : ∀ x ∈ rootTips G Q r, (edgeIncidences G (rootEdges G Q r) x).card ≤ 1 := by
++    intro x hx
++    by_cases hxm : x ∈ multipleTips G r
++    · have hd := hpd x (hmh hxm)
++      have hi := root_outer_incidence_add_le G Q r x
++      have hq := hQdeg x
++      omega
++    · have hxr := (mem_filter.mp hx).2.1
++      have hsmall : (rootType G r x).card ≤ 1 := by
++        have hh : ¬ 2 ≤ (rootType G r x).card := fun h => hxm (mem_filter.mpr ⟨mem_univ _, hxr, h⟩)
++        omega
++      exact (root_incidence_at_tip_le_type G Q r hN hx).trans hsmall
++  have hroot := rootEdges_card_le_tips_of_incidence_le_one G Q r hrd
++  have hc := clique_card_le_star_root_outer G Q r
++  by_cases hs : (singleTips G Q r).Nonempty
++  · obtain ⟨x, hx⟩ := hs
++    obtain ⟨_, _, a, haN, hxT, e, heQ, he⟩ := mem_filter.mp hx
++    have ht := rootTips_card_le_six_of_single G hΔ Q hQ hN ((G.mem_neighborFinset r a).mp haN)
++      hxT e heQ he
++    omega
++  · have ht := card_le_card ((rootTips_subset_multiple_of_no_single G Q r hs).trans hmh)
++    omega
++
++end StrongEdge
+--- /dev/null
++++ high22/StrongEdge/Bounds/High22Support.lean
+@@ -0,0 +1,210 @@
++module
++
++public import StrongEdge.Bounds.High22Local
++public import StrongEdge.Bounds.High23Four
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++variable [DecidableRel (conflictGraph G).Adj]
++
++theorem high22_root_degree_four
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : (rootLabels G Q r).Nonempty) : G.degree r = 4 := by
++  obtain ⟨a, ha⟩ := hR
++  obtain ⟨_, e, heQ, hea⟩ := mem_filter.mp ha
++  exact (high22_endpoints_degree_four G hΔ e hea (h22 e heQ)).1
++
++theorem high22_root_neighborhood_independent
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : 3 ≤ (rootLabels G Q r).card) :
++    G.IsIndepSet (G.neighborSet r) := by
++  intro a ha b hb hab hAdj
++  change G.Adj r a at ha
++  change G.Adj r b at hb
++  have hnot (x : V) (hx : x ∈ rootLabels G Q r) : x ≠ a ∧ x ≠ b := by
++    obtain ⟨_, e, heQ, hex⟩ := mem_filter.mp hx
++    constructor
++    · intro hxa
++      exact high22_no_triangle_on_edge G hΔ e (by simpa only [hxa] using hex)
++        (h22 e heQ) hb hAdj
++    · intro hxb
++      exact high22_no_triangle_on_edge G hΔ e (by simpa only [hxb] using hex)
++        (h22 e heQ) ha hAdj.symm
++  have hs : rootLabels G Q r ⊆ ((G.neighborFinset r).erase a).erase b := by
++    intro x hx
++    exact mem_erase.mpr ⟨(hnot x hx).2, mem_erase.mpr ⟨(hnot x hx).1,
++      rootLabels_subset_neighbors G Q r hx⟩⟩
++  have hc := card_le_card hs
++  have hca := card_erase_add_one ((G.mem_neighborFinset r a).mpr ha)
++  have hcb := card_erase_add_one (mem_erase.mpr ⟨hab.symm, (G.mem_neighborFinset r b).mpr hb⟩)
++  have hd := hΔ r
++  simp only [SimpleGraph.card_neighborFinset_eq_degree] at hca
++  omega
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem fourCycleOpposites_card_eq_root_load (r a : V) :
++    (fourCycleOpposites G r a).card =
++      ∑ x ∈ (G.neighborFinset a).erase r, ((rootType G r x).erase a).card := by
++  have ht (x : V) : (rootType G r x).erase a =
++      ((G.neighborFinset r).erase a).filter (G.Adj x) := by
++    ext b
++    simp [rootType, and_assoc]
++  simp only [fourCycleOpposites, ht, card_eq_sum_ones, sum_filter, sum_product]
++  rw [sum_comm]
++  apply sum_congr rfl
++  intro x hx
++  apply sum_congr rfl
++  intro b hb
++  simp only [G.adj_comm b x]
++
++/-- The cross-edge part of the two-loss budget at a selected root label.
++Every original neighbour of the label is included, even outside Q's support. -/
++theorem high22_root_label_budget_two
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    {r a : V} (ha : a ∈ rootLabels G Q r) :
++    (∑ x ∈ (G.neighborFinset a).erase r, ((rootType G r x).erase a).card) ≤ 2 := by
++  obtain ⟨_, e, heQ, he⟩ := mem_filter.mp ha
++  rw [← fourCycleOpposites_card_eq_root_load]
++  exact high22_at_most_two_four_cycles_on_edge G hΔ e he (h22 e heQ)
++
++theorem high22_root_type_erase_card_le_two
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    {r a x : V} (ha : a ∈ rootLabels G Q r) (hxr : x ≠ r)
++    (hax : a ∈ rootType G r x) : ((rootType G r x).erase a).card ≤ 2 := by
++  have hx : x ∈ (G.neighborFinset a).erase r := mem_erase.mpr
++    ⟨hxr, (G.mem_neighborFinset a x).mpr ((mem_rootType G r x a).mp hax).2.symm⟩
++  exact (single_le_sum (fun y _ => Nat.zero_le _) hx).trans
++    (high22_root_label_budget_two G hΔ Q h22 ha)
++
++theorem high22_root_type_card_le_three
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hR : 3 ≤ (rootLabels G Q r).card)
++    {x : V} (hxr : x ≠ r) : (rootType G r x).card ≤ 3 := by
++  by_contra hn
++  obtain ⟨a, ha⟩ := high23_type_meets_root_labels G hΔ Q r x hR (by omega)
++  have hcard := card_erase_add_one (mem_inter.mp ha).1
++  have hbudget := high22_root_type_erase_card_le_two G hΔ Q h22 (mem_inter.mp ha).2 hxr
++    (mem_inter.mp ha).1
++  omega
++
++omit [DecidableRel (conflictGraph G).Adj] in
++def multipleTips (r : V) : Finset V :=
++  univ.filter (fun x => x ≠ r ∧ 2 ≤ (rootType G r x).card)
++
++theorem high22_root_label_multiple_card_le_two
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    {r a : V} (ha : a ∈ rootLabels G Q r) :
++    ((multipleTips G r).filter (fun x => a ∈ rootType G r x)).card ≤ 2 := by
++  classical
++  let S := (multipleTips G r).filter (fun x => a ∈ rootType G r x)
++  have hs : S ⊆ (G.neighborFinset a).erase r := by
++    intro x hx
++    obtain ⟨hxP, hax⟩ := mem_filter.mp hx
++    exact mem_erase.mpr ⟨(mem_filter.mp hxP).2.1,
++      (G.mem_neighborFinset a x).mpr ((mem_rootType G r x a).mp hax).2.symm⟩
++  have hle : S.card ≤ ∑ x ∈ S, ((rootType G r x).erase a).card := by
++    calc
++      S.card = ∑ _x ∈ S, 1 := card_eq_sum_ones S
++      _ ≤ _ := by
++        apply sum_le_sum
++        intro x hx
++        obtain ⟨hxP, hax⟩ := mem_filter.mp hx
++        have ht := (mem_filter.mp hxP).2.2
++        have hc := card_erase_add_one hax
++        omega
++  exact hle.trans ((sum_le_sum_of_subset_of_nonneg hs (fun _ _ _ => Nat.zero_le _)).trans
++    (high22_root_label_budget_two G hΔ Q h22 ha))
++
++theorem high22_shared_root_types_card_le_four
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    {r a x y : V} (ha : a ∈ rootLabels G Q r)
++    (hxr : x ≠ r) (hyr : y ≠ r) (hxy : x ≠ y)
++    (hax : a ∈ rootType G r x) (hay : a ∈ rootType G r y) :
++    (rootType G r x).card + (rootType G r y).card ≤ 4 := by
++  have hx : x ∈ (G.neighborFinset a).erase r := mem_erase.mpr
++    ⟨hxr, (G.mem_neighborFinset a x).mpr ((mem_rootType G r x a).mp hax).2.symm⟩
++  have hy : y ∈ (G.neighborFinset a).erase r := mem_erase.mpr
++    ⟨hyr, (G.mem_neighborFinset a y).mpr ((mem_rootType G r y a).mp hay).2.symm⟩
++  have hs : ({x, y} : Finset V) ⊆ (G.neighborFinset a).erase r := by
++    intro z hz
++    rcases mem_insert.mp hz with h | h
++    · exact h ▸ hx
++    · exact (mem_singleton.mp h) ▸ hy
++  have hc := sum_le_sum_of_subset_of_nonneg (f := fun z => ((rootType G r z).erase a).card)
++    hs (fun _ _ _ => Nat.zero_le _)
++  simp only [sum_pair hxy] at hc
++  have hb := high22_root_label_budget_two G hΔ Q h22 ha
++  have hxcard := card_erase_add_one hax
++  have hycard := card_erase_add_one hay
++  omega
++
++omit [DecidableRel (conflictGraph G).Adj] in
++theorem root_type_card_sum_eq_label_sum (P : Finset V) (r : V) :
++    (∑ x ∈ P, (rootType G r x).card) =
++      ∑ a ∈ G.neighborFinset r, (P.filter (fun x => a ∈ rootType G r x)).card := by
++  classical
++  calc
++    _ = ∑ x ∈ P, ∑ a ∈ G.neighborFinset r, if G.Adj x a then 1 else 0 := by
++      apply sum_congr rfl
++      intro x hx
++      simp only [rootType, card_eq_sum_ones, sum_filter]
++    _ = ∑ a ∈ G.neighborFinset r, ∑ x ∈ P, if G.Adj x a then 1 else 0 := sum_comm
++    _ = _ := by
++      apply sum_congr rfl
++      intro a ha
++      simp only [card_eq_sum_ones, sum_filter]
++      apply sum_congr rfl
++      intro x hx
++      simp only [mem_rootType, (G.mem_neighborFinset r a).mp ha, true_and]
++
++theorem high22_multipleTips_card_le_four
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hfull : rootLabels G Q r = G.neighborFinset r) :
++    (multipleTips G r).card ≤ 4 := by
++  have hl := sum_le_sum (s := multipleTips G r)
++    (fun x hx => (mem_filter.mp hx).2.2)
++  have hu := sum_le_sum (s := G.neighborFinset r) (fun a ha =>
++    high22_root_label_multiple_card_le_two G hΔ Q h22 (hfull.symm ▸ ha))
++  have hi := root_type_card_sum_eq_label_sum G (multipleTips G r) r
++  have hd := hΔ r
++  simp only [sum_const, smul_eq_mul, SimpleGraph.card_neighborFinset_eq_degree] at hl hu
++  omega
++
++theorem high22_multipleTips_eq_of_triple
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (h22 : ∀ e ∈ Q, 22 ≤ (conflictGraph G).degree e)
++    (r : V) (hfull : rootLabels G Q r = G.neighborFinset r)
++    {x : V} (hxr : x ≠ r) (hx : 3 ≤ (rootType G r x).card)
++    {y : V} (hy : y ∈ multipleTips G r) : y = x := by
++  by_contra hxy
++  obtain ⟨_, hyr, hycard⟩ := mem_filter.mp hy
++  have hc := card_union_add_card_inter (rootType G r x) (rootType G r y)
++  have hu := card_le_card (union_subset (filter_subset (G.Adj x) (G.neighborFinset r))
++    (filter_subset (G.Adj y) (G.neighborFinset r)))
++  change (rootType G r x ∪ rootType G r y).card ≤ (G.neighborFinset r).card at hu
++  have hd := hΔ r
++  simp only [SimpleGraph.card_neighborFinset_eq_degree] at hu
++  have hpos : 0 < (rootType G r x ∩ rootType G r y).card := by omega
++  obtain ⟨a, ha⟩ := card_pos.mp hpos
++  obtain ⟨hax, hay⟩ := mem_inter.mp ha
++  have haR : a ∈ rootLabels G Q r := hfull.symm ▸ (filter_subset _ _ hax)
++  have hb := high22_shared_root_types_card_le_four G hΔ Q h22 haR hxr hyr (Ne.symm hxy) hax hay
++  omega
++
++end StrongEdge
++
+--- /dev/null
++++ high22/StrongEdge/Bounds/RootCounting.lean
+@@ -0,0 +1,145 @@
++module
++
++public import StrongEdge.Bounds.High23Four
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++
++def rootTips (Q : Finset G.edgeSet) (r : V) : Finset V :=
++  univ.filter (fun x => x ≠ r ∧ ∃ a ∈ G.neighborFinset r, ∃ e ∈ Q, e.val = s(a, x))
++
++def rootEdges (Q : Finset G.edgeSet) (r : V) : Finset G.edgeSet :=
++  (edgesMeeting G Q (G.neighborFinset r)).filter (fun e => r ∉ e.val)
++
++theorem root_single_edge_outer_adj {r a b x y : V}
++    (hN : G.IsIndepSet (G.neighborSet r))
++    (ha : G.Adj r a) (hb : G.Adj r b)
++    (hx : rootType G r x = {a}) (hy : a ∉ rootType G r y)
++    (e f : G.edgeSet) (he : e.val = s(a, x)) (hf : f.val = s(b, y))
++    (hc : StrongConflict G e f) : G.Adj x y := by
++  have hby : G.Adj b y := G.mem_edgeSet.mp (hf ▸ f.property)
++  have hab : a ≠ b := by
++    intro h
++    exact hy ((mem_rootType G r y a).mpr ⟨ha, h ▸ hby.symm⟩)
++  have hnab : ¬ G.Adj a b := hN ha hb hab
++  have hnxb : ¬ G.Adj x b := by
++    intro h
++    have hm := (mem_rootType G r x b).mpr ⟨hb, h⟩
++    have hba : b = a := by simpa only [hx, mem_singleton] using hm
++    exact hab hba.symm
++  have hnay : ¬ G.Adj a y := fun h => hy ((mem_rootType G r y a).mpr ⟨ha, h.symm⟩)
++  obtain ⟨w, hw, hwf⟩ := strongConflict_meets_cover G he hc
++  rw [hf, Sym2.mem_iff] at hwf
++  rcases hwf with hwb | hwy
++  · have hb' : b ∈ endpointNeighbourCover G a x := hwb ▸ hw
++    rcases mem_union.mp hb' with h | h
++    · exact (hnab ((G.mem_neighborFinset a b).mp (mem_erase.mp h).2)).elim
++    · exact (hnxb ((G.mem_neighborFinset x b).mp (mem_erase.mp h).2)).elim
++  · have hy' : y ∈ endpointNeighbourCover G a x := hwy ▸ hw
++    rcases mem_union.mp hy' with h | h
++    · exact (hnay ((G.mem_neighborFinset a y).mp (mem_erase.mp h).2)).elim
++    · exact (G.mem_neighborFinset x y).mp (mem_erase.mp h).2
++
++theorem rootTips_adj_of_single
++    (Q : Finset G.edgeSet) (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    {r a x : V} (hN : G.IsIndepSet (G.neighborSet r))
++    (ha : G.Adj r a) (hx : rootType G r x = {a})
++    (e : G.edgeSet) (heQ : e ∈ Q) (he : e.val = s(a, x))
++    {y : V} (hy : y ∈ rootTips G Q r) (hya : a ∉ rootType G r y) : G.Adj x y := by
++  obtain ⟨_, _, b, hbN, f, hfQ, hf⟩ := mem_filter.mp hy
++  have hb := (G.mem_neighborFinset r b).mp hbN
++  have hny := root_edge_tip_not_neighbor G hN hb f hf
++  have hef : e ≠ f := by
++    intro h
++    have haf : a ∈ f.val := h ▸ (he.symm ▸ Sym2.mem_mk_left a x)
++    rw [hf, Sym2.mem_iff] at haf
++    rcases haf with hab | hay
++    · have hby : G.Adj b y := G.mem_edgeSet.mp (hf ▸ f.property)
++      exact hya ((mem_rootType G r y a).mpr ⟨ha, hab ▸ hby.symm⟩)
++    · exact hny (hay ▸ ha)
++  exact root_single_edge_outer_adj G hN ha hb hx hya e f he hf (hQ heQ hfQ hef)
++
++theorem rootTips_card_le_six_of_single
++    (hΔ : ∀ x, G.degree x ≤ 4) (Q : Finset G.edgeSet)
++    (hQ : (conflictGraph G).IsClique (Q : Set G.edgeSet))
++    {r a x : V} (hN : G.IsIndepSet (G.neighborSet r))
++    (ha : G.Adj r a) (hx : rootType G r x = {a})
++    (e : G.edgeSet) (heQ : e ∈ Q) (he : e.val = s(a, x)) :
++    (rootTips G Q r).card ≤ 6 := by
++  have hax : G.Adj a x := G.mem_edgeSet.mp (he ▸ e.property)
++  have hs : rootTips G Q r ⊆ (G.neighborFinset a).erase r ∪ (G.neighborFinset x).erase a := by
++    intro y hy
++    by_cases hya : a ∈ rootType G r y
++    · exact mem_union_left _ (mem_erase.mpr ⟨(mem_filter.mp hy).2.1,
++        (G.mem_neighborFinset a y).mpr ((mem_rootType G r y a).mp hya).2.symm⟩)
++    · have hxy := rootTips_adj_of_single G Q hQ hN ha hx e heQ he hy hya
++      obtain ⟨_, _, b, hbN, f, _, hf⟩ := mem_filter.mp hy
++      have hny := root_edge_tip_not_neighbor G hN ((G.mem_neighborFinset r b).mp hbN) f hf
++      exact mem_union_right _ (mem_erase.mpr ⟨fun h => hny (h.symm ▸ ha),
++        (G.mem_neighborFinset x y).mpr hxy⟩)
++  have hc := (card_le_card hs).trans (card_union_le _ _)
++  have hca := card_erase_add_one ((G.mem_neighborFinset a r).mpr ha.symm)
++  have hcx := card_erase_add_one ((G.mem_neighborFinset x a).mpr hax.symm)
++  have hda := hΔ a
++  have hdx := hΔ x
++  simp only [SimpleGraph.card_neighborFinset_eq_degree] at hca hcx
++  omega
++
++theorem rootEdges_card_le_tip_weight (Q : Finset G.edgeSet) (r : V) :
++    (rootEdges G Q r).card ≤ ∑ x ∈ rootTips G Q r, (rootType G r x).card := by
++  classical
++  let P := ((G.neighborFinset r) ×ˢ rootTips G Q r).filter (fun p => G.Adj p.2 p.1)
++  have hc : (rootEdges G Q r).card ≤ P.card := by
++    apply card_le_via_relation _ _ (fun e p => e.val = s(p.1, p.2))
++    · intro e he
++      obtain ⟨hem, hr⟩ := mem_filter.mp he
++      obtain ⟨heQ, a, ha, hae⟩ := mem_filter.mp hem
++      obtain ⟨x, hex⟩ := Sym2.mem_iff_exists.mp hae
++      have hxr : x ≠ r := by
++        intro h
++        exact hr (hex.symm ▸ h ▸ Sym2.mem_mk_right a x)
++      have hax : G.Adj a x := G.mem_edgeSet.mp (hex ▸ e.property)
++      refine ⟨(a, x), mem_filter.mpr ⟨mem_product.mpr ⟨ha, ?_⟩, hax.symm⟩, hex⟩
++      exact mem_filter.mpr ⟨mem_univ _, hxr, a, ha, e, heQ, hex⟩
++    · intro e he f hf p hep hfp
++      exact Subtype.ext (hep.trans hfp.symm)
++  have hp : P.card = ∑ x ∈ rootTips G Q r, (rootType G r x).card := by
++    simp only [P, rootType, card_eq_sum_ones, sum_filter, sum_product]
++    exact sum_comm
++  exact hp ▸ hc
++
++theorem clique_card_le_star_root_outer (Q : Finset G.edgeSet) (r : V) :
++    Q.card ≤ (edgeIncidences G Q r).card + (rootEdges G Q r).card + (outerEdges G Q r).card := by
++  have hs : edgesMeeting G Q (G.neighborFinset r) ⊆ edgeIncidences G Q r ∪ rootEdges G Q r := by
++    intro e he
++    by_cases hr : r ∈ e.val
++    · exact mem_union_left _ (mem_filter.mpr ⟨(mem_filter.mp he).1, hr⟩)
++    · exact mem_union_right _ (mem_filter.mpr ⟨he, hr⟩)
++  have hc := (card_le_card hs).trans (card_union_le _ _)
++  have ht := selected_edges_card_le_meeting_add_outer G Q r
++  omega
++
++theorem outer_incidence_add_type_card_le_degree (Q : Finset G.edgeSet) (r x : V) :
++    (edgeIncidences G (outerEdges G Q r) x).card + (rootType G r x).card ≤ G.degree x := by
++  have hsub : rootLabels G (outerEdges G Q r) x ∪ rootType G r x ⊆ G.neighborFinset x := by
++    apply union_subset (rootLabels_subset_neighbors G _ x)
++    intro a ha
++    exact (G.mem_neighborFinset x a).mpr ((mem_rootType G r x a).mp ha).2
++  have hdis : Disjoint (rootLabels G (outerEdges G Q r) x) (rootType G r x) := by
++    apply disjoint_left.mpr
++    intro a ha ht
++    obtain ⟨_, e, heo, he⟩ := mem_filter.mp ha
++    exact (mem_filter.mp heo).2.2 a (he.symm ▸ Sym2.mem_mk_right x a)
++      ((mem_rootType G r x a).mp ht).1
++  have hc := card_le_card hsub
++  rw [card_union_of_disjoint hdis, rootLabels_card, SimpleGraph.card_neighborFinset_eq_degree] at hc
++  exact hc
++
++end StrongEdge
+--- /dev/null
++++ high22/StrongEdge/High22Packing.lean
+@@ -0,0 +1,36 @@
++module
++
++public import StrongEdge.Bounds.High22
++public import StrongEdge.High23Packing
++
++@[expose] public section
++
++namespace StrongEdge
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++variable [DecidableRel (conflictGraph G).Adj]
++variable (hΔ : ∀ x, G.degree x ≤ 4)
++variable
++  (high20 : ∀ Q : Finset G.edgeSet, (conflictGraph G).IsClique (Q : Set G.edgeSet) →
++    (∀ e ∈ Q, 20 ≤ (conflictGraph G).degree e) → Q.card ≤ 19)
++  (high21 : ∀ Q : Finset G.edgeSet, (conflictGraph G).IsClique (Q : Set G.edgeSet) →
++    (∀ e ∈ Q, 21 ≤ (conflictGraph G).degree e) → Q.card ≤ 18)
++
++include hΔ high20 high21
++
++/-- The three highest thresholds are proved; high20 and high21 remain explicit. -/
++theorem minimalCliqueBounds20_of_high20_high21 :
++    MinimalCliqueBounds20 (conflictGraph G) :=
++  minimalCliqueBounds20_of_high20_high21_high22 G hΔ high20 high21
++    (high22_clique_card_le_seventeen G hΔ)
++
++/-- Conditional 20-packing for every candidate set in the complete original graph. -/
++theorem induced_matching_packing20_of_high20_high21
++    (F : Finset G.edgeSet) :
++    ∃ M : Finset G.edgeSet, M ⊆ F ∧ IsInducedMatching G (M : Set G.edgeSet) ∧
++      F.card ≤ 20 * M.card :=
++  induced_matching_packing20_of_minimal_clique_bounds G hΔ
++    (minimalCliqueBounds20_of_high20_high21 G hΔ high20 high21) F
++
++end StrongEdge

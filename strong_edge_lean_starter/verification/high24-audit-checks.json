@@ -1,0 +1,26 @@
+{
+  "audit_exit_code": 0,
+  "audited_theorems": 51,
+  "previous_38_entries_preserved": true,
+  "all_axioms_standard": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_audited_theorems": [
+    "StrongEdge.conflict_degree_eq_24_of_ge",
+    "StrongEdge.mem_branchEdges",
+    "StrongEdge.high24_edge_not_between_neighbors",
+    "StrongEdge.high24_external_conflict_adj",
+    "StrongEdge.high24_distinct_branches_ne",
+    "StrongEdge.high24_mixed_branches_cannot_have_fork",
+    "StrongEdge.branchEdges_card_le_three",
+    "StrongEdge.high24_branch_union_card_le_three",
+    "StrongEdge.high24_side_card_le_three",
+    "StrongEdge.high24_clique_card_le_thirteen",
+    "StrongEdge.high24_clique_card_le_fifteen",
+    "StrongEdge.minimalCliqueBounds20_of_high20_high21_high22_high23",
+    "StrongEdge.induced_matching_packing20_of_high20_high21_high22_high23"
+  ]
+}

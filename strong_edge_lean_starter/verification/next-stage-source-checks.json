@@ -1,0 +1,56 @@
+{
+  "lean_files": 11,
+  "forbidden_token_matches": [],
+  "new_theorems": {
+    "StrongEdge/Bounds/ConflictDegree.lean": [
+      "endpointNeighbourCover_comm",
+      "incident_edge_meets_cover",
+      "lineGraph_adj_meets_cover",
+      "left_notMem_endpointNeighbourCover",
+      "right_notMem_endpointNeighbourCover",
+      "strongConflict_meets_cover",
+      "conflict_neighbors_subset_incidence_cover",
+      "conflict_degree_le_incidence_cover_card",
+      "conflict_degree_le_incidence_sum",
+      "endpointNeighbourCover_card_le_six",
+      "conflict_degree_le_24"
+    ],
+    "StrongEdge/Bounds/ConflictRigidity.lean": [
+      "endpointNeighbourCover_card_eq_six_of_degree_eq_24",
+      "endpoint_degrees_eq_four_of_degree_eq_24",
+      "cover_degree_eq_four_of_degree_eq_24",
+      "cover_independent_of_degree_eq_24",
+      "other_neighbor_sets_disjoint_of_degree_eq_24",
+      "endpoint_neighbor_sets_disjoint_of_degree_eq_24",
+      "endpoint_neighborhood_independent_of_degree_eq_24",
+      "no_cross_edge_of_degree_eq_24"
+    ],
+    "StrongEdge/MinimalPacking.lean": [
+      "minimalCliqueBounds20_of_thresholds",
+      "local20_of_minimal_clique_bounds",
+      "packing20_of_minimal_clique_bounds",
+      "minimalCliqueBounds20_induce",
+      "subset_packing20_of_minimal_clique_bounds",
+      "induced_matching_packing20_of_minimal_clique_bounds"
+    ]
+  },
+  "new_theorem_count": 25,
+  "new_theorems_missing_from_audit": [],
+  "audited_theorem_count": 38,
+  "all_axioms_standard": true,
+  "changed_files_in_prior_hash_manifest": [
+    "StrongEdge.lean",
+    "StrongEdge/Audit.lean"
+  ],
+  "unchanged_prior_core_and_config_files": [
+    "StrongEdge/Basic.lean",
+    "StrongEdge/Conflict.lean",
+    "StrongEdge/DoubleCount.lean",
+    "StrongEdge/Packing.lean",
+    "StrongEdge/PrivateExchange.lean",
+    "StrongEdge/Tests.lean",
+    "lean-toolchain",
+    "lakefile.toml",
+    "lake-manifest.json"
+  ]
+}
