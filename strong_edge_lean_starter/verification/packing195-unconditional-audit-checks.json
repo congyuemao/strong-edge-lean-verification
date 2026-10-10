@@ -1,0 +1,2281 @@
+{
+  "count": 376,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "dependencies": {
+    "StrongEdge.strongConflict_symm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.candidate_independent_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.candidate_degree_le_full": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.private_isClique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.optimal_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.private_degree_mono": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.private_double_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.packing_of_local_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.packing20_of_thresholds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subset_packing20_of_thresholds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing20_of_thresholds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests.path_outer_edges_conflict": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests.separated_outer_edges_do_not_conflict": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.endpointNeighbourCover_comm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.incident_edge_meets_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.lineGraph_adj_meets_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.left_notMem_endpointNeighbourCover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.right_notMem_endpointNeighbourCover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.strongConflict_meets_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.conflict_neighbors_subset_incidence_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.conflict_degree_le_incidence_cover_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.conflict_degree_le_incidence_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.endpointNeighbourCover_card_le_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.conflict_degree_le_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.endpointNeighbourCover_card_eq_six_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.endpoint_degrees_eq_four_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cover_degree_eq_four_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cover_independent_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.other_neighbor_sets_disjoint_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.endpoint_neighbor_sets_disjoint_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.endpoint_neighborhood_independent_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.no_cross_edge_of_degree_eq_24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.minimalCliqueBounds20_of_thresholds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.local20_of_minimal_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.packing20_of_minimal_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.minimalCliqueBounds20_induce": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subset_packing20_of_minimal_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing20_of_minimal_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.conflict_degree_eq_24_of_ge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.mem_branchEdges": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_edge_not_between_neighbors": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_external_conflict_adj": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_distinct_branches_ne": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_mixed_branches_cannot_have_fork": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.branchEdges_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_branch_union_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_side_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_clique_card_le_thirteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high24_clique_card_le_fifteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.minimalCliqueBounds20_of_high20_high21_high22_high23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing20_of_high20_high21_high22_high23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.card_le_via_relation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.edgeIncidences_univ_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.edgeIncidences_card_le_degree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.edge_endpoint_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.incidence_sum_eq_meeting_add_inside": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.conflict_degree_add_inside_le_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_one_add_incidence_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_thirteen_of_support_degree_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_cover_card_eq_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_endpoints_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_other_neighbor_sets_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_no_triangle_on_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_cover_inside_card_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_cross_edges_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_at_most_one_four_cycle_on_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.mem_rootType": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootLabels_subset_neighbors": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootLabels_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_root_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_root_neighborhood_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_root_cross_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_type_meets_root_labels": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_root_type_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_double_type_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_type_singleton_of_sharing_double": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outerEdges_endpoints": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_edge_types_cover_root_labels": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_outer_edges_incident_double_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_outer_card_le_two_of_double_root_type": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_outer_edges_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selected_edges_card_le_meeting_add_outer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_clique_card_le_fourteen_of_support_degree_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_edge_tip_not_neighbor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_single_edges_outer_adj": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_singleTips_card_le_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.singleRootEdges_card_le_singleTips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_doubleRootEdges_card_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.meeting_edges_subset_root_single_double": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_meeting_card_le_fourteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_clique_card_le_sixteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_clique_card_le_sixteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.minimalCliqueBounds20_of_high20_high21_high22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing20_of_high20_high21_high22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_cover_card_eq_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_endpoints_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_other_neighbor_sets_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_no_triangle_on_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_cover_inside_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_at_most_two_four_cycles_on_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_single_edge_outer_adj": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootTips_adj_of_single": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootTips_card_le_six_of_single": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootEdges_card_le_tip_weight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_star_root_outer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_incidence_add_type_card_le_degree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_root_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_root_neighborhood_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.fourCycleOpposites_card_eq_root_load": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_root_label_budget_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_root_type_erase_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_root_type_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_root_label_multiple_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_shared_root_types_card_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_type_card_sum_eq_label_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_multipleTips_card_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_multipleTips_eq_of_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_seventeen_of_root_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_endpoints_multiple_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_incidence_sum_eq_twice": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_outer_card_le_four_of_root_types_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootEdges_card_le_tips_add_multiple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootEdges_card_le_twice_multiple_of_no_single": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_outer_degree_eq_two_of_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_saturated_neighbors": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_active_multiple_card_le_two_of_outer_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_seventeen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.labelHeavyTips_subset_multiple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_type_inter_card_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outerEdges_meet_labelHeavyTips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_heavy_label_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_labelHeavyTips_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_outer_incidence_le_two_at_heavy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_outer_card_le_six_of_root_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_heavy_card_and_degree_of_outer_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_heavy_label_card_eq_two_of_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_multiple_subset_heavy_of_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_outer_incidence_add_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_incidence_at_tip_le_type": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootEdges_card_le_tips_of_incidence_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootTips_subset_multiple_of_no_single": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_seventeen_of_support_degree_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_seventeen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.minimalCliqueBounds20_of_high20_high21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing20_of_high20_high21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.restricted_incidence_card_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.restricted_cover_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_one_add_restricted_incidence_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.degree_two_clique_card_le_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.degree_two_five_cover_saturated": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.degree_two_five_supported_degree_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.degree_two_clique_card_le_four_of_selected_bipartition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_eighteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootType_eq_neighbor_inter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.multipleTips_not_neighbor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.residual_neighbors_add_type_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_selected_edges_force_adj": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.fullDoubleTips_adj_of_types_ne": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_full_double_types_equal_or_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.fullDoubleTips_card_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_large_types_share_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_multipleTips_eq_of_type_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_other_type_le_two_of_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_multiple_unique_at_triple_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_multipleTips_subset_triple_outer_endpoints": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_outer_card_le_two_of_root_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_eighteen_of_root_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_cover_card_eq_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_endpoints_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_other_neighbor_sets_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_no_triangle_on_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_cover_inside_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_at_most_three_four_cycles_on_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_card_le_four_of_double_types": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootLabels_rootEdges_at_tip_subset_type": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_incidence_two_mem_fullDoubleTips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootEdges_card_le_tips_add_fullDoubleTips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_eighteen_of_root_types_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_eighteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_root_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_root_neighborhood_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_root_label_budget_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_root_type_erase_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_root_label_multiple_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_shared_root_types_card_le_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_multipleTips_card_le_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_nineteen_of_support_degree_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_nineteen_cover_saturated": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_nineteen_supported_degree_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_eighteen_of_support_degree_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.minimalCliqueBounds20_of_high20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing20_of_high20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_eighteen_of_independent_root_types_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_nineteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_nineteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_other_type_le_two_of_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_multiple_unique_at_four_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_multipleTips_subset_four_outer_endpoints": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_outer_card_le_two_of_root_type_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_eighteen_of_root_type_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.endpointNeighbourCover_card_le_five_of_triangle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_label_multiple_card_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.multipleTips_type_sum_le_twelve": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.multipleTips_card_le_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_cover_inside_card_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_triangle_cover_inside_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_triangle_root_type_singleton": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_root_triangle_outer_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_large_clique_root_neighborhood_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_root_label_budget_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_shared_root_types_card_le_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_avoiding_card_le_four_of_other_types_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.star_add_root_card_le_label_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selected_degree_add_one_le_of_missing_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_label_mem_symm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_card_add_missing_type_le_twelve": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_card_le_ten_of_label_selected_degree_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_other_type_single_at_shared_triple_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_outer_meets_two_triples": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_eighteen_of_two_triples": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_missing_label_selected_degree_le_two_of_unique_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_card_le_ten_of_unique_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_nineteen_of_unique_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.minimalCliqueBounds20_of_maxDegree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.local39_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.packing195_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_induce": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_nineteen_induce": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subset_packing195_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_of_four_improvements": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.multipleTips_erase_card_le_four_of_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outerEdges_eq_self_of_subset": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.four_outer_edges_saturate_multiple_support": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_card_le_four_of_unique_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_eighteen_of_unique_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_eighteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_eighteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_outer_edges_card_le_one_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_clique_card_le_fifteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_clique_card_le_fifteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_of_two_improvements": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_two_improvements": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195.complete20_thresholds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195.complete20_has_no_packing195": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195.empty_candidates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.fullDoubleTips_saturated_of_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootTips_subset_fullDoubleTips_of_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_seventeen_of_root_types_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_sixteen_of_root_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_seventeen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_sixteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedSupport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_cover_card_and_degree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_endpoints_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_support_closed_regular": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_no_triangle_on_selected_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_root_neighborhood_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_support_degree_ge_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedCoverEdges": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.mem_selectedCoverEdges_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_selectedCoverEdges_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_low_cover_card_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedCoverEdges_double_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_support_degree_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedSupport_incidence_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_support_card_twelve": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootEdges_labels_at_external_point": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.adjacent_counts_le_one_add_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_cover_inside_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_label_tip_sum_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_seventeen_of_support_degree_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_seventeen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.High22SubcubicSeventeenExcluded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_sixteen_of_subcubic_exclusion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_of_subcubic_high22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_subcubic_high22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedDefect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.neighbor_weight_sum_swap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.neighbor_filter_eq_of_closed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.closed_neighbor_weight_sum_swap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedCoverEdges_weighted_double_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_seventeen_defect_cover_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_seventeen_defect_weighted_budget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_seventeen_defect_balance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_seventeen_weighted_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.closed_four_regular_weight_square_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.closed_weight_square_complete_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedLowVertices": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedLeafVertices": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedDefect_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selected_defect_counts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selected_defect_sum_handshake": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_seventeen_low_card_le_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_seventeen_defect_square_inequality": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_seventeen_support_card_le_thirteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_type_collision_inequality": [
+      "propext",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_subcubic_seventeen_support_card_ge_thirteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_subcubic_seventeen_support_card_thirteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.positive_weight_clique_of_complete_equality": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.internal_degree_sum_le_fourteen_of_triangle_free_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selected_labels_disjoint_internal_neighbors": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.closed_unit_weight_adj_eq_internal_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.no_selected_inside_clique_of_card_ge_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.no_selected_inside_internal_degree_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_subcubic_seventeen_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_sixteen_of_support_degree_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_sixteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_of_degree_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22SubcubicSeventeenExcluded_of_degree_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_no_twenty_clique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_card_le_four_of_external_double_types": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_conflict_degree_add_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high19_triangle_cover_inside_card_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high19_triangle_root_type_card_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_root_neighborhood_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_exists_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.root_type_sum_le_twelve": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_card_add_quad_tips_le_multipleTips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_card_le_multipleTips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.multipleTips_sum_ge_twice_card_add_two_of_two_triples": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.no_single_type_of_five_multiple_two_triples": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_card_le_four_of_two_triples": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_labels_saturated_of_outer_le_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.full_root_types_nested_or_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.multipleTips_card_le_three_of_full_root_triple_no_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_exists_type_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_quad_counts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_quad_double_tips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_quad_outer_supported_on_double_tips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_incidence_add_selected_type_le_selected_degree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_quad_double_tips_selected_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_twenty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootLabels_eq_neighbors_of_selected_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.incident_edge_mem_of_selected_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.support_closed_of_selected_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_quad_support_subset": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_quad_support_selected_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_support_selected_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_support_card_ten": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_support_closed_regular": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_conflict_closed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_cliques_eq_or_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.four_full_double_tips_pair_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.full_double_types_equal_or_complement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.IsFiveCycleBlowupComponent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.neighbors_eq_of_four_subset": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_support_is_five_cycle_blowup": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twentyCliquesIn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.tightComponentSupportsIn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.tightComponentCount": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.mem_twentyCliquesIn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.mem_tightComponentSupportsIn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twentyCliquesIn_sdiff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_with_twenty_clique_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_eq_edgesInside_support": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.twenty_clique_count_le_tight_component_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_unconditional": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_no_full_tight_component": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.reachable_mem_of_neighbor_closed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.five_cycle_blowup_is_connected_component": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.componentVertices": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.coe_componentVertices": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.tightComponentsIn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.mem_tightComponentsIn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.tightComponentCount_eq_connected_component_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_with_connected_component_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195Unconditional.cycleDouble": [
+      "propext"
+    ],
+    "StrongEdge.Tests195Unconditional.cyclePart": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195Unconditional.cycleDouble_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195Unconditional.cycleDouble_edge_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195Unconditional.cycleDouble_component_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195Unconditional.cycleDouble_is_original_component": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195Unconditional.cycleDouble_all_edges_strong_clique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195Unconditional.cycleDouble_needs_correction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "new_declarations": {
+    "StrongEdge.high22_subcubic_seventeen_impossible": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/High22Improved.lean"
+    },
+    "StrongEdge.high22_clique_card_le_sixteen_of_support_degree_le_three": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/High22Improved.lean"
+    },
+    "StrongEdge.high22_clique_card_le_sixteen": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/High22Improved.lean"
+    },
+    "StrongEdge.root_type_collision_inequality": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/High22SupportSize.lean"
+    },
+    "StrongEdge.high22_subcubic_seventeen_support_card_ge_thirteen": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/High22SupportSize.lean"
+    },
+    "StrongEdge.high22_subcubic_seventeen_support_card_thirteen": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/High22SupportSize.lean"
+    },
+    "StrongEdge.positive_weight_clique_of_complete_equality": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/LowSupportGeometry.lean"
+    },
+    "StrongEdge.internal_degree_sum_le_fourteen_of_triangle_free_edge": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/LowSupportGeometry.lean"
+    },
+    "StrongEdge.selected_labels_disjoint_internal_neighbors": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/LowSupportGeometry.lean"
+    },
+    "StrongEdge.closed_unit_weight_adj_eq_internal_sum": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/LowSupportGeometry.lean"
+    },
+    "StrongEdge.no_selected_inside_clique_of_card_ge_three": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/LowSupportGeometry.lean"
+    },
+    "StrongEdge.no_selected_inside_internal_degree_bound": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/LowSupportGeometry.lean"
+    },
+    "StrongEdge.selectedDefect": {
+      "kind": "def",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.neighbor_weight_sum_swap": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.neighbor_filter_eq_of_closed": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.closed_neighbor_weight_sum_swap": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.selectedCoverEdges_weighted_double_count": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.subcubic_seventeen_defect_cover_le_two": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.subcubic_seventeen_defect_weighted_budget": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.subcubic_seventeen_defect_balance": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.subcubic_seventeen_weighted_identity": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.closed_four_regular_weight_square_bound": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.closed_weight_square_complete_bound": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.selectedLowVertices": {
+      "kind": "def",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.selectedLeafVertices": {
+      "kind": "def",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.selectedDefect_le_two": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.selected_defect_counts": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.selected_defect_sum_handshake": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.subcubic_seventeen_low_card_le_five": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.subcubic_seventeen_defect_square_inequality": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.subcubic_seventeen_support_card_le_thirteen": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/SubcubicDefect.lean"
+    },
+    "StrongEdge.rootLabels_eq_neighbors_of_selected_degree_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.incident_edge_mem_of_selected_degree_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.support_closed_of_selected_degree_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.twenty_clique_quad_support_subset": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.twenty_clique_quad_support_selected_degree_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.twenty_clique_support_selected_degree_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.twenty_clique_support_card_ten": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.twenty_clique_support_closed_regular": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.twenty_clique_conflict_closed": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.twenty_cliques_eq_or_disjoint": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueComponent.lean"
+    },
+    "StrongEdge.root_type_sum_le_twelve": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueCounting.lean"
+    },
+    "StrongEdge.outer_card_add_quad_tips_le_multipleTips": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueCounting.lean"
+    },
+    "StrongEdge.outer_card_le_multipleTips": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueCounting.lean"
+    },
+    "StrongEdge.multipleTips_sum_ge_twice_card_add_two_of_two_triples": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueCounting.lean"
+    },
+    "StrongEdge.no_single_type_of_five_multiple_two_triples": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueCounting.lean"
+    },
+    "StrongEdge.outer_card_le_four_of_two_triples": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueCounting.lean"
+    },
+    "StrongEdge.four_full_double_tips_pair_partition": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueParts.lean"
+    },
+    "StrongEdge.full_double_types_equal_or_complement": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueParts.lean"
+    },
+    "StrongEdge.IsFiveCycleBlowupComponent": {
+      "kind": "def",
+      "module": "StrongEdge/Bounds/TwentyCliqueParts.lean"
+    },
+    "StrongEdge.neighbors_eq_of_four_subset": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRigidity.lean"
+    },
+    "StrongEdge.twenty_clique_support_is_five_cycle_blowup": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRigidity.lean"
+    },
+    "StrongEdge.outer_card_le_four_of_external_double_types": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRoot.lean"
+    },
+    "StrongEdge.clique_card_le_conflict_degree_add_one": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRoot.lean"
+    },
+    "StrongEdge.high19_triangle_cover_inside_card_le_one": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRoot.lean"
+    },
+    "StrongEdge.high19_triangle_root_type_card_le_two": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRoot.lean"
+    },
+    "StrongEdge.twenty_clique_root_neighborhood_independent": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRoot.lean"
+    },
+    "StrongEdge.twenty_clique_exists_root_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueRoot.lean"
+    },
+    "StrongEdge.twenty_clique_quad_counts": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueSaturation.lean"
+    },
+    "StrongEdge.twenty_clique_quad_double_tips": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueSaturation.lean"
+    },
+    "StrongEdge.twenty_clique_quad_outer_supported_on_double_tips": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueSaturation.lean"
+    },
+    "StrongEdge.outer_incidence_add_selected_type_le_selected_degree": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueSaturation.lean"
+    },
+    "StrongEdge.twenty_clique_quad_double_tips_selected_degree_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueSaturation.lean"
+    },
+    "StrongEdge.clique_card_le_twenty": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueSaturation.lean"
+    },
+    "StrongEdge.twenty_clique_labels_saturated_of_outer_le_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueTypes.lean"
+    },
+    "StrongEdge.full_root_types_nested_or_disjoint": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueTypes.lean"
+    },
+    "StrongEdge.multipleTips_card_le_three_of_full_root_triple_no_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueTypes.lean"
+    },
+    "StrongEdge.twenty_clique_exists_type_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Bounds/TwentyCliqueTypes.lean"
+    },
+    "StrongEdge.cliqueBounds195_of_degree_le_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Thresholds.lean"
+    },
+    "StrongEdge.high22SubcubicSeventeenExcluded_of_degree_le_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Thresholds.lean"
+    },
+    "StrongEdge.induced_matching_packing195_of_no_twenty_clique": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Thresholds.lean"
+    },
+    "StrongEdge.twentyCliquesIn": {
+      "kind": "def",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.tightComponentSupportsIn": {
+      "kind": "def",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.tightComponentCount": {
+      "kind": "def",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.mem_twentyCliquesIn": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.mem_tightComponentSupportsIn": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.twentyCliquesIn_sdiff": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.induced_matching_packing195_with_twenty_clique_count": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.twenty_clique_eq_edgesInside_support": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.twenty_clique_count_le_tight_component_count": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.induced_matching_packing195_unconditional": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.induced_matching_packing195_of_no_full_tight_component": {
+      "kind": "theorem",
+      "module": "StrongEdge/Packing195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cycleDouble": {
+      "kind": "def",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cyclePart": {
+      "kind": "def",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cycleDouble_degree_four": {
+      "kind": "theorem",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cycleDouble_edge_count": {
+      "kind": "theorem",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cycleDouble_component_certificate": {
+      "kind": "theorem",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cycleDouble_is_original_component": {
+      "kind": "theorem",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cycleDouble_all_edges_strong_clique": {
+      "kind": "theorem",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.Tests195Unconditional.cycleDouble_needs_correction": {
+      "kind": "theorem",
+      "module": "StrongEdge/Tests195Unconditional.lean"
+    },
+    "StrongEdge.reachable_mem_of_neighbor_closed": {
+      "kind": "theorem",
+      "module": "StrongEdge/TightComponents.lean"
+    },
+    "StrongEdge.five_cycle_blowup_is_connected_component": {
+      "kind": "theorem",
+      "module": "StrongEdge/TightComponents.lean"
+    },
+    "StrongEdge.componentVertices": {
+      "kind": "def",
+      "module": "StrongEdge/TightComponents.lean"
+    },
+    "StrongEdge.coe_componentVertices": {
+      "kind": "theorem",
+      "module": "StrongEdge/TightComponents.lean"
+    },
+    "StrongEdge.tightComponentsIn": {
+      "kind": "def",
+      "module": "StrongEdge/TightComponents.lean"
+    },
+    "StrongEdge.mem_tightComponentsIn": {
+      "kind": "theorem",
+      "module": "StrongEdge/TightComponents.lean"
+    },
+    "StrongEdge.tightComponentCount_eq_connected_component_count": {
+      "kind": "theorem",
+      "module": "StrongEdge/TightComponents.lean"
+    },
+    "StrongEdge.induced_matching_packing195_with_connected_component_count": {
+      "kind": "theorem",
+      "module": "StrongEdge/TightComponents.lean"
+    }
+  }
+}

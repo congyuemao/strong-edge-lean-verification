@@ -48,3 +48,10 @@ public import StrongEdge.High20Packing
 
 public import StrongEdge.Packing195
 public import StrongEdge.Tests195
+
+public import StrongEdge.Packing195Continuation
+
+public import StrongEdge.Packing195Thresholds
+
+public import StrongEdge.TightComponents
+public import StrongEdge.Tests195Unconditional

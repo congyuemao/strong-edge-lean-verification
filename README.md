@@ -1,9 +1,11 @@
 # 强边冲突与诱导匹配打包：Lean 验证成果
 
-**PACKING19.5 续进：** 条件性 T1/T2、无条件局部加强 `high20 ≤18` 和 `high23 ≤15`
-已通过 Lean 编译及公理审计。完整无条件 19.5 仍待完成；详见
-[本轮进展与复现记录](strong_edge_lean_starter/PACKING195_PROGRESS.md) 和
-[剩余证明目标](strong_edge_lean_starter/PACKING195_BLOCKERS.md)。以下保留已验证的 20-packing 基线说明。
+**无条件修正 19.5 已完成 Lean 形式化：** 对任意最大度至多四的有限简单图和任意候选边集 F，
+存在原图诱导匹配 M⊆F，使 `2|F| ≤ 39|M| + t_G(F)`。
+修正项严格计数原图中全部边落在 F 内的 C5[2] 连通分量；为零时得到纯 19.5 界。
+五个阈值、二十团刚性、实际分量计数及最终组装均已通过内核检查。
+详见[完整证明链与复验记录](strong_edge_lean_starter/PACKING195_UNCONDITIONAL.md)及[源码快照](strong_edge_lean_packing195_unconditional_checkpoint.zip)。
+当前为 1,197 jobs、75 个 Lean 文件、376 项公理审计，无警告、无证明占位符。以下保留 20-packing 基线的历史说明。
 
 验证日期：2026-10-10（Australia/Sydney）。
 
@@ -47,7 +49,7 @@ C4 和 C5 的五个阈值界均已完成。最终定理只需原图最大度数�
 | 无条件打包 | 对任意 F，存在诱导匹配 M⊆F，且 \|F\|≤20\|M\| | `induced_matching_packing20` |
 
 完整签名及证明说明见 [HIGH20_VERIFIED_HANDOFF.md](strong_edge_lean_starter/HIGH20_VERIFIED_HANDOFF.md)。
-本结果不宣称整数强边二十色、19.5 加强或算法复杂度结论。
+该历史基线不涉及整数强边二十色或算法复杂度结论；修正 19.5 加强已在本页顶部链接的最新阶段完成。
 
 ## 验证证据
 
@@ -76,8 +78,10 @@ C4 和 C5 的五个阈值界均已完成。最终定理只需原图最大度数�
 | C5 high21 | 强团 ≤18，剩 high20 一项结构假设 | 1,162 | 192 | [high21 checkpoint](strong_edge_lean_high21_checkpoint.zip) |
 | C5 high20 / C6 | 强团 ≤19，无条件任意候选集 20-packing | 1,170 | 225 | [high20 checkpoint](strong_edge_lean_high20_checkpoint.zip) |
 | PACKING19.5 续进 | 条件性 T1/T2、high20 ≤18、high23 ≤15；完整无条件 19.5 待完成 | 1,175 | 原有 225 + 新增 22 | [packing195 checkpoint](strong_edge_lean_packing195_checkpoint.zip) |
+| PACKING19.5 第二阶段 | high21 ≤17、次三次强团 ≤17、high22 四边星根 ≤16；剩余接口缩减 | 1,181 | 225 + 22 + 31（含三个新定义） | [续进 checkpoint](strong_edge_lean_packing195_continuation_checkpoint.zip) |
+| PACKING19.5 完成 | 五阈值、C5[2] 刚性、实际连通分量计数与无条件修正界 | 1,197 | 376 项 | [无条件 checkpoint](strong_edge_lean_packing195_unconditional_checkpoint.zip) |
 
-这些数字来自各阶段实际日志。历史 ZIP、交接和验证日志均未覆盖；当前仓库共保留八个阶段快照。
+这些数字来自各阶段实际日志。历史 ZIP、交接和验证日志均未覆盖；当前仓库共保留十个阶段快照。
 
 ## 导航
 
@@ -100,8 +104,12 @@ cd strong_edge_lean_starter
 .\lean.ps1 build
 .\lean.ps1 env lean StrongEdge/Audit.lean
 .\lean.ps1 env lean StrongEdge/Audit195.lean
+.\lean.ps1 env lean StrongEdge/Audit195Continuation.lean
+.\lean.ps1 env lean StrongEdge/Audit195Thresholds.lean
+.\lean.ps1 env lean StrongEdge/Audit195Unconditional.lean
 .\lean.ps1 env lean StrongEdge/Tests.lean
 .\lean.ps1 env lean StrongEdge/Tests195.lean
+.\lean.ps1 env lean StrongEdge/Tests195Unconditional.lean
 ```
 
 其他系统使用 `lake build` 和 `lake env lean`；依赖缓存命令见
@@ -112,7 +120,8 @@ cd strong_edge_lean_starter
 
 ## 当前边界
 
-本次要求的 high20 和无条件 20-packing 阶段已完成，无剩余结构假设。
-19.5 续进已完成两档局部加强和条件性框架，尚待 high21 ≤17、high22 ≤16、二十团刚性及分量计数。
-两份手稿与 A/B 证明对应无条件 20-packing；整数强边二十色和完整无条件 19.5 均未宣称完成。
-历史交接中“尚需 high20”的表述对应各自阶段，不代表当前结果。
+无条件 20-packing 和带紧分量修正项的无条件 19.5-packing 均已完成，无剩余结构假设。
+19.5 的五个阈值、二十团刚性和实际原图连通分量计数均已完成；修正项为零时得到纯 19.5 界。
+C5[2] 回归验证了修正项不可直接省略。
+两份手稿与 A/B 证明对应此前的无条件 20-packing；本次结果不宣称解决整数强边二十色。
+历史交接中的“尚需 high20”或“完整无条件 19.5 待完成”对应各自阶段，最新状态见本页顶部的完成记录。

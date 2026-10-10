@@ -1,0 +1,94 @@
+import StrongEdge.Packing195Continuation
+
+#check StrongEdge.fullDoubleTips_saturated_of_four
+#print axioms StrongEdge.fullDoubleTips_saturated_of_four
+
+#check StrongEdge.rootTips_subset_fullDoubleTips_of_four
+#print axioms StrongEdge.rootTips_subset_fullDoubleTips_of_four
+
+#check StrongEdge.high21_clique_card_le_seventeen_of_root_types_le_two
+#print axioms StrongEdge.high21_clique_card_le_seventeen_of_root_types_le_two
+
+#check StrongEdge.high21_clique_card_le_sixteen_of_root_triple
+#print axioms StrongEdge.high21_clique_card_le_sixteen_of_root_triple
+
+#check StrongEdge.high21_clique_card_le_seventeen_of_root_four
+#print axioms StrongEdge.high21_clique_card_le_seventeen_of_root_four
+
+#check StrongEdge.high22_clique_card_le_sixteen_of_root_four
+#print axioms StrongEdge.high22_clique_card_le_sixteen_of_root_four
+
+#check StrongEdge.selectedSupport
+#print axioms StrongEdge.selectedSupport
+
+#check StrongEdge.subcubic_large_cover_card_and_degree
+#print axioms StrongEdge.subcubic_large_cover_card_and_degree
+
+#check StrongEdge.subcubic_large_endpoints_degree_four
+#print axioms StrongEdge.subcubic_large_endpoints_degree_four
+
+#check StrongEdge.subcubic_large_support_closed_regular
+#print axioms StrongEdge.subcubic_large_support_closed_regular
+
+#check StrongEdge.subcubic_large_no_triangle_on_selected_edge
+#print axioms StrongEdge.subcubic_large_no_triangle_on_selected_edge
+
+#check StrongEdge.subcubic_large_root_neighborhood_independent
+#print axioms StrongEdge.subcubic_large_root_neighborhood_independent
+
+#check StrongEdge.subcubic_eighteen_support_degree_ge_two
+#print axioms StrongEdge.subcubic_eighteen_support_degree_ge_two
+
+#check StrongEdge.selectedCoverEdges
+#print axioms StrongEdge.selectedCoverEdges
+
+#check StrongEdge.mem_selectedCoverEdges_iff
+#print axioms StrongEdge.mem_selectedCoverEdges_iff
+
+#check StrongEdge.subcubic_large_selectedCoverEdges_count
+#print axioms StrongEdge.subcubic_large_selectedCoverEdges_count
+
+#check StrongEdge.subcubic_eighteen_low_cover_card_le_one
+#print axioms StrongEdge.subcubic_eighteen_low_cover_card_le_one
+
+#check StrongEdge.selectedCoverEdges_double_count
+#print axioms StrongEdge.selectedCoverEdges_double_count
+
+#check StrongEdge.subcubic_eighteen_support_degree_three
+#print axioms StrongEdge.subcubic_eighteen_support_degree_three
+
+#check StrongEdge.selectedSupport_incidence_sum
+#print axioms StrongEdge.selectedSupport_incidence_sum
+
+#check StrongEdge.subcubic_eighteen_support_card_twelve
+#print axioms StrongEdge.subcubic_eighteen_support_card_twelve
+
+#check StrongEdge.rootEdges_labels_at_external_point
+#print axioms StrongEdge.rootEdges_labels_at_external_point
+
+#check StrongEdge.adjacent_counts_le_one_add_product
+#print axioms StrongEdge.adjacent_counts_le_one_add_product
+
+#check StrongEdge.subcubic_eighteen_cover_inside_le_one
+#print axioms StrongEdge.subcubic_eighteen_cover_inside_le_one
+
+#check StrongEdge.subcubic_eighteen_label_tip_sum_le_three
+#print axioms StrongEdge.subcubic_eighteen_label_tip_sum_le_three
+
+#check StrongEdge.clique_card_le_seventeen_of_support_degree_le_three
+#print axioms StrongEdge.clique_card_le_seventeen_of_support_degree_le_three
+
+#check StrongEdge.high21_clique_card_le_seventeen
+#print axioms StrongEdge.high21_clique_card_le_seventeen
+
+#check StrongEdge.High22SubcubicSeventeenExcluded
+#print axioms StrongEdge.High22SubcubicSeventeenExcluded
+
+#check StrongEdge.high22_clique_card_le_sixteen_of_subcubic_exclusion
+#print axioms StrongEdge.high22_clique_card_le_sixteen_of_subcubic_exclusion
+
+#check StrongEdge.cliqueBounds195_of_subcubic_high22
+#print axioms StrongEdge.cliqueBounds195_of_subcubic_high22
+
+#check StrongEdge.induced_matching_packing195_of_subcubic_high22
+#print axioms StrongEdge.induced_matching_packing195_of_subcubic_high22

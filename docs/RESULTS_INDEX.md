@@ -3,9 +3,10 @@
 ## 合并后的最新内容
 
 - 双路线手稿与配套证明：[A 手稿](../output/pdf/route_a_paper_first.pdf)、[A Lean](../output/dual_proofs/route_a_lean.zip)、[B 手稿](../output/pdf/route_b_lean_first.pdf)、[B Lean](../output/dual_proofs/route_b_lean.zip)，以及[独立审计](../audit_packing20/README.md)。
-- PACKING19.5：[进展](../strong_edge_lean_starter/PACKING195_PROGRESS.md)、[剩余目标](../strong_edge_lean_starter/PACKING195_BLOCKERS.md)、[源码快照](../strong_edge_lean_packing195_checkpoint.zip)。
-- 主工程共有 51 个 Lean 文件；1,175 jobs 构建通过，原有 225 项和新增 22 项审计均保留。
-- 当前工作树散列以 [packing195-source-sha256.json](../strong_edge_lean_starter/verification/packing195-source-sha256.json) 为准；完整无条件 19.5 尚未完成。
+- PACKING19.5：[无条件完成记录](../strong_edge_lean_starter/PACKING195_UNCONDITIONAL.md)、[源码快照](../strong_edge_lean_packing195_unconditional_checkpoint.zip)。历史记录和快照原样保留。
+- 五个较强阈值、二十团的 C5[2] 结构、实际原图连通分量计数及 `2|F|≤39|M|+t_G(F)` 全部通过 Lean。
+- 主工程共有 75 个 Lean 文件；1,197 jobs 构建无警告，376 项公理审计通过。本阶段新增 87 个定理、11 个定义。
+- 当前散列：[packing195-unconditional-source-sha256.json](../strong_edge_lean_starter/verification/packing195-unconditional-source-sha256.json)；[状态](../strong_edge_lean_starter/verification/packing195-unconditional-status.json)；[最终签名与公理](../strong_edge_lean_starter/verification/packing195-unconditional-Audit195Unconditional.log)。
 
 以下记录保留 high20 阶段的原始成果与证据。
 

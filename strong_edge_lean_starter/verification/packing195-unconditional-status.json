@@ -1,0 +1,41 @@
+{
+  "verification_date": "2026-10-10",
+  "timezone": "Australia/Sydney",
+  "build_jobs": 1197,
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "audited_declarations": 376,
+  "new_audited_declarations": 98,
+  "new_theorems": 87,
+  "new_definitions": 11,
+  "lean_source_files": 75,
+  "source_and_config_hashes": 79,
+  "preserved_prior_lean_files": 57,
+  "preserved_pinned_files": [
+    "lean-toolchain",
+    "lake-manifest.json",
+    "lakefile.toml",
+    "lean.ps1"
+  ],
+  "changed_prior_lean_files": [
+    "StrongEdge.lean (appended public imports only)"
+  ],
+  "prior_checkpoint_sha256": "4d0d5cda0526a46c850aaa452382b55a8afc7fc7791d2cc929430fc3617cc60f",
+  "proof_gap_scan": "clean",
+  "allowed_axioms_only": true,
+  "unconditional_packing195_complete": true,
+  "endpoint": "StrongEdge.induced_matching_packing195_with_connected_component_count",
+  "remaining_endpoint_hypotheses": [
+    "maximum original degree at most four"
+  ],
+  "statement": "For every F, exists an induced matching M subset F with 2|F| <= 39|M| + t_G(F)",
+  "correction": "Actual original connected C5[2] components with every edge in F",
+  "remaining": [],
+  "finite_search_dependency": false,
+  "regressions": {
+    "original_path4_witness": "passed",
+    "previous_195_tests": "passed",
+    "C5_double_degree_card_shape": "passed",
+    "C5_double_requires_correction": "passed"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "verification_date": "2026-10-10",
+  "timezone": "Australia/Sydney",
+  "build_jobs": 1181,
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "audited_declarations": 278,
+  "new_audited_declarations": 31,
+  "new_theorems": 28,
+  "new_definitions": 3,
+  "lean_source_files": 58,
+  "source_and_config_hashes": 62,
+  "preserved_prior_lean_files": 50,
+  "preserved_pinned_files": [
+    "lean-toolchain",
+    "lake-manifest.json",
+    "lakefile.toml",
+    "lean.ps1"
+  ],
+  "changed_prior_lean_files": [
+    "StrongEdge.lean (appended import only)"
+  ],
+  "prior_checkpoint_sha256": "7f8334242f38f81cd671b6d516fe28c41a2a5ac65e2f78bc8da457c02937379a",
+  "proof_gap_scan": "clean",
+  "allowed_axioms_only": true,
+  "subcubic_clique_le_17": "kernel-checked, no conflict-degree threshold",
+  "high21_le_17": "kernel-checked, complete universal local threshold",
+  "high22_root_four_le_16": "kernel-checked, root-four branch only",
+  "unconditional_packing195_complete": false,
+  "remaining": [
+    "high22 subcubic clique with exactly 17 selected edges",
+    "twenty-clique C5[2] rigidity",
+    "actual tight-component count and corrected 19.5 assembly"
+  ],
+  "current_conditional_endpoint": "StrongEdge.induced_matching_packing195_of_subcubic_high22",
+  "remaining_endpoint_hypotheses": [
+    "High22SubcubicSeventeenExcluded G",
+    "candidate no20"
+  ],
+  "regressions": {
+    "full_graph_path4": "passed",
+    "previous_195_tests": "passed"
+  },
+  "finite_search_dependency": false
+}

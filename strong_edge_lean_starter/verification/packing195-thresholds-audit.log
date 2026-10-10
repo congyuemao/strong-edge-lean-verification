@@ -1,0 +1,178 @@
+StrongEdge.selectedDefect.{u_1} {V : Type u_1} [DecidableEq V] (G : SimpleGraph V) (Q : Finset ↑G.edgeSet) (x : V) : ℕ
+'StrongEdge.selectedDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.neighbor_weight_sum_swap.{u_1} {V : Type u_1} (G : SimpleGraph V) [DecidableRel G.Adj] (S : Finset V)
+  (f g : V → ℕ) : ∑ x ∈ S, f x * ∑ y ∈ S with (G.Adj x) y, g y = ∑ y ∈ S, g y * ∑ x ∈ S with (G.Adj y) x, f x
+'StrongEdge.neighbor_weight_sum_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.neighbor_filter_eq_of_closed.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  (S : Finset V) (hclosed : ∀ x ∈ S, G.neighborFinset x ⊆ S) {x : V} (hx : x ∈ S) :
+  Finset.filter (G.Adj x) S = G.neighborFinset x
+'StrongEdge.neighbor_filter_eq_of_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.closed_neighbor_weight_sum_swap.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  (S : Finset V) (hclosed : ∀ x ∈ S, G.neighborFinset x ⊆ S) (f g : V → ℕ) :
+  ∑ x ∈ S, f x * ∑ y ∈ G.neighborFinset x, g y = ∑ y ∈ S, g y * ∑ x ∈ G.neighborFinset y, f x
+'StrongEdge.closed_neighbor_weight_sum_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.selectedCoverEdges_weighted_double_count.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (S : Finset V) (w : V → ℕ) :
+  ∑ x ∈ S, w x * (StrongEdge.selectedCoverEdges G Q x).card =
+    ∑ e ∈ Q, ∑ x ∈ S with e ∈ StrongEdge.selectedCoverEdges G Q x, w x
+'StrongEdge.selectedCoverEdges_weighted_double_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.subcubic_seventeen_defect_cover_le_two.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : Q.card = 17) {u v : V} (e : ↑G.edgeSet) (heQ : e ∈ Q) (he : ↑e = s(u, v)) :
+  ∑ x ∈ StrongEdge.endpointNeighbourCover G u v, StrongEdge.selectedDefect G Q x ≤ 2
+'StrongEdge.subcubic_seventeen_defect_cover_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.subcubic_seventeen_defect_weighted_budget.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : Q.card = 17) :
+  ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x * (StrongEdge.selectedCoverEdges G Q x).card ≤
+    34
+'StrongEdge.subcubic_seventeen_defect_weighted_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.subcubic_seventeen_defect_balance.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : Q.card = 17) {x : V} (hx : x ∈ StrongEdge.selectedSupport G Q) :
+  (StrongEdge.selectedCoverEdges G Q x).card + ∑ y ∈ G.neighborFinset x, StrongEdge.selectedDefect G Q y =
+    9 + StrongEdge.selectedDefect G Q x
+'StrongEdge.subcubic_seventeen_defect_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.subcubic_seventeen_weighted_identity.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : Q.card = 17) :
+  ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x * (StrongEdge.selectedCoverEdges G Q x).card +
+      ∑ x ∈ StrongEdge.selectedSupport G Q,
+        StrongEdge.selectedDefect G Q x * ∑ y ∈ G.neighborFinset x, StrongEdge.selectedDefect G Q y =
+    9 * ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x +
+      ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x ^ 2
+'StrongEdge.subcubic_seventeen_weighted_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.closed_four_regular_weight_square_bound.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (S : Finset V) (hreg : ∀ x ∈ S, G.degree x = 4 ∧ G.neighborFinset x ⊆ S) (w : V → ℕ) :
+  ∑ x ∈ S, w x * ∑ y ∈ G.neighborFinset x, w y ≤ 4 * ∑ x ∈ S, w x ^ 2
+'StrongEdge.closed_four_regular_weight_square_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.closed_weight_square_complete_bound.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (S : Finset V) (hclosed : ∀ x ∈ S, G.neighborFinset x ⊆ S) (w : V → ℕ) :
+  ∑ x ∈ S, w x * ∑ y ∈ G.neighborFinset x, w y + ∑ x ∈ S, w x ^ 2 ≤ (∑ x ∈ S, w x) ^ 2
+'StrongEdge.closed_weight_square_complete_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.selectedLowVertices.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  (Q : Finset ↑G.edgeSet) : Finset V
+'StrongEdge.selectedLowVertices' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.selectedLeafVertices.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  (Q : Finset ↑G.edgeSet) : Finset V
+'StrongEdge.selectedLeafVertices' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.selectedDefect_le_two.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  (Q : Finset ↑G.edgeSet) {x : V} (hx : x ∈ StrongEdge.selectedSupport G Q) : StrongEdge.selectedDefect G Q x ≤ 2
+'StrongEdge.selectedDefect_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.selected_defect_counts.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  (Q : Finset ↑G.edgeSet) :
+  ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x =
+      (StrongEdge.selectedLowVertices G Q).card + (StrongEdge.selectedLeafVertices G Q).card ∧
+    ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x ^ 2 =
+      (StrongEdge.selectedLowVertices G Q).card + 3 * (StrongEdge.selectedLeafVertices G Q).card
+'StrongEdge.selected_defect_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.selected_defect_sum_handshake.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  (Q : Finset ↑G.edgeSet) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3) :
+  ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x + 2 * Q.card =
+    3 * (StrongEdge.selectedSupport G Q).card
+'StrongEdge.selected_defect_sum_handshake' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.subcubic_seventeen_low_card_le_five.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : Q.card = 17) : (StrongEdge.selectedLowVertices G Q).card ≤ 5
+'StrongEdge.subcubic_seventeen_low_card_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.subcubic_seventeen_defect_square_inequality.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : Q.card = 17) :
+  9 * ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x +
+      2 * ∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x ^ 2 ≤
+    34 + (∑ x ∈ StrongEdge.selectedSupport G Q, StrongEdge.selectedDefect G Q x) ^ 2
+'StrongEdge.subcubic_seventeen_defect_square_inequality' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.subcubic_seventeen_support_card_le_thirteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : Q.card = 17) : (StrongEdge.selectedSupport G Q).card ≤ 13
+'StrongEdge.subcubic_seventeen_support_card_le_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.root_type_collision_inequality (r s e : ℕ) (he : e ≤ 1) (hr : r = s + e) : 2 * r ≤ 2 + s * (r - 1) + e
+'StrongEdge.root_type_collision_inequality' depends on axioms: [propext, Quot.sound]
+StrongEdge.high22_subcubic_seventeen_support_card_ge_thirteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e)
+  (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3) (hq : Q.card = 17) :
+  13 ≤ (StrongEdge.selectedSupport G Q).card
+'StrongEdge.high22_subcubic_seventeen_support_card_ge_thirteen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+StrongEdge.high22_subcubic_seventeen_support_card_thirteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e)
+  (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3) (hq : Q.card = 17) :
+  (StrongEdge.selectedSupport G Q).card = 13
+'StrongEdge.high22_subcubic_seventeen_support_card_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.positive_weight_clique_of_complete_equality.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (S : Finset V) (hclosed : ∀ x ∈ S, G.neighborFinset x ⊆ S) (w : V → ℕ)
+  (heq : ∑ x ∈ S, w x * ∑ y ∈ G.neighborFinset x, w y + ∑ x ∈ S, w x ^ 2 = (∑ x ∈ S, w x) ^ 2) :
+  G.IsClique ↑({x ∈ S | 0 < w x})
+'StrongEdge.positive_weight_clique_of_complete_equality' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.internal_degree_sum_le_fourteen_of_triangle_free_edge.{u_1} {V : Type u_1} [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (S : Finset V) (hS : S.card ≤ 5) {u v : V} (hu : u ∈ S) (hv : v ∈ S)
+  (huv : G.Adj u v) (htri : ∀ w ∈ S, G.Adj u w → ¬G.Adj v w) : ∑ x ∈ S, (Finset.filter (G.Adj x) S).card ≤ 14
+'StrongEdge.internal_degree_sum_le_fourteen_of_triangle_free_edge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+StrongEdge.selected_labels_disjoint_internal_neighbors.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (L : Finset V) (hno : ∀ e ∈ Q, ¬∀ x ∈ ↑e, x ∈ L)
+  {x : V} (hx : x ∈ L) : (Finset.filter (G.Adj x) L).card + (StrongEdge.edgeIncidences G Q x).card ≤ G.degree x
+'StrongEdge.selected_labels_disjoint_internal_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.closed_unit_weight_adj_eq_internal_sum.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (S L : Finset V) (hLS : L ⊆ S) (hclosed : ∀ x ∈ S, G.neighborFinset x ⊆ S) (w : V → ℕ)
+  (hw : ∀ x ∈ S, w x = if x ∈ L then 1 else 0) :
+  ∑ x ∈ S, w x * ∑ y ∈ G.neighborFinset x, w y = ∑ x ∈ L, (Finset.filter (G.Adj x) L).card
+'StrongEdge.closed_unit_weight_adj_eq_internal_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.no_selected_inside_clique_of_card_ge_three.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q) (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3)
+  (hq : 17 ≤ Q.card) (L : Finset V) (hc : G.IsClique ↑L) (hL : 3 ≤ L.card) (e : ↑G.edgeSet) : e ∈ Q → ¬∀ x ∈ ↑e, x ∈ L
+'StrongEdge.no_selected_inside_clique_of_card_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.no_selected_inside_internal_degree_bound.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3) (L : Finset V) (hno : ∀ e ∈ Q, ¬∀ x ∈ ↑e, x ∈ L) :
+  ∑ x ∈ L, (Finset.filter (G.Adj x) L).card ≤ L.card + ∑ x ∈ L, StrongEdge.selectedDefect G Q x
+'StrongEdge.no_selected_inside_internal_degree_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.high22_subcubic_seventeen_impossible.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e)
+  (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3) (hq : Q.card = 17) : False
+'StrongEdge.high22_subcubic_seventeen_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.high22_clique_card_le_sixteen_of_support_degree_le_three.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e)
+  (hd : ∀ (x : V), (StrongEdge.edgeIncidences G Q x).card ≤ 3) : Q.card ≤ 16
+'StrongEdge.high22_clique_card_le_sixteen_of_support_degree_le_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+StrongEdge.high22_clique_card_le_sixteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h22 : ∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) : Q.card ≤ 16
+'StrongEdge.high22_clique_card_le_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.cliqueBounds195_of_degree_le_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) :
+  StrongEdge.CliqueBounds195 (StrongEdge.conflictGraph G)
+'StrongEdge.cliqueBounds195_of_degree_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.high22SubcubicSeventeenExcluded_of_degree_le_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) : StrongEdge.High22SubcubicSeventeenExcluded G
+'StrongEdge.high22SubcubicSeventeenExcluded_of_degree_le_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+StrongEdge.induced_matching_packing195_of_no_twenty_clique.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (F : Finset ↑G.edgeSet)
+  (no20 : ∀ Q ⊆ F, (StrongEdge.conflictGraph G).IsClique ↑Q → Q.card ≤ 19) :
+  ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ 2 * F.card ≤ 39 * M.card
+'StrongEdge.induced_matching_packing195_of_no_twenty_clique' depends on axioms: [propext, Classical.choice, Quot.sound]

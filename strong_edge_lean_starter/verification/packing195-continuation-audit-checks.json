@@ -1,0 +1,295 @@
+{
+  "baseline_count": 225,
+  "previous_count": 22,
+  "new_count": 31,
+  "new_theorems": 28,
+  "new_definitions": 3,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "declarations": {
+    "StrongEdge.fullDoubleTips_saturated_of_four": {
+      "kind": "theorem",
+      "module": "Bounds/High21ImprovedRoot"
+    },
+    "StrongEdge.rootTips_subset_fullDoubleTips_of_four": {
+      "kind": "theorem",
+      "module": "Bounds/High21ImprovedRoot"
+    },
+    "StrongEdge.high21_clique_card_le_seventeen_of_root_types_le_two": {
+      "kind": "theorem",
+      "module": "Bounds/High21ImprovedRoot"
+    },
+    "StrongEdge.high21_clique_card_le_sixteen_of_root_triple": {
+      "kind": "theorem",
+      "module": "Bounds/High21ImprovedRoot"
+    },
+    "StrongEdge.high21_clique_card_le_seventeen_of_root_four": {
+      "kind": "theorem",
+      "module": "Bounds/High21ImprovedRoot"
+    },
+    "StrongEdge.high22_clique_card_le_sixteen_of_root_four": {
+      "kind": "theorem",
+      "module": "Bounds/High22ImprovedRoot"
+    },
+    "StrongEdge.selectedSupport": {
+      "kind": "def",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_large_cover_card_and_degree": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_large_endpoints_degree_four": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_large_support_closed_regular": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_large_no_triangle_on_selected_edge": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_large_root_neighborhood_independent": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_eighteen_support_degree_ge_two": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.selectedCoverEdges": {
+      "kind": "def",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.mem_selectedCoverEdges_iff": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_large_selectedCoverEdges_count": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_eighteen_low_cover_card_le_one": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.selectedCoverEdges_double_count": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.subcubic_eighteen_support_degree_three": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicBoundary"
+    },
+    "StrongEdge.selectedSupport_incidence_sum": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicSeventeen"
+    },
+    "StrongEdge.subcubic_eighteen_support_card_twelve": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicSeventeen"
+    },
+    "StrongEdge.rootEdges_labels_at_external_point": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicSeventeen"
+    },
+    "StrongEdge.adjacent_counts_le_one_add_product": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicSeventeen"
+    },
+    "StrongEdge.subcubic_eighteen_cover_inside_le_one": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicSeventeen"
+    },
+    "StrongEdge.subcubic_eighteen_label_tip_sum_le_three": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicSeventeen"
+    },
+    "StrongEdge.clique_card_le_seventeen_of_support_degree_le_three": {
+      "kind": "theorem",
+      "module": "Bounds/SubcubicSeventeen"
+    },
+    "StrongEdge.high21_clique_card_le_seventeen": {
+      "kind": "theorem",
+      "module": "Bounds/High21Improved"
+    },
+    "StrongEdge.High22SubcubicSeventeenExcluded": {
+      "kind": "def",
+      "module": "Packing195Continuation"
+    },
+    "StrongEdge.high22_clique_card_le_sixteen_of_subcubic_exclusion": {
+      "kind": "theorem",
+      "module": "Packing195Continuation"
+    },
+    "StrongEdge.cliqueBounds195_of_subcubic_high22": {
+      "kind": "theorem",
+      "module": "Packing195Continuation"
+    },
+    "StrongEdge.induced_matching_packing195_of_subcubic_high22": {
+      "kind": "theorem",
+      "module": "Packing195Continuation"
+    }
+  },
+  "new_dependencies": {
+    "StrongEdge.fullDoubleTips_saturated_of_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootTips_subset_fullDoubleTips_of_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_seventeen_of_root_types_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_sixteen_of_root_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_seventeen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_sixteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedSupport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_cover_card_and_degree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_endpoints_degree_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_support_closed_regular": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_no_triangle_on_selected_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_root_neighborhood_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_support_degree_ge_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedCoverEdges": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.mem_selectedCoverEdges_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_large_selectedCoverEdges_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_low_cover_card_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedCoverEdges_double_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_support_degree_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.selectedSupport_incidence_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_support_card_twelve": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.rootEdges_labels_at_external_point": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.adjacent_counts_le_one_add_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_cover_inside_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subcubic_eighteen_label_tip_sum_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_seventeen_of_support_degree_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high21_clique_card_le_seventeen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.High22SubcubicSeventeenExcluded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high22_clique_card_le_sixteen_of_subcubic_exclusion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_of_subcubic_high22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_subcubic_high22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}
