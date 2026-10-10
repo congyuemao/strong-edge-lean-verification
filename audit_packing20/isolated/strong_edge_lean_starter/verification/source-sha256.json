@@ -1,0 +1,13 @@
+{
+  "StrongEdge.lean": "ea7d1c9e773c5d1d1ffd9d5b924a39b93719d1e117d665b1c389835053d28fa4",
+  "StrongEdge/Audit.lean": "cef02f699f72892746e4547c4f35257c716fb8b263b5c6f285f6ed771b52d8f2",
+  "StrongEdge/Basic.lean": "288dc9a5bc9c386f761d4629291accf36826468c12c449ca88d7b5456a10b17f",
+  "StrongEdge/Conflict.lean": "2ba6dfe103a17b3c236a553076d78b41554b0aa9eeb0646e22e9a4c97c73eb3c",
+  "StrongEdge/DoubleCount.lean": "40ab63cb88164f509765dadc130de926d3be8256ec958488738dc74fd5edf7ad",
+  "StrongEdge/Packing.lean": "ab41305d987050fec53be08ca0474c1919974b2240821553d301465a40af7777",
+  "StrongEdge/PrivateExchange.lean": "85b591cff5da0e351b51de2e4ff6c19ec79e7649dc6becacde2d537fe8765423",
+  "StrongEdge/Tests.lean": "f4d0c5d4912924e8a6ece85d6ce87756eaec284a5e30b989fa3592278227a712",
+  "lean-toolchain": "8f89aa44fccdb1a0b6cc768c7c9f54b94cd40e47a08d582f82d1235f13075cf7",
+  "lakefile.toml": "4f9ceaec88afaeaf4c9aa398cb37eb93a14d8b19967740cc6a43016568007147",
+  "lake-manifest.json": "8514da62e26146984cfb3eff374af2f90f2404fbd7e2c4ff5965b9cf9bb0a9bf"
+}

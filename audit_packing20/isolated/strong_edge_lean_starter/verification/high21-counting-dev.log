@@ -1,0 +1,8 @@
+✖ [1132/1133] Building StrongEdge.Bounds.SubcubicEighteen (9.7s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\StrongEdge\Bounds\SubcubicEighteen.lean -o .lake\build\lib\lean\StrongEdge\Bounds\SubcubicEighteen.olean -i .lake\build\lib\lean\StrongEdge\Bounds\SubcubicEighteen.ilean -c .lake\build\ir\StrongEdge\Bounds\SubcubicEighteen.c --setup .lake\build\ir\StrongEdge\Bounds\SubcubicEighteen.setup.json --json
+error: StrongEdge/Bounds/SubcubicEighteen.lean:93:10: Unknown constant `Finset.dvd_sum`
+error: StrongEdge/Bounds/SubcubicEighteen.lean:94:10: No goals to be solved
+✔ [1133/1133] Built StrongEdge.Bounds.High21Support (9.8s)
+Some required targets logged failures:
+- StrongEdge.Bounds.SubcubicEighteen
+error: build failed

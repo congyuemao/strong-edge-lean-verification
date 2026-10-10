@@ -1,0 +1,26 @@
+[
+  {
+    "file": "packing_private_cliques.md",
+    "original_copy_difference": "trailing_newline_only",
+    "git_blob_sha": "fd66d870c106c50519b92a4fe5ebbaf78ef0bd0c",
+    "git_blob_matches": true,
+    "sha256": "198efa9977dfe37aae617fe99db595ae4042bd1fb4477fcc81ad8653e1d58296",
+    "bytes": 9335
+  },
+  {
+    "file": "high_conflict_20_21_improved.md",
+    "original_copy_difference": "trailing_newline_only",
+    "git_blob_sha": "556cb462e09b36f6b1d0764330af4d1638201cf4",
+    "git_blob_matches": true,
+    "sha256": "62af66d04291e6f71b0d503fe862efc9c89ee0b29a53ee6f1781e1cf8defe92e",
+    "bytes": 10248
+  },
+  {
+    "file": "clique20_rigidity.md",
+    "original_copy_difference": "trailing_newline_only",
+    "git_blob_sha": "c740e7658d4b0c6c43f4b3a773dc551148909a39",
+    "git_blob_matches": true,
+    "sha256": "b22c146ff5854fff1403d65e383df1a53d8cc26ae902a03024ebc12c06d7f829",
+    "bytes": 7776
+  }
+]

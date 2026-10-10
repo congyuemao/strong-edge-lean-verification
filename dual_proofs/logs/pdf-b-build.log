@@ -1,0 +1,27 @@
+{
+  "output": "route_b_lean_first.pdf",
+  "pages": 13,
+  "sha256": "5769729e6e7307286b1005ddca638e49ba31d79cb38687ce004b57aa843c2fc5",
+  "source_sha256": "4a26fcd0f84dc2d912a562e09391d20b58b5c85bb95003d57c53e2b7ca62c67e",
+  "unique_math_expressions": 470,
+  "vector_math_draws": 718,
+  "embedded_math_fonts": 2,
+  "author": "",
+  "characters_per_page": [
+    3204,
+    3020,
+    3824,
+    2806,
+    4100,
+    3203,
+    3843,
+    3690,
+    4105,
+    2743,
+    3019,
+    2814,
+    2146
+  ],
+  "raster_images": 0,
+  "math_width_diagnostics": []
+}

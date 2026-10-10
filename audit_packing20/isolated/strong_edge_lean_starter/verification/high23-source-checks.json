@@ -1,0 +1,86 @@
+{
+  "lean_file_count": 20,
+  "new_theorems": {
+    "StrongEdge/Bounds/EdgeCounting.lean": [
+      "card_le_via_relation",
+      "edgeIncidences_univ_card",
+      "edgeIncidences_card_le_degree",
+      "edge_endpoint_count",
+      "incidence_sum_eq_meeting_add_inside",
+      "conflict_degree_add_inside_le_sum",
+      "clique_card_le_one_add_incidence_sum",
+      "clique_card_le_thirteen_of_support_degree_le_two"
+    ],
+    "StrongEdge/Bounds/High23.lean": [
+      "meeting_edges_subset_root_single_double",
+      "high23_meeting_card_le_fourteen_of_root_four",
+      "high23_clique_card_le_sixteen_of_root_four",
+      "high23_clique_card_le_sixteen"
+    ],
+    "StrongEdge/Bounds/High23Four.lean": [
+      "root_edge_tip_not_neighbor",
+      "root_single_edges_outer_adj",
+      "high23_singleTips_card_le_six",
+      "singleRootEdges_card_le_singleTips",
+      "high23_doubleRootEdges_card_le_four"
+    ],
+    "StrongEdge/Bounds/High23Local.lean": [
+      "high23_cover_card_eq_six",
+      "high23_endpoints_degree_four",
+      "high23_other_neighbor_sets_disjoint",
+      "high23_no_triangle_on_edge",
+      "high23_cover_inside_card_le_one",
+      "high23_cross_edges_unique",
+      "high23_at_most_one_four_cycle_on_edge"
+    ],
+    "StrongEdge/Bounds/High23Outer.lean": [
+      "outerEdges_endpoints",
+      "outer_edge_types_cover_root_labels",
+      "high23_outer_edges_incident_double_root",
+      "high23_outer_card_le_two_of_double_root_type",
+      "high23_outer_edges_card_le_two",
+      "selected_edges_card_le_meeting_add_outer",
+      "high23_clique_card_le_fourteen_of_support_degree_le_three"
+    ],
+    "StrongEdge/Bounds/High23Support.lean": [
+      "mem_rootType",
+      "rootLabels_subset_neighbors",
+      "rootLabels_card",
+      "high23_root_degree_four",
+      "high23_root_neighborhood_independent",
+      "high23_root_cross_unique",
+      "high23_type_meets_root_labels",
+      "high23_root_type_card_le_two",
+      "high23_double_type_unique",
+      "high23_type_singleton_of_sharing_double"
+    ],
+    "StrongEdge/High23Packing.lean": [
+      "minimalCliqueBounds20_of_high20_high21_high22",
+      "induced_matching_packing20_of_high20_high21_high22"
+    ]
+  },
+  "new_theorem_count": 43,
+  "forbidden_token_matches": [],
+  "audit_entry_count": 94,
+  "all_new_theorems_in_audit": true,
+  "changed_preexisting_lean_files": [
+    "StrongEdge.lean",
+    "StrongEdge/Audit.lean"
+  ],
+  "unchanged_preexisting_sources_and_configs": [
+    "StrongEdge/Basic.lean",
+    "StrongEdge/Bounds/ConflictDegree.lean",
+    "StrongEdge/Bounds/ConflictRigidity.lean",
+    "StrongEdge/Bounds/High24.lean",
+    "StrongEdge/Conflict.lean",
+    "StrongEdge/DoubleCount.lean",
+    "StrongEdge/High24Packing.lean",
+    "StrongEdge/MinimalPacking.lean",
+    "StrongEdge/Packing.lean",
+    "StrongEdge/PrivateExchange.lean",
+    "StrongEdge/Tests.lean",
+    "lean-toolchain",
+    "lakefile.toml",
+    "lake-manifest.json"
+  ]
+}

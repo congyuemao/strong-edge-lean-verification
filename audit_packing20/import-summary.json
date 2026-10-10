@@ -1,0 +1,19 @@
+{
+  "imported_modules": 3648,
+  "source_files": 3648,
+  "missing_modules": [],
+  "token_counts": {
+    "unsafe": 535,
+    "axiom": 31,
+    "extern": 1019,
+    "sorryAx": 25,
+    "noncomputable": 514,
+    "opaque": 727,
+    "implemented_by": 181,
+    "sorry": 34,
+    "admit": 17,
+    "constant": 16,
+    "native_decide": 4
+  },
+  "note": "Entire imported files, including elaborator/runtime code and unrelated declarations; not the theorem axiom closure."
+}

@@ -1,0 +1,21 @@
+✔ [1164/1167] Built StrongEdge.Bounds.High20Slots (8.6s)
+✔ [1165/1167] Built StrongEdge.Bounds.High20UniqueTriple (16s)
+✖ [1166/1167] Building StrongEdge.Bounds.High20 (17s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\StrongEdge\Bounds\High20.lean -o .lake\build\lib\lean\StrongEdge\Bounds\High20.olean -i .lake\build\lib\lean\StrongEdge\Bounds\High20.ilean -c .lake\build\ir\StrongEdge\Bounds\High20.c --setup .lake\build\ir\StrongEdge\Bounds\High20.setup.json --json
+error: StrongEdge/Bounds/High20.lean:58:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 3
+  a ≥ 20
+where
+ a := ↑(#Q)
+ b := ↑(#(rootType G r y))
+error: StrongEdge/Bounds/High20.lean:63:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 3
+  a ≥ 20
+where
+ a := ↑(#Q)
+ b := ↑(#(rootType G r x))
+Some required targets logged failures:
+- StrongEdge.Bounds.High20
+error: build failed

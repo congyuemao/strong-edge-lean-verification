@@ -1,0 +1,11 @@
+IndependentAudit.conflict_iff_direct.{u_1} {V : Type u_1} (G : SimpleGraph V) (e f : ↑G.edgeSet) (hne : e ≠ f) :
+  (StrongEdge.conflictGraph G).Adj e f ↔ IndependentAudit.directStrongConflict G e f
+'IndependentAudit.conflict_iff_direct' depends on axioms: [propext, Classical.choice, Quot.sound]
+IndependentAudit.inducedMatching_iff_endpoints.{u_1} {V : Type u_1} (G : SimpleGraph V) (M : Set ↑G.edgeSet) :
+  StrongEdge.IsInducedMatching G M ↔ IndependentAudit.endpointInducedMatching G M
+'IndependentAudit.inducedMatching_iff_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+IndependentAudit.endpoint_packing20.{u_1} {V : Type u_1} (G : SimpleGraph V) [Fintype V] [DecidableEq V]
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (F : Finset ↑G.edgeSet) :
+  ∃ M ⊆ F, IndependentAudit.endpointInducedMatching G ↑M ∧ F.card ≤ 20 * M.card
+'IndependentAudit.endpoint_packing20' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.empty_candidates' depends on axioms: [propext, Classical.choice, Quot.sound]

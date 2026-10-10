@@ -2,6 +2,25 @@
 
 验证日期：2026-10-10（Australia/Sydney）。
 
+## 双路线证明与独立审计
+
+最新交付包含两份英文手稿及各自对应的完整 Lean 工程。两条路线共享整体打包策略，
+区别在局部恒等式、根部计数和阈值引理的组织方式；并非两个完全无关的证明。
+
+| 路线 | 英文手稿 | 对应 Lean 工程 |
+|---|---|---|
+| A：原纸面路线的严格形式化 | [PDF](output/pdf/route_a_paper_first.pdf) | [源码 ZIP](output/dual_proofs/route_a_lean.zip) |
+| B：原 Lean 路线的完整纸面证明 | [PDF](output/pdf/route_b_lean_first.pdf) | [源码 ZIP](output/dual_proofs/route_b_lean.zip) |
+
+- [完整交付包](output/dual_proofs/packing20_two_routes_complete.zip)及[交付说明](output/dual_proofs/README.txt)
+- [两条路线的详细比较](dual_proofs/ROUTE_COMPARISON.txt)及[逐项证明对应表](dual_proofs/proof_crosswalk.csv)
+- [构建与审计汇总](dual_proofs/verification_summary.json)、[依赖审计](dual_proofs/dependency_audit.json)及[源码溯源](dual_proofs/final_source_provenance.json)
+- [独立审计目录](audit_packing20/README.md)，含语义、复现与 Joos 2016 原创性核查材料
+
+两份源码包各带复现脚本和哈希清单。原始 49 项源码与配置保持原样；
+下文的 45 个文件、1,170 jobs 和 225 项公理审计数字对应原始 high20 阶段。
+编译器、依赖缓存及临时渲染文件不纳入仓库。
+
 **无条件诱导匹配 20-packing 已完成 Lean 验证。** 对任意有限简单图 G，
 若每个原顶点度数至多四，则对任意候选边集 F，存在诱导匹配 M⊆F，使 |F|≤20|M|。
 冲突始终在完整原图中定义，候选边集外的原边仍可作为冲突见证。

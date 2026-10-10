@@ -1,0 +1,1777 @@
+[
+  {
+    "module": "Batteries.Control.AlternativeMonad",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\batteries\\Batteries\\Control\\AlternativeMonad.lean",
+    "sha256": "2903860a0c8739820f3a80f47a24ec69e07ed21c2618cdabc4143eb420f64358"
+  },
+  {
+    "module": "Batteries.Data.List.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\batteries\\Batteries\\Data\\List\\Basic.lean",
+    "sha256": "c279fef8755f2523345414a1816399726d7e089084a2fee04d572a7ec3e1d724"
+  },
+  {
+    "module": "Batteries.Data.List.Lemmas",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\batteries\\Batteries\\Data\\List\\Lemmas.lean",
+    "sha256": "ac186b2fd90e04bf4a6f680e38166fd641343e1e1154ea1f77187362ecda7c16"
+  },
+  {
+    "module": "Batteries.Data.List.Pairwise",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\batteries\\Batteries\\Data\\List\\Pairwise.lean",
+    "sha256": "54dac3945fe567772781cb69462fc410f38489c0cb2aed52bcc2040a15c6e132"
+  },
+  {
+    "module": "Batteries.Data.List.Perm",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\batteries\\Batteries\\Data\\List\\Perm.lean",
+    "sha256": "1d04f1941c8e23ed36cbea23e562e732131a6cd7c6db9dfcada4fe28b6c99604"
+  },
+  {
+    "module": "Batteries.Logic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\batteries\\Batteries\\Logic.lean",
+    "sha256": "9d83da7691e04e6d0ccf8352bc3de914dab1ea9977eb0c11c0863abea758abdb"
+  },
+  {
+    "module": "Init.BinderNameHint",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\BinderNameHint.lean",
+    "sha256": "2bd86521d666de45a383f8f1dac470d82b679e0fcf7129199f83644e2ff3e5dd"
+  },
+  {
+    "module": "Init.ByCases",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\ByCases.lean",
+    "sha256": "f8714a7a8cd10ec892f16cd3e220a57c4b04f5c362c090ebf73fecd0b3460043"
+  },
+  {
+    "module": "Init.Classical",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Classical.lean",
+    "sha256": "9217cf075cac15875b6fb5073ce5d150037953623fbfacac8a181214d42edd0b"
+  },
+  {
+    "module": "Init.Control.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Control\\Basic.lean",
+    "sha256": "0a55a61ba3f46943981f10de655198033c3d21cd834471579565bd0a40869683"
+  },
+  {
+    "module": "Init.Control.Id",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Control\\Id.lean",
+    "sha256": "b53cea469bc0c372d422112788114310fedc4f631fe2aa6b8d55a7618119832d"
+  },
+  {
+    "module": "Init.Control.Lawful.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Control\\Lawful\\Basic.lean",
+    "sha256": "7aee65ffd017978662f01ddc90932fbbe50379ee36267967d29bb7cf4cb5d2e0"
+  },
+  {
+    "module": "Init.Core",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Core.lean",
+    "sha256": "264a0b48fedc91fadf55fc5caac8d91003e3908a6e5e42736e2ac8bf1f7cdf99"
+  },
+  {
+    "module": "Init.Data.AC",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\AC.lean",
+    "sha256": "50ec71c57f54c37657bf056e3b6cefc103fd5abcfeee447046e585951ec3f9b4"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Array\\Basic.lean",
+    "sha256": "3215940809832a7a1b8ea8cdaecc8ea52e840a454bbfe358e277db09a8eb7183"
+  },
+  {
+    "module": "Init.Data.Array.Bootstrap",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Array\\Bootstrap.lean",
+    "sha256": "f5857aeecfaee150e9daf85202357cbc189b4ddab7f2520c0374d4b11127de81"
+  },
+  {
+    "module": "Init.Data.Array.Lemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Array\\Lemmas.lean",
+    "sha256": "6cdf27c4894d90bc75f1231f289ebc00f4a8e3868633eaa97447699bcccee1bb"
+  },
+  {
+    "module": "Init.Data.BEq",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\BEq.lean",
+    "sha256": "7c60c30768d646020cc4e4e504e5f234ed717afa70637cd1c0e0e1053741e442"
+  },
+  {
+    "module": "Init.Data.Bool",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Bool.lean",
+    "sha256": "182702f903573fe03983e39b23f2af383692e356ad50463eb7264c0152316c3a"
+  },
+  {
+    "module": "Init.Data.Cast",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Cast.lean",
+    "sha256": "c026135a0ec4ef0bd7cb866815a91167d0bde268aab4db1a5d46c986061f9a69"
+  },
+  {
+    "module": "Init.Data.Fin.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Fin\\Basic.lean",
+    "sha256": "bb3d4e46cb40a24f5a09e6e003c76f2b84140a598df81233f0bffe3afe08cbf4"
+  },
+  {
+    "module": "Init.Data.Fin.Fold",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Fin\\Fold.lean",
+    "sha256": "ef0c39fb0ed75be754e2f91df5f19fa72e2099c3d4811d87a5f584371e7fc7c2"
+  },
+  {
+    "module": "Init.Data.Fin.Lemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Fin\\Lemmas.lean",
+    "sha256": "f00755157b6915ad4ff73f0ff86143576dcf9d89a0d0a31a8f0d9401b0a45bd0"
+  },
+  {
+    "module": "Init.Data.Function",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Function.lean",
+    "sha256": "88217ed8ec91da1ec655c8a10f737b659a4570b4c05dbd6b084162a3157cf030"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\Basic.lean",
+    "sha256": "468d1f036ff16558063349347c175fa9a4f0433ba5b9e85a9c562ebcfd3ab202"
+  },
+  {
+    "module": "Init.Data.Int.Compare",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\Compare.lean",
+    "sha256": "dad8c93067d59e2cbfbc38079f3c3a2468d32156dde521527ce6737c87dae208"
+  },
+  {
+    "module": "Init.Data.Int.DivMod.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\DivMod\\Basic.lean",
+    "sha256": "3b831c3aee5aea53a8c40eb6332e5bd8de74b3e552df183da1f70412da978e95"
+  },
+  {
+    "module": "Init.Data.Int.DivMod.Bootstrap",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\DivMod\\Bootstrap.lean",
+    "sha256": "bd55b51820dbc53925d34190fcb5de38afc5d6b3528759101fe6da87973026c1"
+  },
+  {
+    "module": "Init.Data.Int.Lemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\Lemmas.lean",
+    "sha256": "84a9cbfa60b94eafdf86b23bc15d710386767930aa3e3c0a273ddbd99b55e01f"
+  },
+  {
+    "module": "Init.Data.Int.LemmasAux",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\LemmasAux.lean",
+    "sha256": "0825a8f73573a8c6d26e2a9f2c7d13161f2c0fd6d59726fd4ed55c0e00ff6ef8"
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\Linear.lean",
+    "sha256": "b7d2ae684fed1ffaf293f33c2d736861e8fa9f89be108f41a110a7c42243b1ad"
+  },
+  {
+    "module": "Init.Data.Int.OfNat",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\OfNat.lean",
+    "sha256": "e0e157a593c154e0a8a6087a42088b0dca1361b28c3dfef8075c052a6593d26b"
+  },
+  {
+    "module": "Init.Data.Int.Order",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\Order.lean",
+    "sha256": "a92a3e1832b1c0b7e5dd8a66f3b101b0a4ba5abc2bedffd31d767a09f448d753"
+  },
+  {
+    "module": "Init.Data.Int.Package",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\Package.lean",
+    "sha256": "25a587bacf27965764cfee9f4c046f71e8f9d3c69d2843918692bd947b608e9d"
+  },
+  {
+    "module": "Init.Data.Int.Pow",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Int\\Pow.lean",
+    "sha256": "398fa945ac68449be11d47e73322df956fd3da2c44f2af232602baaef8c24f8b"
+  },
+  {
+    "module": "Init.Data.List.Attach",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Attach.lean",
+    "sha256": "2d392f48cdd9c7886817d3ced7ea82b447e25738ca4249f97492ced94e8baf38"
+  },
+  {
+    "module": "Init.Data.List.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Basic.lean",
+    "sha256": "566e74dd5c3e72b2111af000b8bd1552f1aaffe29be317ba01bc91c9e5b55293"
+  },
+  {
+    "module": "Init.Data.List.BasicAux",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\BasicAux.lean",
+    "sha256": "7f45f606bed307bbac4714fe674a778e055508f9f1bd61c000b5d99f5c76e58d"
+  },
+  {
+    "module": "Init.Data.List.Control",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Control.lean",
+    "sha256": "ef3d0071842c592f831488f29b771908d11cad0cdfc2dddb83662172fa90e7c2"
+  },
+  {
+    "module": "Init.Data.List.Count",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Count.lean",
+    "sha256": "4cf663e7844728b7762b9421fedfe044d33ff3a89ccc7e6f4bfd213c6ab336b6"
+  },
+  {
+    "module": "Init.Data.List.Erase",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Erase.lean",
+    "sha256": "8a56a5a4368da5cbc0c7d5bed616cf71ecfbb4e937724d2ed306fdafcf5142bd"
+  },
+  {
+    "module": "Init.Data.List.FinRange",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\FinRange.lean",
+    "sha256": "23534ca339ebcbbeaf9c15a8cd726fa1f7cdf4233e164500d12c31798432b541"
+  },
+  {
+    "module": "Init.Data.List.Find",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Find.lean",
+    "sha256": "a6c652c553d9752ce238f3943aa1a39c125148358a178240a84afe0524b22b0e"
+  },
+  {
+    "module": "Init.Data.List.Lemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Lemmas.lean",
+    "sha256": "9365fb1c6da0313a4c73e8cf096377e69c28ece28d38290a0423e5f8cc1fdfdb"
+  },
+  {
+    "module": "Init.Data.List.Nat.Pairwise",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Nat\\Pairwise.lean",
+    "sha256": "ac58a900cadda31611fbbbcaf6372555460ae2d3f16c303695b06c1a27156a2a"
+  },
+  {
+    "module": "Init.Data.List.Nat.Range",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Nat\\Range.lean",
+    "sha256": "06325fdc2c100a4b20eff48e227419259e0749eb82b156b17a1c57b35a5649e3"
+  },
+  {
+    "module": "Init.Data.List.OfFn",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\OfFn.lean",
+    "sha256": "b91368ac7239f0171498250d1de0e270102c5f8431fa5723a449c83b02807c1b"
+  },
+  {
+    "module": "Init.Data.List.Pairwise",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Pairwise.lean",
+    "sha256": "fcc984c70a81216c178d42a858dea5e3640201023a9a4d2837e76f138fd9b0f4"
+  },
+  {
+    "module": "Init.Data.List.Perm",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Perm.lean",
+    "sha256": "d91620e1c9767119095b48601266b8c5267ed4ab0afb7fe31a4780209b9751fb"
+  },
+  {
+    "module": "Init.Data.List.Range",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Range.lean",
+    "sha256": "74561923c148bb19e8cbcfbbd30f81dcb1302bb395925e7d06d107eb90e6a29a"
+  },
+  {
+    "module": "Init.Data.List.Sublist",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\Sublist.lean",
+    "sha256": "21989b3207dc70b9097d04587d73562445f1444c72cc1bf377dd9852f6e64d6e"
+  },
+  {
+    "module": "Init.Data.List.TakeDrop",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\TakeDrop.lean",
+    "sha256": "9efed9c3f05746ce0dd47c5fcd2c414ba9541d6631d6ddf0cb06203d723c7918"
+  },
+  {
+    "module": "Init.Data.List.ToArray",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\List\\ToArray.lean",
+    "sha256": "2218ae95d2d906335ab6f2e98bef521c9728b221e9e80bbdaf9f1cbb47ef692e"
+  },
+  {
+    "module": "Init.Data.Nat.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Basic.lean",
+    "sha256": "e26b5a54eab922f6b650cfe9032fe23172fa8cc0b63c75cff0c8bf99f6175289"
+  },
+  {
+    "module": "Init.Data.Nat.Bitwise.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Bitwise\\Basic.lean",
+    "sha256": "0196b9eabcb97bd41b9ace0cfb828d2f0f0215085d2eb8972d2c541539c94df3"
+  },
+  {
+    "module": "Init.Data.Nat.Div.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Div\\Basic.lean",
+    "sha256": "0c8fc51180b0d4fb6319e8a44acd7999f3a1b3aad21d8da5c0ad575914f9d120"
+  },
+  {
+    "module": "Init.Data.Nat.Dvd",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Dvd.lean",
+    "sha256": "12cd37a3909fddc05c1f5541662d1a099c083aa1084777ded9d583c7a6780f96"
+  },
+  {
+    "module": "Init.Data.Nat.Gcd",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Gcd.lean",
+    "sha256": "672c96102205b59a47742be74c959ed780ba319713baaa8a2eeede2cdc46cbea"
+  },
+  {
+    "module": "Init.Data.Nat.Internal.Linear",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Internal\\Linear.lean",
+    "sha256": "8f75864cbcbf54ac893dd839959273e2fa2e6ae31cf310c20a8b7f98db27d75b"
+  },
+  {
+    "module": "Init.Data.Nat.Lemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Lemmas.lean",
+    "sha256": "c4530be5c96b507c13823378db43912a3ba577a2a23944ce222aaa7d193d2581"
+  },
+  {
+    "module": "Init.Data.Nat.Order",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Nat\\Order.lean",
+    "sha256": "481f7db05f9a8e0a6743ac7c3cf88f1ea0e361510765ed5f1b3abedb81d6b84d"
+  },
+  {
+    "module": "Init.Data.NeZero",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\NeZero.lean",
+    "sha256": "94e1883fd4fd9c5612da4a24a0cbc9bd6a656d31ce9a0123b9833175c5964df3"
+  },
+  {
+    "module": "Init.Data.Option.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Option\\Basic.lean",
+    "sha256": "cf4b95fea5eceebccfd6ce65c172b8b3cd35e8a805b1f2018e59f951a2b30bf9"
+  },
+  {
+    "module": "Init.Data.Option.Instances",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Option\\Instances.lean",
+    "sha256": "1c7471e4b27cfdd19f4bc111a402d246f2db4d74f5b5559b639e66c70e8429d6"
+  },
+  {
+    "module": "Init.Data.Ord.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Ord\\Basic.lean",
+    "sha256": "0e3a0b38ea902721b3cdaa49b65c87fbf53f9acc94ee783a82f342b5aaa9b630"
+  },
+  {
+    "module": "Init.Data.Order.Classes",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Order\\Classes.lean",
+    "sha256": "9ac5d18a28594020211f78e2e12dd80a0ac6bde4cd654d35b9436f727eaff8c3"
+  },
+  {
+    "module": "Init.Data.Order.ClassesExtra",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Order\\ClassesExtra.lean",
+    "sha256": "ae136aa2755f7ace8978dc2f0a8d3ccad2b53723c5d98c08bcc587db889bb3a7"
+  },
+  {
+    "module": "Init.Data.Order.Factories",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Order\\Factories.lean",
+    "sha256": "c639af400df5248abbb88a0c97fd09cb534d784918cccee7f520f09ca5dec8b7"
+  },
+  {
+    "module": "Init.Data.Order.Lemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Order\\Lemmas.lean",
+    "sha256": "e721ebe577372a31e53cbf6a43cf562396245a7300aaad208957b798e36a0f4f"
+  },
+  {
+    "module": "Init.Data.Order.LemmasExtra",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Order\\LemmasExtra.lean",
+    "sha256": "46d1fadb532ee8ee577e9936f21123b5847b7a85902cdf961322360d44ced255"
+  },
+  {
+    "module": "Init.Data.Order.Ord",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Order\\Ord.lean",
+    "sha256": "dacf0fae1abb5e2c4800e0d8d0ce1ab76a0688e00b2cc2d065656b0569f45c3d"
+  },
+  {
+    "module": "Init.Data.Order.PackageFactories",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Order\\PackageFactories.lean",
+    "sha256": "cf45b6bc3f830a3308f384717242df787cb8f418c6fd20dbaf6491fb7d775c4e"
+  },
+  {
+    "module": "Init.Data.Prod",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Prod.lean",
+    "sha256": "66e190929f976c08354efa2b611d9e2dcb8db2fefd2d60c3f7db49c8de9544ba"
+  },
+  {
+    "module": "Init.Data.RArray",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\RArray.lean",
+    "sha256": "8567fe0ea5f15f70159d8eec4b8a46cf0a0ab28f81247e99010a4c23bfc81350"
+  },
+  {
+    "module": "Init.Data.Repr",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Repr.lean",
+    "sha256": "d61665f84f97f41c7d49a6e7746621dd6842878b127306ea67a27d706187ec15"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\String\\Bootstrap.lean",
+    "sha256": "23f245ddbf06875c7774527a1fd834bef96cd1ac95a63da57850b022093fc177"
+  },
+  {
+    "module": "Init.Data.Subtype.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Subtype\\Basic.lean",
+    "sha256": "146ef8b3ebf4b02f6cf4f317c9f7220901cfed6d83e5ddc597dcc17ebf1f70a3"
+  },
+  {
+    "module": "Init.Data.ToString.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\ToString\\Basic.lean",
+    "sha256": "d8c0b0da1a266c6a178972cf023f8501d95feec972b86d13eb0924670ac9aabf"
+  },
+  {
+    "module": "Init.Data.Zero",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Data\\Zero.lean",
+    "sha256": "7a38aca83ffa33660079bec9c1ef03603d2ef9e1eac63572684c3ad116743978"
+  },
+  {
+    "module": "Init.Ext",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Ext.lean",
+    "sha256": "dd6374ead7a9cb2effa6a53070e9789055fcead1101606d94bac7ca435b56062"
+  },
+  {
+    "module": "Init.GetElem",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\GetElem.lean",
+    "sha256": "48f15b60c7557c565aa59db2833e49e7256c9e690f228272cffc7de2d75c5f14"
+  },
+  {
+    "module": "Init.Grind.Lemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Lemmas.lean",
+    "sha256": "abcf6262ed94458197fa600f04616f1f5c18af28cebf8695f2cf05c5130b5b08"
+  },
+  {
+    "module": "Init.Grind.Module.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Module\\Basic.lean",
+    "sha256": "7259ee82b2bc66169d6e6307cf9ec4edd9b51c21b086ea2daefead9609c309c8"
+  },
+  {
+    "module": "Init.Grind.Norm",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Norm.lean",
+    "sha256": "518b364f160c7eab4a9c3e6629ed9a1d41868776c29d6d350de94003b624d3d0"
+  },
+  {
+    "module": "Init.Grind.Order",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Order.lean",
+    "sha256": "3b0501e81af422c9b27067cf6b24d984590bcc6ce6ff030264be85c8becf93dc"
+  },
+  {
+    "module": "Init.Grind.Ordered.Int",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Ordered\\Int.lean",
+    "sha256": "ae655d6df91afa87a51d6be899e49c63fc60c573e2547aaee2a7ff86f3ee7c15"
+  },
+  {
+    "module": "Init.Grind.Ordered.Module",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Ordered\\Module.lean",
+    "sha256": "0e8d90be0f2a1bc425f65026687be7942961d952ae7c46a06a0b6d9b65195fe0"
+  },
+  {
+    "module": "Init.Grind.Ordered.Order",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Ordered\\Order.lean",
+    "sha256": "3d2129053d6d700f2f7b25f820593a189417f7c1cfc598bf98efd732954893aa"
+  },
+  {
+    "module": "Init.Grind.Ordered.Ring",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Ordered\\Ring.lean",
+    "sha256": "c61e6ef0bbab4a63ba8f7e1dc15453802b985a2d4f0a8b50738c5891510affb2"
+  },
+  {
+    "module": "Init.Grind.Ring.Basic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Ring\\Basic.lean",
+    "sha256": "e20b816a722fc9003146396183d3af2af5394bc4725ca6a8b12f122b806f8df1"
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Ring\\CommSolver.lean",
+    "sha256": "5980754e993f8d9c1880309b67bf54102d22025678708f3ca695ace3aa5bfbb9"
+  },
+  {
+    "module": "Init.Grind.Util",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Grind\\Util.lean",
+    "sha256": "c00d7ab3ce0d581c651ef5495245cb75e3bbe416d4542829c82c6c6f94f2b5a3"
+  },
+  {
+    "module": "Init.GrindInstances.Ring.Int",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\GrindInstances\\Ring\\Int.lean",
+    "sha256": "42a488e9c88c577ddcec9d0c8c7884ff1517dea103638a1b9f79d2e8f6e029ed"
+  },
+  {
+    "module": "Init.LawfulBEqTactics",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\LawfulBEqTactics.lean",
+    "sha256": "adbfd4ff58dbb98dc3a8cc0ce925184498964e8b55e6c3bf3990508c45b1f440"
+  },
+  {
+    "module": "Init.Omega.Coeffs",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Omega\\Coeffs.lean",
+    "sha256": "e54f3c3b3027b79c3e4d61d1374dbc361ee6a6bc7220956da7d15ff003d72fc6"
+  },
+  {
+    "module": "Init.Omega.Constraint",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Omega\\Constraint.lean",
+    "sha256": "d3f85c1a1ecfa9fa8c68987debfc1a9ce6646f832e112a683ad6ece3a18dd69a"
+  },
+  {
+    "module": "Init.Omega.Int",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Omega\\Int.lean",
+    "sha256": "126d2f8aaf07c6e9919f01b12ce7b63f18c2fc71b30673dca8e965d0e907c874"
+  },
+  {
+    "module": "Init.Omega.IntList",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Omega\\IntList.lean",
+    "sha256": "5760ee7f3c39d7b2515d52ad4ef327520f81bfc037224206e9fd51ba12f3333b"
+  },
+  {
+    "module": "Init.Omega.LinearCombo",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Omega\\LinearCombo.lean",
+    "sha256": "cafce2df16a1032da1aca32a8c92bd501a0b7f74f19a650e7b30738d13bd16d6"
+  },
+  {
+    "module": "Init.Omega.Logic",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Omega\\Logic.lean",
+    "sha256": "01a7310a1ffc9f79fb5849e4905116db84248f91b2eea4524aaeeb9eebbadcc3"
+  },
+  {
+    "module": "Init.Prelude",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Prelude.lean",
+    "sha256": "390e6b57ead28cb821a65533b21357f2f02d0a1525602f5a1ce9ee3eeb81fd12"
+  },
+  {
+    "module": "Init.PropLemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\PropLemmas.lean",
+    "sha256": "fd1e5105ce5d47da84164126280c06b5b3e69756dc41e3287046c7d10c01e1bc"
+  },
+  {
+    "module": "Init.SimpLemmas",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\SimpLemmas.lean",
+    "sha256": "0aa122da77386bd084dac91b5921f1cf97a8c99871528d72da6dd6cf0de1074e"
+  },
+  {
+    "module": "Init.SizeOf",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\SizeOf.lean",
+    "sha256": "f7c8f5c2aa4596139f6e37ee0cbf6c664218076fcb089c988787dcebc017d07c"
+  },
+  {
+    "module": "Init.Tactics",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Tactics.lean",
+    "sha256": "0f98c09e7e56ed3431292d6996a20237ec8e5eb4d322e5701b33d6396638e056"
+  },
+  {
+    "module": "Init.Util",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\Util.lean",
+    "sha256": "853410d6970bf94c7501d4fa50763e5db210cb6ab6869d9e1b3f484021b9cfd0"
+  },
+  {
+    "module": "Init.WF",
+    "path": ".tools\\lean-4.35.0-rc4-windows\\src\\lean\\Init\\WF.lean",
+    "sha256": "fe7c0a49de4a9c4b4fac24493f40598a1374837b17a6c334fc1ed03e23646e01"
+  },
+  {
+    "module": "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.lean",
+    "sha256": "5a7e6928b6210557c886e6d4869fcab10b6795546ce3ada6e498a2f4f4efd241"
+  },
+  {
+    "module": "Mathlib.Algebra.BigOperators.Group.Finset.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Defs.lean",
+    "sha256": "9eb47f037527645440dda3cd75addb3421ba0878ba24ee129bbb7768bafdbae4"
+  },
+  {
+    "module": "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Sigma.lean",
+    "sha256": "a95e59d5f1bf5a7284befcbf42dc78687da8f0e1ea59863a97d48a826f857c84"
+  },
+  {
+    "module": "Mathlib.Algebra.BigOperators.Group.List.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\List\\Defs.lean",
+    "sha256": "177eba82ff03cc1be97a32f8f38abe876871cfe8d2d1c82fa24fdcf59649892e"
+  },
+  {
+    "module": "Mathlib.Algebra.BigOperators.Group.Multiset.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Multiset\\Defs.lean",
+    "sha256": "efd862f7f01160710073c3c26662337aed8518f0f71ed5e2c8a8af57ea5e4d24"
+  },
+  {
+    "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Ring\\Finset.lean",
+    "sha256": "6812c8bd7bbc0a0cc68287199b70f1071f7273866ca2e02b6e6db3ad41556baa"
+  },
+  {
+    "module": "Mathlib.Algebra.BigOperators.Ring.Multiset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Ring\\Multiset.lean",
+    "sha256": "fb586484e9ca21eee4d0635ee60bb1beded6742735d3638c312d6d658e91fd4a"
+  },
+  {
+    "module": "Mathlib.Algebra.CharZero.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\CharZero\\Defs.lean",
+    "sha256": "a7e494ce8868817237bc2afb650a47b9f4d1b82ad08bbc6f396f532b7953fd16"
+  },
+  {
+    "module": "Mathlib.Algebra.Divisibility.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Divisibility\\Basic.lean",
+    "sha256": "c0242f42d10f664f67616980308467d8c078438ca781e0fc794950de495755a4"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Basic.lean",
+    "sha256": "be1b1d022259fdd74f9072c127f6958a238ff0e06d6bbb20250cd06437f09b8e"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Defs.lean",
+    "sha256": "3b302af951ff697ab3c6049c1d906da5bb63af70f36dd10ba8405f37e066c6e0"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.DivInvMonoid",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\DivInvMonoid.lean",
+    "sha256": "91cef26c148179d72be2bca415d08c6b685c0d060c4db3d5cfe55dfef01159fe"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Int.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Int\\Defs.lean",
+    "sha256": "1c6e7ca111b311fdec9fe08454f675c21179e2bf3c16a79ec0f913dc35a73d9b"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Monoid",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Monoid.lean",
+    "sha256": "a584062d462600ac944e9e6036b7cc7dd11e9cc1a229f11ccc124d636d96f969"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Nat.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Nat\\Defs.lean",
+    "sha256": "d75fe2fab3a491c7bea99be8a3b5d5b4a1f9a24b662ce57580687d08334fb4f4"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Semigroup",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Semigroup.lean",
+    "sha256": "3e8ffb4a687ac724b2f4d5eca4c4aa15758049ff9d394cdbae68944f7d5d6f06"
+  },
+  {
+    "module": "Mathlib.Algebra.GroupWithZero.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GroupWithZero\\Defs.lean",
+    "sha256": "b9ae57c32751dff874f6120ace9f57d6f7cc3379efa13d9f130c765e370697ea"
+  },
+  {
+    "module": "Mathlib.Algebra.GroupWithZero.Divisibility",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GroupWithZero\\Divisibility.lean",
+    "sha256": "d1a119a38c0635321c2204c3ee12b2e91e879e26202d62b37032bc591c1be649"
+  },
+  {
+    "module": "Mathlib.Algebra.GroupWithZero.Nat",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GroupWithZero\\Nat.lean",
+    "sha256": "b73cc5ad8edf0cc3feeafe9c2ab9d6e89273ba79da19f6f5c4370c4d72953b7a"
+  },
+  {
+    "module": "Mathlib.Algebra.GroupWithZero.NeZero",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GroupWithZero\\NeZero.lean",
+    "sha256": "01db5539b30d3a4e7f419c331668bc8728b6efae9707f67bbb445f4810130c2d"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.lean",
+    "sha256": "2f363d7e8189588096d4cf21203534663ed909046c474ca3d455846121f4fa04"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.BigOperators.Group.Multiset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Multiset.lean",
+    "sha256": "9eaa2cf975afa0771df607c763c035e1299f533998779f4f991d901078824e00"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Group.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Group\\Defs.lean",
+    "sha256": "a37527d97c6e29b38a85a849669ece6f86eab2482c3c48c826f44b0594b46a10"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Group.Int",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Group\\Int.lean",
+    "sha256": "7acb6fc7f958f97b768101f93215c89fcf46040b50c5a7290dad79143966328c"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Group.Multiset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Group\\Multiset.lean",
+    "sha256": "20992ce0f499920c8e143fa43c56638bd0bf7a44f8e4cad5efce1e423ff99bd3"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Group.Nat",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Group\\Nat.lean",
+    "sha256": "7a8e59fbb2a9256e8cbaf7cfe56f69e5aedd77d890c93c7a4ee8ef8dd54e0d3a"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Group.Unbundled.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Group\\Unbundled\\Basic.lean",
+    "sha256": "57e42fe239f8123384590fc00871b6bb9f14aad8d288b2063fa429b03f4e3ca2"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.GroupWithZero.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\GroupWithZero\\Basic.lean",
+    "sha256": "193359178e08d060047ab6dd795ce816ab3c89417355dd5e8a37ce2cea4890fc"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.GroupWithZero.Canonical",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\GroupWithZero\\Canonical.lean",
+    "sha256": "9bd2e094e4d5a88d44c3feca6eb177bdef88b8bd3770169b2656746aaf134df5"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.GroupWithZero.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\GroupWithZero\\Defs.lean",
+    "sha256": "4b2ce4398f917ed574ffe4c99fabf2eb84fc1f2a23a5eb2ae5bc587ee320371b"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.IsBotOne",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\IsBotOne.lean",
+    "sha256": "c436551ef2504f9c3fc20246e99ab822f5afa34e18d6a4434e8120befeba7096"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Monoid.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Monoid\\Defs.lean",
+    "sha256": "7dbbd49ca12e9bb4a3a4a523230ea8a01cbac9a869b0b972d9370fe537be514b"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Monoid.NatCast",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Monoid\\NatCast.lean",
+    "sha256": "088be051c6da549846d1e64e656e7ec5b5fedf4e36c75aaac0729d16de2ab485"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Monoid.Unbundled.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Monoid\\Unbundled\\Basic.lean",
+    "sha256": "f8413f38b5b4db9d13660fb8692f984c064cbf7692ca9c9ff58792d244b46773"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Monoid.Unbundled.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Monoid\\Unbundled\\Defs.lean",
+    "sha256": "bf1e1ff9c00c66b72319e08bde1abfa3f080d60d557f455e657674f04c8e87a5"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Monoid\\Unbundled\\ExistsOfLE.lean",
+    "sha256": "175c67e213fb24d5ae2b8779d4d2e44d9b29a9150a7829f1ed58448c6cfc6753"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Ring.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Ring\\Defs.lean",
+    "sha256": "ce32594a8238efc5c890ec21a1946cc76155f6bd4b728a21db352d1242fb702c"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Ring.Int",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Ring\\Int.lean",
+    "sha256": "c090ca1545786f9e6c5318424ab9f93a5506c28c9bf0477ce3d1534366f56d37"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Ring.Nat",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Ring\\Nat.lean",
+    "sha256": "d2afb93f2ef4927802bb3f668c6cd6252011e483a02da3b984ec21fc670c9de4"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.Ring.Unbundled.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Ring\\Unbundled\\Basic.lean",
+    "sha256": "afb012a66d5ffb56b1998e48849d84bfd311f4cb8ee6257201e3f27e9078d1e9"
+  },
+  {
+    "module": "Mathlib.Algebra.Order.ZeroLEOne",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\ZeroLEOne.lean",
+    "sha256": "c973a5ba0d0cb1f91556fa5935ebd11c3e2126b8a996a4edd64463ff6e56c30e"
+  },
+  {
+    "module": "Mathlib.Algebra.Regular.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Regular\\Defs.lean",
+    "sha256": "f8933a8551a2ef41ba607fa0b1312e5c99649c690eaf31d095d1053066973a77"
+  },
+  {
+    "module": "Mathlib.Algebra.Ring.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Ring\\Defs.lean",
+    "sha256": "c8ba0c1ce87bed48570a579f5ce29f83a097b0c5f4c153065a83bef6bc392055"
+  },
+  {
+    "module": "Mathlib.Algebra.Ring.Divisibility.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Ring\\Divisibility\\Basic.lean",
+    "sha256": "b5bd1168e53c11c406689876ce083de472580e804ca2b41f19f06cc4dde64568"
+  },
+  {
+    "module": "Mathlib.Algebra.Ring.Int.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Ring\\Int\\Defs.lean",
+    "sha256": "1dce3596b3316716424d71b601aa7bd9024b67877b0971fc606a5c856a35f09a"
+  },
+  {
+    "module": "Mathlib.Algebra.Ring.Nat",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Ring\\Nat.lean",
+    "sha256": "601d76433852acdd4a2b4ce183671ef30f36e74099eaca680fce96f08f000953"
+  },
+  {
+    "module": "Mathlib.Basic.Finite.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\Finite\\Defs.lean",
+    "sha256": "044c5a3deecea361439baccbf4b4cd9d700eb99f53c1e88fa7dca57711d429c7"
+  },
+  {
+    "module": "Mathlib.Basic.FunLike.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\FunLike\\Basic.lean",
+    "sha256": "6b157c1bfcd0834de65a78e0a5521cee0a70769bf632bc8593feed9ca4d4806e"
+  },
+  {
+    "module": "Mathlib.Basic.FunLike.Embedding",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\FunLike\\Embedding.lean",
+    "sha256": "69844c5a05b282d6af96b811ca736e7ff9b07a9c024a73225e53adf5cbda91a9"
+  },
+  {
+    "module": "Mathlib.Basic.FunLike.Equiv",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\FunLike\\Equiv.lean",
+    "sha256": "94100111fb4c669f7faf92cd0f16e6cdf9e54250f0ac619b17ef9c872aa5a2c7"
+  },
+  {
+    "module": "Mathlib.Basic.IsEmpty.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\IsEmpty\\Defs.lean",
+    "sha256": "eae0679d6fba387f5386c95d80e3add65e8c0fb53ae0ae14daa05272bce8a7e0"
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\Logic\\Basic.lean",
+    "sha256": "8ec9a1df61bd19e10fa2cda4c92faad99141d11f0ab6e2739fa535d85335bd26"
+  },
+  {
+    "module": "Mathlib.Basic.Nonempty",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\Nonempty.lean",
+    "sha256": "94210b016a3bca44d1bb306a544a413a9d71ab698ef11f80efd697f6492a5797"
+  },
+  {
+    "module": "Mathlib.Basic.Nontrivial.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\Nontrivial\\Defs.lean",
+    "sha256": "1b468ea5201a0dcd23d91153eb0b1163f2c282a933d6d8467b6edd8fe9ae0cbb"
+  },
+  {
+    "module": "Mathlib.Basic.SProd",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\SProd.lean",
+    "sha256": "a61ca8dac5029e9e342d881237c27a81cd44488b674daf506f96f847388ff8d9"
+  },
+  {
+    "module": "Mathlib.Basic.SetLike.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Basic\\SetLike\\Basic.lean",
+    "sha256": "c56fba77d50ec4a7efb0ec89c4e6da2aee6058a8f7ff00332ca1d44b512ebda9"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Basic.lean",
+    "sha256": "a3b2702c016b3ee863725363f3715faa325defa6ea1b8f4c7bb3ee7d2f04b655"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Clique",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Clique.lean",
+    "sha256": "158ea16834e4dd1108c780c5c5640a9a9a6b24a24f611ab2a73f2a457382b61f"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Finite",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.lean",
+    "sha256": "9f461683fda32975e0ee030fa2946d1207185e35fc9eeee7d486b75187c00d24"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.LineGraph",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\LineGraph.lean",
+    "sha256": "2add8247187c098ea3e35ff29f5e71d8b0fabb834178b6538c1ad47016538055"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Maps.lean",
+    "sha256": "4074ee9b9992a46233c2eb8883b09a0dd130f3ab78d8f02ffc6831b264b0bcaf"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Attach",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Attach.lean",
+    "sha256": "230b38cff9dc7b21938cb053fa463466df0e16ef4eb834d4df24dba565e2d3d4"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Basic.lean",
+    "sha256": "89fa70d6bced856015bb7788aee57c07bc14191d96584844919d6be783871b7f"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Card",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Card.lean",
+    "sha256": "dd947dcc6d1d00c23c6e290acbeb5d2e5de70632c85564b722578974f2894d64"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Dedup",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Dedup.lean",
+    "sha256": "45e949eeb1e7fdc6229b9f4d66a6903a09af6191c55132e85af43264f17879c8"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Defs.lean",
+    "sha256": "04fb010119c0af321f475d7677bed3a060fbb0c7336a573eeb55997108da1609"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Disjoint",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Disjoint.lean",
+    "sha256": "abcff17ddc3bd2b9de138381cac2f1eb6abc6d45de93d6556658d50f06f629f8"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Empty",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Empty.lean",
+    "sha256": "41524350309eca0767f69982dfa5eae2ae49421795fa9479f9f3c5e39ad4e193"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Erase",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Erase.lean",
+    "sha256": "b106621232066fd605a54f55f7c09ee661523df49726bfbf48f92ddd5bfcae64"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Filter",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Filter.lean",
+    "sha256": "c8dd74c4c735bca0c67bedc116a627749fca4aa3084c05ffb31490f145b5d5d9"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Fold",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Fold.lean",
+    "sha256": "f71b162636398f5be615677480d0552bcb3e2b727f88ce54e09cd46bfadea4de"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Image",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+    "sha256": "c3829484fc967325b0d71611c03cd7d86f14f0220e9acd314c126a81ab158cb8"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Insert",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Insert.lean",
+    "sha256": "a1a1152eda76680cf5cc1dc0e21dbb8537ea228002884a0c0cd669baaaa8ddf6"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Lattice.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Lattice\\Basic.lean",
+    "sha256": "c3bb1b5c416b79d9108a2d2fde91e3685d351fc81ae2a13da2e3a23ffcefdc7d"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Lattice.Fold",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Lattice\\Fold.lean",
+    "sha256": "b1df476a0e74448ff14b5e187ff8b4d0e258a0d6f8e82fd6574970a3756962a5"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Lattice.Lemmas",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Lattice\\Lemmas.lean",
+    "sha256": "1990ae922abf9ae3760bae5a7c0787a8bfa3156572182a71624844e964952fd6"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Max",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Max.lean",
+    "sha256": "77b07c7539dee15ab36af8aa6a499aa636eeef5b113aeae0afa605c094dc654a"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Powerset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Powerset.lean",
+    "sha256": "2e05c69df9ace4ba82006d705d92ac2cd25a32a762e17acf2ea8a677702958ed"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Prod",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Prod.lean",
+    "sha256": "aa835fe475e2e6639e918c5121b1f697a35452484c5758a9b3b85acf8abc1ea9"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Range",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Range.lean",
+    "sha256": "f1cc8e2403ad82806026993dba10862799b526a47dc4dcb12cd11f6c4ecdedaf"
+  },
+  {
+    "module": "Mathlib.Data.Finset.SDiff",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\SDiff.lean",
+    "sha256": "2a99abf2666a05d1184d3ce37f5bd0be8e42835cd5c745f4943783dbef548b7b"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Sigma",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Sigma.lean",
+    "sha256": "783e8b68089a990c6acb801c7a01c622d3596bfa45b85ed4ecf5bbb4ffa7f3d8"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Sym",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Sym.lean",
+    "sha256": "955d5160884cfba08ce92bc0da2f33ef4d6fb316ae37ad4137d3c84445b2b414"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Union",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Union.lean",
+    "sha256": "cb47760e1e7d22e0dc2c5e290ff5416c839c5590f2e980761d0842e3e8331af2"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Fintype\\Basic.lean",
+    "sha256": "554d8507112c899fe5e3fa92a4d382effdd6a6d8ef69c5ff7c7ccd57f9519ef1"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Card",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Fintype\\Card.lean",
+    "sha256": "f5cf8edec656aa57279e5eb24a97b7cc949270b57a3e6d9f93622b2c6c296d48"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Fintype\\Defs.lean",
+    "sha256": "d515eda83aac73d26a60e065591dfb88fb4946e56b948aa93e6f2e8f588d54f5"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Fintype\\EquivFin.lean",
+    "sha256": "0a184bbb672f8dba591d1b0c670d0e336296701c992755af3eb024c8f0ea7d16"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.OfMap",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Fintype\\OfMap.lean",
+    "sha256": "43a467ac32b75395f538e73c4c55e4e9e4c0df4a215390373fdd4aa814f66c88"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Powerset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Fintype\\Powerset.lean",
+    "sha256": "957bca073c0622647110a78815db47cd1d053feb06334b57c72a7f44931a1cfe"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Sets",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Fintype\\Sets.lean",
+    "sha256": "95cc3f72cb97f72a3129c28f3a3ed44a0983a1f2efa7e231a03a6dfc1a219298"
+  },
+  {
+    "module": "Mathlib.Data.Int.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Int\\Basic.lean",
+    "sha256": "4d0c1d2cd9a665bfa5ae4af691112b2604e0158878606e0250adf33ec3be5ca7"
+  },
+  {
+    "module": "Mathlib.Data.Int.Cast.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Int\\Cast\\Basic.lean",
+    "sha256": "5c2857e4603d5bf97ffcc74d8abe6212ff0581aeb133b701423db9aceaad1d20"
+  },
+  {
+    "module": "Mathlib.Data.Int.Cast.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Int\\Cast\\Defs.lean",
+    "sha256": "13f4a00b76434693faf1ff8943a4e3d8693f45ab73c627d61241c8f555cfea78"
+  },
+  {
+    "module": "Mathlib.Data.Int.Order.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Int\\Order\\Basic.lean",
+    "sha256": "adafb685aac332c7a2f0101a912939bd726af05593ea0e783f8d644fe7930dc2"
+  },
+  {
+    "module": "Mathlib.Data.List.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Basic.lean",
+    "sha256": "ee60f559b27811e831bb0e48a7b301e280c09d5e50c6d588863356f1a2a3684e"
+  },
+  {
+    "module": "Mathlib.Data.List.Count",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Count.lean",
+    "sha256": "60341e2e7109106b18d77fbfed7704ea7201ce7c2eedbf350ef548dff6186ad3"
+  },
+  {
+    "module": "Mathlib.Data.List.Dedup",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Dedup.lean",
+    "sha256": "246e6ccc82fda7b6da0c49377d71909d4fa2dd80a802123b00600b5f36bf6caf"
+  },
+  {
+    "module": "Mathlib.Data.List.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Defs.lean",
+    "sha256": "5c05ce432afe7399f7ddb5cad31934331b9140ebebb50bce304150b1b9c39926"
+  },
+  {
+    "module": "Mathlib.Data.List.Induction",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Induction.lean",
+    "sha256": "0ad3fd72feca61587b4c9d81ef85e0962e0fa39ac789fcb0568f03f73dfde454"
+  },
+  {
+    "module": "Mathlib.Data.List.Infix",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Infix.lean",
+    "sha256": "b6fd61442843063aedb854e5d821353e6bd6db97d52a2568516ef46b1c027001"
+  },
+  {
+    "module": "Mathlib.Data.List.Lattice",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Lattice.lean",
+    "sha256": "067d5d7dd392212cb9274ad422fbd16786268766fd9008e4216e53fcfff82251"
+  },
+  {
+    "module": "Mathlib.Data.List.Lex",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Lex.lean",
+    "sha256": "cc4500cb7ebf8ba278ff29f41dc1c6cd18f2b1b51c9dc33a60235749bdcb227f"
+  },
+  {
+    "module": "Mathlib.Data.List.Monad",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Monad.lean",
+    "sha256": "1e4e48fbfc45fef98dc6242545782f09638d029dc3eee193c0e5c42a996293ac"
+  },
+  {
+    "module": "Mathlib.Data.List.Nodup",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Nodup.lean",
+    "sha256": "50424dcfe476e507851b2ceceaa60d45d4550809b3b75dbf79031bdf1ce3e48d"
+  },
+  {
+    "module": "Mathlib.Data.List.NodupEquivFin",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\NodupEquivFin.lean",
+    "sha256": "aa216d96116c3a213e067a961ad250449266a4cb81bad72bf9f613526e1afd49"
+  },
+  {
+    "module": "Mathlib.Data.List.Perm.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Perm\\Basic.lean",
+    "sha256": "61f739c96e13e426e10a356215bb7aeab27378b0ef6ac910d14bfa93faa3460e"
+  },
+  {
+    "module": "Mathlib.Data.List.Perm.Lattice",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Perm\\Lattice.lean",
+    "sha256": "bcce6af62ec5e19b196d4a3d38b9ce8e39d926e88c1eb83456955860856ad1ed"
+  },
+  {
+    "module": "Mathlib.Data.List.Perm.Subperm",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Perm\\Subperm.lean",
+    "sha256": "fdfcff99e3e951f88dfe547d7fb21e5171f2af2ab4fdb0cb6d3be8a1102f3ea8"
+  },
+  {
+    "module": "Mathlib.Data.List.Sublists",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Sublists.lean",
+    "sha256": "a29522d08192ceff145f6efbc88fb8460da7c266b20fdf86b30c812908b8a21d"
+  },
+  {
+    "module": "Mathlib.Data.List.Sym",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\List\\Sym.lean",
+    "sha256": "ec131b2599c4c3d348c8bee741a377f09330fac8c9b35798021dab14b52b6173"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.AddSub",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\AddSub.lean",
+    "sha256": "a112da9df074ee931f90acf786ab1bd82c752cebf5650dc07b0b4eb74f45a987"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Bind",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Bind.lean",
+    "sha256": "185b0a5290b91c311add2442accd87fbb0a47d54b1cdee484cf7783176ac5476"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Count",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Count.lean",
+    "sha256": "c2a54855d5a8c0f09e35761b4f33bc2397fb7e3db68201807abd73fb07351f45"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Dedup",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Dedup.lean",
+    "sha256": "7665b0d7f0a34190c13f1978bc7b11a9ad6e4de296d71b24129f6830a20bd7b8"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Defs.lean",
+    "sha256": "1ad53f7719d91f3a40c754a08469a11e65acbeba46e2133517b396e1ae8e0432"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Filter",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Filter.lean",
+    "sha256": "728cc075107d51507ab2f859dcb8ad677d795d338aaa998ccc1becdc1ce03e20"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.FinsetOps",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\FinsetOps.lean",
+    "sha256": "cff583a272354879d4ae53d8d7b34611ace33be64e05cb25569827997bc7cb18"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Fold",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Fold.lean",
+    "sha256": "25fcd60fa1270a2cb098a0fae40e5f684b6b38f86d86fa85b995b6525f407d96"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Lattice",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Lattice.lean",
+    "sha256": "353d1302ce4bbfd9fd649682b009ef7e3b0af0732e7a84f0b39e9fdcc8a3a1b4"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.MapFold",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\MapFold.lean",
+    "sha256": "57ced27bbef7a9b9ebf8343fcf5ea16d16373f7971d752f0b743823d859ee964"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Powerset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Powerset.lean",
+    "sha256": "c6f50ea867492b21347a4041f3a205f1b343c978fe59efadb3dadaf709628a39"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Range",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Range.lean",
+    "sha256": "cce7547234fd7f985b40b43c32af015723d888aeecc68751216bd857e53a3bd3"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Replicate",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Replicate.lean",
+    "sha256": "40febb4800b4f9d6ec4ff1e03412fefd3755a9199fbfd8e7b90436fc5b5acc5d"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.Sym",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\Sym.lean",
+    "sha256": "4d4273f717f1bbd2e0bccd84b2963d1c98c2d0b77a07d7e5892b1526ed3b902c"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.UnionInter",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\UnionInter.lean",
+    "sha256": "bdb915a60d07f836a566d819479b2029060c699969cd49e9b44b1526f50b2e23"
+  },
+  {
+    "module": "Mathlib.Data.Multiset.ZeroCons",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Multiset\\ZeroCons.lean",
+    "sha256": "7d058365f3ef8a941e63db3273e3f651a47abc5d85726c57e5d8983c00dc8072"
+  },
+  {
+    "module": "Mathlib.Data.Nat.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Basic.lean",
+    "sha256": "826e6e48c52fddeb9340507f9c9ede337c9acfb62e8376d82866f9719493c5ef"
+  },
+  {
+    "module": "Mathlib.Data.Nat.Cast.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Cast\\Basic.lean",
+    "sha256": "85ad1b50233919ff0fdaf6b71989ee333fad4b91c0a39faafd1a1db5543d9437"
+  },
+  {
+    "module": "Mathlib.Data.Nat.Cast.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Cast\\Defs.lean",
+    "sha256": "bb2d8c3131859d6e411c946bb209cd58bb7c48b3cedaa81f362c4edd5a9ddb8c"
+  },
+  {
+    "module": "Mathlib.Data.Nat.Cast.Order.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Cast\\Order\\Basic.lean",
+    "sha256": "238083d2f67ed1b6fc954bc3c8b7cdfeaa2faddff92ae3dde160663402637b92"
+  },
+  {
+    "module": "Mathlib.Data.Nat.Find",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Find.lean",
+    "sha256": "87a403079fbb523e461c27961b8a8a7c3e4262fe2896ed818a382edbc53fd5fa"
+  },
+  {
+    "module": "Mathlib.Data.Nat.Init",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Init.lean",
+    "sha256": "5605a06ed985a22a73b3ac770401fa613a79804116fce16a0df69c9cbb24fc51"
+  },
+  {
+    "module": "Mathlib.Data.Option.NAry",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Option\\NAry.lean",
+    "sha256": "f4c2bf90201553095a0ac452736d0891dfa72761c8a831c2e17fff553b63fed4"
+  },
+  {
+    "module": "Mathlib.Data.Ordering.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Ordering\\Basic.lean",
+    "sha256": "4ff70dc537ce741d97ae25b27ce391f621435e7b22df1bf68b2862cad9c7b941"
+  },
+  {
+    "module": "Mathlib.Data.Prod.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Prod\\Basic.lean",
+    "sha256": "dba4b7bf74159959606470adea2a1c74048249752dbb87d19ac1c2982352f6f6"
+  },
+  {
+    "module": "Mathlib.Data.Quot",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Quot.lean",
+    "sha256": "f279a94e423200182d411f341baf7c13bdb2b77faeb1851f622e2dc906e2ce2b"
+  },
+  {
+    "module": "Mathlib.Data.Set.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Basic.lean",
+    "sha256": "7cd29a28cca17bf3a0e1b8ba08dd659e871cb34027c99b1a44e28297869b0779"
+  },
+  {
+    "module": "Mathlib.Data.Set.CoeSort",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\CoeSort.lean",
+    "sha256": "277fb106729716a2af38b2a1820c551505fb06603b39952aee236ae639f1d4d6"
+  },
+  {
+    "module": "Mathlib.Data.Set.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Defs.lean",
+    "sha256": "86e8375d778f4127fe1509f97598bbb9ea9c57a35e148ae1988d9762b5471480"
+  },
+  {
+    "module": "Mathlib.Data.Set.Finite.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Finite\\Basic.lean",
+    "sha256": "135141d908e9a0dfec1f0176b30288f1e0b6456ebe9a4b62de4cb9557486761c"
+  },
+  {
+    "module": "Mathlib.Data.Set.Finite.Lattice",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Finite\\Lattice.lean",
+    "sha256": "7782aa9c5edc56c109d6315f481ccc0c2349ef68b44dc14365ff7bc5670fd36e"
+  },
+  {
+    "module": "Mathlib.Data.Set.Image",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Image.lean",
+    "sha256": "fbe51bb4800dadab4ef0207f169f4814dbe75f3f612084ed587b8ed0fb9c45e0"
+  },
+  {
+    "module": "Mathlib.Data.Set.Insert",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Insert.lean",
+    "sha256": "545230fb3ed09eeb8f5ae547d91945d400cddff7a9e414943dbaa2d1fb270087"
+  },
+  {
+    "module": "Mathlib.Data.Set.Operations",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Operations.lean",
+    "sha256": "33ec72cffea66b401958d7842c0772acef4219ea30445624603be8cb3ef5369c"
+  },
+  {
+    "module": "Mathlib.Data.Set.Pairwise.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Pairwise\\Basic.lean",
+    "sha256": "2135a4d4d03c9da09f3a012f99b277e4438ff56118882e1c90d07b1e9b784eb3"
+  },
+  {
+    "module": "Mathlib.Data.Set.Subsingleton",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Set\\Subsingleton.lean",
+    "sha256": "ede7017d8872bba7465ebc97d088e72ec727ca75de7fe4a661fc6957d07d6291"
+  },
+  {
+    "module": "Mathlib.Data.Sigma.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Sigma\\Basic.lean",
+    "sha256": "b9f93ebb786f6cd006e28e2f156bd3b35658a3fef047583135c71b8e1a4135e4"
+  },
+  {
+    "module": "Mathlib.Data.Subtype",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Subtype.lean",
+    "sha256": "458cc377616cc121514c1699cb8ec590eb1b390bb1a19196210111c2d27d0ac3"
+  },
+  {
+    "module": "Mathlib.Data.Sym.Sym2",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Data\\Sym\\Sym2.lean",
+    "sha256": "684f7d5a8f4f0ac3836e99861ab40abffbbd923fa29fdcd2b900fd4c4f0f93ec"
+  },
+  {
+    "module": "Mathlib.Lean.Meta.CongrTheorems",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Lean\\Meta\\CongrTheorems.lean",
+    "sha256": "e8fa958e139e94046804e1dec659acca0b570be85866f78b8a3929c4b1e0f47b"
+  },
+  {
+    "module": "Mathlib.Logic.Embedding.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Embedding\\Basic.lean",
+    "sha256": "6e1d6c300dcc93de2e6ed6780c09e463abef4713c5f1e8031c25e24819d7ebc3"
+  },
+  {
+    "module": "Mathlib.Logic.Equiv.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Equiv\\Defs.lean",
+    "sha256": "856d7445ab18e2d34b7cf78b61c710ee3f308e845e91a0dc164c920548bbe413"
+  },
+  {
+    "module": "Mathlib.Logic.Equiv.Prod",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Equiv\\Prod.lean",
+    "sha256": "80f376112cd3097d8d1826c4b0575b263c9a193d033cbc009c4e7784758053cf"
+  },
+  {
+    "module": "Mathlib.Logic.Function.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Function\\Basic.lean",
+    "sha256": "a15367ab6e6724be4206c68ce85e0635edce957671958511884c23e2b92d47bd"
+  },
+  {
+    "module": "Mathlib.Logic.Function.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Function\\Defs.lean",
+    "sha256": "ab6ee3132d1788c27e98c31d254af89e30a2b3f42d8e4a045319f895880b1e67"
+  },
+  {
+    "module": "Mathlib.Logic.OpClass",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\OpClass.lean",
+    "sha256": "bfd16d798d431b78a48a699285816bd6eaf5a44cd34cf80db60f339122012e40"
+  },
+  {
+    "module": "Mathlib.Logic.Pairwise",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Pairwise.lean",
+    "sha256": "a18f7e6ff7563902e25754e3ddadbce4d572134f9a78bdf002f62dd3ce065917"
+  },
+  {
+    "module": "Mathlib.Logic.Relation",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Relation.lean",
+    "sha256": "7df2cbdef96682c5bb791f73259594ade7fd96456ddf898f8e07ccd7da03a9f8"
+  },
+  {
+    "module": "Mathlib.Order.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Basic.lean",
+    "sha256": "6166ee263ceb3ac5a65681d1224b2cc9f976234249751b07a7f45d8f8f7e80f0"
+  },
+  {
+    "module": "Mathlib.Order.BooleanAlgebra.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\BooleanAlgebra\\Basic.lean",
+    "sha256": "cab5a92be11982e83de0c948465aa97cee7f5a5e251220511cb3f4f9e3026d2e"
+  },
+  {
+    "module": "Mathlib.Order.BooleanAlgebra.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\BooleanAlgebra\\Defs.lean",
+    "sha256": "ce05125028643c4f83d22f8339a04035874a1e6dc30d0c7ee197451b5777500c"
+  },
+  {
+    "module": "Mathlib.Order.BooleanAlgebra.Set",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\BooleanAlgebra\\Set.lean",
+    "sha256": "079b306b2593467bb49f45d66bea35320d097e1ae0790bffc4cac0d0f53cc27e"
+  },
+  {
+    "module": "Mathlib.Order.BoundedOrder.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\BoundedOrder\\Basic.lean",
+    "sha256": "f5b203f9c6eb48d715546f186ccd175ebfa2f1f14813728546cf1fec6b0a6927"
+  },
+  {
+    "module": "Mathlib.Order.BoundedOrder.Lattice",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\BoundedOrder\\Lattice.lean",
+    "sha256": "c87571a5daec48d5d9e486d3913ec3d9eb3832e096520d64b40fd4668a32ef84"
+  },
+  {
+    "module": "Mathlib.Order.Bounds.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Bounds\\Basic.lean",
+    "sha256": "d5260da8187150a26062a08000faa5dd45ea7248ea82de02e6d2b5297821e86c"
+  },
+  {
+    "module": "Mathlib.Order.Bounds.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Bounds\\Defs.lean",
+    "sha256": "c4d2ef16e1b1994453c55371c1291f6659552a21c3bb6b38eae5d8f30b030a47"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\ConditionallyCompleteLattice\\Basic.lean",
+    "sha256": "d93d85058e810500a32432491d6fc48d71b984a2e60eeb7f2dcd36f4a7639608"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\ConditionallyCompleteLattice\\Defs.lean",
+    "sha256": "e36c73a6b2c24fbbfb626acad50bd7d8b7f59ca2e9ed283764f38d4386e34bc4"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Finset",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\ConditionallyCompleteLattice\\Finset.lean",
+    "sha256": "d329ce97487f1c893e67cfa7f5bc2dd6d677c0e98cc9e43e0f4ab368cf8fada3"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompletePartialOrder.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\ConditionallyCompletePartialOrder\\Defs.lean",
+    "sha256": "23e273192ef134467c3b860f8735002592a5b39c875af6ab112a5deac35cb0d7"
+  },
+  {
+    "module": "Mathlib.Order.Defs.Lattice",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Defs\\Lattice.lean",
+    "sha256": "99aea4c1cce2465f8b656e2810dcdb7fb3518d09b0835eec3bd20709b6be202c"
+  },
+  {
+    "module": "Mathlib.Order.Defs.LinearOrder",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Defs\\LinearOrder.lean",
+    "sha256": "2df1497aa0a8dd7d91da1c5ff24a617cee9d865ac299a3a6c2ebd0073fdaa23f"
+  },
+  {
+    "module": "Mathlib.Order.Defs.PartialOrder",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Defs\\PartialOrder.lean",
+    "sha256": "1ef3afa4f65d285a0568e7211df8bb9b063380fe01b72c6cef5acd2da608d892"
+  },
+  {
+    "module": "Mathlib.Order.Defs.Prop",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Defs\\Prop.lean",
+    "sha256": "11c0cd6c23ee444aa005da1c713dd8b787faf4260648883fb206f89428e08ca0"
+  },
+  {
+    "module": "Mathlib.Order.Defs.Unbundled",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Defs\\Unbundled.lean",
+    "sha256": "fd5fe91a22a483318cad99a71c5cb45c21d9477870f07dff1dc88aea45f4243c"
+  },
+  {
+    "module": "Mathlib.Order.Directed",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Directed.lean",
+    "sha256": "0e53afb295adfd43e0ef418229b73f194e5a8dc2ed74fd381e9f74786dc58632"
+  },
+  {
+    "module": "Mathlib.Order.Disjoint",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Disjoint.lean",
+    "sha256": "fdc52fe1ca711140f077eac6d39d1a92df4340e796222341e5b000f7f19c5ef2"
+  },
+  {
+    "module": "Mathlib.Order.Heyting.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Heyting\\Basic.lean",
+    "sha256": "0fa4eee329d76c4076418efbf8ffee2b10fa126735d21280b2b79c24106ed992"
+  },
+  {
+    "module": "Mathlib.Order.Hom.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Hom\\Basic.lean",
+    "sha256": "cca15fa825201b3794db2109476c6f88542f2ca4eb50d9e552730d4d4083c085"
+  },
+  {
+    "module": "Mathlib.Order.Interval.Set.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Interval\\Set\\Defs.lean",
+    "sha256": "821d7663a39cb6f9c4c530b81d3d23998fe5f1e2c30fd1f0433f59d279bc3dad"
+  },
+  {
+    "module": "Mathlib.Order.Lattice",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Lattice.lean",
+    "sha256": "b4767c855039443df74fcbae3fefcaeab5b15a7783a970abe256cbfc6d6d24eb"
+  },
+  {
+    "module": "Mathlib.Order.Lattice.Nat",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Lattice\\Nat.lean",
+    "sha256": "87679a2384eac4c4356ccfb5d2adbb18a4668882c812a582c3d30492f0410f25"
+  },
+  {
+    "module": "Mathlib.Order.Max",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Max.lean",
+    "sha256": "98fe33ebfc641001d7dfe08f1dc37c58f11de1595649cde9013d06038e983d5e"
+  },
+  {
+    "module": "Mathlib.Order.MinMax",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\MinMax.lean",
+    "sha256": "235c648047a1893d3f72459661c093937af37e2ac87ed7dc9b17e45d1fc454ea"
+  },
+  {
+    "module": "Mathlib.Order.Monotone.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Monotone\\Basic.lean",
+    "sha256": "027b0ab4db54707f9537faeae1d97250896dc3a10b2000ef5599902847c78163"
+  },
+  {
+    "module": "Mathlib.Order.Monotone.Defs",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Monotone\\Defs.lean",
+    "sha256": "cb4c7645a5f1087ab986a41564b9d769f5fbfdf853c2bfbd553e6cc1a8f6f8a9"
+  },
+  {
+    "module": "Mathlib.Order.Nat",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Nat.lean",
+    "sha256": "8ec6450dc234c2894b715d1b6bd0dfbc8588ee8bf967d46f71355946dbca0166"
+  },
+  {
+    "module": "Mathlib.Order.Notation",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\Notation.lean",
+    "sha256": "22bb6ed69a5dffd96fcb5480d6fb95cfa274b2bbda82c7af56cd2f9ccafe2362"
+  },
+  {
+    "module": "Mathlib.Order.OrderDual",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\OrderDual.lean",
+    "sha256": "91b3fc8473352148bd9257b155f7f3e7198e0a1d93e7be3b5924d5ac3d1e5883"
+  },
+  {
+    "module": "Mathlib.Order.PropInstances",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\PropInstances.lean",
+    "sha256": "fe3163e4d055ade50346c80a3455d07ad9ef76c841bbd64b8a98ed76cdece390"
+  },
+  {
+    "module": "Mathlib.Order.RelClasses",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\RelClasses.lean",
+    "sha256": "442a684b4becaacfce211175ad889fe797ac599d4b761bc9dd61687b285f38e2"
+  },
+  {
+    "module": "Mathlib.Order.RelIso.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\RelIso\\Basic.lean",
+    "sha256": "f9a29d4adbf11b8c1d4a1ffda3e10d9fdd8c876f496c2a2a7c33b38ff8df1bbb"
+  },
+  {
+    "module": "Mathlib.Order.SetNotation",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\SetNotation.lean",
+    "sha256": "4cb873e640c58c87cfd8907f9bcee3519d26ed811acb938276b4b7ddf482effc"
+  },
+  {
+    "module": "Mathlib.Order.TypeTags",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\TypeTags.lean",
+    "sha256": "63fc9ca4ad1e7295cf51926c8c32326378c772572374182fac10058aaf5871c5"
+  },
+  {
+    "module": "Mathlib.Order.WithBot",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Order\\WithBot.lean",
+    "sha256": "81d63fbacc06a14014bb9d7b3f4317efe16810ed4f76c3dcf47d22152c88bbc5"
+  },
+  {
+    "module": "Mathlib.Tactic.Contrapose",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\Contrapose.lean",
+    "sha256": "3a96f215cafb52f818f57cf3455d603822a247168447aa2aa58636d8bab80619"
+  },
+  {
+    "module": "Mathlib.Tactic.GCongr.Core",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\GCongr\\Core.lean",
+    "sha256": "93c297c4bac436e1abf3974686a41db2e6b8574c99d37c67c98431e7084de47c"
+  },
+  {
+    "module": "Mathlib.Tactic.Lift",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\Lift.lean",
+    "sha256": "73e6953bd67f89abfbc96f9852a92cec739b1f247d44f4d3c1098d132aab6871"
+  },
+  {
+    "module": "Mathlib.Tactic.Linarith.Lemmas",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\Linarith\\Lemmas.lean",
+    "sha256": "c11e3d8a72dfc199090968d0f823721633c2373e4718f348a1bcb4ff4d28a983"
+  },
+  {
+    "module": "Mathlib.Tactic.NormNum.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\NormNum\\Basic.lean",
+    "sha256": "da9c00cd49a5d7eb24983430687d593c5fae65ead54ef92b4479581c77291ccc"
+  },
+  {
+    "module": "Mathlib.Tactic.NormNum.Ineq",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\NormNum\\Ineq.lean",
+    "sha256": "23b6bc3ceb9604e861a167189dd78ac1776e8b66e9223dfc7d4f278d17ba496c"
+  },
+  {
+    "module": "Mathlib.Tactic.NormNum.Result",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\NormNum\\Result.lean",
+    "sha256": "85123f1b3940aa3c796b672681af5936a790c248ced9354a760b49ebe5026d55"
+  },
+  {
+    "module": "Mathlib.Tactic.Push",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\Push.lean",
+    "sha256": "98a99af66b53984499d79ae2042c2af087a696bb473e4eb941e35608e63f08b1"
+  },
+  {
+    "module": "Mathlib.Tactic.Ring.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\Ring\\Basic.lean",
+    "sha256": "5f1e5ed9fbdb72fbee68f511c6daa7cb2096d9fdacee15f8e9ddd67815615893"
+  },
+  {
+    "module": "Mathlib.Tactic.Ring.Common",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\Ring\\Common.lean",
+    "sha256": "94d9faf42e3840b1ca2abefab4a4e0ae5a226ac37821b23855176a9e845c0f8d"
+  },
+  {
+    "module": "Mathlib.Tactic.Zify",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\Zify.lean",
+    "sha256": "5478ffb270d7bc18957a0000ed0df6a790d068cd684247723b3a3a7027eed639"
+  },
+  {
+    "module": "StrongEdge.Basic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Basic.lean",
+    "sha256": "288dc9a5bc9c386f761d4629291accf36826468c12c449ca88d7b5456a10b17f"
+  },
+  {
+    "module": "StrongEdge.Bounds.ConflictDegree",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\ConflictDegree.lean",
+    "sha256": "31488e9940bb477d5dea5b03db2094f7f276d55028ee3b3f6067c0cfa947d138"
+  },
+  {
+    "module": "StrongEdge.Bounds.ConflictRigidity",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "sha256": "17e8b5a40f347cb6bd874d53fae8ec1abcb0cd0149ed6513edbd3e27d2e041ca"
+  },
+  {
+    "module": "StrongEdge.Bounds.DegreeTwoClique",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "sha256": "c19c40ee1886ef0b4788a232162333dc17d56c744f4a71f973a02e8796afbf0a"
+  },
+  {
+    "module": "StrongEdge.Bounds.EdgeCounting",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\EdgeCounting.lean",
+    "sha256": "c0e0314dffabf2d9cd8b211c967c497d6d0b44cddf01926d872b40b98291851b"
+  },
+  {
+    "module": "StrongEdge.Bounds.High20",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High20.lean",
+    "sha256": "adf475c3d18ee364091a81511bf394bb50685a38d8e61745815c2d7b650f00ce"
+  },
+  {
+    "module": "StrongEdge.Bounds.High20Four",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High20Four.lean",
+    "sha256": "2c4fc83e9bdfc4cb67f96808a507ae6ba42fe0252ce5585fdc04c48f4e1f1cec"
+  },
+  {
+    "module": "StrongEdge.Bounds.High20Local",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High20Local.lean",
+    "sha256": "12bca7f902d69f480ae658512dfe479370b1264b52494c26192c74f575e9e669"
+  },
+  {
+    "module": "StrongEdge.Bounds.High20Outer",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High20Outer.lean",
+    "sha256": "988bc2f00b8cd7bb02b1d197091a65fbf4d9460899c888de747c31a01ee43300"
+  },
+  {
+    "module": "StrongEdge.Bounds.High20Slots",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High20Slots.lean",
+    "sha256": "8ae06351b91e0403a77d99901880bb2b25bf1a4e5ed523976fa30aa32394dd9a"
+  },
+  {
+    "module": "StrongEdge.Bounds.High20TwoTriples",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High20TwoTriples.lean",
+    "sha256": "01727f8f211f1f5cdb727d845d40d82937b9325f91ff7e0cc82f2412beb8556c"
+  },
+  {
+    "module": "StrongEdge.Bounds.High20UniqueTriple",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High20UniqueTriple.lean",
+    "sha256": "a179499887dc39fbd885827e5f7abc04798253c6ee4f82a1298cdadaa4e929a0"
+  },
+  {
+    "module": "StrongEdge.Bounds.High21",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High21.lean",
+    "sha256": "01755b57b856b072a70b81ab34c050d5e55edda1bb954e1c54f25422cf317176"
+  },
+  {
+    "module": "StrongEdge.Bounds.High21Double",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High21Double.lean",
+    "sha256": "eda40a14a25422d5127e1a927c0bdbb18cc86ee730f151625d91f688099c18af"
+  },
+  {
+    "module": "StrongEdge.Bounds.High21LargeType",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High21LargeType.lean",
+    "sha256": "de5c8553f6a1cd04aa0368e6f27f897409f1998c94eaef5e6ed05b52b69385ac"
+  },
+  {
+    "module": "StrongEdge.Bounds.High21Local",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High21Local.lean",
+    "sha256": "0ca45742b1ac44c146c5f2098fead1303748ff597821f740fea86572633aefb0"
+  },
+  {
+    "module": "StrongEdge.Bounds.High21RootFour",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High21RootFour.lean",
+    "sha256": "82e910e507761248a52fcd48d2fe521fdb3304b5b17890d676137ec79214bfa0"
+  },
+  {
+    "module": "StrongEdge.Bounds.High21Support",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High21Support.lean",
+    "sha256": "558dcac67b3993fb3c129fdc29ff9a5992ec1be041a7af589a28d164b45ec963"
+  },
+  {
+    "module": "StrongEdge.Bounds.High22",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High22.lean",
+    "sha256": "669d863595750e29f1f971c80fef38cbd73325af8e0f823a24f78d4c7c017659"
+  },
+  {
+    "module": "StrongEdge.Bounds.High22Heavy",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High22Heavy.lean",
+    "sha256": "7d8fa7c8dcb9573788af2c28aaa11e5beeab6542f1b73a89cc14009e991ea2bb"
+  },
+  {
+    "module": "StrongEdge.Bounds.High22Local",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High22Local.lean",
+    "sha256": "850e545d2c36df620104aa4956b50071ad54dc31950b68990a2905b8f8060a0d"
+  },
+  {
+    "module": "StrongEdge.Bounds.High22RootFour",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High22RootFour.lean",
+    "sha256": "0fdf538967c605ac418e978a84cb011bc6211eed51934c441e41d4b61ca86030"
+  },
+  {
+    "module": "StrongEdge.Bounds.High22Subcubic",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High22Subcubic.lean",
+    "sha256": "527002b6e4c0ea0a2cd9e40856b3e0e37824b4f015a19796569b1ef08c9205a0"
+  },
+  {
+    "module": "StrongEdge.Bounds.High22Support",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High22Support.lean",
+    "sha256": "b13cb7d634f8f587988271c71713413d81436104f63045aa2b8cb756de098f28"
+  },
+  {
+    "module": "StrongEdge.Bounds.High23",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High23.lean",
+    "sha256": "1188932515e5768a76bff64e72f85e25f89497575b022234e5e7d89d10da27ab"
+  },
+  {
+    "module": "StrongEdge.Bounds.High23Four",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High23Four.lean",
+    "sha256": "658bc022c5773a44d0b1580d7b7f601bc61ba5f9b9f29eae85cac70491595605"
+  },
+  {
+    "module": "StrongEdge.Bounds.High23Local",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High23Local.lean",
+    "sha256": "2f3cf63a11d81abfa0abea1f029a3f41e10c7d6f2b727032b6a036cb8759ef00"
+  },
+  {
+    "module": "StrongEdge.Bounds.High23Outer",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High23Outer.lean",
+    "sha256": "ece5071cc52bbf48c6d8a48229d62dfc90d0978463402d259cd1f8e628b90732"
+  },
+  {
+    "module": "StrongEdge.Bounds.High23Support",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High23Support.lean",
+    "sha256": "7427dd61956beffbd946dd0302f3a13515d792aff0f21bf990484476582d11c9"
+  },
+  {
+    "module": "StrongEdge.Bounds.High24",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\High24.lean",
+    "sha256": "acbd70b4ac91cb295f7496e1c4f5147568ac092af6f5021a095a244d035d16b2"
+  },
+  {
+    "module": "StrongEdge.Bounds.RootCounting",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\RootCounting.lean",
+    "sha256": "f27464b4fc8ac49779f79c9cb239aa578d70842a4f8d802e489900d30a56771a"
+  },
+  {
+    "module": "StrongEdge.Bounds.SubcubicEighteen",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Bounds\\SubcubicEighteen.lean",
+    "sha256": "7e007e86ff6bd4ab4d32943987e1432d681f79464efacf838f3a8ae1be5dab66"
+  },
+  {
+    "module": "StrongEdge.Conflict",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Conflict.lean",
+    "sha256": "2ba6dfe103a17b3c236a553076d78b41554b0aa9eeb0646e22e9a4c97c73eb3c"
+  },
+  {
+    "module": "StrongEdge.DoubleCount",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\DoubleCount.lean",
+    "sha256": "40ab63cb88164f509765dadc130de926d3be8256ec958488738dc74fd5edf7ad"
+  },
+  {
+    "module": "StrongEdge.High20Packing",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\High20Packing.lean",
+    "sha256": "06990888b99f9f231fd545dbbe24dc09e5beeffef697bc9d12f7c97a1ca82ba9"
+  },
+  {
+    "module": "StrongEdge.High21Packing",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\High21Packing.lean",
+    "sha256": "ef41316bc2f9a006c165fdd0b194055aff05226098c52af02eb2c3e0807226c5"
+  },
+  {
+    "module": "StrongEdge.High22Packing",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\High22Packing.lean",
+    "sha256": "d3da06e6cd6877fc4400af048a5cde9db2f71192fa7edafda58e3d991ccf5d42"
+  },
+  {
+    "module": "StrongEdge.High23Packing",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\High23Packing.lean",
+    "sha256": "ea412d3ae12fc7a50130deda57182cd39511182eb76f9fa66a7f4e80fd251d3e"
+  },
+  {
+    "module": "StrongEdge.MinimalPacking",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\MinimalPacking.lean",
+    "sha256": "84964550d90f4af23ae492d61725ee2622d167b23f04db40d69fa5cb158b2698"
+  },
+  {
+    "module": "StrongEdge.Packing",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\Packing.lean",
+    "sha256": "ab41305d987050fec53be08ca0474c1919974b2240821553d301465a40af7777"
+  },
+  {
+    "module": "StrongEdge.PrivateExchange",
+    "path": "audit_packing20\\isolated\\strong_edge_lean_starter\\StrongEdge\\PrivateExchange.lean",
+    "sha256": "85b591cff5da0e351b51de2e4ff6c19ec79e7649dc6becacde2d537fe8765423"
+  }
+]

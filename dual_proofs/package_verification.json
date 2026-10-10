@@ -1,0 +1,24 @@
+{
+  "a": {
+    "audited_roots": [
+      "PaperRoute.induced_matching_packing20",
+      "PaperRoute.Sharpness.twenty_is_necessary_real",
+      "PaperRoute.private_iff_closed_intersection",
+      "PaperRoute.Semantics.endpoint_packing20"
+    ],
+    "method": "Standalone audit imports only its own route, using the verified same-source compiled module cache.",
+    "exit_code": 0,
+    "archive_files": 65,
+    "source_manifest_verified": true
+  },
+  "b": {
+    "audited_roots": [
+      "StrongEdge.induced_matching_packing20",
+      "OriginalSharpness.twenty_is_necessary_real"
+    ],
+    "method": "Standalone audit imports only its own route, using the verified same-source compiled module cache.",
+    "exit_code": 0,
+    "archive_files": 58,
+    "source_manifest_verified": true
+  }
+}

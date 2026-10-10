@@ -1,0 +1,30 @@
+[
+  {
+    "file": "README.md",
+    "status": "modified"
+  },
+  {
+    "file": "LEAN_20_PACKING_HANDOFF.md",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Audit.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Bounds/ConflictDegree.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/ConflictRigidity.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/MinimalPacking.lean",
+    "status": "added"
+  }
+]

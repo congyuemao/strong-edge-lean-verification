@@ -1,0 +1,31 @@
+{
+  "declarations": 8302,
+  "project_declarations": 506,
+  "modules": 355,
+  "source_files": 355,
+  "missing_modules": [],
+  "axioms": [
+    "Quot.sound",
+    "propext",
+    "Classical.choice"
+  ],
+  "unsafe": [],
+  "dependency_static_counts": {
+    "noncomputable": 265,
+    "extern": 154,
+    "axiom": 12,
+    "opaque": 49,
+    "unsafe": 38,
+    "implemented_by": 16,
+    "sorryAx": 1,
+    "sorry": 3
+  },
+  "high_threshold_references_to_wrappers": {
+    "StrongEdge.high20_clique_card_le_nineteen": [],
+    "StrongEdge.high21_clique_card_le_eighteen": [],
+    "StrongEdge.high22_clique_card_le_seventeen": [],
+    "StrongEdge.high23_clique_card_le_sixteen": [],
+    "StrongEdge.high24_clique_card_le_thirteen": []
+  },
+  "legacy_threshold_record_reachable": false
+}

@@ -1,0 +1,8 @@
+⚠ [1123/1123] Built StrongEdge.MinimalPacking (12s)
+warning: StrongEdge/MinimalPacking.lean:30:0: automatically included section variable(s) unused in theorem `StrongEdge.minimalCliqueBounds20_of_thresholds`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (1123 jobs).

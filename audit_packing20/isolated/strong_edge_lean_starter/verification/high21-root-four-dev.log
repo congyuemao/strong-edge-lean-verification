@@ -1,0 +1,36 @@
+✔ [1145/1146] Built StrongEdge.Bounds.High21Double (9.1s)
+✖ [1146/1146] Building StrongEdge.Bounds.High21RootFour (9.0s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\StrongEdge\Bounds\High21RootFour.lean -o .lake\build\lib\lean\StrongEdge\Bounds\High21RootFour.olean -i .lake\build\lib\lean\StrongEdge\Bounds\High21RootFour.ilean -c .lake\build\ir\StrongEdge\Bounds\High21RootFour.c --setup .lake\build\ir\StrongEdge\Bounds\High21RootFour.setup.json --json
+warning: StrongEdge/Bounds/High21RootFour.lean:64:22: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: StrongEdge/Bounds/High21RootFour.lean:64:31: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+error: StrongEdge/Bounds/High21RootFour.lean:91:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 1
+where
+ a := ↑(#(rootType G r x))
+warning: StrongEdge/Bounds/High21RootFour.lean:117:21: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: StrongEdge/Bounds/High21RootFour.lean:120:21: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: StrongEdge/Bounds/High21RootFour.lean:122:77: This simp argument is unused:
+  ← card_eq_sum_ones
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sum_add_distrib, sum_const, smul_eq_mul, mul_one, ← sum_filter] at hsum
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- StrongEdge.Bounds.High21RootFour
+error: build failed

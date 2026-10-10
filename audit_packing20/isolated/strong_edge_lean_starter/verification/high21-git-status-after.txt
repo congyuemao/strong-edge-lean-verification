@@ -1,0 +1,50 @@
+ M README.md
+ M docs/ARCHIVE_MANIFEST.json
+ M docs/RESULTS_INDEX.md
+ M docs/inputs/README.md
+ M scripts/verify_archive.py
+ M strong_edge_lean_starter/README.md
+ M strong_edge_lean_starter/StrongEdge.lean
+ M strong_edge_lean_starter/StrongEdge/Audit.lean
+?? docs/inputs/CODEX_LEAN_C5_HIGH21_NEXT_PROMPT.md
+?? strong_edge_lean_high21_checkpoint.zip
+?? strong_edge_lean_starter/C5_HIGH21_VERIFIED_HANDOFF.md
+?? strong_edge_lean_starter/StrongEdge/Bounds/DegreeTwoClique.lean
+?? strong_edge_lean_starter/StrongEdge/Bounds/High21.lean
+?? strong_edge_lean_starter/StrongEdge/Bounds/High21Double.lean
+?? strong_edge_lean_starter/StrongEdge/Bounds/High21LargeType.lean
+?? strong_edge_lean_starter/StrongEdge/Bounds/High21Local.lean
+?? strong_edge_lean_starter/StrongEdge/Bounds/High21RootFour.lean
+?? strong_edge_lean_starter/StrongEdge/Bounds/High21Support.lean
+?? strong_edge_lean_starter/StrongEdge/Bounds/SubcubicEighteen.lean
+?? strong_edge_lean_starter/StrongEdge/High21Packing.lean
+?? strong_edge_lean_starter/verification/finalize-high21.py
+?? strong_edge_lean_starter/verification/high21-audit-checks.json
+?? strong_edge_lean_starter/verification/high21-audit-exit-code.txt
+?? strong_edge_lean_starter/verification/high21-axioms.log
+?? strong_edge_lean_starter/verification/high21-baseline-archive-manifest.json
+?? strong_edge_lean_starter/verification/high21-baseline-axioms.log
+?? strong_edge_lean_starter/verification/high21-baseline-build.log
+?? strong_edge_lean_starter/verification/high21-baseline-direct-build.log
+?? strong_edge_lean_starter/verification/high21-baseline-source-sha256.json
+?? strong_edge_lean_starter/verification/high21-build-exit-code.txt
+?? strong_edge_lean_starter/verification/high21-build.log
+?? strong_edge_lean_starter/verification/high21-change-summary.json
+?? strong_edge_lean_starter/verification/high21-compiler-version.log
+?? strong_edge_lean_starter/verification/high21-counting-dev.log
+?? strong_edge_lean_starter/verification/high21-degree-two-dev.log
+?? strong_edge_lean_starter/verification/high21-double-dev.log
+?? strong_edge_lean_starter/verification/high21-git-diff-stat-after.txt
+?? strong_edge_lean_starter/verification/high21-git-status-after.txt
+?? strong_edge_lean_starter/verification/high21-integration-dev.log
+?? strong_edge_lean_starter/verification/high21-large-type-dev.log
+?? strong_edge_lean_starter/verification/high21-large-type-dev2.log
+?? strong_edge_lean_starter/verification/high21-local-dev.log
+?? strong_edge_lean_starter/verification/high21-mathlib-commit.txt
+?? strong_edge_lean_starter/verification/high21-root-four-dev.log
+?? strong_edge_lean_starter/verification/high21-source-checks.json
+?? strong_edge_lean_starter/verification/high21-source-sha256.json
+?? strong_edge_lean_starter/verification/high21-source.diff
+?? strong_edge_lean_starter/verification/high21-status.json
+?? strong_edge_lean_starter/verification/high21-subcubic-dev.log
+?? strong_edge_lean_starter/verification/update-high21-docs.py

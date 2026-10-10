@@ -1,0 +1,35 @@
+✖ [1148/1148] Building StrongEdge.Bounds.High20Local (9.2s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\StrongEdge\Bounds\High20Local.lean -o .lake\build\lib\lean\StrongEdge\Bounds\High20Local.olean -i .lake\build\lib\lean\StrongEdge\Bounds\High20Local.ilean -c .lake\build\ir\StrongEdge\Bounds\High20Local.c --setup .lake\build\ir\StrongEdge\Bounds\High20Local.setup.json --json
+error: StrongEdge/Bounds/High20Local.lean:103:4: Tactic `apply` failed: could not unify the conclusion of `Sym2.forall_mem_pair.mpr`
+  ?m.124 ?x
+with the goal
+  ∀ v ∈ ↑f, v ∈ endpointNeighbourCover G r a
+
+Note: The full type of `Sym2.forall_mem_pair.mpr` is
+  ?m.124 ?m.125 ∧ ?m.124 ?m.126 → ∀ x ∈ s(?m.125, ?m.126), ?m.124 x
+
+V : Type u_1
+inst✝³ : Fintype V
+inst✝² : DecidableEq V
+G : SimpleGraph V
+inst✝¹ : DecidableRel G.Adj
+inst✝ : DecidableRel (conflictGraph G).Adj
+hΔ : ∀ (x : V), G.degree x ≤ 4
+r a b x : V
+e : ↑G.edgeSet
+he : ↑e = s(r, a)
+h20 : 20 ≤ (conflictGraph G).degree e
+hrb : G.Adj r b
+hab : G.Adj a b
+hxr : x ≠ r
+hax : a ∈ rootType G r x
+c : V
+hc : c ∈ rootType G r x
+hca : ¬c = a
+hcx : G.Adj r c ∧ G.Adj x c
+hxa : G.Adj r a ∧ G.Adj x a
+f : ↑G.edgeSet := ⟨s(c, x), ⋯⟩
+⊢ ∀ v ∈ ↑f, v ∈ endpointNeighbourCover G r a
+Some required targets logged failures:
+- StrongEdge.Bounds.High20Local
+error: build failed

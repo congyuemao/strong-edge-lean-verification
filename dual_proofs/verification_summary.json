@@ -1,0 +1,68 @@
+[
+  {
+    "axioms": [
+      "Classical.choice",
+      "propext",
+      "Quot.sound"
+    ],
+    "declarations": 8302,
+    "root": "StrongEdge.induced_matching_packing20",
+    "unsafe": [],
+    "project_declarations": 247
+  },
+  {
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "declarations": 8302,
+    "root": "PaperRoute.induced_matching_packing20",
+    "unsafe": [],
+    "project_declarations": 242
+  },
+  {
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "declarations": 7400,
+    "root": "OriginalSharpness.twenty_is_necessary_real",
+    "unsafe": [],
+    "project_declarations": 26
+  },
+  {
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "declarations": 7401,
+    "root": "PaperRoute.Sharpness.twenty_is_necessary_real",
+    "unsafe": [],
+    "project_declarations": 25
+  },
+  {
+    "axioms": [
+      "Classical.choice",
+      "propext",
+      "Quot.sound"
+    ],
+    "declarations": 1890,
+    "root": "PaperRoute.private_iff_closed_intersection",
+    "unsafe": [],
+    "project_declarations": 2
+  },
+  {
+    "axioms": [
+      "Quot.sound",
+      "propext",
+      "Classical.choice"
+    ],
+    "declarations": 8307,
+    "root": "PaperRoute.Semantics.endpoint_packing20",
+    "unsafe": [],
+    "project_declarations": 247
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "file": "README.md",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Audit.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Bounds/High24.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/High24Packing.lean",
+    "status": "added"
+  }
+]

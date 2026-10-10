@@ -1,0 +1,30 @@
+{
+  "verified_date": "2026-10-10",
+  "timezone": "Australia/Sydney",
+  "build_exit_code": 0,
+  "build_jobs": 1170,
+  "axiom_audit_exit_code": 0,
+  "audited_theorems": 225,
+  "new_theorems": 33,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "high20_clique_bound": 19,
+  "minimal_high20_field_discharged": true,
+  "high20_bound_eighteen_exported": false,
+  "remaining_minimal_clique_bounds": {},
+  "unconditional_packing20_proved": true,
+  "integer_strong_edge_20_colourability_proved": false,
+  "path4_regression_exit_code": 0,
+  "source_archive": "strong_edge_lean_high20_checkpoint.zip",
+  "preserved_checkpoint_sha256": {
+    "strong_edge_lean_verified_checkpoint.zip": "79cdd19342e7686223ce85e79aaeb35fb589c31150548db5876473158e451b2b",
+    "strong_edge_lean_c4_checkpoint.zip": "2d58d4173f84145983ce4bda4972892de5d98ad0beb84ad293fe2b06aa39998e",
+    "strong_edge_lean_high24_checkpoint.zip": "3f646a7e67e7f355dd224d39e9f139ac8238e893dbf124b759e8a1fe0e3639bd",
+    "strong_edge_lean_high23_checkpoint.zip": "c7babe84c5a1fecd846149a6547d97f52d4c89e14ec873e2d664dff63bf7453c",
+    "strong_edge_lean_high22_checkpoint.zip": "b38d5329cfff895e8e4b66150d8f22e81affc81c251e6f452eccf0287843a506",
+    "strong_edge_lean_high21_checkpoint.zip": "1807ec1256eb349488a30b104c79a4cac332c49b5add0b66181b8852b7a456b7"
+  }
+}

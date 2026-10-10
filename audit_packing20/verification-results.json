@@ -1,0 +1,27 @@
+{
+  "checked_utc": "2026-10-10T05:33:45.675630+00:00",
+  "technical_pass": true,
+  "original_source_and_configs_unchanged": 49,
+  "original_zip_files_unchanged_in_both_copies": 205,
+  "original_project_lean_files": 45,
+  "new_audit_lean_files": 5,
+  "original_axiom_declarations": 225,
+  "complete_type_and_axiom_checks": 225,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "build_jobs": 1170,
+  "freshly_built_project_modules": 44,
+  "individual_successful_commands": 11,
+  "entrypoint_successful_commands": 9,
+  "locked_dependencies_verified": 9,
+  "preserved_historical_zip_count": 7,
+  "literature_full_2016_joint_paper_verified": true,
+  "optional_named_mathlib_square_interface_verified": false,
+  "cache_boundary": "Locked dependency .olean cache reused; project modules rebuilt from extracted sources.",
+  "literature_review_record": "joos2016_review/review-result.json",
+  "originality_established": false,
+  "literature_review_updated_utc": "2026-10-10T05:51:10.399175+00:00"
+}

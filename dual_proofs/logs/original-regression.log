@@ -1,0 +1,14 @@
+'IndependentAudit.Regression.path_candidates_still_conflict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.deleting_middle_edge_removes_conflict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentAudit.Regression.doubleC5_degree_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.doubleC5_twenty_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.doubleC5_endpoint_test' does not depend on any axioms
+'IndependentAudit.Regression.doubleC5_all_edges_conflict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.twenty_is_necessary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.empty_graph_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.isolated_vertices_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.nonregular_path_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.triangle_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.Regression.four_cycle_packing' depends on axioms: [propext, Classical.choice, Quot.sound]

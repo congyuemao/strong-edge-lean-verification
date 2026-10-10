@@ -1,0 +1,281 @@
+{
+  "individual": {
+    "compiler-version": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lean.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:11:31.347427+00:00",
+      "end_utc": "2026-10-10T05:11:31.543843+00:00",
+      "start_sydney": "2026-10-10T16:11:31.347427+11:00",
+      "seconds": 0.196416,
+      "exit_code": 0
+    },
+    "build": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "build"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:11:31.874777+00:00",
+      "end_utc": "2026-10-10T05:16:58.908816+00:00",
+      "start_sydney": "2026-10-10T16:11:31.874777+11:00",
+      "seconds": 327.034039,
+      "exit_code": 0
+    },
+    "audit": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "StrongEdge/Audit.lean"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:17:14.048667+00:00",
+      "end_utc": "2026-10-10T05:18:05.136052+00:00",
+      "start_sydney": "2026-10-10T16:17:14.048667+11:00",
+      "seconds": 51.087385,
+      "exit_code": 0
+    },
+    "tests": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "StrongEdge/Tests.lean"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:18:05.386592+00:00",
+      "end_utc": "2026-10-10T05:18:20.357902+00:00",
+      "start_sydney": "2026-10-10T16:18:05.386592+11:00",
+      "seconds": 14.97131,
+      "exit_code": 0
+    },
+    "build-confirm": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "build"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:19:48.780296+00:00",
+      "end_utc": "2026-10-10T05:19:55.029478+00:00",
+      "start_sydney": "2026-10-10T16:19:48.780296+11:00",
+      "seconds": 6.249182,
+      "exit_code": 0
+    },
+    "complete-final": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "AuditComplete.lean"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:19:48.780732+00:00",
+      "end_utc": "2026-10-10T05:20:06.050152+00:00",
+      "start_sydney": "2026-10-10T16:19:48.780732+11:00",
+      "seconds": 17.26942,
+      "exit_code": 0
+    },
+    "semantic": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "-R",
+        "c:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+        "c:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter\\AuditSemantic.lean",
+        "-o",
+        ".lake/build/lib/lean/AuditSemantic.olean"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:19:26.084872+00:00",
+      "end_utc": "2026-10-10T05:19:41.155028+00:00",
+      "start_sydney": "2026-10-10T16:19:26.084872+11:00",
+      "seconds": 15.070156,
+      "exit_code": 0
+    },
+    "regression-dev": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "AuditRegression.lean"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:20:16.748994+00:00",
+      "end_utc": "2026-10-10T05:20:35.461129+00:00",
+      "start_sydney": "2026-10-10T16:20:16.748994+11:00",
+      "seconds": 18.712135,
+      "exit_code": 0
+    },
+    "environment": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "AuditEnvironment.lean"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:21:15.957621+00:00",
+      "end_utc": "2026-10-10T05:21:32.515128+00:00",
+      "start_sydney": "2026-10-10T16:21:15.957621+11:00",
+      "seconds": 16.557507,
+      "exit_code": 0
+    },
+    "dependencies-dev": {
+      "command": [
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "AuditDependencies.lean"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:17:14.046141+00:00",
+      "end_utc": "2026-10-10T05:18:45.082151+00:00",
+      "start_sydney": "2026-10-10T16:17:14.046141+11:00",
+      "seconds": 91.03601,
+      "exit_code": 0
+    },
+    "rerun-entrypoint": {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter\\reproduce-audit.ps1",
+        "-LeanBin",
+        "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin"
+      ],
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+      "start_utc": "2026-10-10T05:30:16.097403+00:00",
+      "end_utc": "2026-10-10T05:32:11.529329+00:00",
+      "start_sydney": "2026-10-10T16:30:16.097403+11:00",
+      "seconds": 115.431926,
+      "exit_code": 0
+    }
+  },
+  "entrypoint": {
+    "version": {
+      "start_utc": "2026-10-10T05:30:16.6141560Z",
+      "command": [
+        "lean",
+        "--version"
+      ],
+      "end_utc": "2026-10-10T05:30:16.7332123Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "build": {
+      "start_utc": "2026-10-10T05:30:16.7806659Z",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "end_utc": "2026-10-10T05:30:22.2466088Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "audit": {
+      "start_utc": "2026-10-10T05:30:22.2466088Z",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "StrongEdge/Audit.lean"
+      ],
+      "end_utc": "2026-10-10T05:30:35.9468752Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "tests": {
+      "start_utc": "2026-10-10T05:30:35.9468752Z",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "StrongEdge/Tests.lean"
+      ],
+      "end_utc": "2026-10-10T05:30:49.5743481Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "complete": {
+      "start_utc": "2026-10-10T05:30:49.5761694Z",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AuditComplete.lean"
+      ],
+      "end_utc": "2026-10-10T05:31:04.7407730Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "semantic": {
+      "start_utc": "2026-10-10T05:31:04.7612666Z",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "c:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+        "c:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter\\AuditSemantic.lean",
+        "-o",
+        ".lake/build/lib/lean/AuditSemantic.olean"
+      ],
+      "end_utc": "2026-10-10T05:31:19.7722139Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "regression": {
+      "start_utc": "2026-10-10T05:31:19.7905527Z",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AuditRegression.lean"
+      ],
+      "end_utc": "2026-10-10T05:31:38.1030388Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "environment": {
+      "start_utc": "2026-10-10T05:31:38.1030388Z",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AuditEnvironment.lean"
+      ],
+      "end_utc": "2026-10-10T05:31:53.8821302Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    },
+    "dependencies": {
+      "start_utc": "2026-10-10T05:31:53.8843647Z",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AuditDependencies.lean"
+      ],
+      "end_utc": "2026-10-10T05:32:11.4990397Z",
+      "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+      "exit_code": 0
+    }
+  }
+}

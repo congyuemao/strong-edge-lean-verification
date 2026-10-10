@@ -1,0 +1,136 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>两条证明路线的详细对照</title><style>body{font:17px/1.8 "Microsoft YaHei",sans-serif;color:#18232e;max-width:1080px;margin:48px auto;padding:0 28px}h1{font-size:30px}h2{font-size:23px;border-top:1px solid #d5dce1;padding-top:26px;margin-top:38px}p{margin:14px 0}table{width:100%;border-collapse:collapse;font-size:15px}td,th{border:1px solid #d5dce1;padding:10px 12px;text-align:left;vertical-align:top}th{background:#edf3f8}code,pre{font-family:Consolas,monospace}pre{overflow:auto;background:#f4f6f8;padding:20px;font-size:13px}nav a{margin-right:18px;display:inline-block}a{color:#165d94}.date{color:#607282}</style><h1>两条证明路线的详细对照与交付说明</h1><p class="date">2026-10-10 · 英文手稿 × 2 · Lean 项目 × 2</p><nav>
+<a href="#s0">结论与交付结构</a>
+<a href="#s1">共同定理与语义</a>
+<a href="#s2">A：原纸面路线如何严格落实</a>
+<a href="#s3">B：原 Lean 如何写成完整纸面证明</a>
+<a href="#s4">五个阈值分支逐项核对</a>
+<a href="#s5">私人邻域与最终打包</a>
+<a href="#s6">核验范围、复现和来源</a>
+</nav><h2>核心差异表</h2><table>
+<tr><th>比较项</th><th>A：原纸面 → 新 Lean</th><th>B：原 Lean → 新纸面</th></tr>
+<tr><td>覆盖关系</td><td>双向等价，邻域与相交边集相等</td><td>只用单向包含</td></tr>
+<tr><td>冲突度计数</td><td>精确加法恒等式及减法形式</td><td>计数恒等式加包含，得到不等式</td></tr>
+<tr><td>负载</td><td>阈值 t 参数化的一条定理</td><td>23/22/21/20 分别展开</td></tr>
+<tr><td>根部边分解</td><td>两条精确等式</td><td>覆盖不等式足够</td></tr>
+<tr><td>外边子集</td><td>任意 O′⊆O 的一般引理</td><td>全体外边/避开例外顶点两个特例</td></tr>
+<tr><td>21 档小类型</td><td>复用阈值无关 Lemma 3.6</td><td>使用 high21 的专门预算计数</td></tr>
+<tr><td>20 档四类型</td><td>o≤1，q≤17</td><td>声明 o≤2，q≤18</td></tr>
+<tr><td>24 档与打包</td><td>证明 13，向打包接口提供 15</td><td>相同</td></tr>
+<tr><td>最终路线</td><td>独立命名空间内的新组装</td><td>原始 49 个文件保持不变</td></tr>
+<tr><td>数学关系</td><td>同一主干的加强、统一与重组</td><td>同一主干的原实现展开</td></tr>
+</table>
+<section id="s0"><h2>结论与交付结构</h2>
+<p>两套材料已按 A（原纸面路线）和 B（原 Lean 路线）配对。A 是原手稿正文及其新增严格形式化；B 是保留原始 StrongEdge 代码的完整数学展开。两份英文手稿均无作者栏，包含主定理、全部结构引理、五档局部团界、私人邻域计数、候选集限制、锐性及参考文献。</p>
+<p>更准确的判断是：这不是两个互不相关的数学策略。两者都通过冲突图、五档局部团界、最优独立集的私人邻域和双计数，得到候选边集的 20-packing。差异在中间命题的强弱、计数等式、统一方式和分支接口。原来的论文附录把这些差别压缩成“对应关系”，不足以证明较强纸面命题已经形式化。本次已经把这些缺口变成有证明项的 Lean 定理。</p>
+<p>“两套 Lean”表示各自可编译、各自有最终入口、各自提供完整项目内依赖；不表示其基础引理没有共同来源。A 的 Library 明确来自原库的命名空间复制，随后对必要模块重构。命名空间不同本身不是独立证明的证据，所以另行检查了实际定理依赖。</p>
+</section>
+<section id="s1"><h2>共同定理与语义</h2>
+<p>两套最终入口都证明：有限简单图 G 满足 Δ(G)≤4 时，对任意 F⊆E(G)，存在 M⊆F，使 M 是原图 G 的诱导匹配且 |F|≤20|M|。冲突关系在完整的 G 中定义；F 之外的边仍能成为冲突见证。</p>
+<p>两套都先构造 H=L(G)²，再取顶点诱导子图 H[F]。它们都不是删除 G 中 F 以外的边后重新构造冲突图。路径 0—1—2—3 上 F={01,23} 的回归例子专门检查了这个区别。</p>
+<p>A 的最终入口是 PaperRoute.induced_matching_packing20；B 是 StrongEdge.induced_matching_packing20。A 使用自己的 Library.conflictGraph 和 Library.IsInducedMatching 定义，定义文本与原库相同；两套分别通过独立端点谓词的等价定理核验语义。</p>
+</section>
+<section id="s2"><h2>A：原纸面路线如何严格落实</h2>
+<p>覆盖等式：ExactCover.lean 补出“相交覆盖 ⇒ 冲突”的反方向，再证明冲突邻域等于相交边集，得到 c(e)+e_G(C(e))=Σ_{x∈C(e)}d_G(x)。减法形式由这个加法等式推出，不借助自然数截断减法的含混推理。</p>
+<p>统一负载：UniformLoad.lean 先证明任意自然数阈值 t 下 L_a+t≤24，再推出 L_a≤24−t。真正的注入条件是两侧删点邻域不交；手稿所用的根邻域独立性足以保证这一条件。23、22、21、20 的局部接口接到这一个证明。</p>
+<p>根分解：Foundations.lean 分别证明 q=s+k+o 和 Σ_{a∈A}d_Q(a)=s+k。前一恒等式按代码对 rootEdges 的定义成立；后一恒等式需要 A 独立，形式化中保留了这一假设。</p>
+<p>任意外部子集：OuterSubsets.lean 证明手稿引理 3.5 的完整量词形式。给定 O′⊆O，只要求 O′ 中各边的端点类型至多为二，便得到 |O′|≤4。它通过原图在多重类型顶点中的邻域度数与选中边的二分性质证明，未假定所有原图边都遵守该二分。</p>
+<p>新的 Thresholds.lean 自行组装五个手稿命题。21 档和 20 档共用无阈值的小类型引理；四元素类型分支显式证明 o≤1、q≤17。Packing.lean 再自行给出五字段准则、诱导子图继承和最终入口。</p>
+<p>新增较强结论不仅存在于文件中：实际依赖闭包要求覆盖等式、统一负载、两条根恒等式、一般外部子集引理、无阈值小类型引理、17 分支全部被 A 的最终证明使用。</p>
+</section>
+<section id="s3"><h2>B：原 Lean 如何写成完整纸面证明</h2>
+<p>覆盖一步保留原实现的不等式 c(e)+e_G(C(e))≤Σd_G。证明使用“冲突邻居包含于与覆盖相交的边”及精确的边—顶点关联计数。它不需要覆盖关系的反方向。</p>
+<p>负载一步保留有序对 fourCycleOpposites。23、22、21 档先迫使覆盖有六个顶点，两侧删点邻域不交，再把有序对单射到覆盖内部的原边；23 档主要使用唯一性，22/21 档分别使用基数上界。20 档不能直接排除三角形，先证明大团根部独立，再得到四单位预算。</p>
+<p>根部计数保留 q≤s+k+o 等覆盖接口。第二份手稿的引理 3.5 只陈述原代码实际提供的两个版本：所有类型至多二时 |O|≤4；允许一个例外类型时，避开它的外边至多四条。</p>
+<p>21 档小类型分支按原代码从高阈值负载推出每个标签最多属于三个多重类型，再双计数得 |P|≤6。20 档才使用每个标签有三个原图邻居槽位的无阈值版本。这和 A 在两处直接复用同一引理的结构不同。</p>
+<p>四元素类型分支保留原声明的 o≤2、q≤18。其内部实际上已经证明“避开该顶点”的外边至多一条，并且四个标签耗尽该顶点的原度数；因此 17 界是可提取的加强，不代表原 18 界有错误。</p>
+<p>B 的 sharpness 补充文件独立证明任意实数常数 C 都必须满足 C≥20。这个补充没有更改原始 StrongEdge 主定理或其证明。</p>
+</section>
+<section id="s4"><h2>五个阈值分支逐项核对</h2>
+<p>24→13：覆盖六点且内部无边；排除选中边上的三角形和四环。不同根枝的冲突迫使外端点相邻；一枝分叉会造成四环，所以每侧至多三条。总计 1+3+3+3+3=13。两条路线的数学论证相同。</p>
+<p>23→16：预算一迫使类型至多二，选中标签处的多重类型唯一。所有外边聚于一个双类型端点，因此 o≤2。根选中度三时 q≤14；根选四边时“星四条+单类型至多六条+多重关联至多四条+外边两条”给 16。</p>
+<p>22→17：根选中度四时，三类型出现则它是唯一多重顶点，o≤1；全小类型先得 18，再由 o=4 的饱和情况与单类型冲突排除等号。根选中度三时，用覆盖至少两个选中标签的 heavy 顶点得到 o≤6；等号迫使三 heavy 顶点耗尽预算，从而得到 q≤15 的矛盾。</p>
+<p>21→18：出现大类型时至多一个；外边分成经过该顶点及避开它两类，各至多一条。无大类型时得到 k≤10、o≤4。这里两条路线区别是 |P|≤6 的来源和是否直接调用同一个无阈值引理。</p>
+<p>20→19：假设 q≥20 后证明根部独立，再穷尽四类：有四类型；至少两个三类型；唯一三类型；全类型至多二。A 的分支界依次为 17、18、19、18；B 的公开分支界依次为 18、18、19、18。唯一三类型一支的关键仍是 k≤10、o≤5。</p>
+<p>最后打包实际只需要五个界 19、18、17、16、15。两条路线均用实际证明的 13 蕴含最后需要的 15。历史文件中的 7 界条件记录不在最终证明依赖中，不被当作已经证明的结论。</p>
+</section>
+<section id="s5"><h2>私人邻域与最终打包</h2>
+<p>共同选择是：先最大化独立集基数，再在所有最大独立集中最小化度数和。私人集 P_v={x:N[x]∩I={v}} 为团，且 x∈P_v ⇒ d(x)≥d(v)。前者用一换二，后者用等规模的一换一。</p>
+<p>双计数得到 2|V(J)|≤Σ_{v∈I}(d(v)+1+|P_v|)。低度顶点用 |P_v|≤d(v)+1；度 20 至 24 用五档团界，使每一项至多 40。于是 |V(J)|≤20|I|。</p>
+<p>对 J=H[F]，J 中度数不超过 H 中的全冲突度。因此 J 的高阈值团继承 H 的五档界。将 J 的独立集映射回原图边集，得到 M⊆F。A 新写了自己的准则与转移入口；B 保留原 MinimalPacking 及逐级字段组装。</p>
+</section>
+<section id="s6"><h2>核验范围、复现和来源</h2>
+<p>原项目的 49 个源码/配置文件与审计前 SHA-256 一致。A 的支持库有 39 个文件仅作命名空间替换，另有 6 个支持文件发生了实际重构；逐文件结果见 final_source_provenance.json。</p>
+<p>lake build StrongEdge 与 lake build PaperRoute 均成功。两套主定理、实数锐性、A 的端点版最终定理和私人集语义接受实际类型/证明项递归依赖检查。公理只允许 propext、Classical.choice、Quot.sound；禁止 sorryAx、额外公理及 unsafe 依赖。</p>
+<p>审计还禁止 A 调用 StrongEdge 的任何声明，禁止 A 调用复制库的最终打包定理及五个通用高阈值最终界；B 的最终证明也不得依赖任何 PaperRoute 声明。因此分开的入口不是把原结论简单换名。</p>
+<p>proof_crosswalk.csv/json 包含 37 项对应记录及源码行号。CrosswalkA.lean 和 CrosswalkB.lean 对表内的全部声明逐一 #check。重放脚本会在任一编译或审计步骤失败时停止并保存日志。</p>
+<p>两份 PDF 已做文字完整性、作者栏、页号、矢量公式和版心边界检查，并逐页目视检查。手稿是数学证明文本；Lean 内核核验的是对应形式化声明，并不是直接读取 PDF 来验证每句英文。</p>
+<p>Joos–Nguyen (2016) 已有全边集的 20 界及双倍五环锐性例子；本次两套材料继续明确引用。候选边集表述需保留原图冲突，不能仅通过删除非候选边套用其全边集结论。两条路线都没有证明 20 强边染色、加权保证或分数染色数至多 20，也不据此宣称全面的文献优先权。</p>
+</section>
+<h2>实际依赖核验统计</h2><pre>[
+  {
+    &quot;axioms&quot;: [
+      &quot;Classical.choice&quot;,
+      &quot;propext&quot;,
+      &quot;Quot.sound&quot;
+    ],
+    &quot;declarations&quot;: 8302,
+    &quot;root&quot;: &quot;StrongEdge.induced_matching_packing20&quot;,
+    &quot;unsafe&quot;: [],
+    &quot;project_declarations&quot;: 247
+  },
+  {
+    &quot;axioms&quot;: [
+      &quot;Classical.choice&quot;,
+      &quot;Quot.sound&quot;,
+      &quot;propext&quot;
+    ],
+    &quot;declarations&quot;: 8302,
+    &quot;root&quot;: &quot;PaperRoute.induced_matching_packing20&quot;,
+    &quot;unsafe&quot;: [],
+    &quot;project_declarations&quot;: 242
+  },
+  {
+    &quot;axioms&quot;: [
+      &quot;Classical.choice&quot;,
+      &quot;Quot.sound&quot;,
+      &quot;propext&quot;
+    ],
+    &quot;declarations&quot;: 7400,
+    &quot;root&quot;: &quot;OriginalSharpness.twenty_is_necessary_real&quot;,
+    &quot;unsafe&quot;: [],
+    &quot;project_declarations&quot;: 26
+  },
+  {
+    &quot;axioms&quot;: [
+      &quot;Classical.choice&quot;,
+      &quot;Quot.sound&quot;,
+      &quot;propext&quot;
+    ],
+    &quot;declarations&quot;: 7401,
+    &quot;root&quot;: &quot;PaperRoute.Sharpness.twenty_is_necessary_real&quot;,
+    &quot;unsafe&quot;: [],
+    &quot;project_declarations&quot;: 25
+  },
+  {
+    &quot;axioms&quot;: [
+      &quot;Classical.choice&quot;,
+      &quot;propext&quot;,
+      &quot;Quot.sound&quot;
+    ],
+    &quot;declarations&quot;: 1890,
+    &quot;root&quot;: &quot;PaperRoute.private_iff_closed_intersection&quot;,
+    &quot;unsafe&quot;: [],
+    &quot;project_declarations&quot;: 2
+  },
+  {
+    &quot;axioms&quot;: [
+      &quot;Quot.sound&quot;,
+      &quot;propext&quot;,
+      &quot;Classical.choice&quot;
+    ],
+    &quot;declarations&quot;: 8307,
+    &quot;root&quot;: &quot;PaperRoute.Semantics.endpoint_packing20&quot;,
+    &quot;unsafe&quot;: [],
+    &quot;project_declarations&quot;: 247
+  }
+]</pre></html>

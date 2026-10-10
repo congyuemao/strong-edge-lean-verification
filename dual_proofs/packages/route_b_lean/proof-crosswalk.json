@@ -1,0 +1,655 @@
+[
+  {
+    "paper_ref": "1.1",
+    "claim": "Prescribed-edge packing",
+    "declarations": [
+      "StrongEdge.induced_matching_packing20"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/High20Packing.lean",
+        "line": 20
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "1 definitions",
+    "claim": "Independent endpoint semantics",
+    "declarations": [
+      "IndependentAudit.conflict_iff_direct",
+      "IndependentAudit.inducedMatching_iff_endpoints"
+    ],
+    "locations": [
+      {
+        "file": "AuditSemantic.lean",
+        "line": 68
+      },
+      {
+        "file": "AuditSemantic.lean",
+        "line": 77
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "2.1 / (2.1)",
+    "claim": "Cover identity / one-sided inequality",
+    "declarations": [
+      "StrongEdge.strongConflict_meets_cover",
+      "StrongEdge.conflict_degree_add_inside_le_sum"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/ConflictDegree.lean",
+        "line": 67
+      },
+      {
+        "file": "StrongEdge/Bounds/EdgeCounting.lean",
+        "line": 93
+      }
+    ],
+    "comparison_note": "A proves equality; B uses inclusion and inequality."
+  },
+  {
+    "paper_ref": "2.1 / (2.2)",
+    "claim": "Selected clique cover",
+    "declarations": [
+      "StrongEdge.clique_card_le_one_add_incidence_sum"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/EdgeCounting.lean",
+        "line": 110
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "2.2",
+    "claim": "Degree at most 24",
+    "declarations": [
+      "StrongEdge.conflict_degree_le_24"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/ConflictDegree.lean",
+        "line": 133
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "2.2",
+    "claim": "Triangle and arbitrary-threshold slack",
+    "declarations": [
+      "StrongEdge.endpointNeighbourCover_card_le_five_of_triangle",
+      "StrongEdge.high20_triangle_cover_inside_empty",
+      "StrongEdge.high21_endpoints_degree_four",
+      "StrongEdge.high21_no_triangle_on_edge"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High20Local.lean",
+        "line": 15
+      },
+      {
+        "file": "StrongEdge/Bounds/High20Local.lean",
+        "line": 75
+      },
+      {
+        "file": "StrongEdge/Bounds/High21Local.lean",
+        "line": 27
+      },
+      {
+        "file": "StrongEdge/Bounds/High21Local.lean",
+        "line": 60
+      }
+    ],
+    "comparison_note": "B obtains the remaining slack cases in specialized local modules."
+  },
+  {
+    "paper_ref": "2.3",
+    "claim": "Selected degree two bound 13",
+    "declarations": [
+      "StrongEdge.clique_card_le_thirteen_of_support_degree_le_two"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/EdgeCounting.lean",
+        "line": 124
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "2.3",
+    "claim": "Selected degree three bound 18",
+    "declarations": [
+      "StrongEdge.clique_card_le_eighteen_of_support_degree_le_three"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/SubcubicEighteen.lean",
+        "line": 86
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "2.4",
+    "claim": "Restricted degree-two clique bounds",
+    "declarations": [
+      "StrongEdge.degree_two_clique_card_le_five",
+      "StrongEdge.degree_two_clique_card_le_four_of_selected_bipartition"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/DegreeTwoClique.lean",
+        "line": 59
+      },
+      {
+        "file": "StrongEdge/Bounds/DegreeTwoClique.lean",
+        "line": 137
+      }
+    ],
+    "comparison_note": "The code uses restricted original-neighbour covers; A prose describes the equivalent vertex-induced graph."
+  },
+  {
+    "paper_ref": "(3.1)",
+    "claim": "Star/root/outer partition",
+    "declarations": [
+      "StrongEdge.clique_card_le_star_root_outer",
+      "StrongEdge.star_add_root_card_le_label_sum"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/RootCounting.lean",
+        "line": 118
+      },
+      {
+        "file": "StrongEdge/Bounds/High20Slots.lean",
+        "line": 15
+      }
+    ],
+    "comparison_note": "A states two exact identities; B exposes covering inequalities."
+  },
+  {
+    "paper_ref": "(3.2)",
+    "claim": "Meeting and outer covering",
+    "declarations": [
+      "StrongEdge.selected_edges_card_le_meeting_add_outer",
+      "StrongEdge.incidence_sum_eq_meeting_add_inside"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High23Outer.lean",
+        "line": 162
+      },
+      {
+        "file": "StrongEdge/Bounds/EdgeCounting.lean",
+        "line": 79
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "3.1 / (3.3)",
+    "claim": "Every outer edge covers all selected root labels",
+    "declarations": [
+      "StrongEdge.outer_edge_types_cover_root_labels"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High23Outer.lean",
+        "line": 28
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "3.1 / (3.4)",
+    "claim": "Outer incidence plus type degree",
+    "declarations": [
+      "StrongEdge.outer_incidence_add_type_card_le_degree"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/RootCounting.lean",
+        "line": 129
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "3.1 / (3.4)",
+    "claim": "Multiple-type incidence capacity",
+    "declarations": [
+      "StrongEdge.multipleTips_type_sum_le_twelve",
+      "StrongEdge.multipleTips_card_le_six"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High20Local.lean",
+        "line": 46
+      },
+      {
+        "file": "StrongEdge/Bounds/High20Local.lean",
+        "line": 56
+      }
+    ],
+    "comparison_note": "A keeps 3|A| before specializing to 12."
+  },
+  {
+    "paper_ref": "3.1 / (3.5)",
+    "claim": "Load budgets",
+    "declarations": [
+      "StrongEdge.high23_at_most_one_four_cycle_on_edge",
+      "StrongEdge.fourCycleOpposites_card_eq_root_load",
+      "StrongEdge.high22_root_label_budget_two",
+      "StrongEdge.high21_root_label_budget_three",
+      "StrongEdge.high20_root_label_budget_four"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High23Local.lean",
+        "line": 116
+      },
+      {
+        "file": "StrongEdge/Bounds/High22Support.lean",
+        "line": 54
+      },
+      {
+        "file": "StrongEdge/Bounds/High22Support.lean",
+        "line": 71
+      },
+      {
+        "file": "StrongEdge/Bounds/High21Support.lean",
+        "line": 56
+      },
+      {
+        "file": "StrongEdge/Bounds/High20Local.lean",
+        "line": 172
+      }
+    ],
+    "comparison_note": "A parameterizes t; B has separate thresholds and an ordered-pair uniqueness proof at 23."
+  },
+  {
+    "paper_ref": "3.2",
+    "claim": "Independent four-element root neighbourhood",
+    "declarations": [
+      "StrongEdge.high21_root_degree_four",
+      "StrongEdge.high21_root_neighborhood_independent"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High21Support.lean",
+        "line": 18
+      },
+      {
+        "file": "StrongEdge/Bounds/High21Support.lean",
+        "line": 26
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "3.3",
+    "claim": "Singleton controls tips",
+    "declarations": [
+      "StrongEdge.rootTips_adj_of_single",
+      "StrongEdge.rootTips_card_le_six_of_single"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/RootCounting.lean",
+        "line": 50
+      },
+      {
+        "file": "StrongEdge/Bounds/RootCounting.lean",
+        "line": 69
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "3.4",
+    "claim": "At most four fully selected doubles",
+    "declarations": [
+      "StrongEdge.fullDoubleTips_card_le_four"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High21Double.lean",
+        "line": 112
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "3.5",
+    "claim": "Complementary-double outer families",
+    "declarations": [
+      "StrongEdge.outer_card_le_four_of_double_types",
+      "StrongEdge.outer_avoiding_card_le_four_of_other_types_le_two"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High21RootFour.lean",
+        "line": 16
+      },
+      {
+        "file": "StrongEdge/Bounds/High20Outer.lean",
+        "line": 15
+      }
+    ],
+    "comparison_note": "A proves the arbitrary-subset version; B states precisely the two original special cases."
+  },
+  {
+    "paper_ref": "3.6",
+    "claim": "Threshold-free small-type bound 18",
+    "declarations": [
+      "StrongEdge.clique_card_le_eighteen_of_independent_root_types_le_two"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High20.lean",
+        "line": 16
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.2",
+    "claim": "Universal threshold 24 clique bound",
+    "declarations": [
+      "StrongEdge.high24_clique_card_le_thirteen"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High24.lean",
+        "line": 207
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.3",
+    "claim": "Universal threshold 23 clique bound",
+    "declarations": [
+      "StrongEdge.high23_clique_card_le_sixteen"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High23.lean",
+        "line": 74
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.4",
+    "claim": "Universal threshold 22 clique bound",
+    "declarations": [
+      "StrongEdge.high22_clique_card_le_seventeen"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High22.lean",
+        "line": 16
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.5",
+    "claim": "Universal threshold 21 clique bound",
+    "declarations": [
+      "StrongEdge.high21_clique_card_le_eighteen"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High21.lean",
+        "line": 16
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.6",
+    "claim": "Universal threshold 20 clique bound",
+    "declarations": [
+      "StrongEdge.high20_clique_card_le_nineteen"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High20.lean",
+        "line": 68
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.4, three selected labels",
+    "claim": "Heavy-vertex equality exclusion",
+    "declarations": [
+      "StrongEdge.high22_labelHeavyTips_card_le_three",
+      "StrongEdge.high22_heavy_card_and_degree_of_outer_six",
+      "StrongEdge.high22_multiple_subset_heavy_of_three"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High22Heavy.lean",
+        "line": 67
+      },
+      {
+        "file": "StrongEdge/Bounds/High22Heavy.lean",
+        "line": 107
+      },
+      {
+        "file": "StrongEdge/Bounds/High22Heavy.lean",
+        "line": 153
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.5, small types",
+    "claim": "Small-type branch at threshold 21",
+    "declarations": [
+      "StrongEdge.high21_multipleTips_card_le_six",
+      "StrongEdge.high21_clique_card_le_eighteen_of_root_types_le_two"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High21Support.lean",
+        "line": 124
+      },
+      {
+        "file": "StrongEdge/Bounds/High21RootFour.lean",
+        "line": 130
+      }
+    ],
+    "comparison_note": "A reuses the threshold-free lemma; B counts multiple vertices from the high21 loads."
+  },
+  {
+    "paper_ref": "4.6, type four",
+    "claim": "Four-element-type branch",
+    "declarations": [
+      "StrongEdge.high20_outer_card_le_two_of_root_type_four",
+      "StrongEdge.high20_clique_card_le_eighteen_of_root_type_four"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High20Four.lean",
+        "line": 103
+      },
+      {
+        "file": "StrongEdge/Bounds/High20Four.lean",
+        "line": 148
+      }
+    ],
+    "comparison_note": "A exposes o<=1 and q<=17; B exposes o<=2 and q<=18, although its proof internally bounds the avoiding family by one."
+  },
+  {
+    "paper_ref": "4.6, two triples",
+    "claim": "Two-triple branch",
+    "declarations": [
+      "StrongEdge.high20_clique_card_le_eighteen_of_two_triples"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High20TwoTriples.lean",
+        "line": 104
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "4.6, unique triple",
+    "claim": "Unique-triple branch",
+    "declarations": [
+      "StrongEdge.clique_card_le_nineteen_of_unique_triple"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/Bounds/High20UniqueTriple.lean",
+        "line": 80
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "5.1",
+    "claim": "Optimal independent set and exchanges",
+    "declarations": [
+      "StrongEdge.optimal_exists",
+      "StrongEdge.private_isClique",
+      "StrongEdge.private_degree_mono",
+      "StrongEdge.private_centre"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/PrivateExchange.lean",
+        "line": 24
+      },
+      {
+        "file": "StrongEdge/Basic.lean",
+        "line": 94
+      },
+      {
+        "file": "StrongEdge/PrivateExchange.lean",
+        "line": 53
+      },
+      {
+        "file": "StrongEdge/Basic.lean",
+        "line": 81
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "5.1 definition",
+    "claim": "Private-set semantics",
+    "declarations": [
+      "StrongEdge.private_iff_covering_singleton"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/DoubleCount.lean",
+        "line": 56
+      }
+    ],
+    "comparison_note": "The original covering predicate is the same closed-neighbourhood relation."
+  },
+  {
+    "paper_ref": "5.2",
+    "claim": "Private double count",
+    "declarations": [
+      "StrongEdge.private_double_count"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/DoubleCount.lean",
+        "line": 122
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "5.3",
+    "claim": "Twenty-packing criterion",
+    "declarations": [
+      "StrongEdge.local20_of_minimal_clique_bounds",
+      "StrongEdge.packing20_of_minimal_clique_bounds"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/MinimalPacking.lean",
+        "line": 39
+      },
+      {
+        "file": "StrongEdge/MinimalPacking.lean",
+        "line": 71
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "Proof of 1.1",
+    "claim": "Induced-subgraph transfer",
+    "declarations": [
+      "StrongEdge.minimalCliqueBounds20_induce",
+      "StrongEdge.subset_packing20_of_minimal_clique_bounds"
+    ],
+    "locations": [
+      {
+        "file": "StrongEdge/MinimalPacking.lean",
+        "line": 78
+      },
+      {
+        "file": "StrongEdge/MinimalPacking.lean",
+        "line": 86
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "6.1",
+    "claim": "Doubled-cycle witness",
+    "declarations": [
+      "IndependentAudit.Regression.doubleC5_degree_four",
+      "IndependentAudit.Regression.doubleC5_twenty_edges",
+      "IndependentAudit.Regression.doubleC5_matching_card_le_one"
+    ],
+    "locations": [
+      {
+        "file": "AuditRegression.lean",
+        "line": 36
+      },
+      {
+        "file": "AuditRegression.lean",
+        "line": 37
+      },
+      {
+        "file": "AuditRegression.lean",
+        "line": 56
+      }
+    ],
+    "comparison_note": ""
+  },
+  {
+    "paper_ref": "6.1",
+    "claim": "Optimality against any real constant",
+    "declarations": [
+      "OriginalSharpness.twenty_is_necessary_real"
+    ],
+    "locations": [
+      {
+        "file": "OriginalSharpness.lean",
+        "line": 8
+      }
+    ],
+    "comparison_note": "Both sharpness endpoints are supplemental; original 49 source/config files remain unchanged."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 16,
+    "token": "noncomputable",
+    "source": "noncomputable def privateFinset (M : Finset W) (v : W) : Finset W := by"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 29,
+    "token": "noncomputable",
+    "source": "noncomputable def privateOwners (M : Finset W) (x : W) : Finset W := by"
+  }
+]

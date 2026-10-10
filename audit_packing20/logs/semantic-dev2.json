@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin\\lake.exe",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/AuditSemantic.olean",
+    "AuditSemantic.lean"
+  ],
+  "cwd": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\audit_packing20\\isolated\\strong_edge_lean_starter",
+  "compiler_bin": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\.tools\\lean-4.35.0-rc4-windows\\bin",
+  "start_utc": "2026-10-10T05:17:14.048643+00:00",
+  "end_utc": "2026-10-10T05:17:18.522119+00:00",
+  "start_sydney": "2026-10-10T16:17:14.048643+11:00",
+  "seconds": 4.473476,
+  "exit_code": 1
+}

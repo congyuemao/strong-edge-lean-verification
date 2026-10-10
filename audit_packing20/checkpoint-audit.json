@@ -1,0 +1,21 @@
+{
+  "archive": "strong_edge_lean_packing20_joos2016_reviewed_checkpoint.zip",
+  "sha256": "6f0a4d9e039bf50d02422b956d6444340a2905afa90627aad21d00255d4970e8",
+  "bytes": 1990705,
+  "member_count": 344,
+  "uncompressed_bytes": 20299740,
+  "zip_crc_pass": true,
+  "all_member_sha256_pass": true,
+  "source_and_config_hashes_checked": 55,
+  "excluded": [
+    ".cache",
+    ".git",
+    ".lake",
+    ".tools",
+    "__pycache__",
+    "dependency-cache"
+  ],
+  "literature_full_2016_joint_paper_verified": true,
+  "originality_established": false,
+  "checked_utc": "2026-10-10T05:51:43.074278+00:00"
+}

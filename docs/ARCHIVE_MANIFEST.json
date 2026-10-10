@@ -4,7 +4,7 @@
   "last_lean_verification_date": "2026-10-10",
   "note": "This inventory excludes itself. Historical Lean logs and checkpoint ZIPs are preserved unchanged.",
   "file_count_excluding_manifest": 226,
-  "total_bytes_excluding_manifest": 2792243,
+  "total_bytes_excluding_manifest": 2793655,
   "verification": {
     "lean_source_files": 45,
     "source_and_config_hashes_matched": 49,
@@ -73,8 +73,8 @@
       "sha256": "7c5e4a2f7235276bdcb52e5281d953fa7dd4c3071a2fd2c90cbc122a4c70387a"
     },
     ".gitignore": {
-      "bytes": 104,
-      "sha256": "6ba318a3c877d823d1a52579f0dd7d811daedb2204093b6bdb2be410dce1aaff"
+      "bytes": 131,
+      "sha256": "7f1481f529149e55749c61977c35bc01bd39facc1d181900ddf283e6ac20d05b"
     },
     "docs/inputs/CODEX_LEAN_C5_HIGH20_FINAL_PROMPT.md": {
       "bytes": 23081,
@@ -117,8 +117,8 @@
       "sha256": "b1cc5998e14da8fcec165442e711f0fe5511d46a0c5e12d8cdd1938095ffa4f4"
     },
     "README.md": {
-      "bytes": 5020,
-      "sha256": "488a92329fc15fe04f498634f6341ded5afcd57e1b3cb4d513336266cb495c11"
+      "bytes": 6405,
+      "sha256": "22ba77f3937b679d08e60aae3ad2af825a1fa9d4a8a5345f2f09c89ba073cc2a"
     },
     "scripts/verify_archive.py": {
       "bytes": 7908,

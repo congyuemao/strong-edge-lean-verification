@@ -1,0 +1,225 @@
+PaperRoute.Library.clique_card_le_eighteen_of_support_degree_le_three.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (hQdeg : ∀ (x : V), (PaperRoute.Library.edgeIncidences G Q x).card ≤ 3) : Q.card ≤ 18
+PaperRoute.Library.clique_card_le_nineteen_of_unique_triple.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) {r : V} (hN : G.IsIndepSet (G.neighborSet r))
+  (hR : (PaperRoute.Library.rootLabels G Q r).card = 4) {x : V} (hx : (PaperRoute.Library.rootType G r x).card = 3)
+  (ht : ∀ (y : V), y ≠ r → y ≠ x → (PaperRoute.Library.rootType G r y).card ≤ 2) : Q.card ≤ 19
+PaperRoute.Library.clique_card_le_one_add_incidence_sum.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) {u v : V} (e : ↑G.edgeSet) (heQ : e ∈ Q) (he : ↑e = s(u, v)) :
+  Q.card ≤ 1 + ∑ w ∈ PaperRoute.Library.endpointNeighbourCover G u v, (PaperRoute.Library.edgeIncidences G Q w).card
+PaperRoute.Library.clique_card_le_thirteen_of_support_degree_le_two.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (hQdeg : ∀ (x : V), (PaperRoute.Library.edgeIncidences G Q x).card ≤ 2) : Q.card ≤ 13
+PaperRoute.Library.conflict_degree_le_24.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (e : ↑G.edgeSet) : (PaperRoute.Library.conflictGraph G).degree e ≤ 24
+PaperRoute.Library.degree_two_clique_card_le_five.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) (P : Finset V)
+  (hP : ∀ e ∈ Q, ∀ x ∈ ↑e, x ∈ P) (hd : ∀ x ∈ P, (G.neighborFinset x ∩ P).card ≤ 2) : Q.card ≤ 5
+PaperRoute.Library.degree_two_clique_card_le_four_of_selected_bipartition.{u_1} {V : Type u_1} [Fintype V]
+  [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) (P : Finset V) (hP : ∀ e ∈ Q, ∀ x ∈ ↑e, x ∈ P)
+  (hd : ∀ x ∈ P, (G.neighborFinset x ∩ P).card ≤ 2) (L : Finset V) (hL : ∀ e ∈ Q, {x ∈ L | x ∈ ↑e}.card = 1) :
+  Q.card ≤ 4
+PaperRoute.Library.fullDoubleTips_card_le_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) {r : V} (hN : G.IsIndepSet (G.neighborSet r)) :
+  (PaperRoute.Library.fullDoubleTips G Q r).card ≤ 4
+PaperRoute.Library.high20_clique_card_le_eighteen_of_two_triples.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet) (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h20 : ∀ e ∈ Q, 20 ≤ (PaperRoute.Library.conflictGraph G).degree e) {r : V} (hN : G.IsIndepSet (G.neighborSet r))
+  (hR : (PaperRoute.Library.rootLabels G Q r).card = 4) {x y : V} (hxr : x ≠ r) (hyr : y ≠ r) (hxy : x ≠ y)
+  (hx : 3 ≤ (PaperRoute.Library.rootType G r x).card) (hy : 3 ≤ (PaperRoute.Library.rootType G r y).card) : Q.card ≤ 18
+PaperRoute.Library.high21_root_degree_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (h21 : ∀ e ∈ Q, 21 ≤ (PaperRoute.Library.conflictGraph G).degree e) (r : V)
+  (hR : (PaperRoute.Library.rootLabels G Q r).Nonempty) : G.degree r = 4
+PaperRoute.Library.high21_root_neighborhood_independent.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (h21 : ∀ e ∈ Q, 21 ≤ (PaperRoute.Library.conflictGraph G).degree e) (r : V)
+  (hR : 3 ≤ (PaperRoute.Library.rootLabels G Q r).card) : G.IsIndepSet (G.neighborSet r)
+PaperRoute.Library.high22_heavy_card_and_degree_of_outer_six.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet) (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h22 : ∀ e ∈ Q, 22 ≤ (PaperRoute.Library.conflictGraph G).degree e) (r : V)
+  (hR : (PaperRoute.Library.rootLabels G Q r).card = 3) (ho : (PaperRoute.Library.outerEdges G Q r).card = 6) :
+  (PaperRoute.Library.labelHeavyTips G Q r).card = 3 ∧
+    ∀ x ∈ PaperRoute.Library.labelHeavyTips G Q r,
+      (PaperRoute.Library.edgeIncidences G (PaperRoute.Library.outerEdges G Q r) x).card = 2
+PaperRoute.Library.high22_labelHeavyTips_card_le_three.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (h22 : ∀ e ∈ Q, 22 ≤ (PaperRoute.Library.conflictGraph G).degree e) (r : V)
+  (hR : (PaperRoute.Library.rootLabels G Q r).card = 3) : (PaperRoute.Library.labelHeavyTips G Q r).card ≤ 3
+PaperRoute.Library.high22_multiple_subset_heavy_of_three.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (h22 : ∀ e ∈ Q, 22 ≤ (PaperRoute.Library.conflictGraph G).degree e) (r : V)
+  (hR : (PaperRoute.Library.rootLabels G Q r).card = 3) (hp : (PaperRoute.Library.labelHeavyTips G Q r).card = 3) :
+  PaperRoute.Library.multipleTips G r ⊆ PaperRoute.Library.labelHeavyTips G Q r
+PaperRoute.Library.incidence_sum_eq_meeting_add_inside.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) (Q : Finset ↑G.edgeSet) (S : Finset V) :
+  ∑ v ∈ S, (PaperRoute.Library.edgeIncidences G Q v).card =
+    (PaperRoute.Library.edgesMeeting G Q S).card + (PaperRoute.Library.edgesInside G Q S).card
+PaperRoute.Library.optimal_exists.{u_1} {W : Type u_1} [Fintype W] (H : SimpleGraph W) [DecidableRel H.Adj] :
+  ∃ M, PaperRoute.Library.IsOptimal H M
+PaperRoute.Library.outer_edge_types_cover_root_labels.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) (r : V) {x y : V} (e : ↑G.edgeSet) (he : ↑e = s(x, y))
+  (heo : e ∈ PaperRoute.Library.outerEdges G Q r) :
+  PaperRoute.Library.rootLabels G Q r ⊆ PaperRoute.Library.rootType G r x ∪ PaperRoute.Library.rootType G r y
+PaperRoute.Library.outer_incidence_add_type_card_le_degree.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (r x : V) :
+  (PaperRoute.Library.edgeIncidences G (PaperRoute.Library.outerEdges G Q r) x).card +
+      (PaperRoute.Library.rootType G r x).card ≤
+    G.degree x
+PaperRoute.Library.private_centre.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W) (M : Finset W)
+  (v : W) (hM : H.IsMaximumIndepSet M) (hv : v ∈ M) : PaperRoute.Library.IsPrivate H M v v
+PaperRoute.Library.private_degree_mono.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (M : Finset W) (hM : PaperRoute.Library.IsOptimal H M) {v x : W} (hv : v ∈ M)
+  (hx : PaperRoute.Library.IsPrivate H M v x) : H.degree v ≤ H.degree x
+PaperRoute.Library.private_double_count.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (M : Finset W) (hM : H.IsMaximumIndepSet M) :
+  2 * Fintype.card W ≤ ∑ v ∈ M, (H.degree v + 1 + (PaperRoute.Library.privateFinset H M v).card)
+PaperRoute.Library.private_isClique.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W) (M : Finset W)
+  (v : W) (hM : H.IsMaximumIndepSet M) (hv : v ∈ M) : H.IsClique {x | PaperRoute.Library.IsPrivate H M v x}
+PaperRoute.Library.rootTips_adj_of_single.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) {r a x : V}
+  (hN : G.IsIndepSet (G.neighborSet r)) (ha : G.Adj r a) (hx : PaperRoute.Library.rootType G r x = {a}) (e : ↑G.edgeSet)
+  (heQ : e ∈ Q) (he : ↑e = s(a, x)) {y : V} (hy : y ∈ PaperRoute.Library.rootTips G Q r)
+  (hya : a ∉ PaperRoute.Library.rootType G r y) : G.Adj x y
+PaperRoute.Library.rootTips_card_le_six_of_single.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) {r a x : V} (hN : G.IsIndepSet (G.neighborSet r))
+  (ha : G.Adj r a) (hx : PaperRoute.Library.rootType G r x = {a}) (e : ↑G.edgeSet) (heQ : e ∈ Q) (he : ↑e = s(a, x)) :
+  (PaperRoute.Library.rootTips G Q r).card ≤ 6
+PaperRoute.Library.selected_edges_card_le_meeting_add_outer.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (r : V) :
+  Q.card ≤ (PaperRoute.Library.edgesMeeting G Q (G.neighborFinset r)).card + (PaperRoute.Library.outerEdges G Q r).card
+PaperRoute.Semantics.conflict_iff_direct.{u_1} {V : Type u_1} (G : SimpleGraph V) (e f : ↑G.edgeSet) (hne : e ≠ f) :
+  (PaperRoute.Library.conflictGraph G).Adj e f ↔ PaperRoute.Semantics.directStrongConflict G e f
+PaperRoute.Semantics.inducedMatching_iff_endpoints.{u_1} {V : Type u_1} (G : SimpleGraph V) (M : Set ↑G.edgeSet) :
+  PaperRoute.Library.IsInducedMatching G M ↔ PaperRoute.Semantics.endpointInducedMatching G M
+PaperRoute.Sharpness.doubleC5_degree_four (v : Fin 10) : PaperRoute.Sharpness.doubleC5.degree v = 4
+PaperRoute.Sharpness.doubleC5_matching_card_le_one (M : Finset ↑PaperRoute.Sharpness.doubleC5.edgeSet)
+  (hM : PaperRoute.Library.IsInducedMatching PaperRoute.Sharpness.doubleC5 ↑M) : M.card ≤ 1
+PaperRoute.Sharpness.doubleC5_twenty_edges : Fintype.card ↑PaperRoute.Sharpness.doubleC5.edgeSet = 20
+PaperRoute.Sharpness.twenty_is_necessary_real (c : ℝ)
+  (h :
+    ∃ M,
+      PaperRoute.Library.IsInducedMatching PaperRoute.Sharpness.doubleC5 ↑M ∧
+        ↑(Fintype.card ↑PaperRoute.Sharpness.doubleC5.edgeSet) ≤ c * ↑M.card) :
+  20 ≤ c
+PaperRoute.clique_card_le_seventeen_of_type_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h20 : ∀ e ∈ Q, 20 ≤ (PaperRoute.Library.conflictGraph G).degree e) {r : V} (hN : G.IsIndepSet (G.neighborSet r))
+  (hR : (PaperRoute.Library.rootLabels G Q r).card = 4) {x : V} (hxr : x ≠ r)
+  (hx : 4 ≤ (PaperRoute.Library.rootType G r x).card) : Q.card ≤ 17
+PaperRoute.conflict_degree_add_inside_eq_sum.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] {u v : V} (e : ↑G.edgeSet)
+  (he : ↑e = s(u, v)) :
+  (PaperRoute.Library.conflictGraph G).degree e +
+      (PaperRoute.Library.edgesInside G Finset.univ (PaperRoute.Library.endpointNeighbourCover G u v)).card =
+    ∑ w ∈ PaperRoute.Library.endpointNeighbourCover G u v, G.degree w
+PaperRoute.conflict_degree_eq_sum_sub_inside.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] {u v : V} (e : ↑G.edgeSet)
+  (he : ↑e = s(u, v)) :
+  (PaperRoute.Library.conflictGraph G).degree e =
+    ∑ w ∈ PaperRoute.Library.endpointNeighbourCover G u v, G.degree w -
+      (PaperRoute.Library.edgesInside G Finset.univ (PaperRoute.Library.endpointNeighbourCover G u v)).card
+PaperRoute.conflict_iff_meets_cover.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] {u v : V} {e f : ↑G.edgeSet} (he : ↑e = s(u, v)) :
+  PaperRoute.Library.StrongConflict G e f ↔ ∃ w ∈ PaperRoute.Library.endpointNeighbourCover G u v, w ∈ ↑f
+PaperRoute.degree_le_twenty_of_triangle.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  {u v w : V} (e : ↑G.edgeSet) (he : ↑e = s(u, v)) (huw : G.Adj u w) (hvw : G.Adj v w) :
+  (PaperRoute.Library.conflictGraph G).degree e ≤ 20
+PaperRoute.induced_matching_packing20.{u_2} {V : Type u_2} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (F : Finset ↑G.edgeSet) : ∃ M ⊆ F, PaperRoute.Library.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card
+PaperRoute.inside_cover_budget.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) {u v : V} (e : ↑G.edgeSet)
+  (he : ↑e = s(u, v)) {t : ℕ} (ht : t ≤ (PaperRoute.Library.conflictGraph G).degree e) :
+  (PaperRoute.Library.edgesInside G Finset.univ (PaperRoute.Library.endpointNeighbourCover G u v)).card + t ≤ 24
+PaperRoute.local20_of_minimal_clique_bounds.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (hdegree : ∀ (x : W), H.degree x ≤ 24) (hb : PaperRoute.CliqueProfile20 H) (M : Finset W)
+  (hM : PaperRoute.Library.IsOptimal H M) {v : W} (hv : v ∈ M) :
+  H.degree v + 1 + (PaperRoute.Library.privateFinset H M v).card ≤ 40
+PaperRoute.minimalCliqueBounds20_induce.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (hb : PaperRoute.CliqueProfile20 H) (F : Set W) [DecidablePred fun x => x ∈ F] :
+  PaperRoute.CliqueProfile20 (SimpleGraph.induce F H)
+PaperRoute.multiple_type_sum_le_three_neighbors.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (r : V) :
+  ∑ x ∈ PaperRoute.Library.multipleTips G r, (PaperRoute.Library.rootType G r x).card ≤ 3 * (G.neighborFinset r).card
+PaperRoute.outer_card_le_one_of_type_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h20 : ∀ e ∈ Q, 20 ≤ (PaperRoute.Library.conflictGraph G).degree e) {r : V} (hN : G.IsIndepSet (G.neighborSet r))
+  (hR : (PaperRoute.Library.rootLabels G Q r).card = 4) {x : V} (hxr : x ≠ r)
+  (hx : 4 ≤ (PaperRoute.Library.rootType G r x).card) : (PaperRoute.Library.outerEdges G Q r).card ≤ 1
+PaperRoute.outer_subset_card_le_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) (r : V) (hR : (PaperRoute.Library.rootLabels G Q r).card = 4)
+  (hN : G.IsIndepSet (G.neighborSet r)) (O : Finset ↑G.edgeSet) (hO : O ⊆ PaperRoute.Library.outerEdges G Q r)
+  (ht : ∀ e ∈ O, ∀ x ∈ ↑e, (PaperRoute.Library.rootType G r x).card ≤ 2) : O.card ≤ 4
+PaperRoute.packing20_of_minimal_clique_bounds.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (hdegree : ∀ (x : W), H.degree x ≤ 24) (hb : PaperRoute.CliqueProfile20 H) :
+  ∃ M, H.IsMaximumIndepSet M ∧ Fintype.card W ≤ 20 * M.card
+PaperRoute.private_iff_closed_intersection.{u_1} {W : Type u_1} [DecidableEq W] (H : SimpleGraph W) [DecidableRel H.Adj]
+  (I : Finset W) {v x : W} (hv : v ∈ I) : PaperRoute.Library.IsPrivate H I v x ↔ {w ∈ I | x = w ∨ H.Adj x w} = {v}
+PaperRoute.proposition_4_2.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h24 : ∀ e ∈ Q, 24 ≤ (PaperRoute.Library.conflictGraph G).degree e) : Q.card ≤ 13
+PaperRoute.proposition_4_3.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h23 : ∀ e ∈ Q, 23 ≤ (PaperRoute.Library.conflictGraph G).degree e) : Q.card ≤ 16
+PaperRoute.proposition_4_4.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h22 : ∀ e ∈ Q, 22 ≤ (PaperRoute.Library.conflictGraph G).degree e) : Q.card ≤ 17
+PaperRoute.proposition_4_5.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h21 : ∀ e ∈ Q, 21 ≤ (PaperRoute.Library.conflictGraph G).degree e) : Q.card ≤ 18
+PaperRoute.proposition_4_6.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q)
+  (h20 : ∀ e ∈ Q, 20 ≤ (PaperRoute.Library.conflictGraph G).degree e) : Q.card ≤ 19
+PaperRoute.root_incidence_eq_star_add_root.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (r : V) (hN : G.IsIndepSet (G.neighborSet r)) :
+  ∑ a ∈ G.neighborFinset r, (PaperRoute.Library.edgeIncidences G Q a).card =
+    (PaperRoute.Library.edgeIncidences G Q r).card + (PaperRoute.Library.rootEdges G Q r).card
+PaperRoute.root_load_budget.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  {t : ℕ} (ht : ∀ e ∈ Q, t ≤ (PaperRoute.Library.conflictGraph G).degree e) {r a : V}
+  (hN : G.IsIndepSet (G.neighborSet r)) (ha : a ∈ PaperRoute.Library.rootLabels G Q r) :
+  ∑ x ∈ (G.neighborFinset a).erase r, ((PaperRoute.Library.rootType G r x).erase a).card + t ≤ 24
+PaperRoute.root_load_budget_disjoint.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (PaperRoute.Library.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) {t : ℕ} (ht : ∀ e ∈ Q, t ≤ (PaperRoute.Library.conflictGraph G).degree e) {r a : V}
+  (hdis : Disjoint ((G.neighborFinset r).erase a) ((G.neighborFinset a).erase r))
+  (ha : a ∈ PaperRoute.Library.rootLabels G Q r) :
+  ∑ x ∈ (G.neighborFinset a).erase r, ((PaperRoute.Library.rootType G r x).erase a).card + t ≤ 24
+PaperRoute.selected_card_eq_star_root_outer.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (Q : Finset ↑G.edgeSet) (r : V) :
+  Q.card =
+    (PaperRoute.Library.edgeIncidences G Q r).card + (PaperRoute.Library.rootEdges G Q r).card +
+      (PaperRoute.Library.outerEdges G Q r).card
+PaperRoute.small_type_clique_bound.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) (Q : Finset ↑G.edgeSet)
+  (hQ : (PaperRoute.Library.conflictGraph G).IsClique ↑Q) (r : V) (hR : (PaperRoute.Library.rootLabels G Q r).card = 4)
+  (hN : G.IsIndepSet (G.neighborSet r)) (ht : ∀ (x : V), x ≠ r → (PaperRoute.Library.rootType G r x).card ≤ 2) :
+  Q.card ≤ 18
+PaperRoute.subset_packing20_of_minimal_clique_bounds.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W]
+  (H : SimpleGraph W) [DecidableRel H.Adj] (hdegree : ∀ (x : W), H.degree x ≤ 24) (hb : PaperRoute.CliqueProfile20 H)
+  (F : Finset W) : ∃ M ⊆ F, H.IsIndepSet ↑M ∧ F.card ≤ 20 * M.card
