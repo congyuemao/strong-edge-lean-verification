@@ -1,12 +1,14 @@
 {
-  "pdf_sha256": "c7dac49c0cf6acf7add2d95d692efc418564a74ece26cf6a803c73906b660faa",
-  "source_sha256": "324ffb3e19fb53cc50021b72773cde16cf2511396fd3de20399ba52985b5b685",
+  "pdf_sha256": "f85f24a98eee20e89971c65fa4928ca8b9bc7906c00332b0dda49d0f1ee39e05",
+  "source_sha256": "dfaecbed197f59c4fe092af8739663782192fcc2a33c8e02e58b786a7c584fe1",
   "pages": 19,
   "numbered_statements": 37,
   "numbered_equations": 28,
   "source_and_config_hashes_preserved": 79,
   "vector_math_only": true,
-  "author_field_empty": true,
+  "author": "Congyue Mao",
+  "author_visible_on_first_page": true,
+  "ai_assistance_disclosure": "GPT-6 Astra; title page and dedicated statement",
   "manuscript_references_resolved": true,
   "crosswalk": [
     {
@@ -153,133 +155,133 @@
   "page_checks": [
     {
       "page": 1,
-      "characters": 3149,
+      "characters": 3058,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 2,
-      "characters": 3304,
+      "characters": 3061,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 3,
-      "characters": 2926,
+      "characters": 3076,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 4,
-      "characters": 2633,
+      "characters": 2616,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 5,
-      "characters": 3608,
+      "characters": 3484,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 6,
-      "characters": 3400,
+      "characters": 3561,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 7,
-      "characters": 2388,
+      "characters": 2455,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 8,
-      "characters": 2333,
+      "characters": 2208,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 9,
-      "characters": 2516,
+      "characters": 2478,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 10,
-      "characters": 3216,
+      "characters": 3195,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 11,
-      "characters": 3496,
+      "characters": 3355,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 12,
-      "characters": 3247,
+      "characters": 3177,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 13,
-      "characters": 3461,
+      "characters": 3538,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 14,
-      "characters": 3119,
+      "characters": 3136,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 15,
-      "characters": 2786,
+      "characters": 2341,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 16,
-      "characters": 1966,
+      "characters": 2281,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 17,
-      "characters": 3304,
+      "characters": 3455,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 18,
-      "characters": 3015,
+      "characters": 2901,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28
     },
     {
       "page": 19,
-      "characters": 1327,
+      "characters": 2293,
       "outside_safe_area": 0,
       "minimum_x": 69.0,
       "maximum_x": 526.28

@@ -12,6 +12,7 @@
 [自动核对记录](output/pdf/packing195_unconditional_manuscript_validation.json)及
 [证明与排版复核记录](output/pdf/packing195_unconditional_manuscript_review.json)。
 手稿沿用原英文 PDF 的版式，给出 37 个编号结论的完整论证，并在附录中逐项对应 Lean 模块。
+作者署名为 Congyue Mao；AI 使用说明明确披露研究主要使用生成式 AI 完成，并注明 GPT-6 Astra。
 手稿中的数学结论对应已验证的 Lean 定理；英文行文和排版经另外核对，不属于 Lean 内核检查的对象。
 
 验证日期：2026-10-10（Australia/Sydney）。

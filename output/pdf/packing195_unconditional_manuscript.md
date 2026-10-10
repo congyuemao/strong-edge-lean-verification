@@ -1,6 +1,8 @@
 # A Corrected 19.5 Bound for Induced Matchings in Prescribed Edge Sets
 
 @subtitle A complete proof manuscript with a correspondence to the verified Lean development
+@author Congyue Mao
+@credit Proof completed using GPT-6 Astra
 @date 10 October 2026
 
 @abstract
@@ -566,6 +568,10 @@ The verified source snapshot is commit **1160b4529436efa82d579a2f7e4b97e57ae5d9f
 The regression suite includes the path with an unselected conflict witness, the empty candidate set, the abstract twenty-clique obstruction to the uncorrected criterion, and the actual doubled five-cycle with its degree, edge count, five-pair structure, connected-component status and correction necessity. Finite evaluations in these examples use kernel-checked **decide**, not **native_decide**. The structural proof does not depend on a finite graph search or a probabilistic experiment.
 
 This appendix identifies the mathematical arguments and their formal counterparts. The Lean kernel checks the formal proof terms; it does not check the English text or its typesetting. The manuscript therefore also gives the full reasoning needed to assess the proof independently of the software.
+
+## AI assistance and verification
+
+This research was conducted predominantly using generative AI systems, including mathematical exploration, proof development, Lean formalization, and manuscript preparation. **GPT-6 Astra** was used for this work under the direction of **Congyue Mao**. The formal proof terms were checked by the Lean kernel, with the verification record described in Appendix A. This kernel verification applies to the formal development; the English exposition was reviewed separately.
 
 ## References
 

@@ -4,7 +4,7 @@
   "last_lean_verification_date": "2026-10-10",
   "note": "This inventory excludes itself. Historical Lean logs and checkpoint ZIPs are preserved unchanged.",
   "file_count_excluding_manifest": 985,
-  "total_bytes_excluding_manifest": 35505979,
+  "total_bytes_excluding_manifest": 35508981,
   "verification": {
     "lean_source_files": 75,
     "source_and_config_hashes_matched": 79,
@@ -2658,16 +2658,16 @@
       "sha256": "5232ff5fde61e159fa17e92190cbfc74f8695d46e80fab98f4be891ed39fca1c"
     },
     "output/pdf/build_packing195.py": {
-      "bytes": 1127,
-      "sha256": "39df38979b7df9dbd0b2e3fb62c3784c55c298f3ccef7923a14f2e7d838f0aeb"
+      "bytes": 2310,
+      "sha256": "36cc3fbeec7bc9b22adee1ca30334c7d3bdf97a872b93ec511494ea5d3424998"
     },
     "output/pdf/check_manuscript.py": {
       "bytes": 3053,
       "sha256": "3a8a7c1fd1eb543c35c7c45679db0471a6eb161660c34f60e7b6a7595928c330"
     },
     "output/pdf/check_packing195_manuscript.py": {
-      "bytes": 6646,
-      "sha256": "379bfca210ee93d60561601018c10ba477fc1b0b8b2728ed01a6a5a0bfc2230b"
+      "bytes": 7336,
+      "sha256": "0ac81d56a65a98a922a07aa9d60190c5d7137824619d49a80f5e3c382405ba3a"
     },
     "output/pdf/dual_pdf_validation.json": {
       "bytes": 3221,
@@ -2682,24 +2682,24 @@
       "sha256": "21736cd2c57b18629f59a7fcf6b640ca51de5d0b3acf9d44791afdcedb5f3fdc"
     },
     "output/pdf/packing195_unconditional_manuscript.md": {
-      "bytes": 61450,
-      "sha256": "324ffb3e19fb53cc50021b72773cde16cf2511396fd3de20399ba52985b5b685"
+      "bytes": 62019,
+      "sha256": "dfaecbed197f59c4fe092af8739663782192fcc2a33c8e02e58b786a7c584fe1"
     },
     "output/pdf/packing195_unconditional_manuscript.pdf": {
-      "bytes": 288912,
-      "sha256": "c7dac49c0cf6acf7add2d95d692efc418564a74ece26cf6a803c73906b660faa"
+      "bytes": 288643,
+      "sha256": "f85f24a98eee20e89971c65fa4928ca8b9bc7906c00332b0dda49d0f1ee39e05"
     },
     "output/pdf/packing195_unconditional_manuscript_build.json": {
-      "bytes": 652,
-      "sha256": "2fcff3948e8f777684fd483ac6c0ad731dbe303172c7f2cebe10ccc77a2c0ed3"
+      "bytes": 663,
+      "sha256": "50555e13fd5cb477f808f9a303af67b7f30b1df2abcaf075ef5c01de419a3c9f"
     },
     "output/pdf/packing195_unconditional_manuscript_review.json": {
-      "bytes": 2354,
-      "sha256": "33ba4863987c52f468ee1d9718b6a445e818acf0f72c711596294fea51fa5e14"
+      "bytes": 2930,
+      "sha256": "1fdb38536fd6eb03da4b26a37724f4f4afbd71ae67dd274b9f6dcbd5ba2ff0e9"
     },
     "output/pdf/packing195_unconditional_manuscript_validation.json": {
-      "bytes": 8709,
-      "sha256": "62fabdffe88058f5dd54ddf873bafe76ea263615474557969dea7795c7b95fcd"
+      "bytes": 8829,
+      "sha256": "e0ca3b33d40a9701fa9bf1a4d679afaaaa6399a50d570df5147d67b71d7e0412"
     },
     "output/pdf/packing20_manuscript.md": {
       "bytes": 37606,
@@ -2738,8 +2738,8 @@
       "sha256": "176608adc5a148af3e5ae863a73271a5f05ca9e5becd079ec0c3fe3625114e9a"
     },
     "README.md": {
-      "bytes": 9239,
-      "sha256": "a8f079aad5a64764d8ba0746b547ae0874f74202135647753f4c6d115bc5d70d"
+      "bytes": 9361,
+      "sha256": "cd10aff170ae3662eeddeb7caff9c2f74874e7650bb6f6715874ad9877638b35"
     },
     "scripts/verify_archive.py": {
       "bytes": 15520,

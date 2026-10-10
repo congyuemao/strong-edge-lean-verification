@@ -95,9 +95,20 @@ def main():
     reader = PdfReader(PDF)
     pages = len(reader.pages)
     extracted = "\n".join(p.extract_text() for p in reader.pages)
-    assert not (reader.metadata.author or "")
+    assert reader.metadata.author == "Congyue Mao"
+    assert build["author"] == "Congyue Mao"
+    first_page = reader.pages[0].extract_text()
+    assert "Congyue Mao" in first_page
+    assert "Proof completed using GPT-6 Astra" in first_page
+    assert "AI assistance and verification" in extracted
+    normalized = " ".join(extracted.split())
+    assert (
+        "This research was conducted predominantly using generative AI systems, "
+        "including mathematical exploration, proof development, Lean formalization, "
+        "and manuscript preparation."
+    ) in normalized
     assert sum(len(p.images) for p in reader.pages) == 0
-    for token in ["@abstract", "@row", "@table", "@ref", "@@", "\ufffd"]:
+    for token in ["@abstract", "@author", "@credit", "@row", "@table", "@ref", "@@", "\ufffd"]:
         assert token not in extracted, token
     for kind, number in definitions:
         assert f"{kind} {number}" in extracted, (kind, number)
@@ -146,7 +157,9 @@ def main():
         "numbered_equations": len(equations),
         "source_and_config_hashes_preserved": len(hashes),
         "vector_math_only": True,
-        "author_field_empty": True,
+        "author": "Congyue Mao",
+        "author_visible_on_first_page": True,
+        "ai_assistance_disclosure": "GPT-6 Astra; title page and dedicated statement",
         "manuscript_references_resolved": True,
         "crosswalk": crosswalk,
         "page_checks": page_checks,
