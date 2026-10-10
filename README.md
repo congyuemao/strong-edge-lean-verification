@@ -7,11 +7,18 @@
 详见[完整证明链与复验记录](strong_edge_lean_starter/PACKING195_UNCONDITIONAL.md)及[源码快照](strong_edge_lean_packing195_unconditional_checkpoint.zip)。
 当前为 1,197 jobs、75 个 Lean 文件、376 项公理审计，无警告、无证明占位符。以下保留 20-packing 基线的历史说明。
 
+英文完整证明手稿：[PDF（19 页）](output/pdf/packing195_unconditional_manuscript.pdf)、
+[可编辑源稿](output/pdf/packing195_unconditional_manuscript.md)、
+[自动核对记录](output/pdf/packing195_unconditional_manuscript_validation.json)及
+[证明与排版复核记录](output/pdf/packing195_unconditional_manuscript_review.json)。
+手稿沿用原英文 PDF 的版式，给出 37 个编号结论的完整论证，并在附录中逐项对应 Lean 模块。
+手稿中的数学结论对应已验证的 Lean 定理；英文行文和排版经另外核对，不属于 Lean 内核检查的对象。
+
 验证日期：2026-10-10（Australia/Sydney）。
 
 ## 双路线证明与独立审计
 
-最新交付包含两份英文手稿及各自对应的完整 Lean 工程。两条路线共享整体打包策略，
+20-packing 基线交付包含两份英文手稿及各自对应的完整 Lean 工程。两条路线共享整体打包策略，
 区别在局部恒等式、根部计数和阈值引理的组织方式；并非两个完全无关的证明。
 
 | 路线 | 英文手稿 | 对应 Lean 工程 |

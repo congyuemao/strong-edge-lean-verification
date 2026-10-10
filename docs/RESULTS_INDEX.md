@@ -2,6 +2,7 @@
 
 ## 合并后的最新内容
 
+- 无条件修正 19.5 的英文完整证明：[PDF（19 页）](../output/pdf/packing195_unconditional_manuscript.pdf)、[可编辑源稿](../output/pdf/packing195_unconditional_manuscript.md)、[自动核对记录](../output/pdf/packing195_unconditional_manuscript_validation.json)及[证明与排版复核记录](../output/pdf/packing195_unconditional_manuscript_review.json)。包含 37 个编号结论、28 个编号公式和 Lean 对照附录。
 - 双路线手稿与配套证明：[A 手稿](../output/pdf/route_a_paper_first.pdf)、[A Lean](../output/dual_proofs/route_a_lean.zip)、[B 手稿](../output/pdf/route_b_lean_first.pdf)、[B Lean](../output/dual_proofs/route_b_lean.zip)，以及[独立审计](../audit_packing20/README.md)。
 - PACKING19.5：[无条件完成记录](../strong_edge_lean_starter/PACKING195_UNCONDITIONAL.md)、[源码快照](../strong_edge_lean_packing195_unconditional_checkpoint.zip)。历史记录和快照原样保留。
 - 五个较强阈值、二十团的 C5[2] 结构、实际原图连通分量计数及 `2|F|≤39|M|+t_G(F)` 全部通过 Lean。

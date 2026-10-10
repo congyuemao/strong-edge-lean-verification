@@ -1,0 +1,290 @@
+{
+  "pdf_sha256": "c7dac49c0cf6acf7add2d95d692efc418564a74ece26cf6a803c73906b660faa",
+  "source_sha256": "324ffb3e19fb53cc50021b72773cde16cf2511396fd3de20399ba52985b5b685",
+  "pages": 19,
+  "numbered_statements": 37,
+  "numbered_equations": 28,
+  "source_and_config_hashes_preserved": 79,
+  "vector_math_only": true,
+  "author_field_empty": true,
+  "manuscript_references_resolved": true,
+  "crosswalk": [
+    {
+      "statement": "Lemmas 2.1-2.2: covers and slack",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/ConflictDegree.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/EdgeCounting.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/ConflictRigidity.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High20Local.lean"
+      ]
+    },
+    {
+      "statement": "Lemmas 2.3-2.4: preliminary bounds",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/SubcubicEighteen.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/DegreeTwoClique.lean"
+      ]
+    },
+    {
+      "statement": "Lemma 2.5 and identity (2.4)",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/SubcubicBoundary.lean"
+      ]
+    },
+    {
+      "statement": "Lemmas 3.1-3.3: roots, loads, singletons",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/RootCounting.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High21Local.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High22Local.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High20Local.lean"
+      ]
+    },
+    {
+      "statement": "Lemmas 3.4-3.6: double-tip saturation",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/High21Double.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High21ImprovedRoot.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueParts.lean"
+      ]
+    },
+    {
+      "statement": "Lemma 3.7: the unique triple",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/High20UniqueTriple.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High20Improved.lean"
+      ]
+    },
+    {
+      "statement": "Lemma 3.8: outer-edge charging",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueCounting.lean"
+      ]
+    },
+    {
+      "statement": "Lemma 4.1 and Proposition 4.2",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/SubcubicBoundary.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/SubcubicSeventeen.lean"
+      ]
+    },
+    {
+      "statement": "Lemma 4.3: defect counts and inequalities",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/SubcubicDefect.lean"
+      ]
+    },
+    {
+      "statement": "Lemma 4.4: thirteen support vertices",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/High22SupportSize.lean"
+      ]
+    },
+    {
+      "statement": "Proposition 4.5: final high22 boundary",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/LowSupportGeometry.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High22Improved.lean"
+      ]
+    },
+    {
+      "statement": "Theorem 5.1: five strengthened thresholds",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Packing195Thresholds.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High20Improved.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High21Improved.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High22Improved.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High23Improved.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/High24.lean"
+      ]
+    },
+    {
+      "statement": "Lemmas 6.1-6.2: root and quadruple",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueRoot.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueCounting.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueTypes.lean"
+      ]
+    },
+    {
+      "statement": "Lemma 6.3: equality and saturation",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueSaturation.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueComponent.lean"
+      ]
+    },
+    {
+      "statement": "Theorem 6.4 and Corollary 6.5",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueParts.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueRigidity.lean",
+        "strong_edge_lean_starter/StrongEdge/Bounds/TwentyCliqueComponent.lean"
+      ]
+    },
+    {
+      "statement": "Lemmas 7.1-7.3: private-set criterion",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/PrivateExchange.lean",
+        "strong_edge_lean_starter/StrongEdge/DoubleCount.lean",
+        "strong_edge_lean_starter/StrongEdge/Packing195.lean",
+        "strong_edge_lean_starter/StrongEdge/MinimalPacking195.lean"
+      ]
+    },
+    {
+      "statement": "Proposition 7.4: prescribed-set transfer",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Packing195Thresholds.lean"
+      ]
+    },
+    {
+      "statement": "Theorem 1.1: component correction",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Packing195Unconditional.lean",
+        "strong_edge_lean_starter/StrongEdge/TightComponents.lean"
+      ]
+    },
+    {
+      "statement": "The doubled-five-cycle regression",
+      "sources": [
+        "strong_edge_lean_starter/StrongEdge/Tests195Unconditional.lean"
+      ]
+    }
+  ],
+  "page_checks": [
+    {
+      "page": 1,
+      "characters": 3149,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 2,
+      "characters": 3304,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 3,
+      "characters": 2926,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 4,
+      "characters": 2633,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 5,
+      "characters": 3608,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 6,
+      "characters": 3400,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 7,
+      "characters": 2388,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 8,
+      "characters": 2333,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 9,
+      "characters": 2516,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 10,
+      "characters": 3216,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 11,
+      "characters": 3496,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 12,
+      "characters": 3247,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 13,
+      "characters": 3461,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 14,
+      "characters": 3119,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 15,
+      "characters": 2786,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 16,
+      "characters": 1966,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 17,
+      "characters": 3304,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 18,
+      "characters": 3015,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 19,
+      "characters": 1327,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    }
+  ],
+  "scope": "Source integrity, reference resolution and PDF layout checks; not a proof of the English prose.",
+  "visual_review": "Rendered pages are inspected separately in the authoring task."
+}

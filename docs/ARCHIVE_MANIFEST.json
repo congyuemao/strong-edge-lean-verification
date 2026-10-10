@@ -3,8 +3,8 @@
   "timezone": "Australia/Sydney",
   "last_lean_verification_date": "2026-10-10",
   "note": "This inventory excludes itself. Historical Lean logs and checkpoint ZIPs are preserved unchanged.",
-  "file_count_excluding_manifest": 978,
-  "total_bytes_excluding_manifest": 35135052,
+  "file_count_excluding_manifest": 985,
+  "total_bytes_excluding_manifest": 35505979,
   "verification": {
     "lean_source_files": 75,
     "source_and_config_hashes_matched": 79,
@@ -1538,8 +1538,8 @@
       "sha256": "3d2785976565814014d3351a9a1f72ffa761084f4bd9c6c2aeaaa0d8a439f366"
     },
     "docs/RESULTS_INDEX.md": {
-      "bytes": 7427,
-      "sha256": "d83ebd7c4bf32d5669b6aea622f8211d8019d1e203dbe33edac591725b120fef"
+      "bytes": 7879,
+      "sha256": "aafb63e13b7d2e18051b88dd3af25aa8f39bc7d18e3123427e28d64f9e8d8158"
     },
     "dual_proofs/add_outer_subset.py": {
       "bytes": 3197,
@@ -2657,9 +2657,17 @@
       "bytes": 17294,
       "sha256": "5232ff5fde61e159fa17e92190cbfc74f8695d46e80fab98f4be891ed39fca1c"
     },
+    "output/pdf/build_packing195.py": {
+      "bytes": 1127,
+      "sha256": "39df38979b7df9dbd0b2e3fb62c3784c55c298f3ccef7923a14f2e7d838f0aeb"
+    },
     "output/pdf/check_manuscript.py": {
       "bytes": 3053,
       "sha256": "3a8a7c1fd1eb543c35c7c45679db0471a6eb161660c34f60e7b6a7595928c330"
+    },
+    "output/pdf/check_packing195_manuscript.py": {
+      "bytes": 6646,
+      "sha256": "379bfca210ee93d60561601018c10ba477fc1b0b8b2728ed01a6a5a0bfc2230b"
     },
     "output/pdf/dual_pdf_validation.json": {
       "bytes": 3221,
@@ -2672,6 +2680,26 @@
     "output/pdf/manuscript_validation.json": {
       "bytes": 2164,
       "sha256": "21736cd2c57b18629f59a7fcf6b640ca51de5d0b3acf9d44791afdcedb5f3fdc"
+    },
+    "output/pdf/packing195_unconditional_manuscript.md": {
+      "bytes": 61450,
+      "sha256": "324ffb3e19fb53cc50021b72773cde16cf2511396fd3de20399ba52985b5b685"
+    },
+    "output/pdf/packing195_unconditional_manuscript.pdf": {
+      "bytes": 288912,
+      "sha256": "c7dac49c0cf6acf7add2d95d692efc418564a74ece26cf6a803c73906b660faa"
+    },
+    "output/pdf/packing195_unconditional_manuscript_build.json": {
+      "bytes": 652,
+      "sha256": "2fcff3948e8f777684fd483ac6c0ad731dbe303172c7f2cebe10ccc77a2c0ed3"
+    },
+    "output/pdf/packing195_unconditional_manuscript_review.json": {
+      "bytes": 2354,
+      "sha256": "33ba4863987c52f468ee1d9718b6a445e818acf0f72c711596294fea51fa5e14"
+    },
+    "output/pdf/packing195_unconditional_manuscript_validation.json": {
+      "bytes": 8709,
+      "sha256": "62fabdffe88058f5dd54ddf873bafe76ea263615474557969dea7795c7b95fcd"
     },
     "output/pdf/packing20_manuscript.md": {
       "bytes": 37606,
@@ -2710,8 +2738,8 @@
       "sha256": "176608adc5a148af3e5ae863a73271a5f05ca9e5becd079ec0c3fe3625114e9a"
     },
     "README.md": {
-      "bytes": 8614,
-      "sha256": "acf9fe1689b9921939853763253d00472608e991e7b19cdd0d41f2e5b320c0e1"
+      "bytes": 9239,
+      "sha256": "a8f079aad5a64764d8ba0746b547ae0874f74202135647753f4c6d115bc5d70d"
     },
     "scripts/verify_archive.py": {
       "bytes": 15520,

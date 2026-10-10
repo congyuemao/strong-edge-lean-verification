@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-10",
+  "review_kind": "Authoring review against the verified Lean development; not external peer review",
+  "pdf_sha256": "c7dac49c0cf6acf7add2d95d692efc418564a74ece26cf6a803c73906b660faa",
+  "source_sha256": "324ffb3e19fb53cc50021b72773cde16cf2511396fd3de20399ba52985b5b685",
+  "verified_lean_snapshot": "1160b4529436efa82d579a2f7e4b97e57ae5d9f0",
+  "mathematical_review": [
+    "Original-graph conflict semantics and arbitrary candidate sets are retained throughout.",
+    "Cover identities, triangle losses, preliminary subcubic bounds, and root-type incidence counts were checked.",
+    "Double-tip saturation, unique-triple and outer-edge bounds were checked, including the threshold-free expository variants explained in Appendix A.",
+    "The subcubic eighteen-edge exclusion, weighted seventeen-edge defect calculation, thirteen-vertex support bound, and both remaining defect configurations were checked.",
+    "The five strengthened thresholds are proved in dependency order: high20, high21, high22, high23, and high24.",
+    "Twenty-clique rigidity identifies the full edge set of an actual original-graph doubled-five-cycle connected component.",
+    "The private-neighbourhood exchange and count use degrees in the candidate conflict graph and transfer the original-graph thresholds in the correct direction.",
+    "The final component removal preserves the original graph, counts actual components, and yields 2|F| <= 39|M| + t_G(F).",
+    "The pure 19.5 specialization and necessity of the correction are stated separately, and no weighted or colouring conclusion is inferred."
+  ],
+  "layout_review": {
+    "pages_visually_inspected": 19,
+    "page_range": "1-19",
+    "format": "A4; Times body text; vector mathematical typography; running header and page numbers",
+    "checked": ["equations", "page boundaries", "statement pagination", "appendix table", "figure", "references"],
+    "result": "No clipping or overlapping content observed in the final rendered pages."
+  },
+  "source_preservation": {
+    "lean_source_and_configuration_hashes_preserved": 79,
+    "earlier_manuscripts_and_renderer": "Unchanged"
+  },
+  "scope": "The Lean kernel checks the formal proof terms at the cited source snapshot. This review and the companion validation script do not constitute a kernel check of the English manuscript."
+}
