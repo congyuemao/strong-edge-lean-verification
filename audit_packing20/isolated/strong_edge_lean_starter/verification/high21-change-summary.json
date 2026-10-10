@@ -1,0 +1,54 @@
+[
+  {
+    "file": "README.md",
+    "status": "modified"
+  },
+  {
+    "file": "C5_HIGH21_VERIFIED_HANDOFF.md",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Audit.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Bounds/DegreeTwoClique.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High21.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High21Double.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High21LargeType.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High21Local.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High21RootFour.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High21Support.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/SubcubicEighteen.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/High21Packing.lean",
+    "status": "added"
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "pdf_sha256": "94c50083e22d845dc9ebb85b35315ad61dfdfaf27e5ddfc0efc309704909687c",
+  "pages": 12,
+  "author_field_empty": true,
+  "vector_math_only": true,
+  "original_sources_unchanged": 49,
+  "unexpanded_markup": [],
+  "page_checks": [
+    {
+      "page": 1,
+      "characters": 2681,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 2,
+      "characters": 2917,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 3,
+      "characters": 2729,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 4,
+      "characters": 2891,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 5,
+      "characters": 3051,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 6,
+      "characters": 3247,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 7,
+      "characters": 3419,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 8,
+      "characters": 3526,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 9,
+      "characters": 2377,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 10,
+      "characters": 2674,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 11,
+      "characters": 2874,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    },
+    {
+      "page": 12,
+      "characters": 1341,
+      "outside_safe_area": 0,
+      "minimum_x": 69.0,
+      "maximum_x": 526.28
+    }
+  ],
+  "visual_review": "Passed: final Poppler renderings inspected across all 12 pages; formulas, margins, table, figure, page numbers, theorem transitions and references checked."
+}

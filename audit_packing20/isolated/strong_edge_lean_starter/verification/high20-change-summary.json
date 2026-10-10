@@ -1,0 +1,50 @@
+[
+  {
+    "file": "README.md",
+    "status": "modified"
+  },
+  {
+    "file": "HIGH20_VERIFIED_HANDOFF.md",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Audit.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Bounds/High20.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High20Four.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High20Local.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High20Outer.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High20Slots.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High20TwoTriples.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High20UniqueTriple.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/High20Packing.lean",
+    "status": "added"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "file": "packing_private_cliques.md",
+    "url": "https://github.com/congyuemao/strong-edge-colouring-research/blob/3a95c4a9c44475196c42b6eab4749c487d15d59b/research/packing_private_cliques.md",
+    "commit": "3a95c4a9c44475196c42b6eab4749c487d15d59b",
+    "git_blob_sha": "fd66d870c106c50519b92a4fe5ebbaf78ef0bd0c",
+    "evidence_status": "Historical mathematical prose, not trusted theorem evidence; stronger claims not audited."
+  },
+  {
+    "file": "high_conflict_20_21_improved.md",
+    "url": "https://github.com/congyuemao/strong-edge-colouring-research/blob/3a95c4a9c44475196c42b6eab4749c487d15d59b/research/high_conflict_20_21_improved.md",
+    "commit": "3a95c4a9c44475196c42b6eab4749c487d15d59b",
+    "git_blob_sha": "556cb462e09b36f6b1d0764330af4d1638201cf4",
+    "evidence_status": "Historical mathematical prose, not trusted theorem evidence; stronger claims not audited."
+  },
+  {
+    "file": "clique20_rigidity.md",
+    "url": "https://github.com/congyuemao/strong-edge-colouring-research/blob/3a95c4a9c44475196c42b6eab4749c487d15d59b/research/clique20_rigidity.md",
+    "commit": "3a95c4a9c44475196c42b6eab4749c487d15d59b",
+    "git_blob_sha": "c740e7658d4b0c6c43f4b3a773dc551148909a39",
+    "evidence_status": "Historical mathematical prose, not trusted theorem evidence; stronger claims not audited."
+  }
+]

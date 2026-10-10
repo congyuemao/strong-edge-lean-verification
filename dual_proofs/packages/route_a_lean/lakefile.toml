@@ -1,0 +1,11 @@
+name = "strong_edge_lean_starter"
+version = "0.1.0"
+defaultTargets = ["PaperRoute"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "49fd9dee36e7bbf345fe7981d2de6aeeb591f75b"
+
+[[lean_lib]]
+name = "PaperRoute"

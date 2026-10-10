@@ -1,0 +1,11 @@
+✔ [1127/1128] Built StrongEdge.Bounds.High22Support (7.0s)
+⚠ [1128/1128] Built StrongEdge.Bounds.High22RootFour (8.0s)
+warning: StrongEdge/Bounds/High22RootFour.lean:127:21: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: StrongEdge/Bounds/High22RootFour.lean:129:21: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+Build completed successfully (1128 jobs).

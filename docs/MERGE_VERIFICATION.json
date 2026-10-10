@@ -1,0 +1,56 @@
+{
+  "verification_date": "2026-10-10",
+  "inputs": {
+    "manuscripts_and_paired_proofs": {
+      "commit": "9e2b45ce3c833ca8348cb992788caea16f3306e8",
+      "files_checked": 866,
+      "files_byte_identical": 861,
+      "integrated_files": [
+        "README.md",
+        "docs/ARCHIVE_MANIFEST.json",
+        "docs/RESULTS_INDEX.md",
+        "scripts/verify_archive.py",
+        "strong_edge_lean_starter/StrongEdge.lean"
+      ]
+    },
+    "packing195_proofs": {
+      "commit": "414b8b806817b6137e345ca00d4b857e8fbbfc5f",
+      "files_checked": 267,
+      "files_byte_identical": 262,
+      "integrated_files": [
+        ".gitignore",
+        "README.md",
+        "docs/ARCHIVE_MANIFEST.json",
+        "docs/RESULTS_INDEX.md",
+        "scripts/verify_archive.py"
+      ]
+    }
+  },
+  "manuscripts_and_packages_sha256": {
+    "output/dual_proofs/packing20_two_routes_complete.zip": "2393b13f2e97edb789cabdb7db7f090da24b7fc9b05a20ebe1a3b2b798e3c369",
+    "output/dual_proofs/route_a_lean.zip": "e53e05da91628a49368c201029e03af6dc2c7222bf2edbb5f9852e09be1195ec",
+    "output/dual_proofs/route_b_lean.zip": "bc9e0353070e1aaaf4fa098b180144e1a16d4b0176c2ebdc0cd82be57f24bb69",
+    "output/pdf/packing20_proof_manuscript.pdf": "94c50083e22d845dc9ebb85b35315ad61dfdfaf27e5ddfc0efc309704909687c",
+    "output/pdf/route_a_paper_first.pdf": "75d53b030411302ff0d7e01b3da67081befb2c07517bbb6d553c28969c10faba",
+    "output/pdf/route_b_lean_first.pdf": "5769729e6e7307286b1005ddca638e49ba31d79cb38687ce004b57aa843c2fc5"
+  },
+  "main_build": {
+    "exit_code": 0,
+    "jobs": 1175
+  },
+  "historical_artifacts_rewritten": false,
+  "fresh_main_project_audits": [
+    {
+      "module": "StrongEdge/Audit.lean",
+      "exit_code": 0,
+      "declarations": 225,
+      "allowed_axioms_only": true
+    },
+    {
+      "module": "StrongEdge/Audit195.lean",
+      "exit_code": 0,
+      "declarations": 22,
+      "allowed_axioms_only": true
+    }
+  ]
+}

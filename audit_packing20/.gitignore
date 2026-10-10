@@ -1,0 +1,4 @@
+isolated/**/.lake/
+isolated/**/.cache/
+dependency-cache/
+__pycache__/

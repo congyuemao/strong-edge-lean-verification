@@ -1,0 +1,603 @@
+--- previous/README.md
++++ current/README.md
+@@ -1,11 +1,18 @@
+ # Strong-edge packing: Lean formalisation
+ 
+-The project now contains kernel-checked conflict definitions, private-neighbourhood
+-exchange lemmas, and the double-counting argument. The full maximum-degree-four
+-20-packing theorem is **not yet proved**. Verified on 9 October 2026: `lake build` passed (1,124 jobs), and the axiom audit
+-passed. All 13 audited theorems use only `propext`, `Classical.choice`, and
+-`Quot.sound`; no proof gaps or custom axioms occur in these dependency closures.
+-The saved evidence is in `verification/build.log` and `verification/axioms.log`.
++C4 is complete: every original edge of a finite simple graph of maximum degree
++four has full conflict degree at most 24. The project also contains verified
++local structure lemmas for equality at 24, and the earlier private-neighbourhood
++exchange and double-counting proofs. The unconditional 20-packing theorem is
++**not yet proved**: five clique-size bounds remain open in this formalisation.
++
++Verified on 9 October 2026: the full build passed (1,127 jobs) and all 38 audited
++theorems use only `propext`, `Classical.choice`, and `Quot.sound`. No proof gaps
++or custom axioms occur in these dependency closures. Current evidence is in
++`verification/next-stage-build.log` and `verification/next-stage-axioms.log`.
++The previous 1,124-job build and 13-theorem audit are preserved in the original
++logs. See [the stage report](verification/NEXT_STAGE_REPORT.md) for the exact
++25 new theorem names, assumptions, checks, and remaining work.
+ 
+ ## Verified mathematical core
+ 
+@@ -19,11 +26,20 @@
+   an explicit local bound implies packing, including the conditional 20 bound.
+ - `Tests.lean`: in the path 0-1-2-3 the outer edges conflict; after removing 1-2
+   they do not. Restricting candidates retains the original conflict.
++- `Bounds/ConflictDegree.lean`: an incidence cover proves
++  `conflict_degree_le_24` directly from the original maximum-degree-four bound.
++- `Bounds/ConflictRigidity.lean`: equality at 24 forces both endpoints and their
++  six other neighbours to have degree four; those six vertices are independent,
++  neither endpoint lies in a triangle, and the fixed edge lies in no four-cycle.
++- `MinimalPacking.lean`: a separate, weaker interface suffices for 20-packing;
++  the degree-24 clique bound need only be 15. The new original-edge wrapper
++  supplies C4 automatically and retains the five clique bounds explicitly.
+ 
+ `Packing.lean` extends the conditional result to every candidate subset and
+ states it in terms of original edges. It passed the full build and axiom audit.
+-The structural premises are bundled as `CliqueThresholds20`; no claim is made
+-that a maximum-degree-four original graph has yet been shown to satisfy them.
++The old `CliqueThresholds20` definition and all six earlier core source files
++are unchanged. No claim is made that a maximum-degree-four original graph has
++yet been shown to satisfy either that record or the new `MinimalCliqueBounds20`.
+ 
+ ## Pinned environment
+ 
+@@ -60,31 +76,46 @@
+ 
+ ## Checked endpoint
+ 
+-`StrongEdge.induced_matching_packing20_of_thresholds` proves
++The new `StrongEdge.induced_matching_packing20_of_minimal_clique_bounds` proves
+ 
+ ```lean
+-(ht : CliqueThresholds20 (conflictGraph G)) (F : Finset G.edgeSet) :
++(hΔ : ∀ x, G.degree x ≤ 4)
++(hb : MinimalCliqueBounds20 (conflictGraph G)) (F : Finset G.edgeSet) :
+   ∃ M ⊆ F, IsInducedMatching G (M : Set G.edgeSet) ∧ F.card ≤ 20 * M.card
+ ```
+ 
+-The finite-edge and decidability instances are shown in full in the axiom log.
+-The `ht` premise is essential and remains undischarged for arbitrary original
+-maximum-degree-four graphs. It is not an axiom: it is an explicit theorem parameter.
++The finite-vertex and decidability instances are shown in full in the axiom log.
++The `hb` premise remains undischarged for arbitrary original maximum-degree-four
++graphs. It is an explicit theorem parameter. The old
++`induced_matching_packing20_of_thresholds` is also preserved and audited.
+ The private-clique, degree-exchange and double-counting proofs have no such
+ structural premises. Empty graphs and empty candidate sets require no exception.
+ 
+-The source scan found no `sorry`, `admit`, `axiom`, `unsafe`, or `native_decide`
+-tokens in the eight project Lean files. The axiom audit, rather than that textual
++The source scan found no `sorry`, `admit`, `axiom`, `constant`, `unsafe`, or
++`native_decide` tokens in the eleven project Lean files. The axiom audit, rather than that textual
+ scan alone, checks the exported proof dependencies. Source/configuration SHA-256
+-fingerprints are saved in `verification/source-sha256.json`.
++fingerprints are saved in `verification/next-stage-source-sha256.json`.
++The original `verification/source-sha256.json` is retained as the prior snapshot.
+ 
+ ## Still required
+ 
+-1. Prove `conflict_degree_le_24` from maximum original degree four.
+-2. Prove the 20-clique rigidity and the high-conflict 21/22/23/24 clique bounds.
+-3. Discharge `CliqueThresholds20 (conflictGraph G)` using those proofs and export
+-   an unconditional `packing20` theorem with only the original degree bound.
+-4. The 19.5 strengthening remains a later, separate goal.
++For every clique `Q` in the **full** conflict graph, `MinimalCliqueBounds20`
++requires the following five facts. None has yet been proved universally here.
++
++| Field | Lower bound on every member's full conflict degree | Required bound on `Q.card` |
++|---|---:|---:|
++| `high20` | 20 | 19 |
++| `high21` | 21 | 18 |
++| `high22` | 22 | 17 |
++| `high23` | 23 | 16 |
++| `high24` | 24 | 15 |
++
++Next, use the verified equality structure to bound degree-24 cliques, then
++formalise the remaining high-conflict clique bounds. Discharging all five
++fields yields the unconditional theorem through the new wrapper. The original
++record additionally includes maximum degree 24 (now proved for these conflict
++graphs) and uses the stronger degree-24 clique bound 7. The 19.5 strengthening
++remains a later, separate goal.
+ 
+ The current result is conditional; it proves neither unconditional 20-packing
+ nor integer strong-edge 20-colourability. The input handoff is retained in
+--- previous/LEAN_20_PACKING_HANDOFF.md
++++ current/LEAN_20_PACKING_HANDOFF.md
+@@ -1,4 +1,14 @@
+ # Lean 4 形式化验证交接：最大度四图的任意候选边集二十倍诱导匹配界
++
++> **2026-10-09 第二阶段更新（已运行 Lean）**：C4 已完成。
++> `StrongEdge.conflict_degree_le_24` 仅由有限简单图的原顶点度数 ≤4 推出完整冲突度 ≤24。
++> 新增八条取等结构引理：冲突度为 24 时，端点及六个其他邻点度数为四，
++> 六个其他邻点构成独立集，端点不在三角形中，固定边不在四圈中。
++> 新增 `MinimalCliqueBounds20`，最后一档只要求团大小 ≤15；原接口及旧核心源码不变。
++> 全量构建通过（1127 jobs）；38 个定理的公理审计仅包含标准三个公理。
++> 五个团界字段仍未证明，无条件 C6 未完成。当前完整记录见
++> `verification/NEXT_STAGE_REPORT.md`、`verification/next-stage-build.log` 和
++> `verification/next-stage-axioms.log`。下列第一阶段更新及原始正文仅作历史记录。
+ 
+ > **2026-10-09 本地续作更新（已运行 Lean）**：基础形式化与条件性包装定理已经编译通过，`lake build` 完成 1124 项任务。C0–C3 已完成；C4 中候选冲突度不超过完整冲突度已证明，但完整冲突度 ≤24 尚未证明；C5 和无条件 C6 仍未完成。
+ >
+--- previous/StrongEdge.lean
++++ current/StrongEdge.lean
+@@ -6,3 +6,6 @@
+ public import StrongEdge.DoubleCount
+ public import StrongEdge.Packing
+ public import StrongEdge.Tests
++public import StrongEdge.Bounds.ConflictDegree
++public import StrongEdge.Bounds.ConflictRigidity
++public import StrongEdge.MinimalPacking
+--- previous/StrongEdge/Audit.lean
++++ current/StrongEdge/Audit.lean
+@@ -16,5 +16,35 @@
+ #print axioms StrongEdge.Tests.path_outer_edges_conflict
+ #print axioms StrongEdge.Tests.separated_outer_edges_do_not_conflict
+ 
++#print axioms StrongEdge.endpointNeighbourCover_comm
++#print axioms StrongEdge.incident_edge_meets_cover
++#print axioms StrongEdge.lineGraph_adj_meets_cover
++#print axioms StrongEdge.left_notMem_endpointNeighbourCover
++#print axioms StrongEdge.right_notMem_endpointNeighbourCover
++#print axioms StrongEdge.strongConflict_meets_cover
++#print axioms StrongEdge.conflict_neighbors_subset_incidence_cover
++#print axioms StrongEdge.conflict_degree_le_incidence_cover_card
++#print axioms StrongEdge.conflict_degree_le_incidence_sum
++#print axioms StrongEdge.endpointNeighbourCover_card_le_six
++#print axioms StrongEdge.conflict_degree_le_24
++
++#print axioms StrongEdge.endpointNeighbourCover_card_eq_six_of_degree_eq_24
++#print axioms StrongEdge.endpoint_degrees_eq_four_of_degree_eq_24
++#print axioms StrongEdge.cover_degree_eq_four_of_degree_eq_24
++#print axioms StrongEdge.cover_independent_of_degree_eq_24
++#print axioms StrongEdge.other_neighbor_sets_disjoint_of_degree_eq_24
++#print axioms StrongEdge.endpoint_neighbor_sets_disjoint_of_degree_eq_24
++#print axioms StrongEdge.endpoint_neighborhood_independent_of_degree_eq_24
++#print axioms StrongEdge.no_cross_edge_of_degree_eq_24
++
++#print axioms StrongEdge.minimalCliqueBounds20_of_thresholds
++#print axioms StrongEdge.local20_of_minimal_clique_bounds
++#print axioms StrongEdge.packing20_of_minimal_clique_bounds
++#print axioms StrongEdge.minimalCliqueBounds20_induce
++#print axioms StrongEdge.subset_packing20_of_minimal_clique_bounds
++#print axioms StrongEdge.induced_matching_packing20_of_minimal_clique_bounds
++
+ #check StrongEdge.packing20_of_thresholds
+ #check StrongEdge.induced_matching_packing20_of_thresholds
++#check StrongEdge.conflict_degree_le_24
++#check StrongEdge.induced_matching_packing20_of_minimal_clique_bounds
+--- /dev/null
++++ current/StrongEdge/Bounds/ConflictDegree.lean
+@@ -0,0 +1,146 @@
++module
++
++public import StrongEdge.Conflict
++public import Mathlib.Algebra.Order.BigOperators.Group.Finset
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++
++/-- The other neighbours of the endpoints of an original edge. -/
++def endpointNeighbourCover (u v : V) : Finset V :=
++  (G.neighborFinset u).erase v ∪ (G.neighborFinset v).erase u
++
++theorem endpointNeighbourCover_comm (u v : V) :
++    endpointNeighbourCover G v u = endpointNeighbourCover G u v := by
++  exact union_comm _ _
++
++/-- An edge through one endpoint, different from the fixed edge, has its other
++endpoint in the cover. -/
++theorem incident_edge_meets_cover {u v : V} {f : G.edgeSet}
++    (hne : f.val ≠ s(u, v)) (hu : u ∈ f.val) :
++    ∃ w ∈ endpointNeighbourCover G u v, w ∈ f.val := by
++  obtain ⟨w, hw⟩ := Sym2.mem_iff_exists.mp hu
++  have hadj : G.Adj u w := by
++    have hf := f.property
++    rw [hw] at hf
++    exact hf
++  have hwv : w ≠ v := by
++    intro h
++    apply hne
++    simpa only [h] using hw
++  refine ⟨w, mem_union_left _ (mem_erase.mpr ⟨hwv, ?_⟩), ?_⟩
++  · exact (G.mem_neighborFinset u w).mpr hadj
++  · rw [hw]
++    exact Sym2.mem_mk_right u w
++
++theorem lineGraph_adj_meets_cover {u v : V} {e f : G.edgeSet}
++    (he : e.val = s(u, v)) (h : G.lineGraph.Adj e f) :
++    ∃ w ∈ endpointNeighbourCover G u v, w ∈ f.val := by
++  rcases SimpleGraph.lineGraph_adj_iff_exists.mp h with ⟨hne, x, hx, hxf⟩
++  have hfe : f.val ≠ s(u, v) := by
++    intro hf
++    exact hne (Subtype.ext (he.trans hf.symm))
++  rw [he, Sym2.mem_iff] at hx
++  rcases hx with hxu | hxv
++  · exact incident_edge_meets_cover G hfe (hxu ▸ hxf)
++  · have hfv : f.val ≠ s(v, u) := by simpa only [Sym2.eq_swap] using hfe
++    simpa only [endpointNeighbourCover_comm G u v] using
++      incident_edge_meets_cover G hfv (hxv ▸ hxf)
++
++@[simp] theorem left_notMem_endpointNeighbourCover (u v : V) :
++    u ∉ endpointNeighbourCover G u v := by
++  simp [endpointNeighbourCover]
++
++@[simp] theorem right_notMem_endpointNeighbourCover (u v : V) :
++    v ∉ endpointNeighbourCover G u v := by
++  simp [endpointNeighbourCover]
++
++/-- This cover uses all original edges, including connecting edges outside any
++candidate set. No triangle or four-cycle restriction is imposed. -/
++theorem strongConflict_meets_cover {u v : V} {e f : G.edgeSet}
++    (he : e.val = s(u, v)) (h : StrongConflict G e f) :
++    ∃ w ∈ endpointNeighbourCover G u v, w ∈ f.val := by
++  rcases h with ⟨hne, h | ⟨g, heg, hgf⟩⟩
++  · exact lineGraph_adj_meets_cover G he h
++  · obtain ⟨w, hw, hwg⟩ := lineGraph_adj_meets_cover G he heg
++    rcases SimpleGraph.lineGraph_adj_iff_exists.mp heg with ⟨_, z, hze, hzg⟩
++    rcases SimpleGraph.lineGraph_adj_iff_exists.mp hgf with ⟨_, x, hxg, hxf⟩
++    have hzw : z ≠ w := by
++      intro hzw
++      subst z
++      rw [he, Sym2.mem_iff] at hze
++      rcases hze with hwu | hwv
++      · exact left_notMem_endpointNeighbourCover G u v (hwu ▸ hw)
++      · exact right_notMem_endpointNeighbourCover G u v (hwv ▸ hw)
++    have hg : g.val = s(z, w) := (Sym2.mem_and_mem_iff hzw).mp ⟨hzg, hwg⟩
++    rw [hg, Sym2.mem_iff] at hxg
++    rcases hxg with hxz | hxw
++    · apply lineGraph_adj_meets_cover G he
++      exact SimpleGraph.lineGraph_adj_iff_exists.mpr ⟨hne, z, hze, hxz ▸ hxf⟩
++    · exact ⟨w, hw, hxw ▸ hxf⟩
++
++/-- Every full-conflict neighbour is covered by an incidence set. -/
++theorem conflict_neighbors_subset_incidence_cover
++    [DecidableRel (conflictGraph G).Adj] {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) :
++    ((conflictGraph G).neighborFinset e).map (Function.Embedding.subtype _) ⊆
++      (endpointNeighbourCover G u v).biUnion (fun w => G.incidenceFinset w) := by
++  classical
++  intro f hf
++  obtain ⟨f, hfn, rfl⟩ := mem_map.mp hf
++  have hconf : StrongConflict G e f := ((conflictGraph G).mem_neighborFinset e f).mp hfn
++  obtain ⟨w, hw, hwf⟩ := strongConflict_meets_cover G he hconf
++  exact mem_biUnion.mpr ⟨w, hw, G.mem_incidenceFinset.mpr ⟨f.property, hwf⟩⟩
++
++theorem conflict_degree_le_incidence_cover_card
++    [DecidableRel (conflictGraph G).Adj] {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) :
++    (conflictGraph G).degree e ≤
++      ((endpointNeighbourCover G u v).biUnion (fun w => G.incidenceFinset w)).card := by
++  have hc := card_le_card (conflict_neighbors_subset_incidence_cover G e he)
++  simpa only [card_map, SimpleGraph.card_neighborFinset_eq_degree] using hc
++
++/-- The finite incidence cover bounds the full conflict degree. -/
++theorem conflict_degree_le_incidence_sum
++    [DecidableRel (conflictGraph G).Adj] {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) :
++    (conflictGraph G).degree e ≤ ∑ w ∈ endpointNeighbourCover G u v, G.degree w := by
++  have hc := (conflict_degree_le_incidence_cover_card G e he).trans
++    (card_biUnion_le (s := endpointNeighbourCover G u v) (t := fun w => G.incidenceFinset w))
++  simpa only [SimpleGraph.card_incidenceFinset_eq_degree] using hc
++
++theorem endpointNeighbourCover_card_le_six {u v : V} (huv : G.Adj u v)
++    (hΔ : ∀ x, G.degree x ≤ 4) : (endpointNeighbourCover G u v).card ≤ 6 := by
++  have hu : ((G.neighborFinset u).erase v).card + 1 = G.degree u := by
++    exact card_erase_add_one ((G.mem_neighborFinset u v).mpr huv)
++  have hv : ((G.neighborFinset v).erase u).card + 1 = G.degree v := by
++    exact card_erase_add_one ((G.mem_neighborFinset v u).mpr huv.symm)
++  have hc := card_union_le ((G.neighborFinset u).erase v) ((G.neighborFinset v).erase u)
++  have hdu := hΔ u
++  have hdv := hΔ v
++  dsimp [endpointNeighbourCover]
++  omega
++
++/-- In every finite simple graph of maximum degree at most four, every original
++edge has at most 24 conflicts, measured in the full original graph. -/
++theorem conflict_degree_le_24 [DecidableRel (conflictGraph G).Adj]
++    (hΔ : ∀ x, G.degree x ≤ 4) (e : G.edgeSet) :
++    (conflictGraph G).degree e ≤ 24 := by
++  classical
++  obtain ⟨u, v, he⟩ := Sym2.exists.mp (show ∃ a : Sym2 V, a = e.val from ⟨e.val, rfl⟩)
++  have he' : e.val = s(u, v) := he.symm
++  have huv : G.Adj u v := G.mem_edgeSet.mp (he' ▸ e.property)
++  have hcount := conflict_degree_le_incidence_sum G e he'
++  have hsum := sum_le_sum (s := endpointNeighbourCover G u v) (fun w _ => hΔ w)
++  have hcard := endpointNeighbourCover_card_le_six G huv hΔ
++  simp only [sum_const, smul_eq_mul] at hsum
++  omega
++
++end StrongEdge
+--- /dev/null
++++ current/StrongEdge/Bounds/ConflictRigidity.lean
+@@ -0,0 +1,154 @@
++module
++
++public import StrongEdge.Bounds.ConflictDegree
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++open scoped BigOperators
++
++variable {V : Type*} [Fintype V] [DecidableEq V]
++variable (G : SimpleGraph V) [DecidableRel G.Adj]
++variable [DecidableRel (conflictGraph G).Adj]
++
++theorem endpointNeighbourCover_card_eq_six_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24) :
++    (endpointNeighbourCover G u v).card = 6 := by
++  have huv : G.Adj u v := G.mem_edgeSet.mp (he ▸ e.property)
++  have hcard := endpointNeighbourCover_card_le_six G huv hΔ
++  have hc := conflict_degree_le_incidence_sum G e he
++  have hs := sum_le_sum (s := endpointNeighbourCover G u v) (fun w _ => hΔ w)
++  simp only [sum_const, smul_eq_mul] at hs
++  omega
++
++theorem endpoint_degrees_eq_four_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24) :
++    G.degree u = 4 ∧ G.degree v = 4 := by
++  have huv : G.Adj u v := G.mem_edgeSet.mp (he ▸ e.property)
++  have hcard := endpointNeighbourCover_card_eq_six_of_degree_eq_24 G hΔ e he h24
++  have hu : ((G.neighborFinset u).erase v).card + 1 = G.degree u :=
++    card_erase_add_one ((G.mem_neighborFinset u v).mpr huv)
++  have hv : ((G.neighborFinset v).erase u).card + 1 = G.degree v :=
++    card_erase_add_one ((G.mem_neighborFinset v u).mpr huv.symm)
++  have hc := card_union_le ((G.neighborFinset u).erase v) ((G.neighborFinset v).erase u)
++  have hdu := hΔ u
++  have hdv := hΔ v
++  dsimp [endpointNeighbourCover] at hcard
++  omega
++
++theorem cover_degree_eq_four_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24)
++    {w : V} (hw : w ∈ endpointNeighbourCover G u v) : G.degree w = 4 := by
++  have hcard := endpointNeighbourCover_card_eq_six_of_degree_eq_24 G hΔ e he h24
++  have hc := conflict_degree_le_incidence_sum G e he
++  have hwd := hΔ w
++  by_contra hne
++  have hlt : G.degree w < 4 := by omega
++  have hs := sum_lt_sum (s := endpointNeighbourCover G u v)
++    (fun x _ => hΔ x) ⟨w, hw, hlt⟩
++  simp only [sum_const, smul_eq_mul, hcard] at hs
++  omega
++
++/-- Equality at 24 forces all six other endpoint-neighbours to be mutually
++nonadjacent in the original graph. This is a local structural result, not a
++global girth assumption. -/
++theorem cover_independent_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24) :
++    G.IsIndepSet (endpointNeighbourCover G u v : Set V) := by
++  classical
++  let S := endpointNeighbourCover G u v
++  let I := fun w => G.incidenceFinset w
++  have hc : 24 ≤ (S.biUnion I).card := by
++    simpa only [h24] using conflict_degree_le_incidence_cover_card G e he
++  have hcard := endpointNeighbourCover_card_eq_six_of_degree_eq_24 G hΔ e he h24
++  have hsum : (∑ w ∈ S, (I w).card) ≤ 24 := by
++    have hs := sum_le_sum (s := S) (fun w _ => hΔ w)
++    simpa only [I, S, SimpleGraph.card_incidenceFinset_eq_degree, sum_const,
++      smul_eq_mul, hcard] using hs
++  intro x hx y hy hxy hAdj
++  have hxS : x ∈ S := hx
++  have hyS : y ∈ S := hy
++  have hxI : s(x, y) ∈ I x := G.mem_incidenceFinset.mpr ⟨hAdj, Sym2.mem_mk_left x y⟩
++  have hyI : s(x, y) ∈ I y := G.mem_incidenceFinset.mpr ⟨hAdj, Sym2.mem_mk_right x y⟩
++  let R := (S.erase x).biUnion I
++  have hR : s(x, y) ∈ R := mem_biUnion.mpr ⟨y, mem_erase.mpr ⟨hxy.symm, hyS⟩, hyI⟩
++  have hpos : 0 < ((I x) ∩ R).card := card_pos.mpr ⟨s(x, y), mem_inter.mpr ⟨hxI, hR⟩⟩
++  have hU : S.biUnion I = I x ∪ R := by
++    conv_lhs => rw [← insert_erase hxS, biUnion_insert]
++  have hUnion := card_union_add_card_inter (I x) R
++  have hRest : R.card ≤ ∑ w ∈ S.erase x, (I w).card := card_biUnion_le
++  have hSum := sum_erase_add S (fun w => (I w).card) hxS
++  rw [hU] at hc
++  omega
++
++theorem other_neighbor_sets_disjoint_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24) :
++    Disjoint ((G.neighborFinset u).erase v) ((G.neighborFinset v).erase u) := by
++  have huv : G.Adj u v := G.mem_edgeSet.mp (he ▸ e.property)
++  have hcard := endpointNeighbourCover_card_eq_six_of_degree_eq_24 G hΔ e he h24
++  obtain ⟨hdu, hdv⟩ := endpoint_degrees_eq_four_of_degree_eq_24 G hΔ e he h24
++  have hu : ((G.neighborFinset u).erase v).card + 1 = G.degree u :=
++    card_erase_add_one ((G.mem_neighborFinset u v).mpr huv)
++  have hv : ((G.neighborFinset v).erase u).card + 1 = G.degree v :=
++    card_erase_add_one ((G.mem_neighborFinset v u).mpr huv.symm)
++  have hc := card_union_add_card_inter ((G.neighborFinset u).erase v) ((G.neighborFinset v).erase u)
++  have hz : (((G.neighborFinset u).erase v) ∩ ((G.neighborFinset v).erase u)).card = 0 := by
++    dsimp [endpointNeighbourCover] at hcard
++    omega
++  exact disjoint_iff_inter_eq_empty.mpr (card_eq_zero.mp hz)
++
++theorem endpoint_neighbor_sets_disjoint_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24) :
++    Disjoint (G.neighborFinset u) (G.neighborFinset v) := by
++  have hd := other_neighbor_sets_disjoint_of_degree_eq_24 G hΔ e he h24
++  apply disjoint_left.mpr
++  intro w hwu hwv
++  have huw := (G.mem_neighborFinset u w).mp hwu
++  have hvw := (G.mem_neighborFinset v w).mp hwv
++  exact disjoint_left.mp hd (mem_erase.mpr ⟨hvw.ne.symm, hwu⟩)
++    (mem_erase.mpr ⟨huw.ne.symm, hwv⟩)
++
++/-- Neither endpoint of a degree-24 edge lies in a triangle. The theorem is
++stated for the first endpoint; the same result applies after swapping endpoints. -/
++theorem endpoint_neighborhood_independent_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24) :
++    G.IsIndepSet (G.neighborSet u) := by
++  have hd := endpoint_neighbor_sets_disjoint_of_degree_eq_24 G hΔ e he h24
++  have hI := cover_independent_of_degree_eq_24 G hΔ e he h24
++  intro x hx y hy hxy hAdj
++  change G.Adj u x at hx
++  change G.Adj u y at hy
++  by_cases hxv : x = v
++  · have hvy : G.Adj v y := hxv ▸ hAdj
++    exact disjoint_left.mp hd ((G.mem_neighborFinset u y).mpr hy)
++      ((G.mem_neighborFinset v y).mpr hvy)
++  by_cases hyv : y = v
++  · have hvx : G.Adj v x := hyv ▸ hAdj.symm
++    exact disjoint_left.mp hd ((G.mem_neighborFinset u x).mpr hx)
++      ((G.mem_neighborFinset v x).mpr hvx)
++  exact hI (mem_union_left _ (mem_erase.mpr ⟨hxv, (G.mem_neighborFinset u x).mpr hx⟩))
++    (mem_union_left _ (mem_erase.mpr ⟨hyv, (G.mem_neighborFinset u y).mpr hy⟩)) hxy hAdj
++
++/-- The two sets of other neighbours have no connecting edge, so the fixed edge
++cannot be part of a four-cycle. -/
++theorem no_cross_edge_of_degree_eq_24
++    (hΔ : ∀ x, G.degree x ≤ 4) {u v : V} (e : G.edgeSet)
++    (he : e.val = s(u, v)) (h24 : (conflictGraph G).degree e = 24)
++    {x y : V} (hx : x ∈ (G.neighborFinset u).erase v)
++    (hy : y ∈ (G.neighborFinset v).erase u) : ¬ G.Adj x y := by
++  by_cases hxy : x = y
++  · subst y
++    exact G.loopless.irrefl x
++  exact cover_independent_of_degree_eq_24 G hΔ e he h24
++    (mem_union_left _ hx) (mem_union_right _ hy) hxy
++
++end StrongEdge
+--- /dev/null
++++ current/StrongEdge/MinimalPacking.lean
+@@ -0,0 +1,120 @@
++module
++
++public import StrongEdge.Packing
++public import StrongEdge.Bounds.ConflictDegree
++
++@[expose] public section
++
++namespace StrongEdge
++
++open Finset
++
++variable {W : Type*} [Fintype W] [DecidableEq W]
++variable (H : SimpleGraph W) [DecidableRel H.Adj]
++
++/-- Only the clique bounds needed for 20-packing. The maximum-degree bound is
++supplied separately, and the last field requires 15 rather than 7.
++The original `CliqueThresholds20` and its theorems are unchanged. -/
++structure MinimalCliqueBounds20 : Prop where
++  high20 : ∀ Q : Finset W, H.IsClique (Q : Set W) →
++    (∀ x ∈ Q, 20 ≤ H.degree x) → Q.card ≤ 19
++  high21 : ∀ Q : Finset W, H.IsClique (Q : Set W) →
++    (∀ x ∈ Q, 21 ≤ H.degree x) → Q.card ≤ 18
++  high22 : ∀ Q : Finset W, H.IsClique (Q : Set W) →
++    (∀ x ∈ Q, 22 ≤ H.degree x) → Q.card ≤ 17
++  high23 : ∀ Q : Finset W, H.IsClique (Q : Set W) →
++    (∀ x ∈ Q, 23 ≤ H.degree x) → Q.card ≤ 16
++  high24 : ∀ Q : Finset W, H.IsClique (Q : Set W) →
++    (∀ x ∈ Q, 24 ≤ H.degree x) → Q.card ≤ 15
++
++omit [DecidableEq W] in
++theorem minimalCliqueBounds20_of_thresholds (ht : CliqueThresholds20 H) :
++    MinimalCliqueBounds20 H where
++  high20 := ht.high20
++  high21 := ht.high21
++  high22 := ht.high22
++  high23 := ht.high23
++  high24 Q hc hd := (ht.high24 Q hc hd).trans (by omega)
++
++theorem local20_of_minimal_clique_bounds (hdegree : ∀ x, H.degree x ≤ 24)
++    (hb : MinimalCliqueBounds20 H) (M : Finset W) (hM : IsOptimal H M)
++    {v : W} (hv : v ∈ M) :
++    H.degree v + 1 + (privateFinset H M v).card ≤ 40 := by
++  classical
++  have hc : H.IsClique (↑(privateFinset H M v) : Set W) := by
++    intro x hx y hy hxy
++    exact private_isClique H M v hM.1 hv
++      ((mem_privateFinset H M v x).mp hx)
++      ((mem_privateFinset H M v y).mp hy) hxy
++  have hm : ∀ x ∈ privateFinset H M v, H.degree v ≤ H.degree x := by
++    intro x hx
++    exact private_degree_mono H M hM hv ((mem_privateFinset H M v x).mp hx)
++  by_cases hlow : H.degree v ≤ 19
++  · have := private_card_le_degree_add_one H M v
++    omega
++  have hmax := hdegree v
++  by_cases h20 : H.degree v = 20
++  · have := hb.high20 _ hc (fun x hx => by have := hm x hx; omega)
++    omega
++  by_cases h21 : H.degree v = 21
++  · have := hb.high21 _ hc (fun x hx => by have := hm x hx; omega)
++    omega
++  by_cases h22 : H.degree v = 22
++  · have := hb.high22 _ hc (fun x hx => by have := hm x hx; omega)
++    omega
++  by_cases h23 : H.degree v = 23
++  · have := hb.high23 _ hc (fun x hx => by have := hm x hx; omega)
++    omega
++  have := hb.high24 _ hc (fun x hx => by have := hm x hx; omega)
++  omega
++
++theorem packing20_of_minimal_clique_bounds (hdegree : ∀ x, H.degree x ≤ 24)
++    (hb : MinimalCliqueBounds20 H) :
++    ∃ M : Finset W, H.IsMaximumIndepSet M ∧ Fintype.card W ≤ 20 * M.card := by
++  obtain ⟨M, hM⟩ := optimal_exists H
++  exact ⟨M, hM.1, packing_of_local_bound H M hM.1 20
++    (fun v hv => local20_of_minimal_clique_bounds H hdegree hb M hM hv)⟩
++
++theorem minimalCliqueBounds20_induce (hb : MinimalCliqueBounds20 H)
++    (F : Set W) [DecidablePred (· ∈ F)] : MinimalCliqueBounds20 (H.induce F) where
++  high20 := clique_bound_induce H F 20 19 hb.high20
++  high21 := clique_bound_induce H F 21 18 hb.high21
++  high22 := clique_bound_induce H F 22 17 hb.high22
++  high23 := clique_bound_induce H F 23 16 hb.high23
++  high24 := clique_bound_induce H F 24 15 hb.high24
++
++theorem subset_packing20_of_minimal_clique_bounds (hdegree : ∀ x, H.degree x ≤ 24)
++    (hb : MinimalCliqueBounds20 H) (F : Finset W) :
++    ∃ M : Finset W, M ⊆ F ∧ H.IsIndepSet (M : Set W) ∧ F.card ≤ 20 * M.card := by
++  classical
++  let S : Set W := F
++  let : Fintype S := Subtype.fintype (fun x => x ∈ S)
++  have hbS : MinimalCliqueBounds20 (H.induce S) := minimalCliqueBounds20_induce H hb S
++  have hdS : ∀ x : S, (H.induce S).degree x ≤ 24 :=
++    fun x => (induced_degree_le H S x).trans (hdegree x.val)
++  obtain ⟨N, hN, hcount⟩ := packing20_of_minimal_clique_bounds (H.induce S) hdS hbS
++  refine ⟨N.image Subtype.val, ?_, ?_, ?_⟩
++  · intro x hx
++    obtain ⟨y, hy, rfl⟩ := mem_image.mp hx
++    exact y.property
++  · intro x hx y hy hxy
++    obtain ⟨a, ha, rfl⟩ := mem_image.mp hx
++    obtain ⟨b, hb, rfl⟩ := mem_image.mp hy
++    exact hN.isIndepSet ha hb (fun heq => hxy (congrArg Subtype.val heq))
++  · have hcardS : Fintype.card S = F.card := Fintype.card_of_subtype F (fun _ => Iff.rfl)
++    simpa only [card_image_of_injective N Subtype.val_injective, hcardS] using hcount
++
++/-- C4 is discharged by the original maximum-degree hypothesis. The five
++remaining clique bounds are still explicit and are not asserted here. -/
++theorem induced_matching_packing20_of_minimal_clique_bounds
++    {V : Type*} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
++    [DecidableRel G.Adj] [DecidableRel (conflictGraph G).Adj]
++    (hΔ : ∀ x, G.degree x ≤ 4) (hb : MinimalCliqueBounds20 (conflictGraph G))
++    (F : Finset G.edgeSet) :
++    ∃ M : Finset G.edgeSet, M ⊆ F ∧ IsInducedMatching G (M : Set G.edgeSet) ∧
++      F.card ≤ 20 * M.card := by
++  simpa only [conflictGraph_independent_iff] using
++    subset_packing20_of_minimal_clique_bounds (conflictGraph G)
++      (conflict_degree_le_24 G hΔ) hb F
++
++end StrongEdge

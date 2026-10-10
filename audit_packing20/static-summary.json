@@ -1,0 +1,37 @@
+{
+  "source_files": 45,
+  "axiom_commands": 225,
+  "unique_axiom_names": 225,
+  "check_commands": 101,
+  "old_lean_unchanged": 35,
+  "old_lean_changes": [
+    {
+      "path": "StrongEdge.lean",
+      "old_sha256": "9f4255a3d2190f9746cc62bcd3f73fd556802924619126dbe3d13ef2a3c380fb",
+      "new_sha256": "10084c07871bb2c97ac080b13151d0b014c8aa99194db670ca9697065b0b2fe7",
+      "unchanged": false,
+      "append_only": true
+    },
+    {
+      "path": "StrongEdge/Audit.lean",
+      "old_sha256": "f1af19b96d64d1b1b3b4dd9f062c80f65ac46438e4cc28c983fdf98fb2eff9c5",
+      "new_sha256": "61fe86ee0716e141ef65c4110eb00e4f02da9ba95582b8326341756979032353",
+      "unchanged": false,
+      "append_only": true
+    }
+  ],
+  "config_unchanged": true,
+  "new_lean": [
+    "StrongEdge/Bounds/High20.lean",
+    "StrongEdge/Bounds/High20Four.lean",
+    "StrongEdge/Bounds/High20Local.lean",
+    "StrongEdge/Bounds/High20Outer.lean",
+    "StrongEdge/Bounds/High20Slots.lean",
+    "StrongEdge/Bounds/High20TwoTriples.lean",
+    "StrongEdge/Bounds/High20UniqueTriple.lean",
+    "StrongEdge/High20Packing.lean"
+  ],
+  "own_static_counts": {
+    "noncomputable": 2
+  }
+}

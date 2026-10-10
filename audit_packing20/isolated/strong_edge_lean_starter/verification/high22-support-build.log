@@ -1,0 +1,38 @@
+✖ [1126/1126] Building StrongEdge.Bounds.High22Support (7.8s)
+trace: .> LEAN_PATH=C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\StrongEdge\Bounds\High22Support.lean -o C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\lib\lean\StrongEdge\Bounds\High22Support.olean -i C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\lib\lean\StrongEdge\Bounds\High22Support.ilean -c C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\ir\StrongEdge\Bounds\High22Support.c --setup C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\ir\StrongEdge\Bounds\High22Support.setup.json --json
+error: StrongEdge/Bounds/High22Support.lean:163:2: Tactic `apply` failed: could not unify the conclusion of `sum_congr rfl`
+  Finset.sum ?m.67 ?m.64 = Finset.sum ?m.67 ?m.65
+with the goal
+  (∑ x ∈ P, if G.Adj x a then 1 else 0) = ∑ x ∈ P with a ∈ filter (G.Adj x) (G.neighborFinset r), 1
+
+Note: The full type of `sum_congr rfl` is
+  (∀ x ∈ ?m.67, ?m.64 x = ?m.65 x) → Finset.sum ?m.67 ?m.64 = Finset.sum ?m.67 ?m.65
+
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+P : Finset V
+r a : V
+ha : a ∈ G.neighborFinset r
+⊢ (∑ x ∈ P, if G.Adj x a then 1 else 0) = ∑ x ∈ P with a ∈ filter (G.Adj x) (G.neighborFinset r), 1
+error: StrongEdge/Bounds/High22Support.lean:194:63: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  0 ≤ c ≤ 4
+  c - d ≥ 0
+  b ≥ 0
+  a ≥ 2
+  a - b ≤ -3
+where
+ a := ↑(#(rootType G r y))
+ b := ↑(#(rootType G r x ∪ rootType G r y))
+ c := ↑(G.degree r)
+ d := ↑(#(filter (G.Adj x) (G.neighborFinset r) ∪ filter (G.Adj y) (G.neighborFinset r)))
+error: StrongEdge/Bounds/High22Support.lean:198:78: Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  hxy
+of type `y = x → False`
+Some required targets logged failures:
+- StrongEdge.Bounds.High22Support
+error: build failed

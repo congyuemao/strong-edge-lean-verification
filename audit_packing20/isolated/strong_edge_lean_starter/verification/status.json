@@ -1,0 +1,26 @@
+{
+  "verified_date": "2026-10-09",
+  "timezone": "Australia/Sydney",
+  "lean": "leanprover/lean4:v4.35.0-rc4",
+  "mathlib": "49fd9dee36e7bbf345fe7981d2de6aeeb591f75b",
+  "build_exit_code": 0,
+  "build_jobs": 1124,
+  "axiom_audit_exit_code": 0,
+  "audited_theorems": 13,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "checkpoints": {
+    "C0": "verified",
+    "C1": "verified",
+    "C2": "verified",
+    "C3": "verified",
+    "C4": "partial: candidate degree monotonicity only",
+    "C5": "not formalised",
+    "C6": "not formalised",
+    "C7": "not formalised"
+  },
+  "unconditional_packing20_proved": false
+}

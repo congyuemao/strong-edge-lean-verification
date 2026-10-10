@@ -1,0 +1,36 @@
+✔ [1161/1196] Built PaperRoute.Library.PrivateExchange (15s)
+✔ [1162/1196] Built Mathlib.Data.Real.Basic (14s)
+✔ [1163/1196] Built PaperRoute.Library.Bounds.High23Support (15s)
+✔ [1188/1196] Built PaperRoute.Thresholds (15s)
+✔ [1189/1196] Built PaperRoute.Library.DoubleCount (15s)
+✔ [1190/1196] Built PaperRoute.Library.Packing (16s)
+✔ [1191/1196] Built PaperRoute.Packing (17s)
+✖ [1192/1196] Building PaperRoute.PrivateSemantics (15s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\PaperRoute\PrivateSemantics.lean -o .lake\build\lib\lean\PaperRoute\PrivateSemantics.olean -i .lake\build\lib\lean\PaperRoute\PrivateSemantics.ilean -c .lake\build\ir\PaperRoute\PrivateSemantics.c --setup .lake\build\ir\PaperRoute\PrivateSemantics.setup.json --json
+error: PaperRoute/PrivateSemantics.lean:29:37: Application type mismatch: The argument
+  hc
+has type
+  x = w ∨ H.Adj x w
+but is expected to have type
+  ?m.115 w
+in the application
+  ⟨hw, hc⟩
+✔ [1193/1196] Built PaperRoute.Semantics (15s)
+✖ [1194/1196] Building PaperRoute.Sharpness (20s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\PaperRoute\Sharpness.lean -o .lake\build\lib\lean\PaperRoute\Sharpness.olean -i .lake\build\lib\lean\PaperRoute\Sharpness.ilean -c .lake\build\ir\PaperRoute\Sharpness.c --setup .lake\build\ir\PaperRoute\Sharpness.setup.json --json
+warning: PaperRoute/Sharpness.lean:3:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+error: PaperRoute/Sharpness.lean:66:2: Type mismatch: After simplification, term
+  hc
+ has type
+  @LE.le ℝ Real.instLE (↑20) c
+but is expected to have type
+  @LE.le ℝ Real.instLE 20 c
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Real.instLE ↦ 2
+Some required targets logged failures:
+- PaperRoute.PrivateSemantics
+- PaperRoute.Sharpness
+error: build failed

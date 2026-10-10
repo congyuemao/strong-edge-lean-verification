@@ -1,0 +1,51 @@
+{
+  "audited_theorems": 225,
+  "previous_192_entries_preserved": true,
+  "all_axioms_standard": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_audited_theorems": [
+    "StrongEdge.clique_card_le_eighteen_of_independent_root_types_le_two",
+    "StrongEdge.high20_clique_card_le_nineteen_of_root_four",
+    "StrongEdge.high20_clique_card_le_nineteen",
+    "StrongEdge.high20_other_type_le_two_of_four",
+    "StrongEdge.high20_multiple_unique_at_four_label",
+    "StrongEdge.high20_multipleTips_subset_four_outer_endpoints",
+    "StrongEdge.high20_outer_card_le_two_of_root_type_four",
+    "StrongEdge.high20_clique_card_le_eighteen_of_root_type_four",
+    "StrongEdge.endpointNeighbourCover_card_le_five_of_triangle",
+    "StrongEdge.root_label_multiple_card_le_three",
+    "StrongEdge.multipleTips_type_sum_le_twelve",
+    "StrongEdge.multipleTips_card_le_six",
+    "StrongEdge.high20_cover_inside_card_le_four",
+    "StrongEdge.high20_triangle_cover_inside_empty",
+    "StrongEdge.high20_triangle_root_type_singleton",
+    "StrongEdge.high20_root_triangle_outer_empty",
+    "StrongEdge.high20_large_clique_root_neighborhood_independent",
+    "StrongEdge.high20_root_label_budget_four",
+    "StrongEdge.high20_shared_root_types_card_le_six",
+    "StrongEdge.outer_avoiding_card_le_four_of_other_types_le_two",
+    "StrongEdge.star_add_root_card_le_label_sum",
+    "StrongEdge.selected_degree_add_one_le_of_missing_label",
+    "StrongEdge.root_label_mem_symm",
+    "StrongEdge.root_card_add_missing_type_le_twelve",
+    "StrongEdge.root_card_le_ten_of_label_selected_degree_le_two",
+    "StrongEdge.high20_other_type_single_at_shared_triple_label",
+    "StrongEdge.high20_outer_meets_two_triples",
+    "StrongEdge.high20_clique_card_le_eighteen_of_two_triples",
+    "StrongEdge.root_missing_label_selected_degree_le_two_of_unique_triple",
+    "StrongEdge.root_card_le_ten_of_unique_triple",
+    "StrongEdge.clique_card_le_nineteen_of_unique_triple",
+    "StrongEdge.minimalCliqueBounds20_of_maxDegree_four",
+    "StrongEdge.induced_matching_packing20"
+  ],
+  "principal_actual_signatures": {
+    "high20_clique_card_le_nineteen": "StrongEdge.high20_clique_card_le_nineteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)\n  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)\n  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)\n  (h20 : ∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) : Q.card ≤ 19",
+    "minimalCliqueBounds20_of_maxDegree_four": "StrongEdge.minimalCliqueBounds20_of_maxDegree_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)\n  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) :\n  StrongEdge.MinimalCliqueBounds20 (StrongEdge.conflictGraph G)",
+    "induced_matching_packing20": "StrongEdge.induced_matching_packing20.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)\n  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)\n  (F : Finset ↑G.edgeSet) : ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card"
+  },
+  "packing_has_no_extra_structural_parameter": true
+}

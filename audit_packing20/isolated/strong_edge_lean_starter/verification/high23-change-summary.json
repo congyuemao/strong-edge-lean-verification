@@ -1,0 +1,46 @@
+[
+  {
+    "file": "README.md",
+    "status": "modified"
+  },
+  {
+    "file": "HIGH23_HANDOFF.md",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Audit.lean",
+    "status": "modified"
+  },
+  {
+    "file": "StrongEdge/Bounds/EdgeCounting.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High23.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High23Four.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High23Local.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High23Outer.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/Bounds/High23Support.lean",
+    "status": "added"
+  },
+  {
+    "file": "StrongEdge/High23Packing.lean",
+    "status": "added"
+  }
+]

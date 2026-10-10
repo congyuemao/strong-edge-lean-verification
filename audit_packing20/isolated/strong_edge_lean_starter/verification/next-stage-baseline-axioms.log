@@ -1,0 +1,20 @@
+'StrongEdge.strongConflict_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.candidate_independent_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.candidate_degree_le_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.private_isClique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.optimal_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.private_degree_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.private_double_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.packing_of_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.packing20_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.subset_packing20_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.induced_matching_packing20_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.Tests.path_outer_edges_conflict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.Tests.separated_outer_edges_do_not_conflict' depends on axioms: [propext, Classical.choice, Quot.sound]
+StrongEdge.packing20_of_thresholds.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (ht : StrongEdge.CliqueThresholds20 H) :
+  ∃ M, H.IsMaximumIndepSet M ∧ Fintype.card W ≤ 20 * M.card
+StrongEdge.induced_matching_packing20_of_thresholds.{u_2} {V : Type u_2} (G : SimpleGraph V) [Fintype ↑G.edgeSet]
+  [DecidableEq ↑G.edgeSet] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (ht : StrongEdge.CliqueThresholds20 (StrongEdge.conflictGraph G)) (F : Finset ↑G.edgeSet) :
+  ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card

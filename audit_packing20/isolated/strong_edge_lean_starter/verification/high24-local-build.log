@@ -1,0 +1,10 @@
+⚠ [1121/1121] Built StrongEdge.Bounds.High24 (14s)
+warning: StrongEdge/Bounds/High24.lean:26:8: automatically included section variable(s) unused in theorem `StrongEdge.mem_branchEdges`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+  [DecidableRel (conflictGraph G).Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] [DecidableRel (conflictGraph G).Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (1121 jobs).

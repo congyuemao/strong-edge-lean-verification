@@ -1,0 +1,30 @@
+{
+  "verified_date": "2026-10-09",
+  "timezone": "Australia/Sydney",
+  "build_exit_code": 0,
+  "build_jobs": 1144,
+  "axiom_audit_exit_code": 0,
+  "audited_theorems": 145,
+  "new_theorems": 51,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "high22_clique_bound": 17,
+  "high22_bound_sixteen_exported": false,
+  "minimal_high22_field_discharged": true,
+  "threshold_free_subcubic_bound_proved": false,
+  "remaining_minimal_clique_bounds": {
+    "high20": 19,
+    "high21": 18
+  },
+  "unconditional_packing20_proved": false,
+  "source_archive": "strong_edge_lean_high22_checkpoint.zip",
+  "preserved_checkpoint_sha256": {
+    "strong_edge_lean_verified_checkpoint.zip": "79cdd19342e7686223ce85e79aaeb35fb589c31150548db5876473158e451b2b",
+    "strong_edge_lean_c4_checkpoint.zip": "2d58d4173f84145983ce4bda4972892de5d98ad0beb84ad293fe2b06aa39998e",
+    "strong_edge_lean_high24_checkpoint.zip": "3f646a7e67e7f355dd224d39e9f139ac8238e893dbf124b759e8a1fe0e3639bd",
+    "strong_edge_lean_high23_checkpoint.zip": "c7babe84c5a1fecd846149a6547d97f52d4c89e14ec873e2d664dff63bf7453c"
+  }
+}

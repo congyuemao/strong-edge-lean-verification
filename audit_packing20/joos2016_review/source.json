@@ -1,0 +1,18 @@
+{
+  "source": "C:\\Users\\21161\\Downloads\\joos2016.pdf",
+  "sha256": "937e4c224752cf22cca24011c6f5723c7548c6e20606055a5a0d22bc1183f19a",
+  "bytes": 222054,
+  "pages": 12,
+  "metadata": {
+    "/Keywords": "induced matching,edge coloring,independent set,strong chromatic index,strong matching",
+    "/Creator": "LaTeX with hyperref package",
+    "/ModDate": "D:20160208005957-08'00'",
+    "/CreationDate": "D:20160126091335-05'00'",
+    "/Producer": "Acrobat Distiller 10.1.16 (Windows); modified using iText 4.2.0 by 1T3XT",
+    "/Subject": "SIAM J. Discrete Math. 2016.30:154-165",
+    "/Author": "Felix Joos and Viet Hang Nguyen",
+    "/Title": "Induced Matchings in Graphs of Degree at Most 4"
+  },
+  "read_utc": "2026-10-10T05:44:28.126951+00:00",
+  "note": "User-supplied PDF read locally; no changes to original PDF or Lean sources."
+}

@@ -1,0 +1,3230 @@
+[
+  {
+    "module": "Init.Classical",
+    "line": 19,
+    "token": "noncomputable",
+    "source": "noncomputable def indefiniteDescription {\u03b1 : Sort u} (p : \u03b1 \u2192 Prop) (h : \u2203 x, p x) : {x // p x} :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 29,
+    "token": "noncomputable",
+    "source": "noncomputable def choose {\u03b1 : Sort u} {p : \u03b1 \u2192 Prop} (h : \u2203 x, p x) : \u03b1 :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 73,
+    "token": "noncomputable",
+    "source": "noncomputable def inhabited_of_nonempty {\u03b1 : Sort u} (h : Nonempty \u03b1) : Inhabited \u03b1 :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 77,
+    "token": "noncomputable",
+    "source": "noncomputable def inhabited_of_exists {\u03b1 : Sort u} {p : \u03b1 \u2192 Prop} (h : \u2203 x, p x) : Inhabited \u03b1 :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 81,
+    "token": "noncomputable",
+    "source": "noncomputable scoped instance (priority := low) propDecidable (a : Prop) : Decidable a :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 87,
+    "token": "noncomputable",
+    "source": "noncomputable def decidableInhabited (a : Prop) : Inhabited (Decidable a) where"
+  },
+  {
+    "module": "Init.Classical",
+    "line": 92,
+    "token": "noncomputable",
+    "source": "noncomputable def typeDecidableEq (\u03b1 : Sort u) : DecidableEq \u03b1 :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 95,
+    "token": "noncomputable",
+    "source": "noncomputable def typeDecidable (\u03b1 : Sort u) : PSum \u03b1 (\u03b1 \u2192 False) :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 100,
+    "token": "noncomputable",
+    "source": "noncomputable def strongIndefiniteDescription {\u03b1 : Sort u} (p : \u03b1 \u2192 Prop) (h : Nonempty \u03b1) : {x : \u03b1 // (\u2203 y : \u03b1, p y) \u2192 p x} :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 109,
+    "token": "noncomputable",
+    "source": "noncomputable def epsilon {\u03b1 : Sort u} [h : Nonempty \u03b1] (p : \u03b1 \u2192 Prop) : \u03b1 :="
+  },
+  {
+    "module": "Init.Classical",
+    "line": 206,
+    "token": "noncomputable",
+    "source": "@[reducible] noncomputable def Exists.choose {p : \u03b1 \u2192 Prop} (P : \u2203 a, p a) : \u03b1 := Classical.choose P"
+  },
+  {
+    "module": "Init.Core",
+    "line": 130,
+    "token": "extern",
+    "source": "attribute [extern \"lean_mk_thunk\"] Thunk.mk"
+  },
+  {
+    "module": "Init.Core",
+    "line": 137,
+    "token": "extern",
+    "source": "@[extern \"lean_thunk_pure\"] protected def Thunk.pure (a : \u03b1) : Thunk \u03b1 :="
+  },
+  {
+    "module": "Init.Core",
+    "line": 147,
+    "token": "extern",
+    "source": "@[extern \"lean_thunk_get_own\"] protected def Thunk.get (x : @& Thunk \u03b1) : \u03b1 :="
+  },
+  {
+    "module": "Init.Core",
+    "line": 646,
+    "token": "extern",
+    "source": "attribute [extern \"lean_task_pure\"] Task.pure"
+  },
+  {
+    "module": "Init.Core",
+    "line": 647,
+    "token": "extern",
+    "source": "attribute [extern \"lean_task_get_own\"] Task.get"
+  },
+  {
+    "module": "Init.Core",
+    "line": 686,
+    "token": "extern",
+    "source": "@[noinline, extern \"lean_task_spawn\"]"
+  },
+  {
+    "module": "Init.Core",
+    "line": 701,
+    "token": "extern",
+    "source": "@[noinline, extern \"lean_task_map\"]"
+  },
+  {
+    "module": "Init.Core",
+    "line": 717,
+    "token": "extern",
+    "source": "@[noinline, extern \"lean_task_bind\"]"
+  },
+  {
+    "module": "Init.Core",
+    "line": 757,
+    "token": "extern",
+    "source": "@[extern \"lean_strict_or\"] def strictOr  (b\u2081 b\u2082 : Bool) := b\u2081 || b\u2082"
+  },
+  {
+    "module": "Init.Core",
+    "line": 763,
+    "token": "extern",
+    "source": "@[extern \"lean_strict_and\"] def strictAnd (b\u2081 b\u2082 : Bool) := b\u2081 && b\u2082"
+  },
+  {
+    "module": "Init.Core",
+    "line": 933,
+    "token": "noncomputable",
+    "source": "noncomputable def HEq.ndrec.{u1, u2} {\u03b1 : Sort u2} {a : \u03b1} {motive : {\u03b2 : Sort u2} \u2192 \u03b2 \u2192 Sort u1} (m : motive a) {\u03b2 : Sort u2} {b : \u03b2} (h : a \u224d b) : motive b :="
+  },
+  {
+    "module": "Init.Core",
+    "line": 937,
+    "token": "noncomputable",
+    "source": "noncomputable def HEq.ndrecOn.{u1, u2} {\u03b1 : Sort u2} {a : \u03b1} {motive : {\u03b2 : Sort u2} \u2192 \u03b2 \u2192 Sort u1} {\u03b2 : Sort u2} {b : \u03b2} (h : a \u224d b) (m : motive a) : motive b :="
+  },
+  {
+    "module": "Init.Core",
+    "line": 941,
+    "token": "noncomputable",
+    "source": "noncomputable def HEq.homo_ndrec.{u1, u2} {\u03b1 : Sort u2} {a : \u03b1} {motive : \u03b1 \u2192 Sort u1} (m : motive a) {b : \u03b1} (h : a \u224d b) : motive b :="
+  },
+  {
+    "module": "Init.Core",
+    "line": 945,
+    "token": "noncomputable",
+    "source": "noncomputable def HEq.homo_ndrec_symm.{u1, u2} {\u03b1 : Sort u2} {a : \u03b1} {motive : \u03b1 \u2192 Sort u1} (m : motive a) {b : \u03b1} (h : b \u224d a) : motive b :="
+  },
+  {
+    "module": "Init.Core",
+    "line": 949,
+    "token": "noncomputable",
+    "source": "noncomputable def HEq.elim {\u03b1 : Sort u} {a : \u03b1} {p : \u03b1 \u2192 Sort v} {b : \u03b1} (h\u2081 : a \u224d b) (h\u2082 : p a) : p b :="
+  },
+  {
+    "module": "Init.Core",
+    "line": 1612,
+    "token": "axiom",
+    "source": "axiom propext {a b : Prop} : (a \u2194 b) \u2192 a = b"
+  },
+  {
+    "module": "Init.Core",
+    "line": 2339,
+    "token": "opaque",
+    "source": "opaque opaqueId {\u03b1 : Sort u} (x : \u03b1) : \u03b1 := x"
+  },
+  {
+    "module": "Init.Data.AC",
+    "line": 114,
+    "token": "noncomputable",
+    "source": "noncomputable def List.two_step_induction"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 165,
+    "token": "extern",
+    "source": "@[extern \"lean_array_size\", simp, expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 173,
+    "token": "extern",
+    "source": "@[extern \"lean_array_uget\", simp, expose, implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 182,
+    "token": "extern",
+    "source": "@[extern \"lean_array_uget_borrowed\"]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 183,
+    "token": "unsafe",
+    "source": "unsafe opaque ugetBorrowed (xs : @& Array \u03b1) (i : USize) (h : i.toNat < xs.size) : \u03b1 :="
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 183,
+    "token": "opaque",
+    "source": "unsafe opaque ugetBorrowed (xs : @& Array \u03b1) (i : USize) (h : i.toNat < xs.size) : \u03b1 :="
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 192,
+    "token": "extern",
+    "source": "@[extern \"lean_array_uset\", expose, implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 205,
+    "token": "extern",
+    "source": "@[extern \"lean_array_pop\", expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 223,
+    "token": "extern",
+    "source": "@[never_extract, extern \"lean_array_mark_linear\", expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 233,
+    "token": "extern",
+    "source": "@[never_extract, extern \"lean_array_propagate_mark\", expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 249,
+    "token": "extern",
+    "source": "@[extern \"lean_mk_array\", expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 263,
+    "token": "extern",
+    "source": "@[extern \"lean_array_fswap\", expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 286,
+    "token": "extern",
+    "source": "@[extern \"lean_array_swap\", expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 512,
+    "token": "unsafe",
+    "source": "unsafe def modifyMUnsafe [Monad m] (xs : Array \u03b1) (i : Nat) (f : \u03b1 \u2192 m \u03b1) : m (Array \u03b1) := do"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 550,
+    "token": "implemented_by",
+    "source": "@[implemented_by modifyMUnsafe, expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 590,
+    "token": "unsafe",
+    "source": "@[inline] unsafe def forIn'Unsafe {\u03b1 : Type u} {\u03b2 : Type v} {m : Type v \u2192 Type w} [Monad m] (as : Array \u03b1) (b : \u03b2) (f : (a : \u03b1) \u2192 a \u2208 as \u2192 \u03b2 \u2192 m (ForInStep \u03b2)) : m \u03b2 :="
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 603,
+    "token": "implemented_by",
+    "source": "@[implemented_by Array.forIn'Unsafe, expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 627,
+    "token": "unsafe",
+    "source": "unsafe def foldlMUnsafe {\u03b1 : Type u} {\u03b2 : Type v} {m : Type v \u2192 Type w} [Monad m] (f : \u03b2 \u2192 \u03b1 \u2192 m \u03b2) (init : \u03b2) (as : Array \u03b1) (start := 0) (stop := as.size) : m \u03b2 :="
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 672,
+    "token": "implemented_by",
+    "source": "@[implemented_by foldlMUnsafe, expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 692,
+    "token": "unsafe",
+    "source": "unsafe def foldrMUnsafe {\u03b1 : Type u} {\u03b2 : Type v} {m : Type v \u2192 Type w} [Monad m] (f : \u03b1 \u2192 \u03b2 \u2192 m \u03b2) (init : \u03b2) (as : Array \u03b1) (start := as.size) (stop := 0) : m \u03b2 :="
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 737,
+    "token": "implemented_by",
+    "source": "@[implemented_by foldrMUnsafe, expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 759,
+    "token": "unsafe",
+    "source": "unsafe def mapMUnsafe {\u03b1 : Type u} {\u03b2 : Type v} {m : Type v \u2192 Type w} [Monad m] (f : \u03b1 \u2192 m \u03b2) (as : Array \u03b1) : m (Array \u03b2) :="
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 779,
+    "token": "implemented_by",
+    "source": "@[implemented_by mapMUnsafe, expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 794,
+    "token": "unsafe",
+    "source": "unsafe def mapFinIdxMUnsafe {\u03b1 : Type u} {\u03b2 : Type v} {m : Type v \u2192 Type w} [Monad m]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 817,
+    "token": "implemented_by",
+    "source": "@[implemented_by mapFinIdxMUnsafe, expose]"
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 935,
+    "token": "unsafe",
+    "source": "unsafe def anyMUnsafe {\u03b1 : Type u} {m : Type \u2192 Type w} [Monad m] (p : \u03b1 \u2192 m Bool) (as : Array \u03b1) (start := 0) (stop := as.size) : m Bool :="
+  },
+  {
+    "module": "Init.Data.Array.Basic",
+    "line": 963,
+    "token": "implemented_by",
+    "source": "@[implemented_by anyMUnsafe, expose]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 60,
+    "token": "extern",
+    "source": "attribute [extern \"lean_nat_to_int\"] Int.ofNat"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 61,
+    "token": "extern",
+    "source": "attribute [extern \"lean_int_neg_succ_of_nat\"] Int.negSucc"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 119,
+    "token": "extern",
+    "source": "@[extern \"lean_int_neg\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 162,
+    "token": "extern",
+    "source": "@[extern \"lean_int_add\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 185,
+    "token": "extern",
+    "source": "@[extern \"lean_int_mul\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 208,
+    "token": "extern",
+    "source": "@[extern \"lean_int_sub\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 255,
+    "token": "extern",
+    "source": "@[extern \"lean_int_dec_eq\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 280,
+    "token": "extern",
+    "source": "@[extern \"lean_int_dec_nonneg\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 299,
+    "token": "extern",
+    "source": "@[extern \"lean_int_dec_le\"]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 312,
+    "token": "extern",
+    "source": "@[extern \"lean_int_dec_lt\"]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 328,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_abs\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 420,
+    "token": "noncomputable",
+    "source": "protected noncomputable def beq' (a b : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 426,
+    "token": "noncomputable",
+    "source": "protected noncomputable def ble' (a b : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Basic",
+    "line": 433,
+    "token": "noncomputable",
+    "source": "protected noncomputable def blt' (a b : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.DivMod.Basic",
+    "line": 72,
+    "token": "extern",
+    "source": "@[extern \"lean_int_ediv\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.DivMod.Basic",
+    "line": 102,
+    "token": "extern",
+    "source": "@[extern \"lean_int_emod\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.DivMod.Basic",
+    "line": 145,
+    "token": "extern",
+    "source": "@[extern \"lean_int_div_exact\"]"
+  },
+  {
+    "module": "Init.Data.Int.DivMod.Basic",
+    "line": 177,
+    "token": "extern",
+    "source": "@[extern \"lean_int_div\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.DivMod.Basic",
+    "line": 210,
+    "token": "extern",
+    "source": "@[extern \"lean_int_mod\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 56,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Poly.beq' (p\u2081 : Poly) : Poly \u2192 Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 77,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Poly.denote'.go (ctx : Context) (p : Poly) : Int \u2192 Int :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 93,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Poly.denote' (ctx : Context) (p : Poly) : Int :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 139,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def Poly.addConst_k (p : Poly) (k : Int) : Poly :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 339,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def Poly.mul_k (p : Poly) (k : Int) : Poly :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 359,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def Poly.combine_mul_k' (fuel : Nat) (a b : Int) : Poly \u2192 Poly \u2192 Poly :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 380,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def Poly.combine_mul_k (a b : Int) (p\u2081 p\u2082 : Poly) : Poly :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 535,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_eq_cert (lhs rhs : Expr) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 551,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_eq_var_cert (lhs rhs : Expr) (x y : Var) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 562,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_eq_var_const_cert (lhs rhs : Expr) (x : Var) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 581,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_eq_coeff_cert (lhs rhs : Expr) (p : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 646,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_le_coeff_tight_cert (lhs rhs : Expr) (p : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 669,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def Poly.isUnsatEq_k (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 758,
+    "token": "noncomputable",
+    "source": "noncomputable def unsatEqDivCoeffCert (lhs rhs : Expr) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 835,
+    "token": "noncomputable",
+    "source": "noncomputable def dvd_coeff_cert (k\u2081 : Int) (p\u2081 : Poly) (k\u2082 : Int) (p\u2082 : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 839,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_dvd_gcd_cert (k\u2081 : Int) (e\u2081 : Expr) (k\u2082 : Int) (p\u2082 : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 871,
+    "token": "noncomputable",
+    "source": "noncomputable def dvd_elim_cert (k\u2081 : Int) (p\u2081 : Poly) (k\u2082 : Int) (p\u2082 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 935,
+    "token": "noncomputable",
+    "source": "noncomputable def dvd_solve_combine_cert (d\u2081 : Int) (p\u2081 : Poly) (d\u2082 : Int) (p\u2082 : Poly) (d : Int) (p : Poly) (g \u03b1 \u03b2 : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 959,
+    "token": "noncomputable",
+    "source": "noncomputable def dvd_solve_elim_cert (d\u2081 : Int) (p\u2081 : Poly) (d\u2082 : Int) (p\u2082 : Poly) (d : Int) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 995,
+    "token": "noncomputable",
+    "source": "noncomputable def le_coeff_cert (p\u2081 p\u2082 : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1004,
+    "token": "noncomputable",
+    "source": "noncomputable def le_neg_cert (p\u2081 p\u2082 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1021,
+    "token": "noncomputable",
+    "source": "noncomputable def le_combine_cert (p\u2081 p\u2082 p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1037,
+    "token": "noncomputable",
+    "source": "noncomputable def le_combine_coeff_cert (p\u2081 p\u2082 p\u2083 : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1068,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_coeff_cert (p p' : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1079,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_unsat_coeff_cert (p : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1093,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def Poly.coeff_k (p : Poly) (x : Var) : Int :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1123,
+    "token": "noncomputable",
+    "source": "noncomputable def dvd_of_eq_cert (x : Var) (p\u2081 : Poly) (d\u2082 : Int) (p\u2082 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1150,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_dvd_subst_cert (x : Var) (p\u2081 : Poly) (d\u2082 : Int) (p\u2082 : Poly) (d\u2083 : Int) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1180,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def eq_eq_subst_cert (x : Var) (p\u2081 : Poly) (p\u2082 : Poly) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1193,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def eq_eq_subst'_cert (a b : Int) (p\u2081 : Poly) (p\u2082 : Poly) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1204,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_le_subst_nonneg_cert (x : Var) (p\u2081 : Poly) (p\u2082 : Poly) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1220,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_le_subst_nonpos_cert (x : Var) (p\u2081 : Poly) (p\u2082 : Poly) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1237,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_of_core_cert (p\u2081 : Poly) (p\u2082 : Poly) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1251,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def Poly.isUnsatDiseq_k (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1271,
+    "token": "noncomputable",
+    "source": "noncomputable def diseq_eq_subst_cert (x : Var) (p\u2081 : Poly) (p\u2082 : Poly) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1291,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_of_le_ge_cert (p\u2081 p\u2082 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1302,
+    "token": "noncomputable",
+    "source": "noncomputable def le_of_le_diseq_cert (p\u2081 : Poly) (p\u2082 : Poly) (p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1317,
+    "token": "noncomputable",
+    "source": "noncomputable def diseq_split_cert (p\u2081 p\u2082 p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1411,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_left_cert (p\u2081 p\u2082 p\u2083 : Poly) (d : Int) (n : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1466,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_left_split_ineq_cert (p\u2081 p\u2082 : Poly) (k : Int) (b : Int) (p' : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1479,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_left_split_dvd1_cert (p\u2081 p' : Poly) (a : Int) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1488,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_left_split_dvd2_cert (p\u2081 p\u2083 : Poly) (d : Int) (k : Nat) (d' : Int) (p' : Poly): Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1518,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_left_cert (p\u2081 p\u2082 : Poly) (n : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1553,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_left_split_ineq_cert (p\u2081 p\u2082 : Poly) (k : Int) (b : Int) (p' : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1566,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_left_split_dvd_cert (p\u2081 p' : Poly) (a : Int) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1600,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_right_cert (p\u2081 p\u2082 p\u2083 : Poly) (d : Int) (n : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1642,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_right_split_ineq_cert (p\u2081 p\u2082 : Poly) (k : Int) (a : Int) (p' : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1655,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_right_split_dvd1_cert (p\u2082 p' : Poly) (b : Int) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1664,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_dvd_right_split_dvd2_cert (p\u2082 p\u2083 : Poly) (d : Int) (k : Nat) (d' : Int) (p' : Poly): Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1694,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_right_cert (p\u2081 p\u2082 : Poly) (n : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1728,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_right_split_ineq_cert (p\u2081 p\u2082 : Poly) (k : Int) (a : Int) (p' : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1741,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_right_split_dvd_cert (p\u2082 p' : Poly) (b : Int) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1831,
+    "token": "noncomputable",
+    "source": "noncomputable def cooper_unsat_cert (p\u2081 p\u2082 p\u2083 : Poly) (d : Int) (\u03b1 \u03b2 : Int) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1928,
+    "token": "noncomputable",
+    "source": "noncomputable def dvd_le_tight_cert (d : Int) (p\u2081 p\u2082 p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1950,
+    "token": "noncomputable",
+    "source": "noncomputable def dvd_neg_le_tight_cert (d : Int) (p\u2081 p\u2082 p\u2083 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 1988,
+    "token": "noncomputable",
+    "source": "noncomputable def not_le_norm_expr_cert (lhs rhs : Expr) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2021,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_def_cert (x : Var) (xPoly : Poly) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2035,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_def'_cert (x : Var) (e : Expr) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2044,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_def_struct_cert (x : Var) (e : Expr) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2054,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_def'_norm_cert (x : Var) (e : Expr) (ePoly ePoly' p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2063,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_def_struct_norm_cert (x : Var) (e : Expr) (ePoly ePoly' p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2165,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def var_eq_cert (x : Var) (k : Int) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2179,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def of_var_eq_mul_cert (x : Var) (k : Int) (y : Var) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2186,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def of_var_eq_var_cert (x : Var) (y : Var) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.Int.Linear",
+    "line": 2193,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def of_var_eq_cert (x : Var) (k : Int) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Data.List.Attach",
+    "line": 37,
+    "token": "unsafe",
+    "source": "@[inline] private unsafe def attachWithImpl"
+  },
+  {
+    "module": "Init.Data.List.Attach",
+    "line": 46,
+    "token": "implemented_by",
+    "source": "@[implemented_by attachWithImpl, expose] def attachWith"
+  },
+  {
+    "module": "Init.Data.List.Basic",
+    "line": 508,
+    "token": "noncomputable",
+    "source": "noncomputable def filterMap (f : \u03b1 \u2192 Option \u03b2) : List \u03b1 \u2192 List \u03b2"
+  },
+  {
+    "module": "Init.Data.List.Basic",
+    "line": 2254,
+    "token": "noncomputable",
+    "source": "noncomputable def intercalate (sep : List \u03b1) (xs : List (List \u03b1)) : List \u03b1 :="
+  },
+  {
+    "module": "Init.Data.List.BasicAux",
+    "line": 175,
+    "token": "unsafe",
+    "source": "@[specialize] private unsafe def mapMonoMImp [Monad m] (as : List \u03b1) (f : \u03b1 \u2192 m \u03b1) : m (List \u03b1) := do"
+  },
+  {
+    "module": "Init.Data.List.BasicAux",
+    "line": 192,
+    "token": "implemented_by",
+    "source": "@[implemented_by mapMonoMImp] def mapMonoM [Monad m] (as : List \u03b1) (f : \u03b1 \u2192 m \u03b1) : m (List \u03b1) :="
+  },
+  {
+    "module": "Init.Data.List.Control",
+    "line": 223,
+    "token": "noncomputable",
+    "source": "noncomputable def flatMapM {m : Type u \u2192 Type v} [Monad m] {\u03b1 : Type w} {\u03b2 : Type u} (f : \u03b1 \u2192 m (List \u03b2)) (as : List \u03b1) : m (List \u03b2) :="
+  },
+  {
+    "module": "Init.Data.Nat.Bitwise.Basic",
+    "line": 49,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_land\"]"
+  },
+  {
+    "module": "Init.Data.Nat.Bitwise.Basic",
+    "line": 57,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_lor\"]"
+  },
+  {
+    "module": "Init.Data.Nat.Bitwise.Basic",
+    "line": 65,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_lxor\"]"
+  },
+  {
+    "module": "Init.Data.Nat.Bitwise.Basic",
+    "line": 78,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_shiftl\", expose, implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Nat.Bitwise.Basic",
+    "line": 94,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_shiftr\", expose, implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.Nat.Div.Basic",
+    "line": 113,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_div_exact\"]"
+  },
+  {
+    "module": "Init.Data.Nat.Gcd",
+    "line": 34,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_gcd\"]"
+  },
+  {
+    "module": "Init.Data.Nat.Internal.Linear",
+    "line": 34,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Var.denote (ctx : Context) (v : Var) : Nat :="
+  },
+  {
+    "module": "Init.Data.Nat.Internal.Linear",
+    "line": 45,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Expr.denote (ctx : Context) : Expr \u2192 Nat"
+  },
+  {
+    "module": "Init.Data.Nat.Internal.Linear",
+    "line": 54,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Poly.denote (ctx : Context) (p : Poly) : Nat :="
+  },
+  {
+    "module": "Init.Data.Nat.Lemmas",
+    "line": 1764,
+    "token": "noncomputable",
+    "source": "noncomputable instance decidableBallLT :"
+  },
+  {
+    "module": "Init.Data.Nat.Lemmas",
+    "line": 1888,
+    "token": "noncomputable",
+    "source": "noncomputable instance decidableExistsLT [h : DecidablePred p] :"
+  },
+  {
+    "module": "Init.Data.Nat.Lemmas",
+    "line": 1915,
+    "token": "noncomputable",
+    "source": "noncomputable instance decidableExistsLT' {p : (m : Nat) \u2192 m < k \u2192 Prop} [I : \u2200 m h, Decidable (p m h)] :"
+  },
+  {
+    "module": "Init.Data.Ord.Basic",
+    "line": 100,
+    "token": "noncomputable",
+    "source": "@[expose] noncomputable def then' (a b : Ordering) : Ordering :="
+  },
+  {
+    "module": "Init.Data.Order.Lemmas",
+    "line": 296,
+    "token": "noncomputable",
+    "source": "public noncomputable scoped instance instBEq {\u03b1 : Type u} [LE \u03b1] : BEq \u03b1 where"
+  },
+  {
+    "module": "Init.Data.Order.Lemmas",
+    "line": 476,
+    "token": "noncomputable",
+    "source": "public noncomputable scoped instance instMin {\u03b1 : Type u} [LE \u03b1] : Min \u03b1 :="
+  },
+  {
+    "module": "Init.Data.Order.Lemmas",
+    "line": 643,
+    "token": "noncomputable",
+    "source": "public noncomputable scoped instance instMax {\u03b1 : Type u} [LE \u03b1] : Max \u03b1 :="
+  },
+  {
+    "module": "Init.Data.Order.LemmasExtra",
+    "line": 189,
+    "token": "noncomputable",
+    "source": "public noncomputable scoped instance instOrd {\u03b1 : Type u} [LE \u03b1] :"
+  },
+  {
+    "module": "Init.Data.RArray",
+    "line": 40,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev RArray.get (a : RArray \u03b1) (n : Nat) : \u03b1 :="
+  },
+  {
+    "module": "Init.Data.Repr",
+    "line": 230,
+    "token": "extern",
+    "source": "@[extern \"lean_string_of_usize\"]"
+  },
+  {
+    "module": "Init.Data.Repr",
+    "line": 246,
+    "token": "implemented_by",
+    "source": "@[implemented_by reprFast]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 33,
+    "token": "extern",
+    "source": "@[extern \"lean_string_push\", expose, implicit_reducible]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 60,
+    "token": "extern",
+    "source": "@[extern \"lean_string_posof\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 61,
+    "token": "opaque",
+    "source": "opaque posOf (s : String) (c : Char) : Pos.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 64,
+    "token": "extern",
+    "source": "@[extern \"lean_string_offsetofpos\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 65,
+    "token": "opaque",
+    "source": "opaque offsetOfPos (s : String) (pos : Pos.Raw) : Nat"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 67,
+    "token": "extern",
+    "source": "@[extern \"lean_string_utf8_extract\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 68,
+    "token": "opaque",
+    "source": "opaque extract : (@& String) \u2192 (@& Pos.Raw) \u2192 (@& Pos.Raw) \u2192 String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 70,
+    "token": "extern",
+    "source": "@[extern \"lean_string_length\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 71,
+    "token": "opaque",
+    "source": "opaque length : (@& String) \u2192 Nat"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 74,
+    "token": "extern",
+    "source": "@[extern \"lean_string_pushn\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 75,
+    "token": "opaque",
+    "source": "opaque pushn (s : String) (c : Char) (n : Nat) : String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 77,
+    "token": "extern",
+    "source": "@[extern \"lean_string_append\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 78,
+    "token": "opaque",
+    "source": "opaque append : String \u2192 (@& String) \u2192 String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 80,
+    "token": "extern",
+    "source": "@[extern \"lean_string_utf8_next\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 81,
+    "token": "opaque",
+    "source": "opaque next (s : @& String) (p : @& Pos.Raw) : Pos.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 84,
+    "token": "extern",
+    "source": "@[extern \"lean_string_isempty\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 85,
+    "token": "opaque",
+    "source": "opaque isEmpty (s : String) : Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 88,
+    "token": "extern",
+    "source": "@[extern \"lean_string_foldl\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 89,
+    "token": "opaque",
+    "source": "opaque foldl (f : String \u2192 Char \u2192 String) (init : String) (s : String) : String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 92,
+    "token": "extern",
+    "source": "@[extern \"lean_string_isprefixof\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 93,
+    "token": "opaque",
+    "source": "opaque isPrefixOf (p : String) (s : String) : Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 96,
+    "token": "extern",
+    "source": "@[extern \"lean_string_any\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 97,
+    "token": "opaque",
+    "source": "opaque any (s : String) (p : Char \u2192 Bool) : Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 100,
+    "token": "extern",
+    "source": "@[extern \"lean_string_contains\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 101,
+    "token": "opaque",
+    "source": "opaque contains (s : String) (c : Char) : Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 103,
+    "token": "extern",
+    "source": "@[extern \"lean_string_utf8_get\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 104,
+    "token": "opaque",
+    "source": "opaque get (s : @& String) (p : @& Pos.Raw) : Char"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 107,
+    "token": "extern",
+    "source": "@[extern \"lean_string_capitalize\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 108,
+    "token": "opaque",
+    "source": "opaque capitalize (s : String) : String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 110,
+    "token": "extern",
+    "source": "@[extern \"lean_string_utf8_at_end\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 111,
+    "token": "opaque",
+    "source": "opaque atEnd : (@& String) \u2192 (@& Pos.Raw) \u2192 Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 114,
+    "token": "extern",
+    "source": "@[extern \"lean_string_nextwhile\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 115,
+    "token": "opaque",
+    "source": "opaque nextWhile (s : String) (p : Char \u2192 Bool) (i : String.Pos.Raw) : String.Pos.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 118,
+    "token": "extern",
+    "source": "@[extern \"lean_string_trim\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 119,
+    "token": "opaque",
+    "source": "opaque trim (s : String) : String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 122,
+    "token": "extern",
+    "source": "@[extern \"lean_string_intercalate\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 123,
+    "token": "opaque",
+    "source": "opaque intercalate (s : String) : List String \u2192 String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 126,
+    "token": "extern",
+    "source": "@[extern \"lean_string_front\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 127,
+    "token": "opaque",
+    "source": "opaque front (s : String) : Char"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 130,
+    "token": "extern",
+    "source": "@[extern \"lean_string_drop\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 131,
+    "token": "opaque",
+    "source": "opaque drop (s : String) (n : Nat) : String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 134,
+    "token": "extern",
+    "source": "@[extern \"lean_string_dropright\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 135,
+    "token": "opaque",
+    "source": "opaque dropRight (s : String) (n : Nat) : String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 137,
+    "token": "extern",
+    "source": "@[extern \"lean_string_get_byte_fast\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 138,
+    "token": "opaque",
+    "source": "opaque getUTF8Byte (s : @& String) (n : Nat) (h : n < s.utf8ByteSize) : UInt8"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 144,
+    "token": "extern",
+    "source": "@[extern \"lean_string_uget_byte_fast\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 145,
+    "token": "opaque",
+    "source": "opaque ugetUTF8Byte (s : @& String) (n : USize) (h : n.toNat < s.utf8ByteSize) : UInt8"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 149,
+    "token": "extern",
+    "source": "@[extern \"lean_string_mk\", expose, deprecated String.ofList (since := \"2025-10-30\")]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 168,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_tostring\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 169,
+    "token": "opaque",
+    "source": "opaque toString : Substring.Raw \u2192 String"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 172,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_drop\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 173,
+    "token": "opaque",
+    "source": "opaque drop : Substring.Raw \u2192 Nat \u2192 Substring.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 176,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_front\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 177,
+    "token": "opaque",
+    "source": "opaque front (s : Substring.Raw) : Char"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 180,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_takewhile\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 181,
+    "token": "opaque",
+    "source": "opaque takeWhile : Substring.Raw \u2192 (Char \u2192 Bool) \u2192 Substring.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 184,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_extract\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 185,
+    "token": "opaque",
+    "source": "opaque extract : Substring.Raw \u2192 String.Pos.Raw \u2192 String.Pos.Raw \u2192 Substring.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 188,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_all\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 189,
+    "token": "opaque",
+    "source": "opaque all (s : Substring.Raw) (p : Char \u2192 Bool) : Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 192,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_beq\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 193,
+    "token": "opaque",
+    "source": "opaque beq (ss1 ss2 : Substring.Raw) : Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 196,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_isempty\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 197,
+    "token": "opaque",
+    "source": "opaque isEmpty (ss : Substring.Raw) : Bool"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 200,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_get\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 201,
+    "token": "opaque",
+    "source": "opaque get : Substring.Raw \u2192 String.Pos.Raw \u2192 Char"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 204,
+    "token": "extern",
+    "source": "@[extern \"lean_substring_prev\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 205,
+    "token": "opaque",
+    "source": "opaque prev : Substring.Raw \u2192 String.Pos.Raw \u2192 String.Pos.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 212,
+    "token": "extern",
+    "source": "@[extern \"lean_string_pos_sub\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 213,
+    "token": "opaque",
+    "source": "opaque sub : String.Pos.Raw \u2192 String.Pos.Raw \u2192 String.Pos.Raw"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 216,
+    "token": "extern",
+    "source": "@[extern \"lean_string_pos_min\"]"
+  },
+  {
+    "module": "Init.Data.String.Bootstrap",
+    "line": 217,
+    "token": "opaque",
+    "source": "opaque min (p\u2081 p\u2082 : Pos.Raw) : Pos.Raw"
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 61,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev denoteInt {\u03b1} [Ring \u03b1] (k : Int) : \u03b1 :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 67,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Expr.denote {\u03b1} [Ring \u03b1] (ctx : Context \u03b1) (e : Expr) : \u03b1 :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 87,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Power.beq' (pw\u2081 pw\u2082 : Power) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 110,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Mon.beq' (m\u2081 : Mon) : Mon \u2192 Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 194,
+    "token": "noncomputable",
+    "source": "noncomputable def Mon.mul_k : Mon \u2192 Mon \u2192 Mon :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 251,
+    "token": "noncomputable",
+    "source": "noncomputable def Mon.degree_k : Mon \u2192 Nat :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 283,
+    "token": "noncomputable",
+    "source": "noncomputable def powerRevlex_k (k\u2081 k\u2082 : Nat) : Ordering :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 331,
+    "token": "noncomputable",
+    "source": "noncomputable def Mon.revlex_k : Mon \u2192 Mon \u2192 Ordering :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 349,
+    "token": "noncomputable",
+    "source": "noncomputable def Mon.grevlex_k (m\u2081 m\u2082 : Mon) : Ordering :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 403,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Poly.beq' (p\u2081 : Poly) : Poly \u2192 Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 464,
+    "token": "noncomputable",
+    "source": "noncomputable def Poly.addConst_k (p : Poly) (k : Int) : Poly :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 517,
+    "token": "noncomputable",
+    "source": "noncomputable def Poly.mulConst_k (k : Int) (p : Poly) : Poly :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 559,
+    "token": "noncomputable",
+    "source": "noncomputable def Poly.mulMon_k (k : Int) (m : Mon) (p : Poly) : Poly :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 631,
+    "token": "noncomputable",
+    "source": "noncomputable def Poly.combine_k : Poly \u2192 Poly \u2192 Poly :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 719,
+    "token": "noncomputable",
+    "source": "noncomputable def Expr.toPoly_k (e : Expr) : Poly :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1319,
+    "token": "noncomputable",
+    "source": "noncomputable def cancel_var_cert (c : Int) (x : Var) (p\u2081 p\u2082 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1532,
+    "token": "noncomputable",
+    "source": "noncomputable def core_cert (lhs rhs : Expr) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1541,
+    "token": "noncomputable",
+    "source": "noncomputable def superpose_cert (k\u2081 : Int) (m\u2081 : Mon) (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1549,
+    "token": "noncomputable",
+    "source": "noncomputable def simp_cert (k\u2081 : Int) (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1557,
+    "token": "noncomputable",
+    "source": "noncomputable def mul_cert (p\u2081 : Poly) (k : Int) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1569,
+    "token": "noncomputable",
+    "source": "noncomputable def mul_ne_cert (p\u2081 : Poly) (k : Int) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1584,
+    "token": "noncomputable",
+    "source": "noncomputable def div_cert (p\u2081 : Poly) (k : Int) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1593,
+    "token": "noncomputable",
+    "source": "noncomputable def unsat_eq_cert (p : Poly) (k : Int) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1606,
+    "token": "noncomputable",
+    "source": "noncomputable def d_step1_cert (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1614,
+    "token": "noncomputable",
+    "source": "noncomputable def d_stepk_cert (k\u2081 : Int) (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1623,
+    "token": "noncomputable",
+    "source": "noncomputable def imp_1eq_cert (lhs rhs : Expr) (p\u2081 p\u2082 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1631,
+    "token": "noncomputable",
+    "source": "noncomputable def imp_keq_cert (lhs rhs : Expr) (k : Int) (p\u2081 p\u2082 : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1641,
+    "token": "noncomputable",
+    "source": "noncomputable def core_certC (lhs rhs : Expr) (p : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1650,
+    "token": "noncomputable",
+    "source": "noncomputable def superpose_certC (k\u2081 : Int) (m\u2081 : Mon) (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1658,
+    "token": "noncomputable",
+    "source": "noncomputable def mul_certC (p\u2081 : Poly) (k : Int) (p : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1666,
+    "token": "noncomputable",
+    "source": "noncomputable def div_certC (p\u2081 : Poly) (k : Int) (p : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1675,
+    "token": "noncomputable",
+    "source": "noncomputable def simp_certC (k\u2081 : Int) (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1683,
+    "token": "noncomputable",
+    "source": "noncomputable def unsat_eq_certC (p : Poly) (k : Int) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1693,
+    "token": "noncomputable",
+    "source": "noncomputable def d_step1_certC (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1701,
+    "token": "noncomputable",
+    "source": "noncomputable def d_stepk_certC (k\u2081 : Int) (p\u2081 : Poly) (k\u2082 : Int) (m\u2082 : Mon) (p\u2082 : Poly) (p : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1710,
+    "token": "noncomputable",
+    "source": "noncomputable def imp_1eq_certC (lhs rhs : Expr) (p\u2081 p\u2082 : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1718,
+    "token": "noncomputable",
+    "source": "noncomputable def imp_keq_certC (lhs rhs : Expr) (k : Int) (p\u2081 p\u2082 : Poly) (c : Nat) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1790,
+    "token": "noncomputable",
+    "source": "noncomputable def mul_ineq_cert (p\u2081 : Poly) (k : Int) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1868,
+    "token": "noncomputable",
+    "source": "noncomputable def one_eq_zero_unsat_cert (p : Poly) :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1907,
+    "token": "noncomputable",
+    "source": "noncomputable def eq_normEq0_cert (c : Nat) (p\u2081 p\u2082 p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1943,
+    "token": "noncomputable",
+    "source": "noncomputable def d_normEq0_cert (c : Nat) (p\u2081 p\u2082 p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1951,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_int_cert (e : Expr) (p : Poly) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1961,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_cnstr_cert (lhs rhs lhs' rhs' : Expr) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1978,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_eq_cert (lhs rhs lhs' rhs' : Expr) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 1988,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_cnstr_nc_cert (lhs rhs lhs' rhs' : Expr) : Bool :="
+  },
+  {
+    "module": "Init.Grind.Ring.CommSolver",
+    "line": 2005,
+    "token": "noncomputable",
+    "source": "noncomputable def norm_eq_nc_cert (lhs rhs lhs' rhs' : Expr) : Bool :="
+  },
+  {
+    "module": "Init.Omega.Constraint",
+    "line": 292,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev normalizeConstraint (s : Constraint) (x : Coeffs) : Constraint :="
+  },
+  {
+    "module": "Init.Omega.Constraint",
+    "line": 295,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev normalizeCoeffs (s : Constraint) (x : Coeffs) : Coeffs :="
+  },
+  {
+    "module": "Init.Omega.Constraint",
+    "line": 325,
+    "token": "noncomputable",
+    "source": "noncomputable def positivize (p : Constraint \u00d7 Coeffs) : Constraint \u00d7 Coeffs :="
+  },
+  {
+    "module": "Init.Omega.Constraint",
+    "line": 329,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev positivizeConstraint (s : Constraint) (x : Coeffs) : Constraint :="
+  },
+  {
+    "module": "Init.Omega.Constraint",
+    "line": 332,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev positivizeCoeffs (s : Constraint) (x : Coeffs) : Coeffs :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 27,
+    "token": "unsafe",
+    "source": "unsafe axiom lcErased : Type"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 27,
+    "token": "axiom",
+    "source": "unsafe axiom lcErased : Type"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 30,
+    "token": "unsafe",
+    "source": "unsafe axiom lcAny : Type"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 30,
+    "token": "axiom",
+    "source": "unsafe axiom lcAny : Type"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 33,
+    "token": "unsafe",
+    "source": "unsafe axiom lcVoid : Type"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 33,
+    "token": "axiom",
+    "source": "unsafe axiom lcVoid : Type"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 116,
+    "token": "extern",
+    "source": "@[extern \"lean_is_scalar\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 117,
+    "token": "unsafe",
+    "source": "unsafe axiom isScalarObj {\u03b1 : Type u} (x : \u03b1) : Bool"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 117,
+    "token": "axiom",
+    "source": "unsafe axiom isScalarObj {\u03b1 : Type u} (x : \u03b1) : Bool"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 242,
+    "token": "unsafe",
+    "source": "unsafe axiom lcProof {\u03b1 : Prop} : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 242,
+    "token": "axiom",
+    "source": "unsafe axiom lcProof {\u03b1 : Prop} : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 247,
+    "token": "unsafe",
+    "source": "unsafe axiom lcCast {\u03b1 : Sort u} {\u03b2 : Sort v} (a : \u03b1) : \u03b2"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 247,
+    "token": "axiom",
+    "source": "unsafe axiom lcCast {\u03b1 : Sort u} {\u03b2 : Sort v} (a : \u03b1) : \u03b2"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 262,
+    "token": "unsafe",
+    "source": "unsafe axiom lcUnreachable {\u03b1 : Sort u} : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 262,
+    "token": "axiom",
+    "source": "unsafe axiom lcUnreachable {\u03b1 : Sort u} : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 543,
+    "token": "axiom",
+    "source": "axiom Quot.sound : \u2200 {\u03b1 : Sort u} {r : \u03b1 \u2192 \u03b1 \u2192 Prop} {a b : \u03b1}, r a b \u2192 Eq (Quot.mk r a) (Quot.mk r b)"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 548,
+    "token": "unsafe",
+    "source": "unsafe axiom Quot.lcInv {\u03b1 : Sort u} {r : \u03b1 \u2192 \u03b1 \u2192 Prop} (q : Quot r) : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 548,
+    "token": "axiom",
+    "source": "unsafe axiom Quot.lcInv {\u03b1 : Sort u} {r : \u03b1 \u2192 \u03b1 \u2192 Prop} (q : Quot r) : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 793,
+    "token": "extern",
+    "source": "@[extern \"lean_sorry\", never_extract]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 794,
+    "token": "axiom",
+    "source": "axiom sorryAx (\u03b1 : Sort u) (synthetic : Bool) : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 794,
+    "token": "sorryAx",
+    "source": "axiom sorryAx (\u03b1 : Sort u) (synthetic : Bool) : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 865,
+    "token": "axiom",
+    "source": "axiom Classical.choice {\u03b1 : Sort u} : Nonempty \u03b1 \u2192 \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 884,
+    "token": "noncomputable",
+    "source": "noncomputable def Classical.ofNonempty {\u03b1 : Sort u} [Nonempty \u03b1] : \u03b1 :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1053,
+    "token": "noncomputable",
+    "source": "noncomputable def Bool.or (x y : Bool) : Bool :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1071,
+    "token": "noncomputable",
+    "source": "noncomputable def Bool.and (x y : Bool) : Bool :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1086,
+    "token": "noncomputable",
+    "source": "noncomputable def Bool.not (x : Bool) : Bool :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1887,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_add\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1908,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_mul\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1923,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_pow\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1937,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_dec_eq\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 1987,
+    "token": "extern",
+    "source": "@[reducible, extern \"lean_nat_dec_eq\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2009,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_dec_le\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2093,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_pred\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2206,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_dec_le\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2224,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_dec_lt\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2247,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_sub\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2306,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_div\", irreducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2336,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_mod\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2337,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Nat.modCore (x y : Nat) : Nat :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2394,
+    "token": "extern",
+    "source": "@[extern \"lean_nat_mod\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2426,
+    "token": "extern",
+    "source": "@[extern \"lean_system_platform_nbits\"] opaque System.Platform.getNumBits : Unit \u2192 Subtype fun (n : Nat) => Or (Eq n 32) (Eq n 64) :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2426,
+    "token": "opaque",
+    "source": "@[extern \"lean_system_platform_nbits\"] opaque System.Platform.getNumBits : Unit \u2192 Subtype fun (n : Nat) => Or (Eq n 32) (Eq n 64) :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2575,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint8_of_nat_mk\"] UInt8.ofBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2576,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint8_to_nat\"] UInt8.toBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2584,
+    "token": "extern",
+    "source": "@[extern \"lean_uint8_of_nat\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2600,
+    "token": "extern",
+    "source": "@[extern \"lean_uint8_of_nat\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2615,
+    "token": "extern",
+    "source": "@[extern \"lean_uint8_dec_eq\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2652,
+    "token": "extern",
+    "source": "@[extern \"lean_uint8_dec_lt\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2668,
+    "token": "extern",
+    "source": "@[extern \"lean_uint8_dec_le\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2693,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint16_of_nat_mk\"] UInt16.ofBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2694,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint16_to_nat\"] UInt16.toBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2702,
+    "token": "extern",
+    "source": "@[extern \"lean_uint16_of_nat\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2719,
+    "token": "extern",
+    "source": "@[extern \"lean_uint16_dec_eq\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2751,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint32_of_nat_mk\"] UInt32.ofBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2752,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint32_to_nat\"] UInt32.toBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2760,
+    "token": "extern",
+    "source": "@[extern \"lean_uint32_of_nat\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2769,
+    "token": "extern",
+    "source": "@[extern \"lean_uint32_to_nat\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2784,
+    "token": "extern",
+    "source": "@[extern \"lean_uint32_dec_eq\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2814,
+    "token": "extern",
+    "source": "@[extern \"lean_uint32_dec_lt\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2830,
+    "token": "extern",
+    "source": "@[extern \"lean_uint32_dec_le\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2858,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint64_of_nat_mk\"] UInt64.ofBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2859,
+    "token": "extern",
+    "source": "attribute [extern \"lean_uint64_to_nat\"] UInt64.toBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2867,
+    "token": "extern",
+    "source": "@[extern \"lean_uint64_of_nat\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2884,
+    "token": "extern",
+    "source": "@[extern \"lean_uint64_dec_eq\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2929,
+    "token": "extern",
+    "source": "attribute [extern \"lean_usize_of_nat_mk\"] USize.ofBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2930,
+    "token": "extern",
+    "source": "attribute [extern \"lean_usize_to_nat\"] USize.toBitVec"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2938,
+    "token": "extern",
+    "source": "@[extern \"lean_usize_of_nat\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 2954,
+    "token": "extern",
+    "source": "@[extern \"lean_usize_dec_eq\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3001,
+    "token": "extern",
+    "source": "@[extern \"lean_uint32_of_nat\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3297,
+    "token": "noncomputable",
+    "source": "noncomputable def List.flatten : List (List \u03b1) \u2192 List \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3324,
+    "token": "noncomputable",
+    "source": "@[inline, implicit_reducible] noncomputable def List.flatMap {\u03b1 : Type u} {\u03b2 : Type v} (b : \u03b1 \u2192 List \u03b2) (as : List \u03b1) : List \u03b2 := flatten (map b as)"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3360,
+    "token": "extern",
+    "source": "attribute [extern \"lean_array_to_list\"] Array.toList"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3361,
+    "token": "extern",
+    "source": "attribute [extern \"lean_array_mk\"] Array.mk"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3381,
+    "token": "extern",
+    "source": "@[extern \"lean_mk_empty_array_with_capacity\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3388,
+    "token": "extern",
+    "source": "@[extern \"lean_mk_empty_array_with_capacity\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3409,
+    "token": "extern",
+    "source": "@[extern \"lean_array_get_size\", tagged_return, instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3418,
+    "token": "extern",
+    "source": "@[extern \"lean_array_fget_borrowed\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3419,
+    "token": "unsafe",
+    "source": "unsafe opaque Array.getInternalBorrowed {\u03b1 : Type u} (a : @& Array \u03b1) (i : @& Nat) (h : LT.lt i a.size) : \u03b1 :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3419,
+    "token": "opaque",
+    "source": "unsafe opaque Array.getInternalBorrowed {\u03b1 : Type u} (a : @& Array \u03b1) (i : @& Nat) (h : LT.lt i a.size) : \u03b1 :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3432,
+    "token": "extern",
+    "source": "@[extern \"lean_array_fget\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3456,
+    "token": "extern",
+    "source": "@[extern \"lean_array_get_borrowed\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3457,
+    "token": "unsafe",
+    "source": "unsafe opaque Array.get!InternalBorrowed {\u03b1 : Type u} [@&Inhabited \u03b1] (a : @& Array \u03b1) (i : @& Nat) : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3457,
+    "token": "opaque",
+    "source": "unsafe opaque Array.get!InternalBorrowed {\u03b1 : Type u} [@&Inhabited \u03b1] (a : @& Array \u03b1) (i : @& Nat) : \u03b1"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3464,
+    "token": "extern",
+    "source": "@[extern \"lean_array_get\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3478,
+    "token": "extern",
+    "source": "@[extern \"lean_array_push\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3575,
+    "token": "extern",
+    "source": "attribute [extern \"lean_byte_array_mk\"] ByteArray.mk"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3576,
+    "token": "extern",
+    "source": "attribute [extern \"lean_byte_array_data\"] ByteArray.data"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3581,
+    "token": "extern",
+    "source": "@[extern \"lean_mk_empty_byte_array\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3599,
+    "token": "extern",
+    "source": "@[extern \"lean_byte_array_push\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3619,
+    "token": "extern",
+    "source": "@[extern \"lean_byte_array_size\", tagged_return, implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3658,
+    "token": "noncomputable",
+    "source": "noncomputable def List.utf8Encode (l : List Char) : ByteArray :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3689,
+    "token": "extern",
+    "source": "attribute [extern \"lean_string_to_utf8\"] String.toByteArray"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3690,
+    "token": "extern",
+    "source": "attribute [extern \"lean_string_from_utf8_unchecked\"] String.ofByteArray"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3700,
+    "token": "extern",
+    "source": "@[extern \"lean_string_mk\", implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3710,
+    "token": "extern",
+    "source": "@[extern \"lean_string_dec_eq\", instance_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3780,
+    "token": "extern",
+    "source": "@[extern \"lean_string_utf8_byte_size\", tagged_return, implicit_reducible]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3833,
+    "token": "unsafe",
+    "source": "unsafe def unsafeCast {\u03b1 : Sort u} {\u03b2 : Sort v} (a : \u03b1) : \u03b2 :="
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 3848,
+    "token": "extern",
+    "source": "@[never_extract, extern \"lean_panic_fn_borrowed\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 4820,
+    "token": "extern",
+    "source": "@[extern \"lean_uint64_mix_hash\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 4821,
+    "token": "opaque",
+    "source": "opaque mixHash (u\u2081 u\u2082 : UInt64) : UInt64"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 4829,
+    "token": "extern",
+    "source": "@[extern \"lean_string_hash\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 4830,
+    "token": "opaque",
+    "source": "protected opaque String.hash (s : @& String) : UInt64"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 4958,
+    "token": "extern",
+    "source": "@[extern \"lean_name_eq\"]"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 5497,
+    "token": "unsafe",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 5500,
+    "token": "implemented_by",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 5501,
+    "token": "opaque",
+    "source": "/-- Converts a `TSyntaxArray` to an `Array Syntax`, without reallocation. -/"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 5504,
+    "token": "unsafe",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 5507,
+    "token": "implemented_by",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 5508,
+    "token": "opaque",
+    "source": "/-- Converts an `Array Syntax` to a `TSyntaxArray`, without reallocation. -/"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 5946,
+    "token": "opaque",
+    "source": "/-- References -/"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 6074,
+    "token": "unsafe",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 6078,
+    "token": "implemented_by",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 6079,
+    "token": "opaque",
+    "source": "/-- Make an opaque reference to a `Methods`. -/"
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 6085,
+    "token": "unsafe",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 6089,
+    "token": "implemented_by",
+    "source": ""
+  },
+  {
+    "module": "Init.Prelude",
+    "line": 6089,
+    "token": "opaque",
+    "source": ""
+  },
+  {
+    "module": "Init.SizeOf",
+    "line": 105,
+    "token": "noncomputable",
+    "source": "@[expose] protected noncomputable def Name.sizeOf : Name \u2192 Nat"
+  },
+  {
+    "module": "Init.SizeOf",
+    "line": 110,
+    "token": "noncomputable",
+    "source": "noncomputable instance : SizeOf Name where"
+  },
+  {
+    "module": "Init.Tactics",
+    "line": 509,
+    "token": "sorry",
+    "source": "macro \"sorry\" : tactic => `(tactic| exact sorry)"
+  },
+  {
+    "module": "Init.Tactics",
+    "line": 512,
+    "token": "sorry",
+    "source": "macro \"admit\" : tactic => `(tactic| sorry)"
+  },
+  {
+    "module": "Init.Tactics",
+    "line": 1267,
+    "token": "sorry",
+    "source": "macro \"stop\" tacticSeq : tactic => `(tactic| repeat sorry)"
+  },
+  {
+    "module": "Init.Util",
+    "line": 18,
+    "token": "extern",
+    "source": "@[never_extract, extern \"lean_dbg_trace\"]"
+  },
+  {
+    "module": "Init.Util",
+    "line": 26,
+    "token": "extern",
+    "source": "@[never_extract, extern \"lean_dbg_trace_if_shared\"]"
+  },
+  {
+    "module": "Init.Util",
+    "line": 30,
+    "token": "extern",
+    "source": "@[never_extract, extern \"lean_dbg_stack_trace\"]"
+  },
+  {
+    "module": "Init.Util",
+    "line": 41,
+    "token": "extern",
+    "source": "@[extern \"lean_dbg_sleep\"]"
+  },
+  {
+    "module": "Init.Util",
+    "line": 89,
+    "token": "extern",
+    "source": "@[extern \"lean_ptr_addr\"]"
+  },
+  {
+    "module": "Init.Util",
+    "line": 90,
+    "token": "unsafe",
+    "source": "unsafe opaque ptrAddrUnsafe {\u03b1 : Type u} (a : @& \u03b1) : USize"
+  },
+  {
+    "module": "Init.Util",
+    "line": 90,
+    "token": "opaque",
+    "source": "unsafe opaque ptrAddrUnsafe {\u03b1 : Type u} (a : @& \u03b1) : USize"
+  },
+  {
+    "module": "Init.Util",
+    "line": 98,
+    "token": "extern",
+    "source": "@[extern \"lean_is_exclusive_obj\"]"
+  },
+  {
+    "module": "Init.Util",
+    "line": 99,
+    "token": "unsafe",
+    "source": "unsafe opaque isExclusiveUnsafe {\u03b1 : Type u} (a : @& \u03b1) : Bool"
+  },
+  {
+    "module": "Init.Util",
+    "line": 99,
+    "token": "opaque",
+    "source": "unsafe opaque isExclusiveUnsafe {\u03b1 : Type u} (a : @& \u03b1) : Bool"
+  },
+  {
+    "module": "Init.Util",
+    "line": 102,
+    "token": "unsafe",
+    "source": "@[inline] unsafe def withPtrAddrUnsafe {\u03b1 : Type u} {\u03b2 : Type v} (a : \u03b1) (k : USize \u2192 \u03b2) (h : \u2200 u\u2081 u\u2082, k u\u2081 = k u\u2082) : \u03b2 :="
+  },
+  {
+    "module": "Init.Util",
+    "line": 111,
+    "token": "unsafe",
+    "source": "@[inline] unsafe def ptrEq (a b : \u03b1) : Bool := ptrAddrUnsafe a == ptrAddrUnsafe b"
+  },
+  {
+    "module": "Init.Util",
+    "line": 120,
+    "token": "unsafe",
+    "source": "unsafe def ptrEqList : (as bs : List \u03b1) \u2192 Bool"
+  },
+  {
+    "module": "Init.Util",
+    "line": 126,
+    "token": "unsafe",
+    "source": "@[inline] unsafe def withPtrEqUnsafe {\u03b1 : Type u} (a b : \u03b1) (k : Unit \u2192 Bool) (h : a = b \u2192 k () = true) : Bool :="
+  },
+  {
+    "module": "Init.Util",
+    "line": 129,
+    "token": "implemented_by",
+    "source": "@[implemented_by withPtrEqUnsafe]"
+  },
+  {
+    "module": "Init.Util",
+    "line": 139,
+    "token": "implemented_by",
+    "source": "@[implemented_by withPtrAddrUnsafe]"
+  },
+  {
+    "module": "Init.WF",
+    "line": 33,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Acc.ndrec.{u1, u2} {\u03b1 : Sort u2} {r : \u03b1 \u2192 \u03b1 \u2192 Prop} {C : \u03b1 \u2192 Sort u1}"
+  },
+  {
+    "module": "Init.WF",
+    "line": 38,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev Acc.ndrecOn.{u1, u2} {\u03b1 : Sort u2} {r : \u03b1 \u2192 \u03b1 \u2192 Prop} {C : \u03b1 \u2192 Sort u1}"
+  },
+  {
+    "module": "Init.WF",
+    "line": 87,
+    "token": "noncomputable",
+    "source": "noncomputable def recursion {C : \u03b1 \u2192 Sort v} (a : \u03b1) (h : \u2200 x, (\u2200 y, r y x \u2192 C y) \u2192 C x) : C a := by"
+  },
+  {
+    "module": "Init.WF",
+    "line": 98,
+    "token": "noncomputable",
+    "source": "noncomputable def fixF (x : \u03b1) (a : Acc r x) : C x := by"
+  },
+  {
+    "module": "Init.WF",
+    "line": 135,
+    "token": "noncomputable",
+    "source": "noncomputable def fix (hwf : WellFounded r) (F : \u2200 x, (\u2200 y, r y x \u2192 C y) \u2192 C x) (x : \u03b1) : C x :="
+  },
+  {
+    "module": "Init.WF",
+    "line": 246,
+    "token": "noncomputable",
+    "source": "@[elab_as_elim] protected noncomputable def strongRecOn"
+  },
+  {
+    "module": "Init.WF",
+    "line": 255,
+    "token": "noncomputable",
+    "source": "@[elab_as_elim] protected noncomputable def caseStrongRecOn"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Monoid",
+    "line": 128,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev IsUnital.toMulOneClass [Mul A] [IsUnital A] : MulOneClass A where"
+  },
+  {
+    "module": "Mathlib.Algebra.Group.Monoid",
+    "line": 506,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev IsUnital.toMonoid {A : Type*} [Semigroup A] [IsUnital A] : Monoid A where"
+  },
+  {
+    "module": "Mathlib.Algebra.Ring.Defs",
+    "line": 531,
+    "token": "noncomputable",
+    "source": "noncomputable section"
+  },
+  {
+    "module": "Mathlib.Algebra.Ring.Divisibility.Basic",
+    "line": 50,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Equiv.dvd {G : Type*} [LeftCancelSemigroup G] (g : G) :"
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "line": 771,
+    "token": "noncomputable",
+    "source": "noncomputable def dec (p : Prop) : Decidable p := by infer_instance"
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "line": 777,
+    "token": "noncomputable",
+    "source": "noncomputable def decPred (p : \u03b1 \u2192 Prop) : DecidablePred p := by infer_instance"
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "line": 781,
+    "token": "noncomputable",
+    "source": "noncomputable def decRel (p : \u03b1 \u2192 \u03b1 \u2192 Prop) : DecidableRel p := by infer_instance"
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "line": 785,
+    "token": "noncomputable",
+    "source": "noncomputable def decEq (\u03b1 : Sort*) : DecidableEq \u03b1 := by infer_instance"
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "line": 789,
+    "token": "noncomputable",
+    "source": "noncomputable def existsCases {\u03b1 C : Sort*} {p : \u03b1 \u2192 Prop} (H0 : C) (H : \u2200 a, p a \u2192 C) : C :="
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "line": 796,
+    "token": "noncomputable",
+    "source": "protected noncomputable def byContradiction' {\u03b1 : Sort*} (H : \u00ac(\u03b1 \u2192 False)) : \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Basic.Logic.Basic",
+    "line": 819,
+    "token": "noncomputable",
+    "source": "noncomputable def Exists.classicalRecOn {\u03b1 : Sort*} {p : \u03b1 \u2192 Prop} (h : \u2203 a, p a)"
+  },
+  {
+    "module": "Mathlib.Basic.Nonempty",
+    "line": 82,
+    "token": "noncomputable",
+    "source": "noncomputable def Classical.inhabited_of_nonempty' {\u03b1} [h : Nonempty \u03b1] : Inhabited \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Basic.Nonempty",
+    "line": 86,
+    "token": "noncomputable",
+    "source": "protected noncomputable abbrev Nonempty.some {\u03b1} (h : Nonempty \u03b1) : \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Basic.Nonempty",
+    "line": 90,
+    "token": "noncomputable",
+    "source": "protected noncomputable abbrev Classical.arbitrary (\u03b1) [h : Nonempty \u03b1] : \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Clique",
+    "line": 392,
+    "token": "noncomputable",
+    "source": "noncomputable def topEmbeddingOfNotCliqueFree {n : \u2115} (h : \u00acG.CliqueFree n) :"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Clique",
+    "line": 725,
+    "token": "noncomputable",
+    "source": "noncomputable def cliqueNum (G : SimpleGraph \u03b1) : \u2115 := sSup {n | \u2203 s, G.IsNClique n s}"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Clique",
+    "line": 1047,
+    "token": "noncomputable",
+    "source": "noncomputable def indepNum (G : SimpleGraph \u03b1) : \u2115 := sSup {n | \u2203 s, G.IsNIndepSet n s}"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "line": 499,
+    "token": "noncomputable",
+    "source": "noncomputable def isoInduceRange : G \u2243g G'.induce (Set.range f) where"
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "line": 823,
+    "token": "noncomputable",
+    "source": "noncomputable def overFin (hc : Fintype.card V = n) : SimpleGraph (Fin n) :="
+  },
+  {
+    "module": "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "line": 827,
+    "token": "noncomputable",
+    "source": "noncomputable def overFinIso (hc : Fintype.card V = n) : G \u2243g G.overFin hc :="
+  },
+  {
+    "module": "Mathlib.Data.Finset.Dedup",
+    "line": 170,
+    "token": "noncomputable",
+    "source": "noncomputable def toList (s : Finset \u03b1) : List \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Finset.Image",
+    "line": 258,
+    "token": "noncomputable",
+    "source": "noncomputable def equivMap : s \u2243 s.map f :="
+  },
+  {
+    "module": "Mathlib.Data.Finset.Lattice.Lemmas",
+    "line": 58,
+    "token": "unsafe",
+    "source": "@[aesop unsafe apply (rule_sets := [finsetNonempty])]"
+  },
+  {
+    "module": "Mathlib.Data.Finset.Lattice.Lemmas",
+    "line": 62,
+    "token": "unsafe",
+    "source": "@[aesop unsafe apply (rule_sets := [finsetNonempty])]"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Basic",
+    "line": 239,
+    "token": "noncomputable",
+    "source": "noncomputable def seqOfForallFinsetExistsAux {\u03b1 : Type*} [DecidableEq \u03b1] (P : \u03b1 \u2192 Prop)"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Card",
+    "line": 217,
+    "token": "noncomputable",
+    "source": "noncomputable def Fintype.sumLeft {\u03b1 \u03b2} [Fintype (\u03b1 \u2295 \u03b2)] : Fintype \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Card",
+    "line": 223,
+    "token": "noncomputable",
+    "source": "noncomputable def Fintype.sumRight {\u03b1 \u03b2} [Fintype (\u03b1 \u2295 \u03b2)] : Fintype \u03b2 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 80,
+    "token": "noncomputable",
+    "source": "noncomputable def equivFin (\u03b1) [Fintype \u03b1] : \u03b1 \u2243 Fin (card \u03b1) :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 124,
+    "token": "noncomputable",
+    "source": "noncomputable def equivFinOfCardEq {n : \u2115} (h : Fintype.card \u03b1 = n) : \u03b1 \u2243 Fin n :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 143,
+    "token": "noncomputable",
+    "source": "noncomputable def equivOfCardEq (h : card \u03b1 = card \u03b2) : \u03b1 \u2243 \u03b2 := by"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 179,
+    "token": "noncomputable",
+    "source": "noncomputable def Fintype.ofFinite (\u03b1 : Type*) [Finite \u03b1] : Fintype \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 320,
+    "token": "noncomputable",
+    "source": "noncomputable def Finset.equivFin (s : Finset \u03b1) : s \u2243 Fin #s :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 325,
+    "token": "noncomputable",
+    "source": "noncomputable def Finset.equivFinOfCardEq {s : Finset \u03b1} {n : \u2115} (h : #s = n) : s \u2243 Fin n :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 336,
+    "token": "noncomputable",
+    "source": "noncomputable def Finset.equivOfCardEq {s : Finset \u03b1} {t : Finset \u03b2} (h : #s = #t) :"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 345,
+    "token": "noncomputable",
+    "source": "noncomputable def equivOfFiniteSelfEmbedding [Finite \u03b1] (e : \u03b1 \u21aa \u03b1) : \u03b1 \u2243 \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 355,
+    "token": "noncomputable",
+    "source": "@[simps] noncomputable def _root_.Equiv.embeddingEquivOfFinite (\u03b1 : Type*) [Finite \u03b1] :"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 413,
+    "token": "noncomputable",
+    "source": "noncomputable def fintypeOfNotInfinite {\u03b1 : Type*} (h : \u00acInfinite \u03b1) : Fintype \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 423,
+    "token": "noncomputable",
+    "source": "noncomputable def fintypeOrInfinite (\u03b1 : Type*) : Fintype \u03b1 \u2295' Infinite \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 525,
+    "token": "noncomputable",
+    "source": "private noncomputable def natEmbeddingAux (\u03b1 : Type*) [Infinite \u03b1] : \u2115 \u2192 \u03b1"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 548,
+    "token": "noncomputable",
+    "source": "@[no_expose] noncomputable def natEmbedding (\u03b1 : Type*) [Infinite \u03b1] : \u2115 \u21aa \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.EquivFin",
+    "line": 574,
+    "token": "noncomputable",
+    "source": "noncomputable def fintypeOfFinsetCardLe {\u03b9 : Type*} (n : \u2115) (w : \u2200 s : Finset \u03b9, #s \u2264 n) :"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.OfMap",
+    "line": 64,
+    "token": "noncomputable",
+    "source": "noncomputable def ofInjective [Fintype \u03b2] (f : \u03b1 \u2192 \u03b2) (H : Function.Injective f) : Fintype \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Sets",
+    "line": 274,
+    "token": "noncomputable",
+    "source": "noncomputable def finsetEquivSet : Finset \u03b1 \u2243 Set \u03b1 where"
+  },
+  {
+    "module": "Mathlib.Data.Fintype.Sets",
+    "line": 290,
+    "token": "noncomputable",
+    "source": "noncomputable def finsetOrderIsoSet : Finset \u03b1 \u2243o Set \u03b1 where"
+  },
+  {
+    "module": "Mathlib.Data.Quot",
+    "line": 361,
+    "token": "noncomputable",
+    "source": "noncomputable def Quot.out {r : \u03b1 \u2192 \u03b1 \u2192 Prop} (q : Quot r) : \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Quot",
+    "line": 366,
+    "token": "unsafe",
+    "source": "unsafe def Quot.unquot {r : \u03b1 \u2192 \u03b1 \u2192 Prop} : Quot r \u2192 \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Quot",
+    "line": 375,
+    "token": "noncomputable",
+    "source": "noncomputable def Quotient.out {s : Setoid \u03b1} : Quotient s \u2192 \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Quot",
+    "line": 427,
+    "token": "noncomputable",
+    "source": "noncomputable def Quotient.choice {\u03b9 : Type*} {\u03b1 : \u03b9 \u2192 Type*} {S : \u2200 i, Setoid (\u03b1 i)}"
+  },
+  {
+    "module": "Mathlib.Data.Quot",
+    "line": 556,
+    "token": "noncomputable",
+    "source": "noncomputable def out : Trunc \u03b1 \u2192 \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Set.Basic",
+    "line": 348,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Nonempty.some (h : s.Nonempty) : \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Set.Basic",
+    "line": 1163,
+    "token": "noncomputable",
+    "source": "noncomputable instance decidableEq : DecidableEq (Set \u03b1) := Classical.typeDecidableEq (Set \u03b1)"
+  },
+  {
+    "module": "Mathlib.Data.Set.Finite.Basic",
+    "line": 71,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Finite.fintype {s : Set \u03b1} (h : s.Finite) : Fintype s :="
+  },
+  {
+    "module": "Mathlib.Data.Set.Finite.Basic",
+    "line": 75,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Finite.toFinset {s : Set \u03b1} (h : s.Finite) : Finset \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Set.Finite.Basic",
+    "line": 246,
+    "token": "noncomputable",
+    "source": "noncomputable def fintypeOfFiniteUniv (H : (univ (\u03b1 := \u03b1)).Finite) : Fintype \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Set.Finite.Basic",
+    "line": 414,
+    "token": "noncomputable",
+    "source": "@[simps] noncomputable def OrderIso.finsetSetFinite : Finset \u03b1 \u2243o {s : Set \u03b1 // s.Finite} where"
+  },
+  {
+    "module": "Mathlib.Data.Set.Finite.Basic",
+    "line": 862,
+    "token": "noncomputable",
+    "source": "noncomputable def Infinite.natEmbedding (s : Set \u03b1) (h : s.Infinite) : \u2115 \u21aa s :="
+  },
+  {
+    "module": "Mathlib.Data.Set.Operations",
+    "line": 202,
+    "token": "noncomputable",
+    "source": "noncomputable def rangeSplitting (f : \u03b1 \u2192 \u03b2) : range f \u2192 \u03b1 := fun x => x.2.choose"
+  },
+  {
+    "module": "Mathlib.Data.Set.Subsingleton",
+    "line": 161,
+    "token": "noncomputable",
+    "source": "protected noncomputable def Nontrivial.choose (hs : s.Nontrivial) : \u03b1 \u00d7 \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Sym.Sym2",
+    "line": 383,
+    "token": "noncomputable",
+    "source": "noncomputable def Mem.other {a : \u03b1} {z : Sym2 \u03b1} (h : a \u2208 z) : \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Data.Sym.Sym2",
+    "line": 998,
+    "token": "unsafe",
+    "source": "unsafe instance [Repr \u03b1] : Repr (Sym2 \u03b1) where"
+  },
+  {
+    "module": "Mathlib.Logic.Embedding.Basic",
+    "line": 174,
+    "token": "noncomputable",
+    "source": "protected noncomputable def ofSurjective {\u03b1 \u03b2} (f : \u03b2 \u2192 \u03b1) (hf : Surjective f) : \u03b1 \u21aa \u03b2 :="
+  },
+  {
+    "module": "Mathlib.Logic.Embedding.Basic",
+    "line": 178,
+    "token": "noncomputable",
+    "source": "protected noncomputable def equivOfSurjective {\u03b1 \u03b2} (f : \u03b1 \u21aa \u03b2) (hf : Surjective f) : \u03b1 \u2243 \u03b2 :="
+  },
+  {
+    "module": "Mathlib.Logic.Embedding.Basic",
+    "line": 183,
+    "token": "noncomputable",
+    "source": "noncomputable def _root_.Equiv.embeddingSurjectiveEquiv {\u03b1 \u03b2} :"
+  },
+  {
+    "module": "Mathlib.Logic.Embedding.Basic",
+    "line": 247,
+    "token": "noncomputable",
+    "source": "noncomputable def quotientOut (\u03b1) [s : Setoid \u03b1] : Quotient s \u21aa \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Logic.Embedding.Basic",
+    "line": 354,
+    "token": "noncomputable",
+    "source": "noncomputable def arrowCongrLeft {\u03b1 : Sort u} {\u03b2 : Sort v} {\u03b3 : Sort w} [Inhabited \u03b3] (e : \u03b1 \u21aa \u03b2) :"
+  },
+  {
+    "module": "Mathlib.Logic.Equiv.Defs",
+    "line": 544,
+    "token": "noncomputable",
+    "source": "noncomputable def propEquivBool : Prop \u2243 Bool where"
+  },
+  {
+    "module": "Mathlib.Logic.Equiv.Defs",
+    "line": 819,
+    "token": "noncomputable",
+    "source": "noncomputable def ofBijective (f : \u03b1 \u2192 \u03b2) (hf : Bijective f) : \u03b1 \u2243 \u03b2 where"
+  },
+  {
+    "module": "Mathlib.Logic.Equiv.Defs",
+    "line": 841,
+    "token": "noncomputable",
+    "source": "noncomputable def bijectiveEquiv : { f : \u03b1 \u2192 \u03b2 // Bijective f } \u2243 (\u03b1 \u2243 \u03b2) where"
+  },
+  {
+    "module": "Mathlib.Logic.Function.Basic",
+    "line": 492,
+    "token": "noncomputable",
+    "source": "noncomputable def partialInv {\u03b1 \u03b2} (f : \u03b1 \u2192 \u03b2) (b : \u03b2) : Option \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Logic.Function.Basic",
+    "line": 525,
+    "token": "noncomputable",
+    "source": "noncomputable def invFun {\u03b1 : Sort u} {\u03b2} [Nonempty \u03b1] (f : \u03b1 \u2192 \u03b2) : \u03b2 \u2192 \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Logic.Function.Basic",
+    "line": 573,
+    "token": "noncomputable",
+    "source": "noncomputable def surjInv {f : \u03b1 \u2192 \u03b2} (h : Surjective f) (b : \u03b2) : \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Logic.Function.Basic",
+    "line": 818,
+    "token": "noncomputable",
+    "source": "noncomputable section Extend"
+  },
+  {
+    "module": "Mathlib.Logic.Function.Basic",
+    "line": 1119,
+    "token": "noncomputable",
+    "source": "noncomputable def sometimes {\u03b1 \u03b2} [Nonempty \u03b2] (f : \u03b1 \u2192 \u03b2) : \u03b2 :="
+  },
+  {
+    "module": "Mathlib.Order.BooleanAlgebra.Defs",
+    "line": 163,
+    "token": "noncomputable",
+    "source": "noncomputable"
+  },
+  {
+    "module": "Mathlib.Order.BoundedOrder.Basic",
+    "line": 58,
+    "token": "noncomputable",
+    "source": "noncomputable def topOrderOrNoTopOrder (\u03b1 : Type*) [LE \u03b1] : OrderTop \u03b1 \u2295' NoTopOrder \u03b1 := by"
+  },
+  {
+    "module": "Mathlib.Order.BoundedOrder.Basic",
+    "line": 68,
+    "token": "unsafe",
+    "source": "@[to_dual (attr := aesop (rule_sets := [finiteness]) unsafe 70% apply)]"
+  },
+  {
+    "module": "Mathlib.Order.BoundedOrder.Basic",
+    "line": 73,
+    "token": "unsafe",
+    "source": "@[to_dual (attr := aesop (rule_sets := [finiteness]) unsafe 70% apply)]"
+  },
+  {
+    "module": "Mathlib.Order.BoundedOrder.Basic",
+    "line": 139,
+    "token": "unsafe",
+    "source": "attribute [aesop (rule_sets := [finiteness]) unsafe 20%] ne_top_of_lt"
+  },
+  {
+    "module": "Mathlib.Order.Bounds.Basic",
+    "line": 759,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev OrderSupSet.choose (d : \u03b1) :"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 52,
+    "token": "noncomputable",
+    "source": "noncomputable instance [SupSet \u03b1] : SupSet (WithTop \u03b1) :="
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 59,
+    "token": "noncomputable",
+    "source": "noncomputable instance instInfSet [InfSet \u03b1] : InfSet (WithTop \u03b1) :="
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 667,
+    "token": "noncomputable",
+    "source": "noncomputable instance : CompleteLinearOrder (WithTop \u03b1) where"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 838,
+    "token": "noncomputable",
+    "source": "noncomputable instance WithTop.conditionallyCompleteLattice {\u03b1 : Type*}"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 844,
+    "token": "noncomputable",
+    "source": "noncomputable instance [CompleteLattice \u03b1] : CompleteLattice (WithTop \u03b1) where"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 850,
+    "token": "noncomputable",
+    "source": "noncomputable instance [CompleteLinearOrder \u03b1] : CompleteLinearOrder (WithBot \u03b1) where"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 855,
+    "token": "noncomputable",
+    "source": "noncomputable instance [ConditionallyCompleteLinearOrder \u03b1] :"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 864,
+    "token": "noncomputable",
+    "source": "noncomputable instance [ConditionallyCompleteLinearOrder \u03b1] :"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 876,
+    "token": "noncomputable",
+    "source": "noncomputable instance WithTop.WithBot.completeLattice {\u03b1 : Type*}"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "line": 899,
+    "token": "noncomputable",
+    "source": "noncomputable instance WithBot.WithTop.completeLinearOrder {\u03b1 : Type*}"
+  },
+  {
+    "module": "Mathlib.Order.ConditionallyCompleteLattice.Defs",
+    "line": 165,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev WellFoundedLT.conditionallyCompleteLinearOrderBot (\u03b1 : Type*)"
+  },
+  {
+    "module": "Mathlib.Order.Hom.Basic",
+    "line": 984,
+    "token": "noncomputable",
+    "source": "noncomputable def ofSurjective (f : \u03b1 \u21aao \u03b2) (hf : Function.Surjective f) : \u03b1 \u2243o \u03b2 :="
+  },
+  {
+    "module": "Mathlib.Order.Hom.Basic",
+    "line": 989,
+    "token": "noncomputable",
+    "source": "noncomputable def equivEmbeddingSurjective :"
+  },
+  {
+    "module": "Mathlib.Order.Hom.Basic",
+    "line": 1170,
+    "token": "noncomputable",
+    "source": "noncomputable def ofUnique"
+  },
+  {
+    "module": "Mathlib.Order.Lattice.Nat",
+    "line": 29,
+    "token": "noncomputable",
+    "source": "noncomputable instance : InfSet \u2115 :="
+  },
+  {
+    "module": "Mathlib.Order.Lattice.Nat",
+    "line": 33,
+    "token": "noncomputable",
+    "source": "noncomputable instance : SupSet \u2115 :="
+  },
+  {
+    "module": "Mathlib.Order.Lattice.Nat",
+    "line": 126,
+    "token": "noncomputable",
+    "source": "noncomputable instance : ConditionallyCompleteLinearOrderBot \u2115 :="
+  },
+  {
+    "module": "Mathlib.Order.PropInstances",
+    "line": 55,
+    "token": "noncomputable",
+    "source": "noncomputable def Prop.linearOrder : LinearOrder Prop := by"
+  },
+  {
+    "module": "Mathlib.Order.RelClasses",
+    "line": 374,
+    "token": "noncomputable",
+    "source": "noncomputable def IsWellOrder.linearOrder (r : \u03b1 \u2192 \u03b1 \u2192 Prop) [IsWellOrder \u03b1 r] : LinearOrder \u03b1 :="
+  },
+  {
+    "module": "Mathlib.Order.RelIso.Basic",
+    "line": 411,
+    "token": "noncomputable",
+    "source": "noncomputable def Quotient.outRelEmbedding {_ : Setoid \u03b1} {r : \u03b1 \u2192 \u03b1 \u2192 Prop}"
+  },
+  {
+    "module": "Mathlib.Order.RelIso.Basic",
+    "line": 792,
+    "token": "noncomputable",
+    "source": "noncomputable def ofSurjective (f : r \u21aar s) (H : Surjective f) : r \u2243r s :="
+  },
+  {
+    "module": "Mathlib.Order.RelIso.Basic",
+    "line": 797,
+    "token": "noncomputable",
+    "source": "noncomputable def embeddingSurjectiveEquivIso :"
+  },
+  {
+    "module": "Mathlib.Order.WithBot",
+    "line": 269,
+    "token": "noncomputable",
+    "source": "noncomputable abbrev unbotA [Nonempty \u03b1] : WithBot \u03b1 \u2192 \u03b1 := unbotD (Classical.arbitrary \u03b1)"
+  },
+  {
+    "module": "StrongEdge.DoubleCount",
+    "line": 16,
+    "token": "noncomputable",
+    "source": "noncomputable def privateFinset (M : Finset W) (v : W) : Finset W := by"
+  },
+  {
+    "module": "StrongEdge.DoubleCount",
+    "line": 29,
+    "token": "noncomputable",
+    "source": "noncomputable def privateOwners (M : Finset W) (x : W) : Finset W := by"
+  }
+]

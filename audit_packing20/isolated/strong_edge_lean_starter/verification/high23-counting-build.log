@@ -1,0 +1,63 @@
+✖ [1120/1120] Building StrongEdge.Bounds.EdgeCounting (16s)
+trace: .> LEAN_PATH=C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\StrongEdge\Bounds\EdgeCounting.lean -o C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\lib\lean\StrongEdge\Bounds\EdgeCounting.olean -i C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\lib\lean\StrongEdge\Bounds\EdgeCounting.ilean -c C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\ir\StrongEdge\Bounds\EdgeCounting.c --setup C:\Users\21161\Documents\ChatGPT\math\strong_edge_lean_starter\.lake\build\ir\StrongEdge\Bounds\EdgeCounting.setup.json --json
+error: build failed
+error: StrongEdge/Bounds/EdgeCounting.lean:47:47: unsolved goals
+case pos
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+S : Finset V
+e : ↑G.edgeSet
+a b : V
+he : s(a, b) = ↑e
+hab : G.Adj a b
+hfilter : {v ∈ S | v ∈ ↑e} = {v ∈ {a, b} | v ∈ S}
+hex : (∃ v ∈ S, v ∈ ↑e) ↔ a ∈ S ∨ b ∈ S
+ha : a ∈ S
+hb : b ∈ S
+⊢ #({v ∈ {a, b} | v ∈ S}) = 2
+
+case neg
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+S : Finset V
+e : ↑G.edgeSet
+a b : V
+he : s(a, b) = ↑e
+hab : G.Adj a b
+hfilter : {v ∈ S | v ∈ ↑e} = {v ∈ {a, b} | v ∈ S}
+hex : (∃ v ∈ S, v ∈ ↑e) ↔ a ∈ S ∨ b ∈ S
+ha : a ∈ S
+hb : b ∉ S
+⊢ #({v ∈ {a, b} | v ∈ S}) = 1
+
+case pos
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+S : Finset V
+e : ↑G.edgeSet
+a b : V
+he : s(a, b) = ↑e
+hab : G.Adj a b
+hfilter : {v ∈ S | v ∈ ↑e} = {v ∈ {a, b} | v ∈ S}
+hex : (∃ v ∈ S, v ∈ ↑e) ↔ a ∈ S ∨ b ∈ S
+ha : a ∉ S
+hb : b ∈ S
+⊢ #({v ∈ {a, b} | v ∈ S}) = 1
+warning: StrongEdge/Bounds/EdgeCounting.lean:60:18: This simp argument is unused:
+  hab.ne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- StrongEdge.Bounds.EdgeCounting

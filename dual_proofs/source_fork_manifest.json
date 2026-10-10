@@ -1,0 +1,272 @@
+[
+  {
+    "original": "StrongEdge\\Audit.lean",
+    "copy": "PaperRoute\\Library\\Audit.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "61fe86ee0716e141ef65c4110eb00e4f02da9ba95582b8326341756979032353"
+  },
+  {
+    "original": "StrongEdge\\Basic.lean",
+    "copy": "PaperRoute\\Library\\Basic.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "288dc9a5bc9c386f761d4629291accf36826468c12c449ca88d7b5456a10b17f"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\ConflictDegree.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "31488e9940bb477d5dea5b03db2094f7f276d55028ee3b3f6067c0cfa947d138"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\ConflictRigidity.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "17e8b5a40f347cb6bd874d53fae8ec1abcb0cd0149ed6513edbd3e27d2e041ca"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\DegreeTwoClique.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "c19c40ee1886ef0b4788a232162333dc17d56c744f4a71f973a02e8796afbf0a"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\EdgeCounting.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "c0e0314dffabf2d9cd8b211c967c497d6d0b44cddf01926d872b40b98291851b"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High20.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High20.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "adf475c3d18ee364091a81511bf394bb50685a38d8e61745815c2d7b650f00ce"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High20Four.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High20Four.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "2c4fc83e9bdfc4cb67f96808a507ae6ba42fe0252ce5585fdc04c48f4e1f1cec"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High20Local.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High20Local.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "12bca7f902d69f480ae658512dfe479370b1264b52494c26192c74f575e9e669"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High20Outer.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High20Outer.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "988bc2f00b8cd7bb02b1d197091a65fbf4d9460899c888de747c31a01ee43300"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High20Slots.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High20Slots.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "8ae06351b91e0403a77d99901880bb2b25bf1a4e5ed523976fa30aa32394dd9a"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High20TwoTriples.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High20TwoTriples.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "01727f8f211f1f5cdb727d845d40d82937b9325f91ff7e0cc82f2412beb8556c"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High20UniqueTriple.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High20UniqueTriple.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "a179499887dc39fbd885827e5f7abc04798253c6ee4f82a1298cdadaa4e929a0"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High21.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High21.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "01755b57b856b072a70b81ab34c050d5e55edda1bb954e1c54f25422cf317176"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High21Double.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High21Double.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "eda40a14a25422d5127e1a927c0bdbb18cc86ee730f151625d91f688099c18af"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High21LargeType.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "de5c8553f6a1cd04aa0368e6f27f897409f1998c94eaef5e6ed05b52b69385ac"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High21Local.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High21Local.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "0ca45742b1ac44c146c5f2098fead1303748ff597821f740fea86572633aefb0"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High21RootFour.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High21RootFour.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "82e910e507761248a52fcd48d2fe521fdb3304b5b17890d676137ec79214bfa0"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High21Support.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High21Support.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "558dcac67b3993fb3c129fdc29ff9a5992ec1be041a7af589a28d164b45ec963"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High22.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High22.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "669d863595750e29f1f971c80fef38cbd73325af8e0f823a24f78d4c7c017659"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High22Heavy.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "7d8fa7c8dcb9573788af2c28aaa11e5beeab6542f1b73a89cc14009e991ea2bb"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High22Local.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High22Local.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "850e545d2c36df620104aa4956b50071ad54dc31950b68990a2905b8f8060a0d"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High22RootFour.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "0fdf538967c605ac418e978a84cb011bc6211eed51934c441e41d4b61ca86030"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High22Subcubic.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High22Subcubic.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "527002b6e4c0ea0a2cd9e40856b3e0e37824b4f015a19796569b1ef08c9205a0"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High22Support.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High22Support.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "b13cb7d634f8f587988271c71713413d81436104f63045aa2b8cb756de098f28"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High23.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High23.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "1188932515e5768a76bff64e72f85e25f89497575b022234e5e7d89d10da27ab"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High23Four.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High23Four.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "658bc022c5773a44d0b1580d7b7f601bc61ba5f9b9f29eae85cac70491595605"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High23Local.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High23Local.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "2f3cf63a11d81abfa0abea1f029a3f41e10c7d6f2b727032b6a036cb8759ef00"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High23Outer.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High23Outer.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "ece5071cc52bbf48c6d8a48229d62dfc90d0978463402d259cd1f8e628b90732"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High23Support.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High23Support.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "7427dd61956beffbd946dd0302f3a13515d792aff0f21bf990484476582d11c9"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\High24.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\High24.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "acbd70b4ac91cb295f7496e1c4f5147568ac092af6f5021a095a244d035d16b2"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\RootCounting.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\RootCounting.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "f27464b4fc8ac49779f79c9cb239aa578d70842a4f8d802e489900d30a56771a"
+  },
+  {
+    "original": "StrongEdge\\Bounds\\SubcubicEighteen.lean",
+    "copy": "PaperRoute\\Library\\Bounds\\SubcubicEighteen.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "7e007e86ff6bd4ab4d32943987e1432d681f79464efacf838f3a8ae1be5dab66"
+  },
+  {
+    "original": "StrongEdge\\Conflict.lean",
+    "copy": "PaperRoute\\Library\\Conflict.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "2ba6dfe103a17b3c236a553076d78b41554b0aa9eeb0646e22e9a4c97c73eb3c"
+  },
+  {
+    "original": "StrongEdge\\DoubleCount.lean",
+    "copy": "PaperRoute\\Library\\DoubleCount.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "40ab63cb88164f509765dadc130de926d3be8256ec958488738dc74fd5edf7ad"
+  },
+  {
+    "original": "StrongEdge\\High20Packing.lean",
+    "copy": "PaperRoute\\Library\\High20Packing.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "06990888b99f9f231fd545dbbe24dc09e5beeffef697bc9d12f7c97a1ca82ba9"
+  },
+  {
+    "original": "StrongEdge\\High21Packing.lean",
+    "copy": "PaperRoute\\Library\\High21Packing.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "ef41316bc2f9a006c165fdd0b194055aff05226098c52af02eb2c3e0807226c5"
+  },
+  {
+    "original": "StrongEdge\\High22Packing.lean",
+    "copy": "PaperRoute\\Library\\High22Packing.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "d3da06e6cd6877fc4400af048a5cde9db2f71192fa7edafda58e3d991ccf5d42"
+  },
+  {
+    "original": "StrongEdge\\High23Packing.lean",
+    "copy": "PaperRoute\\Library\\High23Packing.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "ea412d3ae12fc7a50130deda57182cd39511182eb76f9fa66a7f4e80fd251d3e"
+  },
+  {
+    "original": "StrongEdge\\High24Packing.lean",
+    "copy": "PaperRoute\\Library\\High24Packing.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "609e27ff574b3950c014dcc339411b8d73256afa6cc9bc0c2f6cfcebc48f1a36"
+  },
+  {
+    "original": "StrongEdge\\MinimalPacking.lean",
+    "copy": "PaperRoute\\Library\\MinimalPacking.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "84964550d90f4af23ae492d61725ee2622d167b23f04db40d69fa5cb158b2698"
+  },
+  {
+    "original": "StrongEdge\\Packing.lean",
+    "copy": "PaperRoute\\Library\\Packing.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "ab41305d987050fec53be08ca0474c1919974b2240821553d301465a40af7777"
+  },
+  {
+    "original": "StrongEdge\\PrivateExchange.lean",
+    "copy": "PaperRoute\\Library\\PrivateExchange.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "85b591cff5da0e351b51de2e4ff6c19ec79e7649dc6becacde2d537fe8765423"
+  },
+  {
+    "original": "StrongEdge\\Tests.lean",
+    "copy": "PaperRoute\\Library\\Tests.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "f4d0c5d4912924e8a6ece85d6ce87756eaec284a5e30b989fa3592278227a712"
+  },
+  {
+    "original": "StrongEdge.lean",
+    "copy": "PaperRoute\\Library.lean",
+    "operation": "StrongEdge -> PaperRoute.Library; otherwise same text",
+    "source_sha256": "10084c07871bb2c97ac080b13151d0b014c8aa99194db670ca9697065b0b2fe7"
+  }
+]

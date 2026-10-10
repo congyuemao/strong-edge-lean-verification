@@ -1,0 +1,26 @@
+{
+  "output": "packing20_proof_manuscript.pdf",
+  "pages": 12,
+  "sha256": "94c50083e22d845dc9ebb85b35315ad61dfdfaf27e5ddfc0efc309704909687c",
+  "source_sha256": "8588b37b12cafcaeaaa33694f020096742087df67e070a7e6d65842a94a593ac",
+  "unique_math_expressions": 415,
+  "vector_math_draws": 641,
+  "embedded_math_fonts": 2,
+  "author": "",
+  "characters_per_page": [
+    2941,
+    3281,
+    3167,
+    3324,
+    3424,
+    3554,
+    3791,
+    3900,
+    2861,
+    2878,
+    2943,
+    1364
+  ],
+  "raster_images": 0,
+  "math_width_diagnostics": []
+}

@@ -1,0 +1,200 @@
+'StrongEdge.strongConflict_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.candidate_independent_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.candidate_degree_le_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.private_isClique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.optimal_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.private_degree_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.private_double_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.packing_of_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.packing20_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.subset_packing20_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.induced_matching_packing20_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.Tests.path_outer_edges_conflict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.Tests.separated_outer_edges_do_not_conflict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.endpointNeighbourCover_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.incident_edge_meets_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.lineGraph_adj_meets_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.left_notMem_endpointNeighbourCover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.right_notMem_endpointNeighbourCover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.strongConflict_meets_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.conflict_neighbors_subset_incidence_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.conflict_degree_le_incidence_cover_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.conflict_degree_le_incidence_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.endpointNeighbourCover_card_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.conflict_degree_le_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.endpointNeighbourCover_card_eq_six_of_degree_eq_24' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge.endpoint_degrees_eq_four_of_degree_eq_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.cover_degree_eq_four_of_degree_eq_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.cover_independent_of_degree_eq_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.other_neighbor_sets_disjoint_of_degree_eq_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.endpoint_neighbor_sets_disjoint_of_degree_eq_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.endpoint_neighborhood_independent_of_degree_eq_24' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge.no_cross_edge_of_degree_eq_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.minimalCliqueBounds20_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.local20_of_minimal_clique_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.packing20_of_minimal_clique_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.minimalCliqueBounds20_induce' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.subset_packing20_of_minimal_clique_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.induced_matching_packing20_of_minimal_clique_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge.conflict_degree_eq_24_of_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.mem_branchEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_edge_not_between_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_external_conflict_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_distinct_branches_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_mixed_branches_cannot_have_fork' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.branchEdges_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_branch_union_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_side_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_clique_card_le_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high24_clique_card_le_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.minimalCliqueBounds20_of_high20_high21_high22_high23' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge.induced_matching_packing20_of_high20_high21_high22_high23' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+StrongEdge.packing20_of_thresholds.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (ht : StrongEdge.CliqueThresholds20 H) :
+  ∃ M, H.IsMaximumIndepSet M ∧ Fintype.card W ≤ 20 * M.card
+StrongEdge.induced_matching_packing20_of_thresholds.{u_2} {V : Type u_2} (G : SimpleGraph V) [Fintype ↑G.edgeSet]
+  [DecidableEq ↑G.edgeSet] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (ht : StrongEdge.CliqueThresholds20 (StrongEdge.conflictGraph G)) (F : Finset ↑G.edgeSet) :
+  ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card
+StrongEdge.conflict_degree_le_24.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (e : ↑G.edgeSet) : (StrongEdge.conflictGraph G).degree e ≤ 24
+StrongEdge.induced_matching_packing20_of_minimal_clique_bounds.{u_2} {V : Type u_2} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (hb : StrongEdge.MinimalCliqueBounds20 (StrongEdge.conflictGraph G))
+  (F : Finset ↑G.edgeSet) : ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card
+StrongEdge.high24_clique_card_le_thirteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h24 : ∀ e ∈ Q, 24 ≤ (StrongEdge.conflictGraph G).degree e) : Q.card ≤ 13
+StrongEdge.high24_clique_card_le_fifteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h24 : ∀ e ∈ Q, 24 ≤ (StrongEdge.conflictGraph G).degree e) : Q.card ≤ 15
+StrongEdge.minimalCliqueBounds20_of_high20_high21_high22_high23.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (high20 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 19)
+  (high21 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 21 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 18)
+  (high22 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 17)
+  (high23 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 23 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 16) :
+  StrongEdge.MinimalCliqueBounds20 (StrongEdge.conflictGraph G)
+StrongEdge.induced_matching_packing20_of_high20_high21_high22_high23.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (high20 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 19)
+  (high21 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 21 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 18)
+  (high22 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 17)
+  (high23 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 23 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 16)
+  (F : Finset ↑G.edgeSet) : ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card
+'StrongEdge.card_le_via_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.edgeIncidences_univ_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.edgeIncidences_card_le_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.edge_endpoint_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.incidence_sum_eq_meeting_add_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.conflict_degree_add_inside_le_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.clique_card_le_one_add_incidence_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.clique_card_le_thirteen_of_support_degree_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_cover_card_eq_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_endpoints_degree_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_other_neighbor_sets_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_no_triangle_on_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_cover_inside_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_cross_edges_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_at_most_one_four_cycle_on_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.mem_rootType' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.rootLabels_subset_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.rootLabels_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_root_degree_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_root_neighborhood_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_root_cross_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_type_meets_root_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_root_type_card_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_double_type_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_type_singleton_of_sharing_double' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.outerEdges_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.outer_edge_types_cover_root_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_outer_edges_incident_double_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_outer_card_le_two_of_double_root_type' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_outer_edges_card_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.selected_edges_card_le_meeting_add_outer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_clique_card_le_fourteen_of_support_degree_le_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge.root_edge_tip_not_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.root_single_edges_outer_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_singleTips_card_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.singleRootEdges_card_le_singleTips' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_doubleRootEdges_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.meeting_edges_subset_root_single_double' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_meeting_card_le_fourteen_of_root_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_clique_card_le_sixteen_of_root_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.high23_clique_card_le_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.minimalCliqueBounds20_of_high20_high21_high22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge.induced_matching_packing20_of_high20_high21_high22' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+StrongEdge.high23_cover_inside_card_le_one.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) {u v : V}
+  (e : ↑G.edgeSet) (he : ↑e = s(u, v)) (h23 : 23 ≤ (StrongEdge.conflictGraph G).degree e) :
+  (StrongEdge.edgesInside G Finset.univ (StrongEdge.endpointNeighbourCover G u v)).card ≤ 1
+StrongEdge.high23_at_most_one_four_cycle_on_edge.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4) {u v : V}
+  (e : ↑G.edgeSet) (he : ↑e = s(u, v)) (h23 : 23 ≤ (StrongEdge.conflictGraph G).degree e) :
+  (StrongEdge.fourCycleOpposites G u v).card ≤ 1
+StrongEdge.high23_clique_card_le_sixteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h23 : ∀ e ∈ Q, 23 ≤ (StrongEdge.conflictGraph G).degree e) : Q.card ≤ 16
+StrongEdge.minimalCliqueBounds20_of_high20_high21_high22.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (high20 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 19)
+  (high21 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 21 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 18)
+  (high22 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 17) :
+  StrongEdge.MinimalCliqueBounds20 (StrongEdge.conflictGraph G)
+StrongEdge.induced_matching_packing20_of_high20_high21_high22.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (high20 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 19)
+  (high21 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 21 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 18)
+  (high22 :
+    ∀ (Q : Finset ↑G.edgeSet),
+      (StrongEdge.conflictGraph G).IsClique ↑Q → (∀ e ∈ Q, 22 ≤ (StrongEdge.conflictGraph G).degree e) → Q.card ≤ 17)
+  (F : Finset ↑G.edgeSet) : ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 20 * M.card

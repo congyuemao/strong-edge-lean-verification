@@ -1,0 +1,36 @@
+✔ [1126/1155] Built PaperRoute.Library.Basic (14s)
+✔ [1127/1155] Built PaperRoute.Library.Conflict (14s)
+✔ [1128/1155] Built PaperRoute.Library.Bounds.ConflictDegree (15s)
+✔ [1129/1155] Built PaperRoute.Library.Bounds.EdgeCounting (14s)
+✔ [1130/1155] Built PaperRoute.Library.Bounds.High23Local (14s)
+✔ [1131/1155] Built PaperRoute.Library.Bounds.High21Local (16s)
+✔ [1132/1155] Built PaperRoute.Library.Bounds.High22Local (16s)
+✔ [1133/1155] Built PaperRoute.Library.Bounds.High23Support (16s)
+✔ [1134/1155] Built PaperRoute.Library.Bounds.High23Outer (15s)
+✔ [1135/1155] Built PaperRoute.Library.Bounds.High23Four (17s)
+✔ [1136/1155] Built PaperRoute.Library.Bounds.RootCounting (15s)
+✔ [1137/1155] Built PaperRoute.Library.Bounds.High22Support (15s)
+✔ [1138/1155] Built PaperRoute.Library.Bounds.High21Support (15s)
+✔ [1139/1155] Built PaperRoute.Library.Bounds.High22RootFour (16s)
+✔ [1140/1155] Built PaperRoute.Library.Bounds.High22Heavy (15s)
+✔ [1141/1155] Built PaperRoute.Library.Bounds.High22Subcubic (15s)
+✔ [1142/1155] Built PaperRoute.Library.Bounds.High21LargeType (15s)
+✔ [1143/1155] Built PaperRoute.Library.Bounds.SubcubicEighteen (16s)
+✔ [1144/1155] Built PaperRoute.Library.Bounds.DegreeTwoClique (17s)
+✔ [1145/1155] Built PaperRoute.Library.Bounds.High21Double (16s)
+✔ [1146/1155] Built PaperRoute.Library.Bounds.High21RootFour (16s)
+✔ [1147/1155] Built PaperRoute.Library.Bounds.High21 (15s)
+✔ [1148/1155] Built PaperRoute.Library.Bounds.High20Local (16s)
+✔ [1149/1155] Built PaperRoute.Library.Bounds.High20Four (16s)
+✔ [1150/1155] Built PaperRoute.Library.Bounds.High20Slots (16s)
+✔ [1151/1155] Built PaperRoute.Library.Bounds.High20Outer (16s)
+✔ [1152/1155] Built PaperRoute.Library.Bounds.High20TwoTriples (16s)
+✔ [1153/1155] Built PaperRoute.Library.Bounds.High20UniqueTriple (16s)
+✔ [1154/1155] Built PaperRoute.Library.Bounds.High20 (15s)
+✖ [1155/1155] Building PaperRoute.Foundations (15s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\PaperRoute\Foundations.lean -o .lake\build\lib\lean\PaperRoute\Foundations.olean -i .lake\build\lib\lean\PaperRoute\Foundations.ilean -c .lake\build\ir\PaperRoute\Foundations.c --setup .lake\build\ir\PaperRoute\Foundations.setup.json --json
+error: PaperRoute/Foundations.lean:31:49: Unknown identifier `u`
+error: PaperRoute/Foundations.lean:32:52: Unknown identifier `v`
+Some required targets logged failures:
+- PaperRoute.Foundations
+error: build failed

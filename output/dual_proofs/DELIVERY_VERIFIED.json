@@ -1,0 +1,36 @@
+{
+  "bundle": "C:\\Users\\21161\\Documents\\ChatGPT\\math\\output\\dual_proofs\\packing20_two_routes_complete.zip",
+  "bytes": 941468,
+  "sha256": "2393b13f2e97edb789cabdb7db7f090da24b7fc9b05a20ebe1a3b2b798e3c369",
+  "paper_pages": {
+    "route_a_paper_first.pdf": 12,
+    "route_b_lean_first.pdf": 13
+  },
+  "crosswalk_rows": 37,
+  "original_files_unchanged": 49,
+  "all_archive_hashes_verified": true,
+  "standalone_audits": {
+    "a": {
+      "audited_roots": [
+        "PaperRoute.induced_matching_packing20",
+        "PaperRoute.Sharpness.twenty_is_necessary_real",
+        "PaperRoute.private_iff_closed_intersection",
+        "PaperRoute.Semantics.endpoint_packing20"
+      ],
+      "method": "Standalone audit imports only its own route, using the verified same-source compiled module cache.",
+      "exit_code": 0,
+      "archive_files": 65,
+      "source_manifest_verified": true
+    },
+    "b": {
+      "audited_roots": [
+        "StrongEdge.induced_matching_packing20",
+        "OriginalSharpness.twenty_is_necessary_real"
+      ],
+      "method": "Standalone audit imports only its own route, using the verified same-source compiled module cache.",
+      "exit_code": 0,
+      "archive_files": 58,
+      "source_manifest_verified": true
+    }
+  }
+}

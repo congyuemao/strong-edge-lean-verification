@@ -1,0 +1,1372 @@
+[
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 25,
+    "name": "StrongEdge.StrongConflict"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 33,
+    "name": "StrongEdge.strongConflict_symm"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 41,
+    "name": "StrongEdge.strongConflict_irrefl"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 46,
+    "name": "StrongEdge.conflictGraph"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 56,
+    "name": "StrongEdge.candidateConflictGraph"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 67,
+    "name": "StrongEdge.candidateConflictGraph_adj_iff"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 73,
+    "name": "StrongEdge.IsPrivate"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 80,
+    "name": "StrongEdge.private_centre"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 91,
+    "name": "StrongEdge.private_isClique"
+  },
+  {
+    "file": "StrongEdge\\Basic.lean",
+    "line": 168,
+    "name": "StrongEdge.twenty_packing_arithmetic"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 15,
+    "name": "StrongEdge.endpointNeighbourCover"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 19,
+    "name": "StrongEdge.endpointNeighbourCover_comm"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 23,
+    "name": "StrongEdge.incident_edge_meets_cover"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 42,
+    "name": "StrongEdge.lineGraph_adj_meets_cover"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 64,
+    "name": "StrongEdge.strongConflict_meets_cover"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 88,
+    "name": "StrongEdge.conflict_neighbors_subset_incidence_cover"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 101,
+    "name": "StrongEdge.conflict_degree_le_incidence_cover_card"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 109,
+    "name": "StrongEdge.conflict_degree_le_incidence_sum"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 118,
+    "name": "StrongEdge.endpointNeighbourCover_card_le_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictDegree.lean",
+    "line": 130,
+    "name": "StrongEdge.conflict_degree_le_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 15,
+    "name": "StrongEdge.endpointNeighbourCover_card_eq_six_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 26,
+    "name": "StrongEdge.endpoint_degrees_eq_four_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 42,
+    "name": "StrongEdge.cover_degree_eq_four_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 56,
+    "name": "StrongEdge.cover_independent_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 89,
+    "name": "StrongEdge.other_neighbor_sets_disjoint_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 106,
+    "name": "StrongEdge.endpoint_neighbor_sets_disjoint_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 118,
+    "name": "StrongEdge.endpoint_neighborhood_independent_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\ConflictRigidity.lean",
+    "line": 140,
+    "name": "StrongEdge.no_cross_edge_of_degree_eq_24"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "line": 14,
+    "name": "StrongEdge.restricted_incidence_card_le"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "line": 26,
+    "name": "StrongEdge.restricted_cover_card_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "line": 43,
+    "name": "StrongEdge.clique_card_le_one_add_restricted_incidence_sum"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "line": 58,
+    "name": "StrongEdge.degree_two_clique_card_le_five"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "line": 75,
+    "name": "StrongEdge.degree_two_five_cover_saturated"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "line": 101,
+    "name": "StrongEdge.degree_two_five_supported_degree_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\DegreeTwoClique.lean",
+    "line": 134,
+    "name": "StrongEdge.degree_two_clique_card_le_four_of_selected_bipartition"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 11,
+    "name": "StrongEdge.card_le_via_relation"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 27,
+    "name": "StrongEdge.edgeIncidences"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 30,
+    "name": "StrongEdge.edgesMeeting"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 33,
+    "name": "StrongEdge.edgesInside"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 36,
+    "name": "StrongEdge.edgeIncidences_univ_card"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 49,
+    "name": "StrongEdge.edgeIncidences_card_le_degree"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 58,
+    "name": "StrongEdge.edge_endpoint_count"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 77,
+    "name": "StrongEdge.incidence_sum_eq_meeting_add_inside"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 92,
+    "name": "StrongEdge.conflict_degree_add_inside_le_sum"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 109,
+    "name": "StrongEdge.clique_card_le_one_add_incidence_sum"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\EdgeCounting.lean",
+    "line": 123,
+    "name": "StrongEdge.clique_card_le_thirteen_of_support_degree_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20.lean",
+    "line": 15,
+    "name": "StrongEdge.clique_card_le_eighteen_of_independent_root_types_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20.lean",
+    "line": 38,
+    "name": "StrongEdge.high20_clique_card_le_nineteen_of_root_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20.lean",
+    "line": 66,
+    "name": "StrongEdge.high20_clique_card_le_nineteen"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Four.lean",
+    "line": 15,
+    "name": "StrongEdge.high20_other_type_le_two_of_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Four.lean",
+    "line": 29,
+    "name": "StrongEdge.high20_multiple_unique_at_four_label"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Four.lean",
+    "line": 66,
+    "name": "StrongEdge.high20_multipleTips_subset_four_outer_endpoints"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Four.lean",
+    "line": 102,
+    "name": "StrongEdge.high20_outer_card_le_two_of_root_type_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Four.lean",
+    "line": 147,
+    "name": "StrongEdge.high20_clique_card_le_eighteen_of_root_type_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 14,
+    "name": "StrongEdge.endpointNeighbourCover_card_le_five_of_triangle"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 31,
+    "name": "StrongEdge.root_label_multiple_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 45,
+    "name": "StrongEdge.multipleTips_type_sum_le_twelve"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 55,
+    "name": "StrongEdge.multipleTips_card_le_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 64,
+    "name": "StrongEdge.high20_cover_inside_card_le_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 74,
+    "name": "StrongEdge.high20_triangle_cover_inside_empty"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 87,
+    "name": "StrongEdge.high20_triangle_root_type_singleton"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 109,
+    "name": "StrongEdge.high20_root_triangle_outer_empty"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 153,
+    "name": "StrongEdge.high20_large_clique_root_neighborhood_independent"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 171,
+    "name": "StrongEdge.high20_root_label_budget_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Local.lean",
+    "line": 201,
+    "name": "StrongEdge.high20_shared_root_types_card_le_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Outer.lean",
+    "line": 14,
+    "name": "StrongEdge.outer_avoiding_card_le_four_of_other_types_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Slots.lean",
+    "line": 14,
+    "name": "StrongEdge.star_add_root_card_le_label_sum"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Slots.lean",
+    "line": 32,
+    "name": "StrongEdge.selected_degree_add_one_le_of_missing_label"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Slots.lean",
+    "line": 43,
+    "name": "StrongEdge.root_label_mem_symm"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Slots.lean",
+    "line": 49,
+    "name": "StrongEdge.root_card_add_missing_type_le_twelve"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20Slots.lean",
+    "line": 77,
+    "name": "StrongEdge.root_card_le_ten_of_label_selected_degree_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20TwoTriples.lean",
+    "line": 15,
+    "name": "StrongEdge.high20_other_type_single_at_shared_triple_label"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20TwoTriples.lean",
+    "line": 45,
+    "name": "StrongEdge.high20_outer_meets_two_triples"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20TwoTriples.lean",
+    "line": 103,
+    "name": "StrongEdge.high20_clique_card_le_eighteen_of_two_triples"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20UniqueTriple.lean",
+    "line": 14,
+    "name": "StrongEdge.root_missing_label_selected_degree_le_two_of_unique_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20UniqueTriple.lean",
+    "line": 59,
+    "name": "StrongEdge.root_card_le_ten_of_unique_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High20UniqueTriple.lean",
+    "line": 79,
+    "name": "StrongEdge.clique_card_le_nineteen_of_unique_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21.lean",
+    "line": 14,
+    "name": "StrongEdge.high21_clique_card_le_eighteen"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 15,
+    "name": "StrongEdge.fullDoubleTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 19,
+    "name": "StrongEdge.rootType_eq_neighbor_inter"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 24,
+    "name": "StrongEdge.multipleTips_not_neighbor"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 33,
+    "name": "StrongEdge.residual_neighbors_add_type_card"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 37,
+    "name": "StrongEdge.root_selected_edges_force_adj"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 67,
+    "name": "StrongEdge.fullDoubleTips_adj_of_types_ne"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 90,
+    "name": "StrongEdge.high21_full_double_types_equal_or_disjoint"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Double.lean",
+    "line": 110,
+    "name": "StrongEdge.fullDoubleTips_card_le_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "line": 18,
+    "name": "StrongEdge.high21_large_types_share_label"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "line": 30,
+    "name": "StrongEdge.high21_multipleTips_eq_of_type_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "line": 44,
+    "name": "StrongEdge.high21_other_type_le_two_of_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "line": 57,
+    "name": "StrongEdge.high21_multiple_unique_at_triple_label"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "line": 93,
+    "name": "StrongEdge.high21_multipleTips_subset_triple_outer_endpoints"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "line": 128,
+    "name": "StrongEdge.high21_outer_card_le_two_of_root_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21LargeType.lean",
+    "line": 172,
+    "name": "StrongEdge.high21_clique_card_le_eighteen_of_root_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Local.lean",
+    "line": 15,
+    "name": "StrongEdge.high21_cover_card_eq_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Local.lean",
+    "line": 26,
+    "name": "StrongEdge.high21_endpoints_degree_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Local.lean",
+    "line": 41,
+    "name": "StrongEdge.high21_other_neighbor_sets_disjoint"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Local.lean",
+    "line": 59,
+    "name": "StrongEdge.high21_no_triangle_on_edge"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Local.lean",
+    "line": 68,
+    "name": "StrongEdge.high21_cover_inside_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Local.lean",
+    "line": 80,
+    "name": "StrongEdge.high21_at_most_three_four_cycles_on_edge"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21RootFour.lean",
+    "line": 15,
+    "name": "StrongEdge.outer_card_le_four_of_double_types"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21RootFour.lean",
+    "line": 65,
+    "name": "StrongEdge.rootLabels_rootEdges_at_tip_subset_type"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21RootFour.lean",
+    "line": 79,
+    "name": "StrongEdge.root_incidence_two_mem_fullDoubleTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21RootFour.lean",
+    "line": 95,
+    "name": "StrongEdge.rootEdges_card_le_tips_add_fullDoubleTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21RootFour.lean",
+    "line": 129,
+    "name": "StrongEdge.high21_clique_card_le_eighteen_of_root_types_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21RootFour.lean",
+    "line": 154,
+    "name": "StrongEdge.high21_clique_card_le_eighteen_of_root_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Support.lean",
+    "line": 17,
+    "name": "StrongEdge.high21_root_degree_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Support.lean",
+    "line": 25,
+    "name": "StrongEdge.high21_root_neighborhood_independent"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Support.lean",
+    "line": 53,
+    "name": "StrongEdge.high21_root_label_budget_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Support.lean",
+    "line": 64,
+    "name": "StrongEdge.high21_root_type_erase_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Support.lean",
+    "line": 74,
+    "name": "StrongEdge.high21_root_label_multiple_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Support.lean",
+    "line": 99,
+    "name": "StrongEdge.high21_shared_root_types_card_le_five"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High21Support.lean",
+    "line": 123,
+    "name": "StrongEdge.high21_multipleTips_card_le_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22.lean",
+    "line": 14,
+    "name": "StrongEdge.high22_clique_card_le_seventeen"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 14,
+    "name": "StrongEdge.labelHeavyTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 17,
+    "name": "StrongEdge.labelHeavyTips_subset_multiple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 23,
+    "name": "StrongEdge.root_type_inter_card_sum"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 33,
+    "name": "StrongEdge.outerEdges_meet_labelHeavyTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 54,
+    "name": "StrongEdge.high22_heavy_label_card_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 66,
+    "name": "StrongEdge.high22_labelHeavyTips_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 80,
+    "name": "StrongEdge.high22_outer_incidence_le_two_at_heavy"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 89,
+    "name": "StrongEdge.high22_outer_card_le_six_of_root_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 106,
+    "name": "StrongEdge.high22_heavy_card_and_degree_of_outer_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 134,
+    "name": "StrongEdge.high22_heavy_label_card_eq_two_of_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Heavy.lean",
+    "line": 152,
+    "name": "StrongEdge.high22_multiple_subset_heavy_of_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Local.lean",
+    "line": 15,
+    "name": "StrongEdge.high22_cover_card_eq_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Local.lean",
+    "line": 26,
+    "name": "StrongEdge.high22_endpoints_degree_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Local.lean",
+    "line": 41,
+    "name": "StrongEdge.high22_other_neighbor_sets_disjoint"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Local.lean",
+    "line": 59,
+    "name": "StrongEdge.high22_no_triangle_on_edge"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Local.lean",
+    "line": 68,
+    "name": "StrongEdge.high22_cover_inside_card_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Local.lean",
+    "line": 80,
+    "name": "StrongEdge.high22_at_most_two_four_cycles_on_edge"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 16,
+    "name": "StrongEdge.high22_clique_card_le_seventeen_of_root_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 57,
+    "name": "StrongEdge.outer_endpoints_multiple_of_root_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 74,
+    "name": "StrongEdge.outer_incidence_sum_eq_twice"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 91,
+    "name": "StrongEdge.high22_outer_card_le_four_of_root_types_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 116,
+    "name": "StrongEdge.rootEdges_card_le_tips_add_multiple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 134,
+    "name": "StrongEdge.rootEdges_card_le_twice_multiple_of_no_single"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 156,
+    "name": "StrongEdge.high22_outer_degree_eq_two_of_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 187,
+    "name": "StrongEdge.outer_saturated_neighbors"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 212,
+    "name": "StrongEdge.high22_active_multiple_card_le_two_of_outer_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22RootFour.lean",
+    "line": 248,
+    "name": "StrongEdge.high22_clique_card_le_seventeen_of_root_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Subcubic.lean",
+    "line": 14,
+    "name": "StrongEdge.root_outer_incidence_add_le"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Subcubic.lean",
+    "line": 33,
+    "name": "StrongEdge.root_incidence_at_tip_le_type"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Subcubic.lean",
+    "line": 54,
+    "name": "StrongEdge.rootEdges_card_le_tips_of_incidence_le_one"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Subcubic.lean",
+    "line": 72,
+    "name": "StrongEdge.rootTips_subset_multiple_of_no_single"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Subcubic.lean",
+    "line": 88,
+    "name": "StrongEdge.high22_clique_card_le_seventeen_of_support_degree_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 16,
+    "name": "StrongEdge.high22_root_degree_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 24,
+    "name": "StrongEdge.high22_root_neighborhood_independent"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 54,
+    "name": "StrongEdge.fourCycleOpposites_card_eq_root_load"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 68,
+    "name": "StrongEdge.high22_root_label_budget_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 79,
+    "name": "StrongEdge.high22_root_type_erase_card_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 89,
+    "name": "StrongEdge.high22_root_type_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 103,
+    "name": "StrongEdge.multipleTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 105,
+    "name": "StrongEdge.high22_root_label_multiple_card_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 130,
+    "name": "StrongEdge.high22_shared_root_types_card_le_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 156,
+    "name": "StrongEdge.root_type_card_sum_eq_label_sum"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 173,
+    "name": "StrongEdge.high22_multipleTips_card_le_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High22Support.lean",
+    "line": 187,
+    "name": "StrongEdge.high22_multipleTips_eq_of_triple"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23.lean",
+    "line": 13,
+    "name": "StrongEdge.meeting_edges_subset_root_single_double"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23.lean",
+    "line": 40,
+    "name": "StrongEdge.high23_meeting_card_le_fourteen_of_root_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23.lean",
+    "line": 60,
+    "name": "StrongEdge.high23_clique_card_le_sixteen_of_root_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23.lean",
+    "line": 70,
+    "name": "StrongEdge.high23_clique_card_le_sixteen"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 13,
+    "name": "StrongEdge.singleTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 17,
+    "name": "StrongEdge.singleRootEdges"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 21,
+    "name": "StrongEdge.doubleRootEdges"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 27,
+    "name": "StrongEdge.root_edge_tip_not_neighbor"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 33,
+    "name": "StrongEdge.root_single_edges_outer_adj"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 63,
+    "name": "StrongEdge.high23_singleTips_card_le_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 105,
+    "name": "StrongEdge.singleRootEdges_card_le_singleTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Four.lean",
+    "line": 122,
+    "name": "StrongEdge.high23_doubleRootEdges_card_le_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 15,
+    "name": "StrongEdge.high23_cover_card_eq_six"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 26,
+    "name": "StrongEdge.high23_endpoints_degree_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 41,
+    "name": "StrongEdge.high23_other_neighbor_sets_disjoint"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 59,
+    "name": "StrongEdge.high23_no_triangle_on_edge"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 68,
+    "name": "StrongEdge.high23_cover_inside_card_le_one"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 80,
+    "name": "StrongEdge.high23_cross_edges_unique"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 109,
+    "name": "StrongEdge.fourCycleOpposites"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Local.lean",
+    "line": 115,
+    "name": "StrongEdge.high23_at_most_one_four_cycle_on_edge"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 14,
+    "name": "StrongEdge.outerEdges"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 18,
+    "name": "StrongEdge.outerEdges_endpoints"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 27,
+    "name": "StrongEdge.outer_edge_types_cover_root_labels"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 53,
+    "name": "StrongEdge.high23_outer_edges_incident_double_root"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 104,
+    "name": "StrongEdge.high23_outer_card_le_two_of_double_root_type"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 137,
+    "name": "StrongEdge.high23_outer_edges_card_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 162,
+    "name": "StrongEdge.selected_edges_card_le_meeting_add_outer"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Outer.lean",
+    "line": 179,
+    "name": "StrongEdge.high23_clique_card_le_fourteen_of_support_degree_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 14,
+    "name": "StrongEdge.rootLabels"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 17,
+    "name": "StrongEdge.rootType"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 25,
+    "name": "StrongEdge.rootLabels_subset_neighbors"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 28,
+    "name": "StrongEdge.rootLabels_card"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 50,
+    "name": "StrongEdge.high23_root_degree_four"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 58,
+    "name": "StrongEdge.high23_root_neighborhood_independent"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 86,
+    "name": "StrongEdge.high23_root_cross_unique"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 105,
+    "name": "StrongEdge.high23_type_meets_root_labels"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 119,
+    "name": "StrongEdge.high23_root_type_card_le_two"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 137,
+    "name": "StrongEdge.high23_double_type_unique"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High23Support.lean",
+    "line": 152,
+    "name": "StrongEdge.high23_type_singleton_of_sharing_double"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 15,
+    "name": "StrongEdge.conflict_degree_eq_24_of_ge"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 21,
+    "name": "StrongEdge.branchEdges"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 31,
+    "name": "StrongEdge.high24_edge_not_between_neighbors"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 40,
+    "name": "StrongEdge.high24_external_conflict_adj"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 75,
+    "name": "StrongEdge.high24_distinct_branches_ne"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 85,
+    "name": "StrongEdge.high24_mixed_branches_cannot_have_fork"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 139,
+    "name": "StrongEdge.branchEdges_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 161,
+    "name": "StrongEdge.high24_branch_union_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 190,
+    "name": "StrongEdge.high24_side_card_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 204,
+    "name": "StrongEdge.high24_clique_card_le_thirteen"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\High24.lean",
+    "line": 252,
+    "name": "StrongEdge.high24_clique_card_le_fifteen"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 14,
+    "name": "StrongEdge.rootTips"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 17,
+    "name": "StrongEdge.rootEdges"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 20,
+    "name": "StrongEdge.root_single_edge_outer_adj"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 49,
+    "name": "StrongEdge.rootTips_adj_of_single"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 68,
+    "name": "StrongEdge.rootTips_card_le_six_of_single"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 94,
+    "name": "StrongEdge.rootEdges_card_le_tip_weight"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 117,
+    "name": "StrongEdge.clique_card_le_star_root_outer"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\RootCounting.lean",
+    "line": 128,
+    "name": "StrongEdge.outer_incidence_add_type_card_le_degree"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\SubcubicEighteen.lean",
+    "line": 15,
+    "name": "StrongEdge.clique_card_le_nineteen_of_support_degree_le_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\SubcubicEighteen.lean",
+    "line": 30,
+    "name": "StrongEdge.subcubic_nineteen_cover_saturated"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\SubcubicEighteen.lean",
+    "line": 54,
+    "name": "StrongEdge.subcubic_nineteen_supported_degree_three"
+  },
+  {
+    "file": "StrongEdge\\Bounds\\SubcubicEighteen.lean",
+    "line": 82,
+    "name": "StrongEdge.clique_card_le_eighteen_of_support_degree_le_three"
+  },
+  {
+    "file": "StrongEdge\\Conflict.lean",
+    "line": 10,
+    "name": "StrongEdge.IsInducedMatching"
+  },
+  {
+    "file": "StrongEdge\\Conflict.lean",
+    "line": 14,
+    "name": "StrongEdge.conflictGraph_independent_iff"
+  },
+  {
+    "file": "StrongEdge\\Conflict.lean",
+    "line": 17,
+    "name": "StrongEdge.candidate_independent_iff"
+  },
+  {
+    "file": "StrongEdge\\Conflict.lean",
+    "line": 28,
+    "name": "StrongEdge.induced_degree_le"
+  },
+  {
+    "file": "StrongEdge\\Conflict.lean",
+    "line": 38,
+    "name": "StrongEdge.candidate_degree_le_full"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 15,
+    "name": "StrongEdge.privateFinset"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 25,
+    "name": "StrongEdge.covering"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 28,
+    "name": "StrongEdge.privateOwners"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 32,
+    "name": "StrongEdge.maximum_covers"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 56,
+    "name": "StrongEdge.private_iff_covering_singleton"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 80,
+    "name": "StrongEdge.coverage_pointwise"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 96,
+    "name": "StrongEdge.sum_covering"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 115,
+    "name": "StrongEdge.sum_privateOwners"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 120,
+    "name": "StrongEdge.private_double_count"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 130,
+    "name": "StrongEdge.packing_of_local_bound"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 140,
+    "name": "StrongEdge.private_card_le_degree_add_one"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 151,
+    "name": "StrongEdge.CliqueThresholds20"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 165,
+    "name": "StrongEdge.local20_of_thresholds"
+  },
+  {
+    "file": "StrongEdge\\DoubleCount.lean",
+    "line": 196,
+    "name": "StrongEdge.packing20_of_thresholds"
+  },
+  {
+    "file": "StrongEdge\\High20Packing.lean",
+    "line": 13,
+    "name": "StrongEdge.minimalCliqueBounds20_of_maxDegree_four"
+  },
+  {
+    "file": "StrongEdge\\High20Packing.lean",
+    "line": 18,
+    "name": "StrongEdge.induced_matching_packing20"
+  },
+  {
+    "file": "StrongEdge\\High21Packing.lean",
+    "line": 19,
+    "name": "StrongEdge.minimalCliqueBounds20_of_high20"
+  },
+  {
+    "file": "StrongEdge\\High21Packing.lean",
+    "line": 25,
+    "name": "StrongEdge.induced_matching_packing20_of_high20"
+  },
+  {
+    "file": "StrongEdge\\High22Packing.lean",
+    "line": 21,
+    "name": "StrongEdge.minimalCliqueBounds20_of_high20_high21"
+  },
+  {
+    "file": "StrongEdge\\High22Packing.lean",
+    "line": 27,
+    "name": "StrongEdge.induced_matching_packing20_of_high20_high21"
+  },
+  {
+    "file": "StrongEdge\\High23Packing.lean",
+    "line": 23,
+    "name": "StrongEdge.minimalCliqueBounds20_of_high20_high21_high22"
+  },
+  {
+    "file": "StrongEdge\\High23Packing.lean",
+    "line": 33,
+    "name": "StrongEdge.induced_matching_packing20_of_high20_high21_high22"
+  },
+  {
+    "file": "StrongEdge\\High24Packing.lean",
+    "line": 25,
+    "name": "StrongEdge.minimalCliqueBounds20_of_high20_high21_high22_high23"
+  },
+  {
+    "file": "StrongEdge\\High24Packing.lean",
+    "line": 35,
+    "name": "StrongEdge.induced_matching_packing20_of_high20_high21_high22_high23"
+  },
+  {
+    "file": "StrongEdge\\MinimalPacking.lean",
+    "line": 14,
+    "name": "StrongEdge.MinimalCliqueBounds20"
+  },
+  {
+    "file": "StrongEdge\\MinimalPacking.lean",
+    "line": 31,
+    "name": "StrongEdge.minimalCliqueBounds20_of_thresholds"
+  },
+  {
+    "file": "StrongEdge\\MinimalPacking.lean",
+    "line": 38,
+    "name": "StrongEdge.local20_of_minimal_clique_bounds"
+  },
+  {
+    "file": "StrongEdge\\MinimalPacking.lean",
+    "line": 70,
+    "name": "StrongEdge.packing20_of_minimal_clique_bounds"
+  },
+  {
+    "file": "StrongEdge\\MinimalPacking.lean",
+    "line": 77,
+    "name": "StrongEdge.minimalCliqueBounds20_induce"
+  },
+  {
+    "file": "StrongEdge\\MinimalPacking.lean",
+    "line": 85,
+    "name": "StrongEdge.subset_packing20_of_minimal_clique_bounds"
+  },
+  {
+    "file": "StrongEdge\\MinimalPacking.lean",
+    "line": 106,
+    "name": "StrongEdge.induced_matching_packing20_of_minimal_clique_bounds"
+  },
+  {
+    "file": "StrongEdge\\Packing.lean",
+    "line": 14,
+    "name": "StrongEdge.clique_bound_induce"
+  },
+  {
+    "file": "StrongEdge\\Packing.lean",
+    "line": 36,
+    "name": "StrongEdge.thresholds20_induce"
+  },
+  {
+    "file": "StrongEdge\\Packing.lean",
+    "line": 45,
+    "name": "StrongEdge.subset_packing20_of_thresholds"
+  },
+  {
+    "file": "StrongEdge\\Packing.lean",
+    "line": 64,
+    "name": "StrongEdge.induced_matching_packing20_of_thresholds"
+  },
+  {
+    "file": "StrongEdge\\PrivateExchange.lean",
+    "line": 14,
+    "name": "StrongEdge.degreeSum"
+  },
+  {
+    "file": "StrongEdge\\PrivateExchange.lean",
+    "line": 17,
+    "name": "StrongEdge.IsOptimal"
+  },
+  {
+    "file": "StrongEdge\\PrivateExchange.lean",
+    "line": 24,
+    "name": "StrongEdge.optimal_exists"
+  },
+  {
+    "file": "StrongEdge\\PrivateExchange.lean",
+    "line": 35,
+    "name": "StrongEdge.private_swap_independent"
+  },
+  {
+    "file": "StrongEdge\\PrivateExchange.lean",
+    "line": 51,
+    "name": "StrongEdge.private_degree_mono"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 11,
+    "name": "StrongEdge.path4"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 18,
+    "name": "StrongEdge.separated"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 26,
+    "name": "StrongEdge.path01"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 28,
+    "name": "StrongEdge.path23"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 29,
+    "name": "StrongEdge.sep01"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 30,
+    "name": "StrongEdge.sep23"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 31,
+    "name": "StrongEdge.path_outer_edges_conflict"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 35,
+    "name": "StrongEdge.separated_outer_edges_do_not_conflict"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 39,
+    "name": "StrongEdge.candidates"
+  },
+  {
+    "file": "StrongEdge\\Tests.lean",
+    "line": 41,
+    "name": "StrongEdge.candidate_outer_edges_adjacent"
+  }
+]

@@ -1,5 +1,14 @@
 # 成果与证据索引
 
+## 合并后的最新内容
+
+- 双路线手稿与配套证明：[A 手稿](../output/pdf/route_a_paper_first.pdf)、[A Lean](../output/dual_proofs/route_a_lean.zip)、[B 手稿](../output/pdf/route_b_lean_first.pdf)、[B Lean](../output/dual_proofs/route_b_lean.zip)，以及[独立审计](../audit_packing20/README.md)。
+- PACKING19.5：[进展](../strong_edge_lean_starter/PACKING195_PROGRESS.md)、[剩余目标](../strong_edge_lean_starter/PACKING195_BLOCKERS.md)、[源码快照](../strong_edge_lean_packing195_checkpoint.zip)。
+- 主工程共有 51 个 Lean 文件；1,175 jobs 构建通过，原有 225 项和新增 22 项审计均保留。
+- 当前工作树散列以 [packing195-source-sha256.json](../strong_edge_lean_starter/verification/packing195-source-sha256.json) 为准；完整无条件 19.5 尚未完成。
+
+以下记录保留 high20 阶段的原始成果与证据。
+
 整理日期：2026-10-10。新增 high20 及无条件 20-packing 证明；35 个既有数学及测试模块、历史日志、交接与六个旧 checkpoint 保持原样。
 
 ## 数学模块
@@ -32,7 +41,7 @@
 | high21 | [status](../strong_edge_lean_starter/verification/high21-status.json) | [build](../strong_edge_lean_starter/verification/high21-build.log) | [axioms](../strong_edge_lean_starter/verification/high21-axioms.log) | [SHA-256](../strong_edge_lean_starter/verification/high21-source-sha256.json) |
 | high20 | [status](../strong_edge_lean_starter/verification/high20-status.json) | [build](../strong_edge_lean_starter/verification/high20-build.log) | [axioms](../strong_edge_lean_starter/verification/high20-axioms.log) | [SHA-256](../strong_edge_lean_starter/verification/high20-source-sha256.json) |
 
-历史散列应与相应阶段 ZIP 比较；当前工作树以 high20 清单为准。
+历史散列应与相应阶段 ZIP 比较；high20 清单对应 high20 快照。
 `verification/` 还保留各阶段基线日志、真实源码 diff、文件变动摘要、开发中间日志和各阶段打包脚本。
 中间日志中的历史错误或警告不代表最终构建状态；上表链接的是最终验证记录。
 

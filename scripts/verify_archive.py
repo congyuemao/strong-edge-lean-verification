@@ -41,19 +41,25 @@ checkpoint_names = [
     "strong_edge_lean_high22_checkpoint.zip",
     "strong_edge_lean_high21_checkpoint.zip",
     "strong_edge_lean_high20_checkpoint.zip",
+    "strong_edge_lean_packing195_checkpoint.zip",
 ]
 paths = [root / n for n in [".gitignore", ".gitattributes", "README.md", *checkpoint_names]]
 paths += list(walk_files(project)) + list(walk_files(root / "docs")) + list(walk_files(root / "scripts"))
+for directory in ["audit_packing20", "dual_proofs", "output"]:
+    paths += list(walk_files(root / directory))
 paths = sorted(set(p for p in paths if p != manifest_path))
 assert all(p.is_file() and p.is_relative_to(root) for p in paths)
 assert not any(p.suffix.lower() in {".exe", ".dll", ".olean", ".ilean", ".pyc"} for p in paths)
 assert not any(p.name == ".env" or p.name.startswith(".env.") for p in paths)
 
-source_manifest = json.loads(read(project / "verification/high20-source-sha256.json"))
-assert len(source_manifest) == 49
+source_manifest = json.loads(read(project / "verification/packing195-source-sha256.json"))
+assert len(source_manifest) == 55
 assert all(sha(project / name) == value for name, value in source_manifest.items()), "Current source hash changed."
-lean_files = [p for p in paths if p.suffix == ".lean"]
-assert len(lean_files) == 45
+lean_files = [p for p in paths if p.suffix == ".lean" and p.is_relative_to(project)]
+assert len(lean_files) == 51
+assert {p.relative_to(project).as_posix() for p in lean_files} == {
+    name for name in source_manifest if name.endswith(".lean")
+}
 for p in lean_files:
     assert not re.search(r"\b(sorry|admit|sorryAx|axiom|constant|unsafe|native_decide)\b", read(p)), p
 
@@ -85,23 +91,58 @@ for label, stem, jobs, audited in [
     assert len(re.findall(r"'([^']+)' depends on axioms:", stage_audit)) == audited
     stages.append({"stage": label, "build_jobs": jobs, "audited_theorems": audited})
 
+new_audit = read(project / "verification/packing195-axioms.log")
+new_entries = re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", new_audit)
+new_names = re.findall(r"^#print axioms (\S+)", read(project / "StrongEdge/Audit195.lean"), re.M)
+assert len(new_entries) == len(new_names) == 22
+assert [name for name, _ in new_entries] == new_names
+assert all({a.strip() for a in dependencies.split(",")} <= allowed for _, dependencies in new_entries)
+for stem in ["packing195-build", "packing195-axioms", "packing195-tests", "packing195-path4-regression"]:
+    assert int(read(project / f"verification/{stem}.exitcode")) == 0
+    assert not re.search(r"^(?:error|warning):", read(project / f"verification/{stem}.log"), re.M)
+assert "Build completed successfully (1175 jobs)" in read(project / "verification/packing195-build.log")
+stages.append({"stage": "packing195-conditional", "build_jobs": 1175, "audited_theorems": 247})
+
 old_hashes = json.loads(read(project / "verification/high20-status.json"))["preserved_checkpoint_sha256"]
 previous_verification = json.loads(read(project / "verification/high20-baseline-archive-manifest.json"))["verification"]
 historical_hashes = dict(previous_verification["preserved_checkpoints"])
 historical_hashes["strong_edge_lean_high21_checkpoint.zip"] = previous_verification["latest_checkpoint_sha256"]
 assert old_hashes == historical_hashes
+old_hashes["strong_edge_lean_high20_checkpoint.zip"] = "7dd2a102dda783f1ade4ec53096928bc52dcc246a6432c9221c9fe3ac4a41818"
 for name in checkpoint_names:
     if name in old_hashes:
         assert sha(root / name) == old_hashes[name], name
     with zipfile.ZipFile(root / name) as archive:
         assert archive.testzip() is None, name
 
+with zipfile.ZipFile(root / "strong_edge_lean_high20_checkpoint.zip") as archive:
+    baseline_members = [name for name in archive.namelist() if not name.endswith("/")]
+    assert len(baseline_members) >= 205
+    for name in baseline_members:
+        assert (root / name).is_relative_to(root)
+        original = archive.read(name)
+        current = (root / name).read_bytes()
+        if name == "strong_edge_lean_starter/StrongEdge.lean":
+            assert current.startswith(original), name
+        else:
+            assert current == original, name
+    baseline_sources = json.loads(read(project / "verification/high20-source-sha256.json"))
+    assert len(baseline_sources) == 49
+    for name, value in baseline_sources.items():
+        original = archive.read("strong_edge_lean_starter/" + name)
+        assert hashlib.sha256(original).hexdigest() == value, name
+        current = (project / name).read_bytes()
+        if name == "StrongEdge.lean":
+            assert current.startswith(original), "Baseline imports must be preserved."
+        else:
+            assert current == original, name
+
 with zipfile.ZipFile(root / checkpoint_names[-1]) as archive:
     latest_zip_files = [name for name in archive.namelist() if not name.endswith("/")]
     for name in latest_zip_files:
         assert (root / name).is_relative_to(root)
         assert archive.read(name) == (root / name).read_bytes(), name
-    assert len(latest_zip_files) >= 205
+    assert len(latest_zip_files) >= 55
 
 secret_patterns = {
     "github_token": re.compile(rb"(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})"),
@@ -134,15 +175,18 @@ for md in [root / "README.md", root / "docs/RESULTS_INDEX.md", root / "docs/inpu
 
 inventory = {p.relative_to(root).as_posix(): {"bytes": p.stat().st_size, "sha256": sha(p)} for p in paths}
 verification = {
-    "lean_source_files": 45, "source_and_config_hashes_matched": 49,
-    "latest_build_jobs": 1170, "latest_audited_theorems": 225,
+    "lean_source_files": 51, "source_and_config_hashes_matched": 55,
+    "latest_build_jobs": 1175, "latest_audited_theorems": 247,
+    "baseline_audited_theorems": 225, "new_audited_theorems": 22,
     "allowed_axioms": sorted(allowed), "prohibited_lean_tokens_found": 0,
     "common_credential_patterns_found": 0,
     "preserved_checkpoints": old_hashes,
     "latest_checkpoint_sha256": sha(root / checkpoint_names[-1]),
     "latest_zip_files_matching_workspace": len(latest_zip_files),
     "stages": stages, "unconditional_packing20_proved": True,
-    "remaining_explicit_bounds": {},
+    "unconditional_packing195_proved": False,
+    "remaining_explicit_bounds": {"high21": 17, "high22": 16},
+    "remaining_packing195_structure": ["candidate clique bound <= 19", "C5[2] rigidity and component counting"],
 }
 if args.write_manifest:
     manifest = {

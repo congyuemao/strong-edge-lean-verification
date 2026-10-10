@@ -1,0 +1,9 @@
+✖ [1144/1144] Building StrongEdge.Bounds.High21Double (9.7s)
+trace: .> LEAN_PATH=.lake\packages\Cli\.lake\build\lib\lean;.lake\packages\batteries\.lake\build\lib\lean;.lake\packages\Qq\.lake\build\lib\lean;.lake\packages\aesop\.lake\build\lib\lean;.lake\packages\proofwidgets\.lake\build\lib\lean;.lake\packages\importGraph\.lake\build\lib\lean;.lake\packages\LeanSearchClient\.lake\build\lib\lean;.lake\packages\plausible\.lake\build\lib\lean;.lake\packages\mathlib\.lake\build\lib\lean;.lake\build\lib\lean c:\Users\21161\Documents\ChatGPT\math\.tools\lean-4.35.0-rc4-windows\bin\lean.exe .\StrongEdge\Bounds\High21Double.lean -o .lake\build\lib\lean\StrongEdge\Bounds\High21Double.olean -i .lake\build\lib\lean\StrongEdge\Bounds\High21Double.ilean -c .lake\build\ir\StrongEdge\Bounds\High21Double.c --setup .lake\build\ir\StrongEdge\Bounds\High21Double.setup.json --json
+error: StrongEdge/Bounds/High21Double.lean:60:43: Unknown identifier `b`
+error: StrongEdge/Bounds/High21Double.lean:61:43: Unknown identifier `b`
+error: StrongEdge/Bounds/High21Double.lean:63:43: Unknown identifier `y`
+error: StrongEdge/Bounds/High21Double.lean:64:36: Unknown identifier `y`
+Some required targets logged failures:
+- StrongEdge.Bounds.High21Double
+error: build failed

@@ -1,0 +1,34 @@
+{
+  "verified_date": "2026-10-09",
+  "timezone": "Australia/Sydney",
+  "lean": "leanprover/lean4:v4.35.0-rc4",
+  "lean_compiler_commit": "c29b6dda4f7c20e3eeaa717c4e565663c5cfa364",
+  "mathlib": "49fd9dee36e7bbf345fe7981d2de6aeeb591f75b",
+  "baseline_build_exit_code": 0,
+  "baseline_build_jobs": 1127,
+  "baseline_audited_theorems": 38,
+  "build_exit_code": 0,
+  "build_jobs": 1129,
+  "axiom_audit_exit_code": 0,
+  "audited_theorems": 51,
+  "new_theorems": 13,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "high24_clique_bound": 13,
+  "minimal_high24_field_discharged": true,
+  "remaining_minimal_clique_bounds": {
+    "high20": 19,
+    "high21": 18,
+    "high22": 17,
+    "high23": 16
+  },
+  "unconditional_packing20_proved": false,
+  "source_archive": "strong_edge_lean_high24_checkpoint.zip",
+  "preserved_checkpoint_sha256": {
+    "strong_edge_lean_c4_checkpoint.zip": "2d58d4173f84145983ce4bda4972892de5d98ad0beb84ad293fe2b06aa39998e",
+    "strong_edge_lean_verified_checkpoint.zip": "79cdd19342e7686223ce85e79aaeb35fb589c31150548db5876473158e451b2b"
+  }
+}

@@ -1,0 +1,9 @@
+✔ [1128/1129] Built StrongEdge.Bounds.High22RootFour (8.0s)
+⚠ [1129/1129] Built StrongEdge.Bounds.High22Heavy (8.2s)
+warning: StrongEdge/Bounds/High22Heavy.lean:79:0: automatically included section variable(s) unused in theorem `StrongEdge.high22_outer_incidence_le_two_at_heavy`:
+  [DecidableRel (conflictGraph G).Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel (conflictGraph G).Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (1129 jobs).
