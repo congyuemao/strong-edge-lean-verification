@@ -1,0 +1,9 @@
+ README.md                                      |  105 +-
+ docs/ARCHIVE_MANIFEST.json                     | 1419 +++++++++++++-----------
+ docs/RESULTS_INDEX.md                          |   26 +-
+ docs/inputs/README.md                          |    2 +
+ scripts/verify_archive.py                      |   46 +-
+ strong_edge_lean_starter/README.md             |  311 +++---
+ strong_edge_lean_starter/StrongEdge.lean       |   19 +
+ strong_edge_lean_starter/StrongEdge/Audit.lean |  194 ++++
+ 8 files changed, 1227 insertions(+), 895 deletions(-)

@@ -1,44 +1,43 @@
 # 强边冲突与诱导匹配打包：Lean 验证成果
 
-整理日期：2026-10-10（Australia/Sydney）。最近一次数学验证完成于 2026-10-09。
+验证日期：2026-10-10（Australia/Sydney）。
 
-本仓库汇总目前全部本地 Lean 证明、阶段交接、构建日志、公理审计、源码散列和五个历史 checkpoint。
-证明始终采用**完整原图**的强边冲突，候选边集外的原边仍可作为冲突见证。
+**无条件诱导匹配 20-packing 已完成 Lean 验证。** 对任意有限简单图 G，
+若每个原顶点度数至多四，则对任意候选边集 F，存在诱导匹配 M⊆F，使 |F|≤20|M|。
+冲突始终在完整原图中定义，候选边集外的原边仍可作为冲突见证。
 
-目前已完成 C4，以及 C5 的 high24、high23、high22 三个强团界。
-**high21 和 high20 仍未完成，无条件 20-packing 尚未证明。**
+C4 和 C5 的五个阈值界均已完成。最终定理只需原图最大度数条件及普通有限性、
+可判定性实例，不再要求任何额外的 high20 假设。
 
 ## 当前已验证结论
 
-以下结论针对任意有限简单图 `G`，假设每个原顶点度数至多四。
-表中的阈值均指每条候选边在完整冲突图中的度数。
-
 | 内容 | 已验证结论 | 主声明 |
 |---|---|---|
-| 完整冲突度上界 C4 | 每条原边的完整冲突度 ≤24 | `conflict_degree_le_24` |
-| high24 强团界 | 每条成员冲突度 ≥24 的团，边数 ≤13；满足所需 ≤15 | `high24_clique_card_le_thirteen` |
-| high23 强团界 | 每条成员冲突度 ≥23 的团，边数 ≤16 | `high23_clique_card_le_sixteen` |
-| high22 强团界 | 每条成员冲突度 ≥22 的团，边数 ≤17 | `high22_clique_card_le_seventeen` |
-| 条件性打包 | 对任意候选边集 F，存在诱导匹配 M⊆F，且 \|F\|≤20\|M\| | `induced_matching_packing20_of_high20_high21` |
+| C4 | 完整冲突度 ≤24 | `conflict_degree_le_24` |
+| high24 | 成员完整冲突度 ≥24 的团大小 ≤13，满足所需 ≤15 | `high24_clique_card_le_thirteen` |
+| high23 | 成员完整冲突度 ≥23 的团大小 ≤16 | `high23_clique_card_le_sixteen` |
+| high22 | 成员完整冲突度 ≥22 的团大小 ≤17 | `high22_clique_card_le_seventeen` |
+| high21 | 成员完整冲突度 ≥21 的团大小 ≤18 | `high21_clique_card_le_eighteen` |
+| high20 | 成员完整冲突度 ≥20 的团大小 ≤19 | `high20_clique_card_le_nineteen` |
+| 无条件打包 | 对任意 F，存在诱导匹配 M⊆F，且 \|F\|≤20\|M\| | `induced_matching_packing20` |
 
-最后一项仍显式要求 high20（阈值 20 时团大小 ≤19）和 high21（阈值 21 时团大小 ≤18）。
-最新完整定理签名见 [HIGH22_HANDOFF.md](strong_edge_lean_starter/HIGH22_HANDOFF.md)。
-
-已完成的通用基础包括完整冲突与候选限制、独立集与诱导匹配等价、最优私有邻域交换、度数单调性、双重计数，以及任意候选边集上的条件性打包。
-本仓库没有宣称整数强边二十色、19.5 加强、high23 ≤15 或 high22 ≤16 已获 Lean 验证。
+完整签名及证明说明见 [HIGH20_VERIFIED_HANDOFF.md](strong_edge_lean_starter/HIGH20_VERIFIED_HANDOFF.md)。
+本结果不宣称整数强边二十色、19.5 加强或算法复杂度结论。
 
 ## 验证证据
 
-- 当前项目含 **28 个 Lean 源文件**。
-- 最近一次完整构建通过：**1,144 jobs，无警告**。
-- **145 项公理审计**均仅列出 `propext`、`Classical.choice`、`Quot.sound`。
-- 项目 Lean 源码没有 `sorry`、`admit`、`sorryAx`、自定义 `axiom`、`constant`、`unsafe` 或 `native_decide`。
-- 本次整理核对了当前源码与 high22 散列清单，以及 high22 checkpoint 中全部文件的字节一致性。
+- **45 个 Lean 源文件**，49 项源码及配置 SHA-256。
+- 完整构建通过：**1,170 jobs，无警告**。
+- **225 项公理审计**均仅使用 `propext`、`Classical.choice`、`Quot.sound`。
+- 新增八个模块、33 个定理，旧有 192 项审计全部保留。
+- 35 个既有数学及测试模块、全部版本锁定文件和六个历史 checkpoint 原样保留。
+- 四顶点路径回归通过；源码扫描未发现证明缺口标记。
 
-原始依据：[最终构建日志](strong_edge_lean_starter/verification/high22-build.log)、
-[最终公理审计](strong_edge_lean_starter/verification/high22-axioms.log)、
-[源码 SHA-256](strong_edge_lean_starter/verification/high22-source-sha256.json)。
-本次归档清单为 [ARCHIVE_MANIFEST.json](docs/ARCHIVE_MANIFEST.json)。
+原始证据：[构建](strong_edge_lean_starter/verification/high20-build.log)、
+[公理审计](strong_edge_lean_starter/verification/high20-axioms.log)、
+[源码 SHA-256](strong_edge_lean_starter/verification/high20-source-sha256.json)、
+[状态](strong_edge_lean_starter/verification/high20-status.json)。
+仓库归档清单：[ARCHIVE_MANIFEST.json](docs/ARCHIVE_MANIFEST.json)。
 
 ## 阶段与交付物
 
@@ -49,51 +48,41 @@
 | C5 high24 | 强团 ≤13，接入所需 ≤15 | 1,129 | 51 | [high24 checkpoint](strong_edge_lean_high24_checkpoint.zip) |
 | C5 high23 | 强团 ≤16，剩三项结构假设 | 1,136 | 94 | [high23 checkpoint](strong_edge_lean_high23_checkpoint.zip) |
 | C5 high22 | 强团 ≤17，剩两项结构假设 | 1,144 | 145 | [high22 checkpoint](strong_edge_lean_high22_checkpoint.zip) |
+| C5 high21 | 强团 ≤18，剩 high20 一项结构假设 | 1,162 | 192 | [high21 checkpoint](strong_edge_lean_high21_checkpoint.zip) |
+| C5 high20 / C6 | 强团 ≤19，无条件任意候选集 20-packing | 1,170 | 225 | [high20 checkpoint](strong_edge_lean_high20_checkpoint.zip) |
 
-这些数字是各阶段实际日志中的构建任务数与审计声明数，不表示 Lean 定理总数。
-历史 ZIP 原样保留；源码和交接材料仍使用原有相对路径，便于后续继续证明。
+这些数字来自各阶段实际日志。历史 ZIP、交接和验证日志均未覆盖；当前仓库共保留七个阶段快照。
 
 ## 导航
 
-- [Lean 项目说明与模块清单](strong_edge_lean_starter/README.md)
-- [全部成果与证据索引](docs/RESULTS_INDEX.md)
-- [high22 完整交接](strong_edge_lean_starter/HIGH22_HANDOFF.md)
-- [high23 完整交接](strong_edge_lean_starter/HIGH23_HANDOFF.md)
-- [high24 完整交接](strong_edge_lean_starter/verification/high24-handoff.md)
-- [C4 阶段报告](strong_edge_lean_starter/verification/NEXT_STAGE_REPORT.md)
-- [原始输入与交接说明](docs/inputs/README.md)
+- [Lean 项目说明](strong_edge_lean_starter/README.md)
+- [成果与证据索引](docs/RESULTS_INDEX.md)
+- [high20 / C6 完整交接](strong_edge_lean_starter/HIGH20_VERIFIED_HANDOFF.md)
+- [high21 交接](strong_edge_lean_starter/C5_HIGH21_VERIFIED_HANDOFF.md)
+- [high22 交接](strong_edge_lean_starter/HIGH22_HANDOFF.md)
+- [原始输入说明](docs/inputs/README.md)
 
 ## 复现
 
-固定版本：
-
-- Lean：`leanprover/lean4:v4.35.0-rc4`
-- Lean 编译器提交：`c29b6dda4f7c20e3eeaa717c4e565663c5cfa364`
-- mathlib：`49fd9dee36e7bbf345fe7981d2de6aeeb591f75b`
-
-安装 Lean/elan 后，在项目子目录执行；保留现有 lockfile：
+固定 Lean `v4.35.0-rc4`，编译器提交
+`c29b6dda4f7c20e3eeaa717c4e565663c5cfa364`，mathlib 提交
+`49fd9dee36e7bbf345fe7981d2de6aeeb591f75b`。保留现有 lockfile。
 
 ```powershell
 cd strong_edge_lean_starter
 .\lean.ps1 build
 .\lean.ps1 env lean StrongEdge/Audit.lean
+.\lean.ps1 env lean StrongEdge/Tests.lean
 ```
 
-在其他系统上可直接执行 `lake build` 和 `lake env lean StrongEdge/Audit.lean`。
-首次构建需要获取锁定的依赖；mathlib 缓存命令见 [项目 README](strong_edge_lean_starter/README.md#reproduce)。
-编译器二进制、`.lake` 和 `.cache` 不上传，均可按固定版本重新获取。
+其他系统使用 `lake build` 和 `lake env lean`；依赖缓存命令见
+[项目 README](strong_edge_lean_starter/README.md#reproduce)。编译器、依赖树和缓存不包含在源码快照中。
 
-在仓库根目录核对归档完整性：
+在仓库根目录运行 `python scripts/verify_archive.py` 核对文件清单与历史证据。
+该脚本不能替代 Lean 内核检查。`.gitattributes` 保留原始换行字节，以维护历史散列。
 
-```powershell
-python scripts/verify_archive.py
-```
+## 当前边界
 
-该脚本检查文件与历史证据，不能替代 Lean 内核构建与公理审计。
-`.gitattributes` 禁用自动换行转换，以保持已验证散列和日志的原始字节。
-
-## 接下来
-
-先证明 high21 ≤18，再证明 high20 ≤19，并接入现有最小阈值记录。
-high22 的支撑度至多三分支仍使用 high22 假设；不能将其当作已证明的无阈值通用次三次图定理。
-各阶段更具体的复用条件与未完成目标均记录于相应 handoff。
+本次要求的 high20 和无条件 20-packing 阶段已完成，无剩余结构假设。
+整数强边二十色、19.5 加强、完整极值图分类和更强阈值界留作独立项目。
+历史交接中“尚需 high20”的表述对应各自阶段，不代表当前结果。

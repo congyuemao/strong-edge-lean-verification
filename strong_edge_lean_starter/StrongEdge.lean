@@ -26,3 +26,22 @@ public import StrongEdge.Bounds.High22Heavy
 public import StrongEdge.Bounds.High22Subcubic
 public import StrongEdge.Bounds.High22
 public import StrongEdge.High22Packing
+
+public import StrongEdge.Bounds.DegreeTwoClique
+public import StrongEdge.Bounds.High21
+public import StrongEdge.Bounds.High21Double
+public import StrongEdge.Bounds.High21LargeType
+public import StrongEdge.Bounds.High21Local
+public import StrongEdge.Bounds.High21RootFour
+public import StrongEdge.Bounds.High21Support
+public import StrongEdge.Bounds.SubcubicEighteen
+public import StrongEdge.High21Packing
+
+public import StrongEdge.Bounds.High20
+public import StrongEdge.Bounds.High20Four
+public import StrongEdge.Bounds.High20Local
+public import StrongEdge.Bounds.High20Outer
+public import StrongEdge.Bounds.High20Slots
+public import StrongEdge.Bounds.High20TwoTriples
+public import StrongEdge.Bounds.High20UniqueTriple
+public import StrongEdge.High20Packing

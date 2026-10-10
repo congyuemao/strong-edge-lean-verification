@@ -188,3 +188,197 @@ public import StrongEdge
 #check StrongEdge.high22_clique_card_le_seventeen
 #check StrongEdge.minimalCliqueBounds20_of_high20_high21
 #check StrongEdge.induced_matching_packing20_of_high20_high21
+
+-- StrongEdge/Bounds/DegreeTwoClique.lean
+#check StrongEdge.restricted_incidence_card_le
+#print axioms StrongEdge.restricted_incidence_card_le
+#check StrongEdge.restricted_cover_card_le_two
+#print axioms StrongEdge.restricted_cover_card_le_two
+#check StrongEdge.clique_card_le_one_add_restricted_incidence_sum
+#print axioms StrongEdge.clique_card_le_one_add_restricted_incidence_sum
+#check StrongEdge.degree_two_clique_card_le_five
+#print axioms StrongEdge.degree_two_clique_card_le_five
+#check StrongEdge.degree_two_five_cover_saturated
+#print axioms StrongEdge.degree_two_five_cover_saturated
+#check StrongEdge.degree_two_five_supported_degree_two
+#print axioms StrongEdge.degree_two_five_supported_degree_two
+#check StrongEdge.degree_two_clique_card_le_four_of_selected_bipartition
+#print axioms StrongEdge.degree_two_clique_card_le_four_of_selected_bipartition
+
+-- StrongEdge/Bounds/High21.lean
+#check StrongEdge.high21_clique_card_le_eighteen
+#print axioms StrongEdge.high21_clique_card_le_eighteen
+
+-- StrongEdge/Bounds/High21Double.lean
+#check StrongEdge.rootType_eq_neighbor_inter
+#print axioms StrongEdge.rootType_eq_neighbor_inter
+#check StrongEdge.multipleTips_not_neighbor
+#print axioms StrongEdge.multipleTips_not_neighbor
+#check StrongEdge.residual_neighbors_add_type_card
+#print axioms StrongEdge.residual_neighbors_add_type_card
+#check StrongEdge.root_selected_edges_force_adj
+#print axioms StrongEdge.root_selected_edges_force_adj
+#check StrongEdge.fullDoubleTips_adj_of_types_ne
+#print axioms StrongEdge.fullDoubleTips_adj_of_types_ne
+#check StrongEdge.high21_full_double_types_equal_or_disjoint
+#print axioms StrongEdge.high21_full_double_types_equal_or_disjoint
+#check StrongEdge.fullDoubleTips_card_le_four
+#print axioms StrongEdge.fullDoubleTips_card_le_four
+
+-- StrongEdge/Bounds/High21LargeType.lean
+#check StrongEdge.high21_large_types_share_label
+#print axioms StrongEdge.high21_large_types_share_label
+#check StrongEdge.high21_multipleTips_eq_of_type_four
+#print axioms StrongEdge.high21_multipleTips_eq_of_type_four
+#check StrongEdge.high21_other_type_le_two_of_triple
+#print axioms StrongEdge.high21_other_type_le_two_of_triple
+#check StrongEdge.high21_multiple_unique_at_triple_label
+#print axioms StrongEdge.high21_multiple_unique_at_triple_label
+#check StrongEdge.high21_multipleTips_subset_triple_outer_endpoints
+#print axioms StrongEdge.high21_multipleTips_subset_triple_outer_endpoints
+#check StrongEdge.high21_outer_card_le_two_of_root_triple
+#print axioms StrongEdge.high21_outer_card_le_two_of_root_triple
+#check StrongEdge.high21_clique_card_le_eighteen_of_root_triple
+#print axioms StrongEdge.high21_clique_card_le_eighteen_of_root_triple
+
+-- StrongEdge/Bounds/High21Local.lean
+#check StrongEdge.high21_cover_card_eq_six
+#print axioms StrongEdge.high21_cover_card_eq_six
+#check StrongEdge.high21_endpoints_degree_four
+#print axioms StrongEdge.high21_endpoints_degree_four
+#check StrongEdge.high21_other_neighbor_sets_disjoint
+#print axioms StrongEdge.high21_other_neighbor_sets_disjoint
+#check StrongEdge.high21_no_triangle_on_edge
+#print axioms StrongEdge.high21_no_triangle_on_edge
+#check StrongEdge.high21_cover_inside_card_le_three
+#print axioms StrongEdge.high21_cover_inside_card_le_three
+#check StrongEdge.high21_at_most_three_four_cycles_on_edge
+#print axioms StrongEdge.high21_at_most_three_four_cycles_on_edge
+
+-- StrongEdge/Bounds/High21RootFour.lean
+#check StrongEdge.outer_card_le_four_of_double_types
+#print axioms StrongEdge.outer_card_le_four_of_double_types
+#check StrongEdge.rootLabels_rootEdges_at_tip_subset_type
+#print axioms StrongEdge.rootLabels_rootEdges_at_tip_subset_type
+#check StrongEdge.root_incidence_two_mem_fullDoubleTips
+#print axioms StrongEdge.root_incidence_two_mem_fullDoubleTips
+#check StrongEdge.rootEdges_card_le_tips_add_fullDoubleTips
+#print axioms StrongEdge.rootEdges_card_le_tips_add_fullDoubleTips
+#check StrongEdge.high21_clique_card_le_eighteen_of_root_types_le_two
+#print axioms StrongEdge.high21_clique_card_le_eighteen_of_root_types_le_two
+#check StrongEdge.high21_clique_card_le_eighteen_of_root_four
+#print axioms StrongEdge.high21_clique_card_le_eighteen_of_root_four
+
+-- StrongEdge/Bounds/High21Support.lean
+#check StrongEdge.high21_root_degree_four
+#print axioms StrongEdge.high21_root_degree_four
+#check StrongEdge.high21_root_neighborhood_independent
+#print axioms StrongEdge.high21_root_neighborhood_independent
+#check StrongEdge.high21_root_label_budget_three
+#print axioms StrongEdge.high21_root_label_budget_three
+#check StrongEdge.high21_root_type_erase_card_le_three
+#print axioms StrongEdge.high21_root_type_erase_card_le_three
+#check StrongEdge.high21_root_label_multiple_card_le_three
+#print axioms StrongEdge.high21_root_label_multiple_card_le_three
+#check StrongEdge.high21_shared_root_types_card_le_five
+#print axioms StrongEdge.high21_shared_root_types_card_le_five
+#check StrongEdge.high21_multipleTips_card_le_six
+#print axioms StrongEdge.high21_multipleTips_card_le_six
+
+-- StrongEdge/Bounds/SubcubicEighteen.lean
+#check StrongEdge.clique_card_le_nineteen_of_support_degree_le_three
+#print axioms StrongEdge.clique_card_le_nineteen_of_support_degree_le_three
+#check StrongEdge.subcubic_nineteen_cover_saturated
+#print axioms StrongEdge.subcubic_nineteen_cover_saturated
+#check StrongEdge.subcubic_nineteen_supported_degree_three
+#print axioms StrongEdge.subcubic_nineteen_supported_degree_three
+#check StrongEdge.clique_card_le_eighteen_of_support_degree_le_three
+#print axioms StrongEdge.clique_card_le_eighteen_of_support_degree_le_three
+
+-- StrongEdge/High21Packing.lean
+#check StrongEdge.minimalCliqueBounds20_of_high20
+#print axioms StrongEdge.minimalCliqueBounds20_of_high20
+#check StrongEdge.induced_matching_packing20_of_high20
+#print axioms StrongEdge.induced_matching_packing20_of_high20
+
+-- StrongEdge/Bounds/High20.lean
+#check StrongEdge.clique_card_le_eighteen_of_independent_root_types_le_two
+#print axioms StrongEdge.clique_card_le_eighteen_of_independent_root_types_le_two
+#check StrongEdge.high20_clique_card_le_nineteen_of_root_four
+#print axioms StrongEdge.high20_clique_card_le_nineteen_of_root_four
+#check StrongEdge.high20_clique_card_le_nineteen
+#print axioms StrongEdge.high20_clique_card_le_nineteen
+
+-- StrongEdge/Bounds/High20Four.lean
+#check StrongEdge.high20_other_type_le_two_of_four
+#print axioms StrongEdge.high20_other_type_le_two_of_four
+#check StrongEdge.high20_multiple_unique_at_four_label
+#print axioms StrongEdge.high20_multiple_unique_at_four_label
+#check StrongEdge.high20_multipleTips_subset_four_outer_endpoints
+#print axioms StrongEdge.high20_multipleTips_subset_four_outer_endpoints
+#check StrongEdge.high20_outer_card_le_two_of_root_type_four
+#print axioms StrongEdge.high20_outer_card_le_two_of_root_type_four
+#check StrongEdge.high20_clique_card_le_eighteen_of_root_type_four
+#print axioms StrongEdge.high20_clique_card_le_eighteen_of_root_type_four
+
+-- StrongEdge/Bounds/High20Local.lean
+#check StrongEdge.endpointNeighbourCover_card_le_five_of_triangle
+#print axioms StrongEdge.endpointNeighbourCover_card_le_five_of_triangle
+#check StrongEdge.root_label_multiple_card_le_three
+#print axioms StrongEdge.root_label_multiple_card_le_three
+#check StrongEdge.multipleTips_type_sum_le_twelve
+#print axioms StrongEdge.multipleTips_type_sum_le_twelve
+#check StrongEdge.multipleTips_card_le_six
+#print axioms StrongEdge.multipleTips_card_le_six
+#check StrongEdge.high20_cover_inside_card_le_four
+#print axioms StrongEdge.high20_cover_inside_card_le_four
+#check StrongEdge.high20_triangle_cover_inside_empty
+#print axioms StrongEdge.high20_triangle_cover_inside_empty
+#check StrongEdge.high20_triangle_root_type_singleton
+#print axioms StrongEdge.high20_triangle_root_type_singleton
+#check StrongEdge.high20_root_triangle_outer_empty
+#print axioms StrongEdge.high20_root_triangle_outer_empty
+#check StrongEdge.high20_large_clique_root_neighborhood_independent
+#print axioms StrongEdge.high20_large_clique_root_neighborhood_independent
+#check StrongEdge.high20_root_label_budget_four
+#print axioms StrongEdge.high20_root_label_budget_four
+#check StrongEdge.high20_shared_root_types_card_le_six
+#print axioms StrongEdge.high20_shared_root_types_card_le_six
+
+-- StrongEdge/Bounds/High20Outer.lean
+#check StrongEdge.outer_avoiding_card_le_four_of_other_types_le_two
+#print axioms StrongEdge.outer_avoiding_card_le_four_of_other_types_le_two
+
+-- StrongEdge/Bounds/High20Slots.lean
+#check StrongEdge.star_add_root_card_le_label_sum
+#print axioms StrongEdge.star_add_root_card_le_label_sum
+#check StrongEdge.selected_degree_add_one_le_of_missing_label
+#print axioms StrongEdge.selected_degree_add_one_le_of_missing_label
+#check StrongEdge.root_label_mem_symm
+#print axioms StrongEdge.root_label_mem_symm
+#check StrongEdge.root_card_add_missing_type_le_twelve
+#print axioms StrongEdge.root_card_add_missing_type_le_twelve
+#check StrongEdge.root_card_le_ten_of_label_selected_degree_le_two
+#print axioms StrongEdge.root_card_le_ten_of_label_selected_degree_le_two
+
+-- StrongEdge/Bounds/High20TwoTriples.lean
+#check StrongEdge.high20_other_type_single_at_shared_triple_label
+#print axioms StrongEdge.high20_other_type_single_at_shared_triple_label
+#check StrongEdge.high20_outer_meets_two_triples
+#print axioms StrongEdge.high20_outer_meets_two_triples
+#check StrongEdge.high20_clique_card_le_eighteen_of_two_triples
+#print axioms StrongEdge.high20_clique_card_le_eighteen_of_two_triples
+
+-- StrongEdge/Bounds/High20UniqueTriple.lean
+#check StrongEdge.root_missing_label_selected_degree_le_two_of_unique_triple
+#print axioms StrongEdge.root_missing_label_selected_degree_le_two_of_unique_triple
+#check StrongEdge.root_card_le_ten_of_unique_triple
+#print axioms StrongEdge.root_card_le_ten_of_unique_triple
+#check StrongEdge.clique_card_le_nineteen_of_unique_triple
+#print axioms StrongEdge.clique_card_le_nineteen_of_unique_triple
+
+-- StrongEdge/High20Packing.lean
+#check StrongEdge.minimalCliqueBounds20_of_maxDegree_four
+#print axioms StrongEdge.minimalCliqueBounds20_of_maxDegree_four
+#check StrongEdge.induced_matching_packing20
+#print axioms StrongEdge.induced_matching_packing20

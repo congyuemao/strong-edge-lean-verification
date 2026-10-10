@@ -1,0 +1,11 @@
+✖ [1125/1126] Running StrongEdge.Bounds.High21Support
+error: StrongEdge\Bounds\High21Support.lean: module imports itself
+error: build cycle detected:
+  strong_edge_lean_starter/+StrongEdge.Bounds.High21Support:precompileImports
+  strong_edge_lean_starter/+StrongEdge.Bounds.High21Support:presetup
+  strong_edge_lean_starter/+StrongEdge.Bounds.High21Support:leanArts
+  strong_edge_lean_starter/+StrongEdge.Bounds.High21Support:precompileImports
+✔ [1126/1126] Built StrongEdge.Bounds.High21Local (42s)
+Some required targets logged failures:
+- StrongEdge.Bounds.High21Support
+error: build failed

@@ -11,6 +11,8 @@
 | [high24 工作说明](CODEX_LEAN_C5_HIGH24_NEXT_PROMPT.md) | 来自用户指定的 `CODEX_LEAN_C5_HIGH24_NEXT_PROMPT (1).md`；仅规范化归档文件名；它与无 `(1)` 后缀的版本 SHA-256 相同 |
 | [high23 工作说明](CODEX_LEAN_C5_HIGH23_NEXT_PROMPT.md) | 用户提供的 high23 阶段工作说明 |
 | [high22 工作说明](CODEX_LEAN_C5_HIGH22_NEXT_PROMPT.md) | 用户提供的 high22 阶段工作说明 |
+| [high21 工作说明](CODEX_LEAN_C5_HIGH21_NEXT_PROMPT.md) | 用户指定的 `CODEX_LEAN_C5_HIGH21_NEXT_PROMPT (8).md`；按原始字节保存 |
+| [high20 最终工作说明](CODEX_LEAN_C5_HIGH20_FINAL_PROMPT.md) | 用户指定的 `CODEX_LEAN_C5_HIGH20_FINAL_PROMPT.md`；按原始字节保存 |
 
 这些输入文件的 SHA-256 已纳入 [全量归档清单](../ARCHIVE_MANIFEST.json)。
 原始 Downloads 文件和现有数学项目均未移动或删除。
