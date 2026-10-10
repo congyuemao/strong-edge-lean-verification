@@ -1,0 +1,37 @@
+{
+  "baseline_commit": "8de26d2d6cb17354af7fb5919fcdbbc79c8aaf6f",
+  "branch": "codex/packing195",
+  "baseline_build_jobs": 1170,
+  "final_build_jobs": 1175,
+  "baseline_audited_theorems": 225,
+  "new_audited_theorems": 22,
+  "lean_source_files": 51,
+  "preserved_old_lean_files": 44,
+  "changed_old_lean_files": [
+    "strong_edge_lean_starter/StrongEdge.lean"
+  ],
+  "preserved_pinned_environment_files": [
+    "lean-toolchain",
+    "lake-manifest.json",
+    "lakefile.toml",
+    "lean.ps1"
+  ],
+  "proof_gap_scan": "clean",
+  "T1": "kernel-checked conditional theorem",
+  "T2": "kernel-checked conditional theorem",
+  "high20_le_18": "kernel-checked",
+  "high23_le_15": "kernel-checked",
+  "high24_le_13": "reused baseline theorem",
+  "unconditional_packing195_complete": false,
+  "remaining": [
+    "high21 <= 17",
+    "high22 <= 16",
+    "twenty-clique rigidity",
+    "C5[2] component counting and final assembly"
+  ],
+  "finite_search": {
+    "graphs": 501,
+    "counterexamples": 0,
+    "role": "falsification search only; not a proof dependency"
+  }
+}

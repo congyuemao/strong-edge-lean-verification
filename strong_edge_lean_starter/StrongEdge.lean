@@ -45,3 +45,6 @@ public import StrongEdge.Bounds.High20Slots
 public import StrongEdge.Bounds.High20TwoTriples
 public import StrongEdge.Bounds.High20UniqueTriple
 public import StrongEdge.High20Packing
+
+public import StrongEdge.Packing195
+public import StrongEdge.Tests195

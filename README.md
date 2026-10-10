@@ -1,5 +1,10 @@
 # 强边冲突与诱导匹配打包：Lean 验证成果
 
+**PACKING19.5 续进：** 条件性 T1/T2、无条件局部加强 `high20 ≤18` 和 `high23 ≤15`
+已通过 Lean 编译及公理审计。完整无条件 19.5 仍待完成；详见
+[本轮进展与复现记录](strong_edge_lean_starter/PACKING195_PROGRESS.md) 和
+[剩余证明目标](strong_edge_lean_starter/PACKING195_BLOCKERS.md)。以下保留已验证的 20-packing 基线说明。
+
 验证日期：2026-10-10（Australia/Sydney）。
 
 **无条件诱导匹配 20-packing 已完成 Lean 验证。** 对任意有限简单图 G，

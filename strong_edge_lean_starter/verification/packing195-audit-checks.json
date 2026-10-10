@@ -1,0 +1,121 @@
+{
+  "baseline_count": 225,
+  "new_count": 22,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_declarations": {
+    "StrongEdge.local39_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.packing195_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_induce": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_nineteen_induce": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.subset_packing195_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_clique_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_of_four_improvements": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.multipleTips_erase_card_le_four_of_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outerEdges_eq_self_of_subset": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.four_outer_edges_saturate_multiple_support": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.outer_card_le_four_of_unique_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.clique_card_le_eighteen_of_unique_triple": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_eighteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high20_clique_card_le_eighteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_outer_edges_card_le_one_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_clique_card_le_fifteen_of_root_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.high23_clique_card_le_fifteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.cliqueBounds195_of_two_improvements": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.induced_matching_packing195_of_two_improvements": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195.complete20_thresholds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195.complete20_has_no_packing195": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StrongEdge.Tests195.empty_candidates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

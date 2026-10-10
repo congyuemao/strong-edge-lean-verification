@@ -1,0 +1,51 @@
+import StrongEdge.Packing195
+import StrongEdge.Tests195
+
+#check StrongEdge.CliqueBounds195
+#check StrongEdge.local39_of_clique_bounds
+#print axioms StrongEdge.local39_of_clique_bounds
+#check StrongEdge.packing195_of_clique_bounds
+#print axioms StrongEdge.packing195_of_clique_bounds
+#check StrongEdge.cliqueBounds195_induce
+#print axioms StrongEdge.cliqueBounds195_induce
+#check StrongEdge.clique_card_le_nineteen_induce
+#print axioms StrongEdge.clique_card_le_nineteen_induce
+#check StrongEdge.subset_packing195_of_clique_bounds
+#print axioms StrongEdge.subset_packing195_of_clique_bounds
+#check StrongEdge.induced_matching_packing195_of_clique_bounds
+#print axioms StrongEdge.induced_matching_packing195_of_clique_bounds
+#check StrongEdge.cliqueBounds195_of_four_improvements
+#print axioms StrongEdge.cliqueBounds195_of_four_improvements
+
+#check StrongEdge.multipleTips_erase_card_le_four_of_triple
+#print axioms StrongEdge.multipleTips_erase_card_le_four_of_triple
+#check StrongEdge.outerEdges_eq_self_of_subset
+#print axioms StrongEdge.outerEdges_eq_self_of_subset
+#check StrongEdge.four_outer_edges_saturate_multiple_support
+#print axioms StrongEdge.four_outer_edges_saturate_multiple_support
+#check StrongEdge.outer_card_le_four_of_unique_triple
+#print axioms StrongEdge.outer_card_le_four_of_unique_triple
+#check StrongEdge.clique_card_le_eighteen_of_unique_triple
+#print axioms StrongEdge.clique_card_le_eighteen_of_unique_triple
+#check StrongEdge.high20_clique_card_le_eighteen_of_root_four
+#print axioms StrongEdge.high20_clique_card_le_eighteen_of_root_four
+#check StrongEdge.high20_clique_card_le_eighteen
+#print axioms StrongEdge.high20_clique_card_le_eighteen
+
+#check StrongEdge.high23_outer_edges_card_le_one_of_root_four
+#print axioms StrongEdge.high23_outer_edges_card_le_one_of_root_four
+#check StrongEdge.high23_clique_card_le_fifteen_of_root_four
+#print axioms StrongEdge.high23_clique_card_le_fifteen_of_root_four
+#check StrongEdge.high23_clique_card_le_fifteen
+#print axioms StrongEdge.high23_clique_card_le_fifteen
+#check StrongEdge.cliqueBounds195_of_two_improvements
+#print axioms StrongEdge.cliqueBounds195_of_two_improvements
+#check StrongEdge.induced_matching_packing195_of_two_improvements
+#print axioms StrongEdge.induced_matching_packing195_of_two_improvements
+
+#check StrongEdge.Tests195.complete20_thresholds
+#print axioms StrongEdge.Tests195.complete20_thresholds
+#check StrongEdge.Tests195.complete20_has_no_packing195
+#print axioms StrongEdge.Tests195.complete20_has_no_packing195
+#check StrongEdge.Tests195.empty_candidates
+#print axioms StrongEdge.Tests195.empty_candidates

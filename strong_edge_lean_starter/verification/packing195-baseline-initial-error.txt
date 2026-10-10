@@ -1,0 +1,14 @@
+This is a transcription of the exec tool result, not captured process stdout.
+The attempted PowerShell redirection created an empty .log before the wrapper
+raised an error. That original empty log is preserved separately.
+
+Command: .\lean.ps1 build
+Reported process exit code: 1
+Error: The term 'lake' is not recognized as a name of a cmdlet, function,
+script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+
+Resolution: Installed the pinned official compiler locally, restored locked
+dependencies, then successfully ran the baseline build and audit. See the
+packing195-baseline-build and packing195-baseline-axioms evidence files.

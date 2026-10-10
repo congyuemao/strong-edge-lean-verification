@@ -1,0 +1,22 @@
+{
+  "kind": "finite falsification search; not a universal proof",
+  "seed": 19520261010,
+  "graphs": 501,
+  "sample_sha256": "bf5ce3c6673aa2b310088ecab382befae414a93fa2023e9319531aa1202a93ce",
+  "threshold_bounds_tested": {
+    "20": 18,
+    "21": 17,
+    "22": 16,
+    "23": 15,
+    "24": 13
+  },
+  "largest_cliques_observed": {
+    "20": 11,
+    "21": 10,
+    "22": 9,
+    "23": 8,
+    "24": 6
+  },
+  "counterexamples": [],
+  "tight_C5_blowup_and_full_graph_witness_checks": "passed"
+}
